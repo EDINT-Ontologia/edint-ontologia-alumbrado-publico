@@ -1,47 +1,46 @@
-# Ontología XXX
+# Ontología de Alumbrado Público (Public Street Lighting Ontology)
 
-La ontología XXX represent el dominio XXXX.
+Ontología para la representación de datos de alumbrado público en el contexto de la Federación Española de Municipios y Provincias (FEMP). Evolución de la ontología [OpenCityData](https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico) (v1.0-rc).
 
+# Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-# Propósito y alcance de la ontología
+El propósito de esta ontología es modelar los datos de alumbrado público publicados por entidades locales españolas, permitiendo:
 
-El propósito de la ontología XXX es YYYY. 
-El alcance de la ontología XXX está limitado a ZZZZ.
+- La publicación de inventarios de farolas como datos abiertos vinculados
+- La auditoría energética del consumo eléctrico por períodos tarifarios
+- La evaluación del estado de conservación de las instalaciones
+- El cálculo de indicadores ODS-EL de la FEMP (7.2.EL05, 7.2.EL06, 11.7.EL05, 11.7.EL41)
 
-# Prefijo y espacio de nombres de la ontología
+El alcance cubre: composición modular de farolas, infraestructura eléctrica, consumo energético, catálogo de modelos, parámetros fotométricos y contaminación lumínica. **IoT/telegestión queda excluido de esta versión.**
 
-El prefijo de la ontología es: XXX y se encuentra publicada en el espacio de nombres: https://webdomain.ext/def/domain/subdomain# 
+# Prefijo y espacio de nombres (Prefix and namespace)
 
-# Modelo conceptual de la ontología
+El prefijo de la ontología *Alumbrado Público* es: `esalumb` publicado bajo el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#)
 
-Cada repositorio de desarrollo de ontologías debe incluir, en este README principal, una representación visual de la conceptualización de la ontología.
-Esta imagen ayuda a los usuarios y colaboradores a comprender rápidamente la estructura de la ontología, sus conceptos clave y las relaciones entre ellos.
+# Modelo conceptual (Ontology conceptualization)
 
-- La imagen debe estar ubicada en la carpeta de conceptualización.
-- Formatos aceptados: .svg, .png o .drawio.
-- Debe referenciarse en este README usando la sintaxis de Markdown, por ejemplo:
-
-
-![Diagrama del modelo conceptual](diagrams/diagrama.png)
+![Diagrama del modelo conceptual](diagrams/modelo-conceptual.svg)
 
 # Estructura del repositorio
 
-El repositorio debe contener (al menos) las siguientes carpetas
-
 | Carpeta | Descripción |
 |--------|--------------|
-| **diagrams/** | Contiene diagramas y otros recursos que representan el modelo conceptual de la ontología (por ejemplo, jerarquías de clases, relaciones). |
-| **documentation/** | Contiene la documentación de la ontología y artefactos relacionados en formato HTML o dirigida a usuarios. |
-| **tests/** | Contiene las pruebas para la evaluación de la ontología. |
-| **kos/** | Contiene la implementación de vocabularios controlados o KOS, generalmente implementaciones SKOS en RDF.|
-| **ontology/** | Contiene los archivos de implementación de la ontología en formatos como .owl, .rdf, .ttl o .jsonld |
+| **diagrams/** | Almacena diagramas y otros recursos que representan el modelo conceptual de la ontología (e.g., jerarquías de clases, relaciones). |
+| **documentation/** | Almacena la documentación HTML o dirigida a humanos de la ontología y artefactos relacionados. |
+| **examples/** | Incluye ejemplos que demuestran cómo instanciar o aplicar la ontología en escenarios de datos reales. |
+| **kos/** | Almacena vocabularios controlados o implementaciones KOS, generalmente implementaciones SKOS en rdf. |
+| **ontology/** | Contiene los archivos de implementación de la ontología en formatos como `.owl`, `.rdf`, `.ttl`, o `.jsonld`. |
 | **requirements/** | Contiene todos los documentos utilizados para definir los requisitos de la ontología: ejemplos de datos, preguntas de competencia, requisitos funcionales, casos de uso, etc. |
-| **shapes/** | Contiene las restricciones SHACL utilizad para validar datos respecto a la ontología.  |
+| **shapes/** | Contiene las formas SHACL utilizadas para definir y validar las restricciones de la ontología. |
+| **tests/** | Contiene pruebas diseñadas para verificar que la ontología cumple con sus requisitos definidos. |
+| **resources/** | Almacena recursos del proyecto como logotipos e imágenes. |
 
-# Mantenimiento del proyecto
+# Mantenimiento y evolución (Maintenance and evolution)
 
-Para gestionar esos incidentes o las mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) para generar incidecias (trabajo en progreso).
+Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir la guía proporcionada en [ISSUES.md](ISSUES.md) para generar una incidencia.
 
-# Financiación
+# Financiación (Funding)
 
-Incluir aquí la información sobre financiación del proyecto e imágenes necesarias.
+Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
+
+![Logos](./resources/EDINT_UE_V-Color.png)
