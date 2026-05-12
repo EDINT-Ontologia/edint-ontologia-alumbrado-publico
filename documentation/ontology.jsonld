@@ -1,0 +1,1870 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/applicableUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/CD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/EUR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/HR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/K",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/KiloW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/KiloW-HR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/LM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/M",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/PERCENT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/V",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://qudt.org/vocab/unit/W",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/abstract" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for representing public street lighting data. Models the modular composition of streetlights, electrical infrastructure, energy consumption, and photometric and light pollution parameters."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica."
+  } ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Ontology Engineering Group, Universidad Politécnica de Madrid"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Daniel Doña"
+  }, {
+    "@value" : "Edna Ruckhaus"
+  }, {
+    "@value" : "Lucía Sánchez"
+  }, {
+    "@value" : "M. Martín Blázquez"
+  }, {
+    "@value" : "María Poveda"
+  }, {
+    "@value" : "Oscar Corcho"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer and owner, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante y propietario, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT."
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@value" : "FEMP — Federación Española de Municipios y Provincias"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de Alumbrado Público"
+  }, {
+    "@language" : "en",
+    "@value" : "Public Street Lighting Ontology"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-07"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "edintalu"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for representing public street lighting data."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología para la representación de datos de alumbrado público."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de Alumbrado Público"
+  }, {
+    "@language" : "en",
+    "@value" : "Public Street Lighting Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://raw.githubusercontent.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico/main/v1.0-rc/ontology/ontology.owl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/0.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.0"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Caja de conexiones o registro de acceso a los cables eléctricos de la farola. Opcional: no todas las farolas tienen una caja accesible."
+  }, {
+    "@language" : "en",
+    "@value" : "Junction box or access point for the streetlight's electrical cables. Optional: not all streetlights have an accessible box."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Caja"
+  }, {
+    "@language" : "en",
+    "@value" : "Junction Box"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuadro eléctrico o centro de control del que dependen una o más farolas. Es un punto de suministro (edintsum:UtilitySupplyPoint), punto donde llega la electricidad a la instalación de alumbrado."
+  }, {
+    "@language" : "en",
+    "@value" : "Electrical panel or control center on which one or more streetlights depend. It is a utility supply point (edintsum:UtilitySupplyPoint), the point where electricity reaches the lighting installation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Centro de mando"
+  }, {
+    "@language" : "en",
+    "@value" : "Control Center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Observación de consumo eléctrico en un período tarifario determinado. Al heredar de edintsum:UtilityConsumption ⊂ sosa:Observation, usa el patrón SOSA: – sosa:hasFeatureOfInterest → el CentroDeMando (punto de suministro) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:periodoTarifario → concepto SKOS (activo, llano, valle, punta) Cada instancia representa el consumo en UN período tarifario. El total se obtiene sumando las instancias del mismo ejercicio."
+  }, {
+    "@language" : "en",
+    "@value" : "Observation of electricity consumption in a specific tariff period. By inheriting from edintsum:UtilityConsumption ⊂ sosa:Observation, uses the SOSA pattern: – sosa:hasFeatureOfInterest → the CentroDeMando (supply point) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:periodoTarifario → SKOS concept (active, standard, off-peak, peak) Each instance represents consumption in ONE tariff period. The total is obtained by summing instances of the same fiscal year."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Consumo energético"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy Consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entidad que fabrica componentes del alumbrado (postes, luminarias, lámparas, cajas o modelos)."
+  }, {
+    "@language" : "en",
+    "@value" : "Entity that manufactures street lighting components (posts, luminaires, lamps, boxes or models)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Fabricante"
+  }, {
+    "@language" : "en",
+    "@value" : "Manufacturer"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A complete point of light, composed of a post, one or more luminaires (which in turn contain lamps) and optionally a junction box. It is an urban element (edintinf:UrbanElement) and, by inheritance, an InfrastructureElement that can have a utility supply point (edintsum:hasUtilitySupplyPoint). Every instance of Farola has infrastructure type 'Street lamp' (edintkosinftype:StreeLamp) from the EDINT SKOS."
+  }, {
+    "@language" : "es",
+    "@value" : "Punto de luz completo, compuesto por un poste, una o más luminarias (que a su vez contienen lámparas) y opcionalmente una caja de conexiones. Es un elemento urbano (edintinf:UrbanElement) y, por herencia, un InfrastructureElement que puede tener punto de suministro (edintsum:hasUtilitySupplyPoint). Toda instancia de Farola tiene como tipo de infraestructura 'Street lamp' (edintkosinftype:StreeLamp) del SKOS de EDINT."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Farola"
+  }, {
+    "@language" : "en",
+    "@value" : "Streetlight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/v1.0-rc/Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fuente de luz: bombilla, módulo LED o convertidor de energía eléctrica en luz. Cada luminaria aloja exactamente una lámpara. Incluye propiedades fotométricas (potencia, flujo, CCT, CRI) y de vida útil (L70, L80)."
+  }, {
+    "@language" : "en",
+    "@value" : "Light source: bulb, LED module or converter of electrical energy into light. Each luminaire houses exactly one lamp. Includes photometric properties (power, luminous flux, CCT, CRI) and rated life (L70, L80)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lamp"
+  }, {
+    "@language" : "es",
+    "@value" : "Lámpara"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Aparato de iluminación que aloja, dirige y filtra la luz de la lámpara. Una farola puede tener múltiples luminarias (caso LED+DESCARGA). Puede referenciar un modelo del catálogo (ModeloLuminaria)."
+  }, {
+    "@language" : "en",
+    "@value" : "Lighting apparatus that houses, directs and filters the light from the lamp. A streetlight can have multiple luminaires (e.g., LED+DISCHARGE). Can reference a catalog model (ModeloLuminaria)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Luminaire"
+  }, {
+    "@language" : "es",
+    "@value" : "Luminaria"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entrada del catálogo de modelos de luminaria. Permite vincular fabricante, potencia nominal, tecnología y especificaciones fotométricas."
+  }, {
+    "@language" : "en",
+    "@value" : "Entry in the luminaire model catalog. Allows linking manufacturer, nominal power, technology and photometric specifications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Luminaire Model"
+  }, {
+    "@language" : "es",
+    "@value" : "Modelo de luminaria"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS)."
+  }, {
+    "@language" : "es",
+    "@value" : "Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Post"
+  }, {
+    "@language" : "es",
+    "@value" : "Poste"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entidad titular de la farola: ayuntamiento, compañía eléctrica, comunidad de vecinos, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "Entity that owns the streetlight: municipality, electricity company, community of owners, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Owner"
+  }, {
+    "@language" : "es",
+    "@value" : "Propietario"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Energy saving system that reduces luminous flux. Can be located in the luminaire (lamp regulator) or at the start of the installation (head-end regulator)."
+  }, {
+    "@language" : "es",
+    "@value" : "Sistema de ahorro energético que reduce el flujo luminoso. Puede estar ubicado en la luminaria (regulador de lámpara) o al inicio de la instalación (regulador de cabecera)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Reducer"
+  }, {
+    "@language" : "es",
+    "@value" : "Reductor de flujo"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Contrato de suministro eléctrico asociado a un centro de mando. Incluye tarifa, tensión y consumo por períodos tarifarios. Es un contrato de suministro (edintsum:UtilityContract), con tarifa y punto de suministro asociado."
+  }, {
+    "@language" : "en",
+    "@value" : "Electricity supply contract associated with a control center. Includes tariff, voltage, and consumption by tariff periods. It is a utility contract (edintsum:UtilityContract), with rate and associated supply point."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electricity Supply"
+  }, {
+    "@language" : "es",
+    "@value" : "Suministro eléctrico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Accesorios montados en el poste (medidores, cámaras, etc.)."
+  }, {
+    "@language" : "en",
+    "@value" : "Accessories mounted on the post (meters, cameras, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "accesorios"
+  }, {
+    "@language" : "en",
+    "@value" : "accessories"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Altura total del poste desde el suelo hasta la parte más alta. En metros (m)."
+  }, {
+    "@language" : "en",
+    "@value" : "Total height of the post from ground to top. In meters (m)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "altura"
+  }, {
+    "@language" : "en",
+    "@value" : "height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Altura del primer brazo del poste. En metros (m)."
+  }, {
+    "@language" : "en",
+    "@value" : "Height of the first arm of the post. In meters (m)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "altura del brazo 1"
+  }, {
+    "@language" : "en",
+    "@value" : "arm height 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Altura del segundo brazo del poste. En metros (m)."
+  }, {
+    "@language" : "en",
+    "@value" : "Height of the second arm of the post. In meters (m)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "altura del brazo 2"
+  }, {
+    "@language" : "en",
+    "@value" : "arm height 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Caja de conexiones de la farola. Cardinalidad: 0..1 (opcional)."
+  }, {
+    "@language" : "en",
+    "@value" : "Junction box of the streetlight. Cardinality: 0..1 (optional)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "caja"
+  }, {
+    "@language" : "en",
+    "@value" : "junction box"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Calidad del dato: B (buena), R (regular), M (mala), E (en ejecución)."
+  }, {
+    "@language" : "en",
+    "@value" : "Data quality: B (good), R (regular), M (poor), E (under construction)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "calidad del dato"
+  }, {
+    "@language" : "en",
+    "@value" : "data quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Centro de mando del que depende la farola."
+  }, {
+    "@language" : "en",
+    "@value" : "Control center on which the streetlight depends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "centro de mando"
+  }, {
+    "@language" : "en",
+    "@value" : "control center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales)."
+  }, {
+    "@language" : "en",
+    "@value" : "Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "clase luminotécnica"
+  }, {
+    "@language" : "en",
+    "@value" : "lighting class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."
+  }, {
+    "@language" : "en",
+    "@value" : "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "address"
+  }, {
+    "@language" : "es",
+    "@value" : "dirección"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Associated flow reducer. Applies to: Streetlight. Cardinality: 0..n."
+  }, {
+    "@language" : "es",
+    "@value" : "Reductor de flujo asociado. Aplica a: Farola. Cardinalidad: 0..n."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "dispone de reductor de flujo"
+  }, {
+    "@language" : "en",
+    "@value" : "has flow reducer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W)."
+  }, {
+    "@language" : "en",
+    "@value" : "Luminous efficacy of the lamp in lumens per watt (lm/W)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "eficacia luminosa"
+  }, {
+    "@language" : "en",
+    "@value" : "luminous efficacy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ejercicio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Año de referencia de los datos. Aplica a: ConsumoEnergetico, SuministroElectrico."
+  }, {
+    "@language" : "en",
+    "@value" : "Reference year of the data. Applies to: ConsumoEnergetico, SuministroElectrico."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "ejercicio"
+  }, {
+    "@language" : "en",
+    "@value" : "fiscal year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#gYear"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoInicio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si dispone de sistema de reducción de flujo al inicio de la instalación (regulador de cabecera)."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether a flow reduction system is available at the start of the installation (head-end regulator)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es reductor de flujo al inicio"
+  }, {
+    "@language" : "en",
+    "@value" : "is head-end flow reducer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoLuminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si dispone de sistema de reducción de flujo en la luminaria."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether a flow reduction system is available in the luminaire."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es reductor de flujo en luminaria"
+  }, {
+    "@language" : "en",
+    "@value" : "is luminaire flow reducer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Conservation status of the streetlight. SKOS with 5 levels: Excellent, Good, Regular, Poor, Under construction."
+  }, {
+    "@language" : "es",
+    "@value" : "Estado de conservación de la farola. SKOS con 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "conservation status"
+  }, {
+    "@language" : "es",
+    "@value" : "estado de conservación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1."
+  }, {
+    "@language" : "en",
+    "@value" : "Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fabricado por"
+  }, {
+    "@language" : "en",
+    "@value" : "manufactured by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fecha de instalación de la lámpara."
+  }, {
+    "@language" : "en",
+    "@value" : "Installation date of the lamp."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha de instalación"
+  }, {
+    "@language" : "en",
+    "@value" : "installation date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/PERCENT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Flujo hemisférico superior (FHS/ULOR) de la luminaria como porcentaje. Clave para el cumplimiento del REEAE en zonas E1-E4."
+  }, {
+    "@language" : "en",
+    "@value" : "Upper hemisphere flux (FHS/ULOR) of the luminaire as a percentage. Key for REEAE compliance in zones E1-E4."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "flujo hemisférico superior"
+  }, {
+    "@language" : "en",
+    "@value" : "upper hemisphere flux"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/LM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Flujo luminoso de la lámpara en lúmenes (lm)."
+  }, {
+    "@language" : "en",
+    "@value" : "Luminous flux of the lamp in lumens (lm)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "flujo luminoso"
+  }, {
+    "@language" : "en",
+    "@value" : "luminous flux"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Horario en que el alumbrado está encendido (ej: '22:00-07:00')."
+  }, {
+    "@language" : "en",
+    "@value" : "Schedule when the lighting is on (e.g., '22:00-07:00')."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "horas de funcionamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "operating hours"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Color rendering index (CRI) of the lamp (0-100)."
+  }, {
+    "@language" : "es",
+    "@value" : "Índice de reproducción cromática (CRI/IRC) de la lámpara (0-100)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "color rendering index"
+  }, {
+    "@language" : "es",
+    "@value" : "índice de reproducción cromática"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/CD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Intensidad lumínica de la lámpara en candelas (cd)."
+  }, {
+    "@language" : "en",
+    "@value" : "Luminous intensity of the lamp in candelas (cd)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "intensidad lumínica"
+  }, {
+    "@language" : "en",
+    "@value" : "luminous intensity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/KiloW-HR"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Consumo en kWh de fuentes de energía renovable con sistemas de autoconsumo."
+  }, {
+    "@language" : "en",
+    "@value" : "Consumption in kWh from renewable energy sources with self-consumption systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "kWh renovables"
+  }, {
+    "@language" : "en",
+    "@value" : "renewable kWh"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Aparato de iluminación de la farola. Cardinalidad: 1 o más (caso LED+DESCARGA)."
+  }, {
+    "@language" : "en",
+    "@value" : "Lighting apparatus of the streetlight. Cardinality: 1 or more (e.g., LED+DISCHARGE)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "luminaire"
+  }, {
+    "@language" : "es",
+    "@value" : "luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Material del componente. Aplica a: Poste, Luminaria, Lampara, Caja."
+  }, {
+    "@language" : "en",
+    "@value" : "Material of the component. Applies to: Post, Luminaire, Lamp, JunctionBox."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material"
+  }, {
+    "@language" : "es",
+    "@value" : "material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Method for switching the lighting on/off (astronomical clock, photocell, remote management, etc.)."
+  }, {
+    "@language" : "es",
+    "@value" : "Método de activación/desactivación del alumbrado (reloj astronómico, fotocélula, telegestión, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "control method"
+  }, {
+    "@language" : "es",
+    "@value" : "método de control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code or model of the bulb."
+  }, {
+    "@language" : "es",
+    "@value" : "Código o modelo de la bombilla."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bulb model"
+  }, {
+    "@language" : "es",
+    "@value" : "modelo de bombilla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reference to the luminaire's catalog model. Cardinality: 0..1."
+  }, {
+    "@language" : "es",
+    "@value" : "Referencia al modelo de catálogo de la luminaria. Cardinalidad: 0..1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "luminaire model"
+  }, {
+    "@language" : "es",
+    "@value" : "modelo de luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#nombre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel."
+  }, {
+    "@language" : "es",
+    "@value" : "Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, Propietario, ModeloLuminaria."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "name"
+  }, {
+    "@language" : "es",
+    "@value" : "nombre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of arms of the post."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de brazos del poste."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "number of arms"
+  }, {
+    "@language" : "es",
+    "@value" : "número de brazos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of luminaires in the streetlight."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de luminarias en la farola."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "number of luminaires"
+  }, {
+    "@language" : "es",
+    "@value" : "número de luminarias"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#observaciones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Notes about the streetlight or component. Applies to: Streetlight, Post, Luminaire, Lamp, JunctionBox."
+  }, {
+    "@language" : "es",
+    "@value" : "Observaciones sobre la farola o componente. Aplica a: Farola, Poste, Luminaria, Lampara, Caja."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "notes"
+  }, {
+    "@language" : "es",
+    "@value" : "observaciones"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#periodoTarifario",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Período tarifario al que corresponde el consumo. SKOS: activo, llano, valle, punta. Cada instancia de ConsumoEnergetico representa UN período tarifario; el total se obtiene sumando las instancias del mismo ejercicio."
+  }, {
+    "@language" : "en",
+    "@value" : "Tariff period to which the consumption corresponds. SKOS: active, standard, off-peak, peak. Each ConsumoEnergetico instance represents ONE tariff period; the total is obtained by summing instances of the same fiscal year."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "período tarifario"
+  }, {
+    "@language" : "en",
+    "@value" : "tariff period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical support of the streetlight. Cardinality: exactly 1."
+  }, {
+    "@language" : "es",
+    "@value" : "Soporte físico de la farola. Cardinalidad: exactamente 1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "post"
+  }, {
+    "@language" : "es",
+    "@value" : "poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/KiloW"
+  }, {
+    "@id" : "http://qudt.org/vocab/unit/W"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Nominal power of the lamp. In watts (W)."
+  }, {
+    "@language" : "es",
+    "@value" : "Potencia nominal de la lámpara. En vatios (W)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "nominal power"
+  }, {
+    "@language" : "es",
+    "@value" : "potencia nominal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entidad titular de la farola. Cardinalidad: 0..1."
+  }, {
+    "@language" : "en",
+    "@value" : "Entity that owns the streetlight. Cardinality: 0..1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "owner"
+  }, {
+    "@language" : "es",
+    "@value" : "propietario"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4)."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tarifa"
+  }, {
+    "@language" : "en",
+    "@value" : "tariff"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Correlated color temperature (CCT) of the lamp in kelvin (K)."
+  }, {
+    "@language" : "es",
+    "@value" : "Temperatura de color correlacionada (CCT) de la lámpara en kelvin (K)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "correlated color temperature"
+  }, {
+    "@language" : "es",
+    "@value" : "temperatura de color"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/V"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Supply voltage in volts (V)."
+  }, {
+    "@language" : "es",
+    "@value" : "Tensión de alimentación del suministro en voltios (V)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tensión"
+  }, {
+    "@language" : "en",
+    "@value" : "voltage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Energy consumption record of the supply. Cardinality: 0..n."
+  }, {
+    "@language" : "es",
+    "@value" : "Registro de consumo energético del suministro. Cardinalidad: 0..n."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has consumption"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene consumo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lamp housed in the luminaire. Cardinality: exactly 1."
+  }, {
+    "@language" : "es",
+    "@value" : "Lámpara alojada en la luminaria. Cardinalidad: exactamente 1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has lamp"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene lámpara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Contrato de suministro eléctrico asociado al centro de mando. Cardinalidad: 0..1."
+  }, {
+    "@language" : "en",
+    "@value" : "Electricity supply contract associated with the control center. Cardinality: 0..1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has supply"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene suministro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de alimentación eléctrica. SKOS con 5 conceptos (Subterránea, Aérea, Fachada, Grapada, Batería)."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of electrical supply. SKOS with 5 concepts (Underground, Aerial, Wall, Stapled, Battery)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "power supply type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de alimentación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."
+  }, {
+    "@language" : "en",
+    "@value" : "Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lighting class"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de alumbrado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cable type in the junction box. SKOS: ET103, ET106, ET107, ET112, ET113."
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de cable en la caja de conexiones. SKOS: ET103, ET106, ET107, ET112, ET113."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cable type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de cable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de iluminación. SKOS: Nocturna, Permanente."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of illumination. SKOS: Nighttime, Permanent."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "illumination type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de iluminación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de lámpara. SKOS con 12 conceptos (LED, Vapor sodio, Vapor mercurio, Halogenuro metálico, etc.)."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of lamp. SKOS with 12 concepts (LED, Sodium vapor, Mercury vapor, Metal halide, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lamp type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de lámpara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de luminaria. SKOS con 8 conceptos (Proyector, Empotrado pared, Baliza, Viaria, Artística, etc.)."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of luminaire. SKOS with 8 concepts (Projector, Recessed wall, Bollard, Road, Artistic, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "luminaire type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de luminaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de soporte físico del poste. SKOS con ~35 conceptos. ConceptScheme: tipo-soporte."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of physical support of the post. SKOS with ~35 concepts. ConceptScheme: tipo-soporte."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "support type"
+  }, {
+    "@language" : "es",
+    "@value" : "tipo de soporte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/HR"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Rated life of the lamp at 70% maintained flux (L70) in hours."
+  }, {
+    "@language" : "es",
+    "@value" : "Vida útil nominal de la lámpara al 70% de flujo mantenido (L70) en horas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rated life L70"
+  }, {
+    "@language" : "es",
+    "@value" : "vida útil L70"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/applicableUnit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/HR"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Rated life of the lamp at 80% maintained flux (L80) in hours."
+  }, {
+    "@language" : "es",
+    "@value" : "Vida útil nominal de la lámpara al 80% de flujo mantenido (L80) en horas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rated life L80"
+  }, {
+    "@language" : "es",
+    "@value" : "vida útil L80"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Clasificación de zona según REEAE (RD 1890/2008) para control de contaminación lumínica. SKOS: E1 (protección máxima), E2 (protección alta), E3 (protección media), E4 (protección baja)."
+  }, {
+    "@language" : "en",
+    "@value" : "Zone classification according to REEAE (RD 1890/2008) for light pollution control. SKOS: E1 (maximum protection), E2 (high protection), E3 (medium protection), E4 (low protection)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lighting zone"
+  }, {
+    "@language" : "es",
+    "@value" : "zona de alumbrado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dirección postal en España. Especialización de schema:PostalAddress, vcard:Address y locn:Address. Permite representar la dirección de una farola con propiedades como streetAddress, addressLocality, postalCode, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "Postal address in Spain. Specialisation of schema:PostalAddress, vcard:Address and locn:Address. Allows representing a streetlight's address with properties like streetAddress, addressLocality, postalCode, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Dirección postal"
+  }, {
+    "@language" : "en",
+    "@value" : "Postal address"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#gYear",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+} ]

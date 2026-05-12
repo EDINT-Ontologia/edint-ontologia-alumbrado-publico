@@ -85,11 +85,15 @@ ex:poste-001 a edintalu:Poste ;
     edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/bacula> ;
     edintalu:altura 8 ;
     qudt:applicableUnit qudtu:M ;
-    edintalu:alturaBrazo1 6.5 ;
-    qudt:applicableUnit qudtu:M ;
     edintalu:numeroDeBrazos 1 ;
+    edintalu:tieneBrazo ex:poste-001-brazo1 ;
     edintalu:material "Acero galvanizado" ;
     edintalu:fabricadoPor ex:fabricante-postes .
+
+ex:poste-001-brazo1 a edintalu:Brazo ;
+    edintalu:ordenBrazo 1 ;
+    edintalu:altura 6.5 ;
+    qudt:applicableUnit qudtu:M .
 
 # --- Luminaria ---
 
