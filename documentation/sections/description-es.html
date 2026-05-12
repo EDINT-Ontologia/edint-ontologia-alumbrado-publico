@@ -1,5 +1,103 @@
-<h2 id="desc" class="list">alumbrado-publico: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<h2 id="desc" class="list">Alumbrado P&uacute;blico: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown"><p>En la Figura 1 se muestra el modelo conceptual de la ontología con sus clases y relaciones (propiedades de objeto).</p>
+<p><center><img src="images/diagrama-conceptual.png"/><figcaption>
+Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
+<p>La ontología modela la composición modular de una <a href="#Farola">farola</a> como elemento urbano (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement">edintinf:UrbanElement</a>), compuesta por un <a href="#Poste">poste</a> (con uno o más <a href="#Brazo">brazos</a>), una o más <a href="#Luminaria">luminarias</a> (que alojan una <a href="#Lampara">lámpara</a> cada una) y opcionalmente una <a href="#Caja">caja de conexiones</a>.</p>
 
-<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.
+<p>La infraestructura eléctrica se representa mediante el <a href="#CentroDeMando">centro de mando</a>, que es un punto de suministro (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) del que dependen una o más farolas. El centro de mando puede tener un <a href="#SuministroElectrico">suministro eléctrico</a> (contrato de suministro, <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract">edintsum:UtilityContract</a>).</p>
 
+<p>El <a href="#ConsumoEnergetico">consumo energético</a> se modela como una observación SOSA (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), donde cada instancia representa el consumo en un período tarifario determinado. El valor del consumo se representa mediante <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, que expresa la magnitud a través de <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> y la unidad de medida a través de <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (por ejemplo, <code>unit:KiloW-HR</code> para kilovatios-hora). El período tarifario se indica mediante la propiedad <a href="#periodoTarifario">periodoTarifario</a> vinculada a un concepto SKOS (activo, llano, valle, punta).</p>
+
+<p>Las clasificaciones del alumbrado (tipo de soporte, tipo de lámpara, estado de conservación, zona de alumbrado, clase luminotécnica, etc.) se representan mediante propiedades de objeto que apuntan a conceptos SKOS, organizados en esquemas de conceptos independientes disponibles en la carpeta <code>kos/</code>.</p>
+
+<p>El <a href="#Fabricante">fabricante</a> y el <a href="#Propietario">propietario</a> son entidades referenciables (no strings), lo que permite vincularlos a organizaciones u otros agentes. El <a href="#ModeloLuminaria">modelo de luminaria</a> actúa como entrada del catálogo de modelos, permitiendo vincular fabricante, potencia nominal y especificaciones.</p>
+
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
+@prefix edintalu: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#&gt; .
+@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
+@prefix edintsum: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#&gt; .
+@prefix edintkosinftype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/&gt; .
+@prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
+@prefix gsp: &lt;http://www.opengis.net/ont/geosparql#&gt; .
+@prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
+@prefix qudt: &lt;http://qudt.org/schema/qudt/&gt; .
+@prefix qudtu: &lt;http://qudt.org/vocab/unit/&gt; .
+@prefix schema: &lt;http://schema.org/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# --- Centro de mando ---
+ex:cm-001 a edintalu:CentroDeMando ;
+    edintalu:nombre "CM-001" ;
+    edintalu:tieneSuministro ex:sum-001 .
+
+# --- Suministro eléctrico ---
+ex:sum-001 a edintalu:SuministroElectrico ;
+    edintalu:ejercicio "2024"^^xsd:gYear ;
+    edintalu:tarifa "6.1" ;
+    edintalu:tieneConsumo ex:cons-001-llano .
+
+# --- Consumo energético (SOSA) ---
+ex:cons-001-llano a edintalu:ConsumoEnergetico ;
+    sosa:hasFeatureOfInterest ex:cm-001 ;
+    sosa:observedProperty edintsum:electricityConsumption ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+                     qudt:numericValue 8500 ;
+                     qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintalu:periodoTarifario &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano&gt; ;
+    edintalu:ejercicio "2024"^^xsd:gYear .
+
+# --- Farola ---
+ex:farola-001 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:centroDeMando ex:cm-001 ;
+    edintalu:poste ex:poste-001 ;
+    edintalu:luminaria ex:lum-001 ;
+    edintalu:tipoAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/ME4b&gt; ;
+    edintalu:zonaAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/E3&gt; ;
+    edintalu:direccion ex:dir-001 ;
+    gsp:hasGeometry ex:geom-001 .
+
+# --- Poste con brazo ---
+ex:poste-001 a edintalu:Poste ;
+    edintalu:tipoSoporte &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/bacula&gt; ;
+    edintalu:altura 8 ;
+    qudt:applicableUnit qudtu:M ;
+    edintalu:tieneBrazo ex:brazo-001 .
+
+ex:brazo-001 a edintalu:Brazo ;
+    edintalu:ordenBrazo 1 ;
+    edintalu:altura 6.5 ;
+    qudt:applicableUnit qudtu:M .
+
+# --- Luminaria + Lámpara ---
+ex:lum-001 a edintalu:Luminaria ;
+    edintalu:tieneLampara ex:lamp-001 ;
+    edintalu:modeloLuminaria ex:modelo-001 .
+
+ex:lamp-001 a edintalu:Lampara ;
+    edintalu:tipoLampara &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led&gt; ;
+    edintalu:potenciaNominal 72 ;
+    qudt:applicableUnit qudtu:W .
+
+# --- Modelo de catálogo ---
+ex:modelo-001 a edintalu:ModeloLuminaria ;
+    edintalu:nombre "SpeedStar LED 72W" .
+
+# --- Dirección postal ---
+ex:dir-001 a esdir:DireccionPostal ;
+    schema:streetAddress "Calle Mayor 1" ;
+    schema:addressLocality "Villaexample" ;
+    schema:addressCountry "ES" .
+
+# --- Geometría ---
+ex:geom-001 a gsp:Geometry ;
+    gsp:asWKT "POINT (-3.70 40.42)"^^gsp:wktLiteral .
+</textarea></pre>
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
+En el ejemplo anterior se muestra una porción del grafo de conocimiento en RDF para una farola de alumbrado público. El <strong>centro de mando</strong> (CM-001) es el punto de suministro del que depende la farola, y tiene asociado un contrato de <strong>suministro eléctrico</strong> con tarifa 6.1. El <strong>consumo energético</strong> se representa como una observación SOSA: cada instancia (una por período tarifario) tiene como resultado un <code>qudt:QuantityValue</code> con el valor numérico y la unidad (kWh). La <strong>farola</strong> es un elemento urbano con tipo de infraestructura <code>StreeLamp</code> (SKOS de EDINT), compuesta por un <strong>poste</strong> (con su brazo a 6,5 m), una <strong>luminaria</strong> (con una lámpara LED de 72 W) y referencia a un <strong>modelo de catálogo</strong>. Las clasificaciones (tipo de alumbrado ME4b, zona E3, tipo de soporte báculo, tipo de lámpara LED) se representan mediante conceptos SKOS. La dirección postal se reutiliza de <code>esdir:DireccionPostal</code> y la geometría de GeoSPARQL.
 </span>

@@ -1,5 +1,103 @@
-<h2 id="desc" class="list">alumbrado-publico: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="desc" class="list">Public Street Lighting: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown"><p>Figure 1 shows the conceptual model of the ontology with its classes and relationships (object properties).</p>
+<p><center><img src="images/diagrama-conceptual.png"/><figcaption>
+Figure 1. Conceptual model of the ontology</figcaption></center></p>
+<p>The ontology models the modular composition of a <a href="#Farola">streetlight</a> as an urban element (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement">edintinf:UrbanElement</a>), composed of a <a href="#Poste">post</a> (with one or more <a href="#Brazo">arms</a>), one or more <a href="#Luminaria">luminaires</a> (each housing a <a href="#Lampara">lamp</a>) and optionally a <a href="#Caja">junction box</a>.</p>
 
-<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
+<p>The electrical infrastructure is represented by the <a href="#CentroDeMando">control center</a>, which is a utility supply point (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) on which one or more streetlights depend. The control center may have an <a href="#SuministroElectrico">electricity supply</a> contract (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract">edintsum:UtilityContract</a>).</p>
 
+<p>Energy <a href="#ConsumoEnergetico">consumption</a> is modeled as a SOSA observation (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), where each instance represents the consumption for a specific tariff period. The consumption value is represented via <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, expressing the magnitude through <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> and the unit of measure through <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (e.g., <code>unit:KiloW-HR</code> for kilowatt-hours). The tariff period is indicated by the <a href="#periodoTarifario">periodoTarifario</a> property linked to a SKOS concept (active, standard, off-peak, peak).</p>
+
+<p>Street lighting classifications (support type, lamp type, conservation status, lighting zone, lighting class, etc.) are represented via object properties pointing to SKOS concepts, organized in independent concept schemes available in the <code>kos/</code> folder.</p>
+
+<p>The <a href="#Fabricante">manufacturer</a> and <a href="#Propietario">owner</a> are referenceable entities (not strings), allowing them to be linked to organizations or other agents. The <a href="#ModeloLuminaria">luminaire model</a> serves as a catalog entry, linking manufacturer, nominal power and specifications.</p>
+
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
+@prefix edintalu: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#&gt; .
+@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
+@prefix edintsum: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#&gt; .
+@prefix edintkosinftype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/&gt; .
+@prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
+@prefix gsp: &lt;http://www.opengis.net/ont/geosparql#&gt; .
+@prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
+@prefix qudt: &lt;http://qudt.org/schema/qudt/&gt; .
+@prefix qudtu: &lt;http://qudt.org/vocab/unit/&gt; .
+@prefix schema: &lt;http://schema.org/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# --- Control center ---
+ex:cm-001 a edintalu:CentroDeMando ;
+    edintalu:nombre "CM-001" ;
+    edintalu:tieneSuministro ex:sum-001 .
+
+# --- Electricity supply ---
+ex:sum-001 a edintalu:SuministroElectrico ;
+    edintalu:ejercicio "2024"^^xsd:gYear ;
+    edintalu:tarifa "6.1" ;
+    edintalu:tieneConsumo ex:cons-001-llano .
+
+# --- Energy consumption (SOSA) ---
+ex:cons-001-llano a edintalu:ConsumoEnergetico ;
+    sosa:hasFeatureOfInterest ex:cm-001 ;
+    sosa:observedProperty edintsum:electricityConsumption ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+                     qudt:numericValue 8500 ;
+                     qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintalu:periodoTarifario &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano&gt; ;
+    edintalu:ejercicio "2024"^^xsd:gYear .
+
+# --- Streetlight ---
+ex:farola-001 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:centroDeMando ex:cm-001 ;
+    edintalu:poste ex:poste-001 ;
+    edintalu:luminaria ex:lum-001 ;
+    edintalu:tipoAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/ME4b&gt; ;
+    edintalu:zonaAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/E3&gt; ;
+    edintalu:direccion ex:dir-001 ;
+    gsp:hasGeometry ex:geom-001 .
+
+# --- Post with arm ---
+ex:poste-001 a edintalu:Poste ;
+    edintalu:tipoSoporte &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/bacula&gt; ;
+    edintalu:altura 8 ;
+    qudt:applicableUnit qudtu:M ;
+    edintalu:tieneBrazo ex:brazo-001 .
+
+ex:brazo-001 a edintalu:Brazo ;
+    edintalu:ordenBrazo 1 ;
+    edintalu:altura 6.5 ;
+    qudt:applicableUnit qudtu:M .
+
+# --- Luminaire + Lamp ---
+ex:lum-001 a edintalu:Luminaria ;
+    edintalu:tieneLampara ex:lamp-001 ;
+    edintalu:modeloLuminaria ex:modelo-001 .
+
+ex:lamp-001 a edintalu:Lampara ;
+    edintalu:tipoLampara &lt;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led&gt; ;
+    edintalu:potenciaNominal 72 ;
+    qudt:applicableUnit qudtu:W .
+
+# --- Catalog model ---
+ex:modelo-001 a edintalu:ModeloLuminaria ;
+    edintalu:nombre "SpeedStar LED 72W" .
+
+# --- Postal address ---
+ex:dir-001 a esdir:DireccionPostal ;
+    schema:streetAddress "Calle Mayor 1" ;
+    schema:addressLocality "Villaexample" ;
+    schema:addressCountry "ES" .
+
+# --- Geometry ---
+ex:geom-001 a gsp:Geometry ;
+    gsp:asWKT "POINT (-3.70 40.42)"^^gsp:wktLiteral .
+</textarea></pre>
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
+The example above shows a portion of the RDF knowledge graph for a public lighting streetlight. The <strong>control center</strong> (CM-001) is the supply point on which the streetlight depends, and has an associated <strong>electricity supply</strong> contract with tariff 6.1. <strong>Energy consumption</strong> is represented as a SOSA observation: each instance (one per tariff period) has as result a <code>qudt:QuantityValue</code> with the numeric value and unit (kWh). The <strong>streetlight</strong> is an urban element with infrastructure type <code>StreeLamp</code> (EDINT SKOS), composed of a <strong>post</strong> (with its arm at 6.5 m), a <strong>luminaire</strong> (with a 72 W LED lamp) and a reference to a <strong>catalog model</strong>. Classifications (lighting type ME4b, zone E3, support type báculo, lamp type LED) are represented via SKOS concepts. The postal address reuses <code>esdir:DireccionPostal</code> and the geometry from GeoSPARQL.
 </span>
