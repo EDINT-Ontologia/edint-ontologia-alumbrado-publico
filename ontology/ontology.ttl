@@ -84,8 +84,14 @@ edintalu:Farola a owl:Class ;
 
 edintalu:Poste a owl:Class ;
     rdfs:label "Poste"@es , "Post"@en ;
-    rdfs:comment """Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS)."""@es ;
-    rdfs:comment """Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS)."""@en ;
+    rdfs:comment """Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS). Un poste puede tener uno o más brazos."""@es ;
+    rdfs:comment """Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS). A post can have one or more arms."""@en ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
+
+edintalu:Brazo a owl:Class ;
+    rdfs:label "Brazo"@es , "Arm"@en ;
+    rdfs:comment """Brazo del poste que soporta una luminaria. Un poste puede tener múltiples brazos, cada uno con su propia altura."""@es ;
+    rdfs:comment """Arm of the post that supports a luminaire. A post can have multiple arms, each with its own height."""@en ;
     rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
 
 edintalu:Luminaria a owl:Class ;
@@ -356,38 +362,35 @@ edintalu:claseLuminotecnica a owl:ObjectProperty ;
 # --- Poste ---
 
 edintalu:altura a owl:DatatypeProperty ;
-    rdfs:domain edintalu:Poste ;
     rdfs:range xsd:decimal ;
     rdfs:label "altura"@es , "height"@en ;
-    rdfs:comment "Altura total del poste desde el suelo hasta la parte más alta. En metros (m)."@es ;
-    rdfs:comment "Total height of the post from ground to top. In meters (m)."@en ;
+    rdfs:comment "Altura en metros (m). Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo)."@es ;
+    rdfs:comment "Height in meters (m). Applies to: Post (total height), Arm (height of the arm above ground)."@en ;
     qudt:applicableUnit qudtu:M ;
     rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
 
-edintalu:alturaBrazo1 a owl:DatatypeProperty ;
+edintalu:tieneBrazo a owl:ObjectProperty ;
     rdfs:domain edintalu:Poste ;
-    rdfs:range xsd:decimal ;
-    rdfs:label "altura del brazo 1"@es , "arm height 1"@en ;
-    rdfs:comment "Altura del primer brazo del poste. En metros (m)."@es ;
-    rdfs:comment "Height of the first arm of the post. In meters (m)."@en ;
-    qudt:applicableUnit qudtu:M ;
-    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
-
-edintalu:alturaBrazo2 a owl:DatatypeProperty ;
-    rdfs:domain edintalu:Poste ;
-    rdfs:range xsd:decimal ;
-    rdfs:label "altura del brazo 2"@es , "arm height 2"@en ;
-    rdfs:comment "Altura del segundo brazo del poste. En metros (m)."@es ;
-    rdfs:comment "Height of the second arm of the post. In meters (m)."@en ;
-    qudt:applicableUnit qudtu:M ;
+    rdfs:range edintalu:Brazo ;
+    rdfs:label "tiene brazo"@es , "has arm"@en ;
+    rdfs:comment "Brazo del poste. Cardinalidad: 0..n."@es ;
+    rdfs:comment "Arm of the post. Cardinality: 0..n."@en ;
     rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
 
 edintalu:numeroDeBrazos a owl:DatatypeProperty ;
     rdfs:domain edintalu:Poste ;
     rdfs:range xsd:integer ;
     rdfs:label "número de brazos"@es , "number of arms"@en ;
-    rdfs:comment "Número de brazos del poste."@es ;
-    rdfs:comment "Number of arms of the post."@en ;
+    rdfs:comment "Número total de brazos del poste."@es ;
+    rdfs:comment "Total number of arms of the post."@en ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
+
+edintalu:ordenBrazo a owl:DatatypeProperty ;
+    rdfs:domain edintalu:Brazo ;
+    rdfs:range xsd:integer ;
+    rdfs:label "orden del brazo"@es , "arm order"@en ;
+    rdfs:comment "Posición ordinal del brazo en el poste (1, 2, 3...)."@es ;
+    rdfs:comment "Ordinal position of the arm on the post (1, 2, 3...)."@en ;
     rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
 
 edintalu:accesorios a owl:DatatypeProperty ;
