@@ -1,0 +1,57 @@
+@prefix : <http://example.org/madrid/alumbrado/> .
+@prefix edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtu: <http://qudt.org/vocab/unit/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ejemplo: Farola LED en calle Ramírez de Arellano, Madrid
+# Fuente: Ayuntamiento de Madrid — Unidades Luminosas
+#         Registro: tipo_bloqu=GLED001, TIPOL=LED,
+#         DISTRITO=15, BARRIO=6
+#
+# Campos del dataset: tipo_bloqu, TIPOL, VIA_CLASE, VIA_PAR,
+# VIA_NOMBRE, NUMERO, DISTRITO, BARRIO, X_UTM, Y_UTM
+#################################################################
+
+# --- Farola ---
+
+:farola_001 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:luminaria :lum_001 ;
+    edintalu:direccion :dir_001 ;
+    gsp:hasGeometry :geom_001 .
+
+# --- Luminaria + Lámpara ---
+
+:lum_001 a edintalu:Luminaria ;
+    edintalu:modeloLuminaria :modelo_GLED001 ;
+    edintalu:tieneLampara :lamp_001 .
+
+:lamp_001 a edintalu:Lampara ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:modeloBombilla "GLED001" .
+
+# --- Modelo de luminaria (catálogo) ---
+
+:modelo_GLED001 a edintalu:ModeloLuminaria ;
+    edintalu:nombre "GLED001" .
+
+# --- Dirección ---
+
+:dir_001 a esdir:DireccionPostal ;
+    schema:streetAddress "Calle de Ramírez de Arellano 17" ;
+    schema:addressLocality "Madrid" ;
+    schema:addressRegion "Madrid" ;
+    schema:addressCountry "ES" .
+
+# --- Geometría ---
+
+:geom_001 a sf:Point ;
+    gsp:asWKT "POINT (-3.7115 40.4299)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .

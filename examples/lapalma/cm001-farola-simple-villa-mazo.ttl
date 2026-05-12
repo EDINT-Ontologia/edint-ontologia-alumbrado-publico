@@ -1,0 +1,79 @@
+@prefix exlp: <http://example.org/lapalma/alumbrado/> .
+@prefix edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtu: <http://qudt.org/vocab/unit/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ============================================================================
+# Ejemplo: Farola simple en CM-001, Villa de Mazo, La Palma
+# Fuente: Cabildo Insular de La Palma — Alumbrado y farolas (ejercicio 2014)
+#         Registro OBJECTID=1002, Código=1002
+#
+# Demuestra: farola simple (1 luminaria, 1 lámpara LED),
+#            tipo de soporte báculo.
+# ============================================================================
+
+# --- Centro de mando CM-001 ---
+
+exlp:cm-001 a edintalu:CentroDeMando ;
+    edintalu:nombre "CM-001" ;
+    dcterms:spatial exlp:cm-001-loc .
+
+exlp:cm-001-loc a esdir:DireccionPostal ;
+    schema:streetAddress "Avenida Enrique Mederos" ;
+    schema:addressLocality "Villa de Mazo" ;
+    schema:addressRegion "Santa Cruz de Tenerife" ;
+    schema:addressCountry "ES" .
+
+# --- Farola simple (1 luminaria) ---
+
+exlp:f1002 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:centroDeMando exlp:cm-001 ;
+    edintalu:poste exlp:f1002-poste ;
+    edintalu:luminaria exlp:f1002-lum1 ;
+    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/C> ;
+    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/S3> ;
+    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea> ;
+    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> ;
+    edintalu:horasDeFuncionamiento "Noche entera" ;
+    edintalu:numeroDeLuminarias 1 ;
+    edintalu:calidadDato "B" ;
+    edintalu:direccion exlp:f1002-dir ;
+    gsp:hasGeometry exlp:f1002-geom .
+
+exlp:f1002-dir a esdir:DireccionPostal ;
+    schema:streetAddress "Calle El Roque" ;
+    schema:addressLocality "Villa de Mazo" ;
+    schema:addressRegion "Santa Cruz de Tenerife" ;
+    schema:addressCountry "ES" .
+
+exlp:f1002-geom a gsp:Geometry ;
+    gsp:asWKT "POINT (-17.7750 28.6060)"^^gsp:wktLiteral .
+
+# --- Poste ---
+
+exlp:f1002-poste a edintalu:Poste ;
+    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    edintalu:altura 5 ;
+    qudt:applicableUnit qudtu:M .
+
+# --- Luminaria + Lámpara (LED 80W) ---
+
+exlp:f1002-lum1 a edintalu:Luminaria ;
+    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariaVidrioPlano> ;
+    edintalu:tieneLampara exlp:f1002-lum1-lamp .
+
+exlp:f1002-lum1-lamp a edintalu:Lampara ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:potenciaNominal 80 ;
+    qudt:applicableUnit qudtu:W ;
+    edintalu:temperaturaColor 4000 ;
+    qudt:applicableUnit qudtu:K ;
+    edintalu:indiceReproduccionCromatica 80 .

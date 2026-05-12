@@ -1,0 +1,163 @@
+@prefix ex: <http://example.org/generico/alumbrado/> .
+@prefix edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#> .
+@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtu: <http://qudt.org/vocab/unit/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ejemplo genérico: Farola completa con todos los elementos del modelo
+# No corresponde a un dataset real — ilustra la máxima extensión
+# del modelo: poste, luminaria, lámpara, caja, fabricante, propietario,
+# parámetros fotométricos, FHS, zona de alumbrado, clase luminotécnica,
+# estado de conservación, reductor de flujo, centro de mando,
+# suministro eléctrico y consumo energético (SOSA).
+#################################################################
+
+# --- Centro de mando ---
+
+ex:cm-001 a edintalu:CentroDeMando ;
+    edintalu:nombre "CM-001" ;
+    edintalu:tieneSuministro ex:suministro-001 .
+
+# --- Suministro eléctrico ---
+
+ex:suministro-001 a edintalu:SuministroElectrico ;
+    edintalu:ejercicio "2024"^^xsd:gYear ;
+    edintalu:tarifa "6.1" ;
+    edintalu:tension 230 ;
+    qudt:applicableUnit qudtu:V ;
+    edintalu:kwhRenovables 1200 ;
+    qudt:applicableUnit qudtu:KiloW-HR ;
+    edintalu:tieneConsumo ex:consumo-001-llano , ex:consumo-001-valle .
+
+# --- Consumo energético (SOSA) ---
+
+ex:consumo-001-llano a edintalu:ConsumoEnergetico ;
+    sosa:hasFeatureOfInterest ex:cm-001 ;
+    sosa:observedProperty edintsum:electricityConsumption ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+                     qudt:numericValue 8500 ;
+                     qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano> ;
+    edintalu:ejercicio "2024"^^xsd:gYear .
+
+ex:consumo-001-valle a edintalu:ConsumoEnergetico ;
+    sosa:hasFeatureOfInterest ex:cm-001 ;
+    sosa:observedProperty edintsum:electricityConsumption ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+                     qudt:numericValue 4200 ;
+                     qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/valle> ;
+    edintalu:ejercicio "2024"^^xsd:gYear .
+
+# --- Farola ---
+
+ex:farola-001 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:centroDeMando ex:cm-001 ;
+    edintalu:poste ex:poste-001 ;
+    edintalu:luminaria ex:lum-001 ;
+    edintalu:caja ex:caja-001 ;
+    edintalu:propietario ex:ayto ;
+    edintalu:disponeReductorFlujo ex:reductor-001 ;
+    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/ME4b> ;
+    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea> ;
+    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> ;
+    edintalu:estadoConservacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/bueno> ;
+    edintalu:zonaAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/E3> ;
+    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/B> ;
+    edintalu:horasDeFuncionamiento "22:00-07:00" ;
+    edintalu:metodoDeControl "Reloj astronómico" ;
+    edintalu:direccion ex:dir-001 ;
+    gsp:hasGeometry ex:geom-001 .
+
+# --- Poste ---
+
+ex:poste-001 a edintalu:Poste ;
+    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/bacula> ;
+    edintalu:altura 8 ;
+    qudt:applicableUnit qudtu:M ;
+    edintalu:alturaBrazo1 6.5 ;
+    qudt:applicableUnit qudtu:M ;
+    edintalu:numeroDeBrazos 1 ;
+    edintalu:material "Acero galvanizado" ;
+    edintalu:fabricadoPor ex:fabricante-postes .
+
+# --- Luminaria ---
+
+ex:lum-001 a edintalu:Luminaria ;
+    edintalu:tieneLampara ex:lamp-001 ;
+    edintalu:modeloLuminaria ex:modelo-speedstar ;
+    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viaria> ;
+    edintalu:flujoHemisfericoSuperior 1 ;
+    qudt:applicableUnit qudtu:PERCENT ;
+    edintalu:material "Aluminio inyectado" ;
+    edintalu:fabricadoPor ex:fabricante-luminarias .
+
+# --- Lámpara (LED con parámetros fotométricos) ---
+
+ex:lamp-001 a edintalu:Lampara ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:potenciaNominal 72 ;
+    qudt:applicableUnit qudtu:W ;
+    edintalu:flujoLuminoso 8600 ;
+    qudt:applicableUnit qudtu:LM ;
+    edintalu:temperaturaColor 3000 ;
+    qudt:applicableUnit qudtu:K ;
+    edintalu:indiceReproduccionCromatica 70 ;
+    edintalu:eficaciaLuminosa 119 ;
+    edintalu:vidaUtilL70 100000 ;
+    qudt:applicableUnit qudtu:HR ;
+    edintalu:fechaInstalacion "2024-03-15T00:00:00"^^xsd:dateTime .
+
+# --- Caja de conexiones ---
+
+ex:caja-001 a edintalu:Caja ;
+    edintalu:tipoCable <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-cable/ET106> ;
+    edintalu:material "Policarbonato" .
+
+# --- Reductor de flujo ---
+
+ex:reductor-001 a edintalu:ReductorFlujo ;
+    edintalu:esReductorFlujoLuminaria true ;
+    edintalu:esReductorFlujoInicio false .
+
+# --- Modelo de luminaria (catálogo) ---
+
+ex:modelo-speedstar a edintalu:ModeloLuminaria ;
+    edintalu:nombre "SpeedStar LED 72W" ;
+    edintalu:fabricadoPor ex:fabricante-luminarias .
+
+# --- Fabricantes ---
+
+ex:fabricante-luminarias a edintalu:Fabricante ;
+    edintalu:nombre "Signify" .
+
+ex:fabricante-postes a edintalu:Fabricante ;
+    edintalu:nombre "Valmont Industries" .
+
+# --- Propietario ---
+
+ex:ayto a edintalu:Propietario ;
+    edintalu:nombre "Ayuntamiento" .
+
+# --- Dirección ---
+
+ex:dir-001 a esdir:DireccionPostal ;
+    schema:streetAddress "Calle Mayor 1" ;
+    schema:addressLocality "Villaexample" ;
+    schema:addressRegion "Provincia" ;
+    schema:addressCountry "ES" .
+
+# --- Geometría ---
+
+ex:geom-001 a gsp:Geometry ;
+    gsp:asWKT "POINT (-3.70 40.42)"^^gsp:wktLiteral .

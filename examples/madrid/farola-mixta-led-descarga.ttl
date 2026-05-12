@@ -1,0 +1,65 @@
+@prefix : <http://example.org/madrid/alumbrado/> .
+@prefix edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ejemplo: Farola mixta LED + descarga (bicéfala), Madrid
+# Fuente: Ayuntamiento de Madrid — Unidades Luminosas
+#         Registro: tipo_bloqu=LBE120, TIPOL=LED-DESCARGA,
+#         DISTRITO=13, BARRIO=4
+#
+# Demuestra: farola con 2 luminarias de tecnología distinta
+# (LED y descarga), modelo de luminaria LBE120.
+#################################################################
+
+# --- Farola ---
+
+:farola_002 a edintalu:Farola ;
+    edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
+    edintalu:luminaria :lum_002_led , :lum_002_desc ;
+    edintalu:direccion :dir_002 ;
+    gsp:hasGeometry :geom_002 .
+
+# --- Luminaria LED (añadida) ---
+
+:lum_002_led a edintalu:Luminaria ;
+    edintalu:modeloLuminaria :modelo_LBE120 ;
+    edintalu:tieneLampara :lamp_002_led .
+
+:lamp_002_led a edintalu:Lampara ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:modeloBombilla "LBE120" .
+
+# --- Luminaria de descarga (original) ---
+
+:lum_002_desc a edintalu:Luminaria ;
+    edintalu:modeloLuminaria :modelo_LBE120 ;
+    edintalu:tieneLampara :lamp_002_desc .
+
+:lamp_002_desc a edintalu:Lampara ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapor-sodio-alta-presion> ;
+    edintalu:modeloBombilla "LBE120" .
+
+# --- Modelo de luminaria (catálogo) ---
+
+:modelo_LBE120 a edintalu:ModeloLuminaria ;
+    edintalu:nombre "LBE120" .
+
+# --- Dirección ---
+
+:dir_002 a esdir:DireccionPostal ;
+    schema:streetAddress "Avenida de Rafael Alberti 51" ;
+    schema:addressLocality "Madrid" ;
+    schema:addressRegion "Madrid" ;
+    schema:addressCountry "ES" .
+
+# --- Geometría ---
+
+:geom_002 a sf:Point ;
+    gsp:asWKT "POINT (-3.6933 40.3976)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
