@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> a skos:ConceptScheme ;
+    dc:title "Tipos de alimentación eléctrica"@es , "Electrical power supply types"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de alimentación eléctrica de farolas. Ampliada de 3 a 5 conceptos según Tenerife."@es ;
+    skos:definition "Taxonomy of electrical power supply types for streetlights. Expanded from 3 to 5 concepts based on Tenerife."@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> ;
+    skos:notation "subterranea" ;
+    skos:prefLabel "Subterránea"@es , "Underground"@en ;
+    skos:definition "Alimentación por cable subterráneo."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/aerea> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> ;
+    skos:notation "aerea" ;
+    skos:prefLabel "Aérea"@es , "Aerial"@en ;
+    skos:altLabel "Tensada"@es ;
+    skos:definition "Alimentación por cable aéreo."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/fachada> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> ;
+    skos:notation "fachada" ;
+    skos:prefLabel "Fachada"@es , "Wall"@en ;
+    skos:definition "Cable discurre por la fachada del edificio."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/grapada> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> ;
+    skos:notation "grapada" ;
+    skos:prefLabel "Grapada"@es , "Stapled"@en ;
+    skos:definition "Cable grapado a la pared o superficie (Tenerife)."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/bateria> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion> ;
+    skos:notation "bateria" ;
+    skos:prefLabel "Batería"@es , "Battery"@en ;
+    skos:altLabel "Autónoma"@es ;
+    skos:definition "Alimentación por batería autónoma (placa solar, Tenerife)."@es .

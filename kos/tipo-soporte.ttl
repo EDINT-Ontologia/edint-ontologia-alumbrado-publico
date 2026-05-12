@@ -1,0 +1,188 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> a skos:ConceptScheme ;
+    dc:title "Tipos de soporte de alumbrado público"@es , "Public lighting support types"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de soporte físico de farolas. Ampliada de 5 conceptos (v1.0-rc) a ~35 según Tenerife y Navarra."@es ;
+    skos:definition "Taxonomy of physical support types for streetlights. Expanded from 5 concepts (v1.0-rc) to ~35 based on Tenerife and Navarra."@en .
+
+# --- Conceptos ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "columna" ;
+    skos:prefLabel "Columna"@es , "Column"@en ;
+    skos:altLabel "Poste"@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-triconica> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-triconica" ;
+    skos:prefLabel "Columna troncónica"@es , "Conical column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-cilindrica> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-cilindrica" ;
+    skos:prefLabel "Columna cilíndrica"@es , "Cylindrical column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-clasica> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-clasica" ;
+    skos:prefLabel "Columna clásica"@es , "Classic column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-prim> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-prim" ;
+    skos:prefLabel "Columna prim"@es , "Prim column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-nickolson> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-nickolson" ;
+    skos:prefLabel "Columna Nickolson"@es , "Nickolson column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-doble-luminaria> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-doble-luminaria" ;
+    skos:prefLabel "Columna doble luminaria"@es , "Double luminaire column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna-diseno> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> ;
+    skos:notation "columna-diseno" ;
+    skos:prefLabel "Columna diseño"@es , "Design column"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "baculo" ;
+    skos:prefLabel "Báculo"@es , "Bracket"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo-doble> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    skos:notation "baculo-doble" ;
+    skos:prefLabel "Báculo doble"@es , "Double bracket"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo-dos-brazos> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    skos:notation "baculo-dos-brazos" ;
+    skos:prefLabel "Báculo de dos brazos"@es , "Two-arm bracket"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo-tres-brazos> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    skos:notation "baculo-tres-brazos" ;
+    skos:prefLabel "Báculo de tres brazos"@es , "Three-arm bracket"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/fachada> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "fachada" ;
+    skos:prefLabel "Fachada"@es , "Wall"@en ;
+    skos:altLabel "Pared"@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/brazo-fachada> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/fachada> ;
+    skos:notation "brazo-fachada" ;
+    skos:prefLabel "Brazo en fachada"@es , "Wall arm"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/pared-tunel> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/fachada> ;
+    skos:notation "pared-tunel" ;
+    skos:prefLabel "Pared túnel"@es , "Tunnel wall"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/postelete> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "postelete" ;
+    skos:prefLabel "Postelete"@es , "Short post"@en ;
+    skos:altLabel "Baliza"@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/postelete-zanca-hormigon> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/postelete> ;
+    skos:notation "postelete-zanca-hormigon" ;
+    skos:prefLabel "Postelete zanca hormigón"@es , "Short post concrete bracket"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste-zanja> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "poste-zanja" ;
+    skos:prefLabel "Poste en zanja"@es , "Trench post"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste-zanca> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "poste-zanca" ;
+    skos:prefLabel "Poste en zanca"@es , "Bracket post"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste-zanca-hormigon> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste-zanca> ;
+    skos:notation "poste-zanca-hormigon" ;
+    skos:prefLabel "Poste en zanca hormigón"@es , "Concrete bracket post"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/farola-suelo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "farola-suelo" ;
+    skos:prefLabel "Farola en suelo"@es , "Ground-level streetlight"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/cable-acero> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "cable-acero" ;
+    skos:prefLabel "Cable de acero"@es , "Steel cable"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/catenaria-tranvia> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "catenaria-tranvia" ;
+    skos:prefLabel "Catenaria de tranvía"@es , "Tram catenary"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/brazo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "brazo" ;
+    skos:prefLabel "Brazo"@es , "Arm"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/puente> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "puente" ;
+    skos:prefLabel "Puente"@es , "Bridge"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/marquesina> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "marquesina" ;
+    skos:prefLabel "Marquesina"@es , "Canopy"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/punto-techo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "punto-techo" ;
+    skos:prefLabel "Punto en techo"@es , "Ceiling point"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/pilona> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "pilona" ;
+    skos:prefLabel "Pilona"@es , "Bollard"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/colgante> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "colgante" ;
+    skos:prefLabel "Colgante"@es , "Pendant"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baliza> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "baliza" ;
+    skos:prefLabel "Baliza"@es , "Beacon"@en ;
+    skos:altLabel "Postelete"@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/sin-soporte> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> ;
+    skos:notation "sin-soporte" ;
+    skos:prefLabel "Sin soporte"@es , "No support"@en .

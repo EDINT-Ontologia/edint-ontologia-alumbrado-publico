@@ -1,0 +1,62 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> a skos:ConceptScheme ;
+    dc:title "Tipos de luminaria de alumbrado público"@es , "Public lighting luminaire types"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de luminaria según su forma y uso. 8 conceptos."@es ;
+    skos:definition "Taxonomy of luminaire types by shape and use. 8 concepts."@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viaria> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "viaria" ;
+    skos:prefLabel "Viaria"@es , "Road"@en ;
+    skos:definition "Luminaria diseñada para la iluminación de vías de circulación."@es ;
+    skos:definition "Luminaire designed for road lighting."@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/proyector> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "proyector" ;
+    skos:prefLabel "Proyector"@es , "Projector"@en ;
+    skos:altLabel "Floodlight"@en ;
+    skos:definition "Luminaria de haz concentrado para iluminación de grandes superficies."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/empotrado-pared> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "empotrado-pared" ;
+    skos:prefLabel "Empotrado en pared"@es , "Wall recessed"@en ;
+    skos:altLabel "Aplique"@es , "Wall-mounted"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/baliza> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "baliza" ;
+    skos:prefLabel "Baliza"@es , "Bollard"@en ;
+    skos:definition "Luminaria baja tipo baliza para iluminación peatonal o decorativa."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/artistica> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "artistica" ;
+    skos:prefLabel "Artística"@es , "Artistic"@en ;
+    skos:definition "Luminaria con diseño ornamental o histórico."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/colgante> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "colgante" ;
+    skos:prefLabel "Colgante"@es , "Pendant"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/suspension> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "suspension" ;
+    skos:prefLabel "Suspensión"@es , "Suspended"@en ;
+    skos:altLabel "Catenaria"@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/techo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> ;
+    skos:notation "techo" ;
+    skos:prefLabel "Techo"@es , "Ceiling"@en ;
+    skos:definition "Luminaria montada en techo o bóveda."@es .

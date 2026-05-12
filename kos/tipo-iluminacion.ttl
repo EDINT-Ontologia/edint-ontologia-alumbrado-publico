@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion> a skos:ConceptScheme ;
+    dc:title "Tipos de iluminación"@es , "Illumination types"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Clasificación del régimen de iluminación: nocturna o permanente."@es ;
+    skos:definition "Classification of the illumination regime: nighttime or permanent."@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion> ;
+    skos:notation "nocturna" ;
+    skos:prefLabel "Nocturna"@es , "Nighttime"@en ;
+    skos:definition "Iluminación encendida solo durante las horas nocturnas."@es ;
+    skos:definition "Lighting switched on only during nighttime hours."@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/permanente> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion> ;
+    skos:notation "permanente" ;
+    skos:prefLabel "Permanente"@es , "Permanent"@en ;
+    skos:altLabel "24h"@es ;
+    skos:definition "Iluminación encendida las 24 horas (túneles, etc.)."@es ;
+    skos:definition "Lighting switched on 24 hours (tunnels, etc.)."@en .

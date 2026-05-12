@@ -1,0 +1,98 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> a skos:ConceptScheme ;
+    dc:title "Tipos de lámpara de alumbrado público"@es , "Public lighting lamp types"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de lámpara (tecnología de fuente de luz). 12 conceptos."@es ;
+    skos:definition "Taxonomy of lamp types (light source technology). 12 concepts."@en .
+
+# --- LED ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "led" ;
+    skos:prefLabel "LED"@es , "LED"@en ;
+    skos:altLabel "Diodo emisor de luz"@es , "Light Emitting Diode"@en ;
+    skos:definition "Lámpara de diodos emisores de luz (estado sólido)."@es .
+
+# --- Descarga (categoría padre) ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "descarga" ;
+    skos:prefLabel "Descarga"@es , "Discharge"@en ;
+    skos:definition "Lámpara de descarga en gas (categoría general)."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapor-sodio-alta-presion> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> ;
+    skos:notation "vsap" ;
+    skos:prefLabel "Vapor de sodio alta presión"@es , "High-pressure sodium vapor"@en ;
+    skos:altLabel "VSAP"@es , "HPS"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapor-sodio-baja-presion> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> ;
+    skos:notation "vsbp" ;
+    skos:prefLabel "Vapor de sodio baja presión"@es , "Low-pressure sodium vapor"@en ;
+    skos:altLabel "VSBP"@es , "LPS"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapor-mercurio> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> ;
+    skos:notation "vm" ;
+    skos:prefLabel "Vapor de mercurio"@es , "Mercury vapor"@en ;
+    skos:altLabel "VM"@es , "MV"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenuro-metalico> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:broader <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> ;
+    skos:notation "hm" ;
+    skos:prefLabel "Halogenuro metálico"@es , "Metal halide"@en ;
+    skos:altLabel "HM"@es , "MH"@en .
+
+# --- Mixta ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led-descarga> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "led-descarga" ;
+    skos:prefLabel "LED-Descarga"@es , "LED-Discharge"@en ;
+    skos:definition "Farola con luminarias mixtas LED y descarga (0.6% en Madrid)."@es .
+
+# --- Incandescencia ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/incandescente> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "incandescente" ;
+    skos:prefLabel "Incandescente"@es , "Incandescent"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogen> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "halogena" ;
+    skos:prefLabel "Halógena"@es , "Halogen"@en .
+
+# --- Fluorescente ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/fluorescente> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "fluorescente" ;
+    skos:prefLabel "Fluorescente"@es , "Fluorescent"@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/induccion> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "induccion" ;
+    skos:prefLabel "Inducción"@es , "Induction"@en ;
+    skos:altLabel "Fluorescente por inducción"@es .
+
+# --- Sin lámpara ---
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/sin-lampara> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> ;
+    skos:notation "sin-lampara" ;
+    skos:prefLabel "Sin lámpara"@es , "No lamp"@en .

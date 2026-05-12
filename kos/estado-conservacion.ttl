@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> a skos:ConceptScheme ;
+    dc:title "Estado de conservación de farolas"@es , "Streetlight conservation status"@en ;
+    dc:creator "FEMP" ;
+    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition """Estado de conservación de la farola según la metodología EIEL. 
+        5 niveles: Excelente, Bueno, Regular, Malo, En ejecución. 
+        Basado en Castellón (B/R/M/E) y La Palma (B/R/M)."""@es ;
+    skos:definition """Conservation status of the streetlight according to the EIEL methodology. 
+        5 levels: Excellent, Good, Regular, Poor, Under construction. 
+        Based on Castellón (B/R/M/E) and La Palma (B/R/M)."""@en .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/excelente> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> ;
+    skos:notation "E" ;
+    skos:prefLabel "Excelente"@es , "Excellent"@en ;
+    skos:altLabel "E"@es ;
+    skos:definition "Farola en perfecto estado de conservación y funcionamiento."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/bueno> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> ;
+    skos:notation "B" ;
+    skos:prefLabel "Bueno"@es , "Good"@en ;
+    skos:altLabel "B"@es ;
+    skos:definition "Farola en buen estado con desgaste mínimo."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/regular> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> ;
+    skos:notation "R" ;
+    skos:prefLabel "Regular"@es , "Regular"@en ;
+    skos:altLabel "R"@es ;
+    skos:definition "Farola con desgaste apreciable que precisa mantenimiento preventivo."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/malo> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> ;
+    skos:notation "M" ;
+    skos:prefLabel "Malo"@es , "Poor"@en ;
+    skos:altLabel "M"@es ;
+    skos:definition "Farola en mal estado que precisa reparación o sustitución."@es .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/en-ejecucion> a skos:Concept ;
+    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion> ;
+    skos:notation "EJ" ;
+    skos:prefLabel "En ejecución"@es , "Under construction"@en ;
+    skos:altLabel "Ejecución"@es ;
+    skos:definition "Farola en proceso de instalación o reforma."@es .
