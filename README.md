@@ -7,11 +7,10 @@ Ontología para la representación de datos de alumbrado público en el contexto
 El propósito de esta ontología es modelar los datos de alumbrado público publicados por entidades locales españolas, permitiendo:
 
 - La publicación de inventarios de farolas como datos abiertos vinculados
-- La auditoría energética del consumo eléctrico por períodos tarifarios
+- La auditoría energética del consumo eléctrico
 - La evaluación del estado de conservación de las instalaciones
-- El cálculo de indicadores ODS-EL de la FEMP (7.2.EL05, 7.2.EL06, 11.7.EL05, 11.7.EL41)
 
-El alcance cubre: composición modular de farolas, infraestructura eléctrica, consumo energético, catálogo de modelos, parámetros fotométricos y contaminación lumínica. **IoT/telegestión queda excluido de esta versión.**
+El alcance cubre: composición modular de farolas, infraestructura eléctrica, consumo energético, catálogo de modelos, parámetros fotométricos y contaminación lumínica.
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
