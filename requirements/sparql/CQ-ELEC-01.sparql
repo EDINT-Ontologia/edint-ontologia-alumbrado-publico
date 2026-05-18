@@ -1,0 +1,27 @@
+# =============================================================================
+# QUERY: CQ-ELEC-01
+# Question: ¿Qué farolas dependen de cada centro de mando?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas agrupadas por centro de mando
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando ?farola
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:centroDeMando ?centroDeMando .
+}
+ORDER BY ?centroDeMando ?farola
+
+# -----------------------------------------------------------------------------
+# Farolas de un centro de mando específico
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:centroDeMando <URI-CENTRO-DE-MANDO> .
+}

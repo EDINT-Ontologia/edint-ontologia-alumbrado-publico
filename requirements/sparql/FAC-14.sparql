@@ -1,0 +1,24 @@
+# =============================================================================
+# FACT: FAC-14
+# Statement: Una farola mixta LED-DESCARGA se modela con múltiples luminarias
+# Verification: Farolas con más de 1 luminaria son mixtas
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+# -----------------------------------------------------------------------------
+# Farolas con múltiples luminarias (mixtas LED + descarga)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola (GROUP_CONCAT(DISTINCT ?tipoLabel; separator=" + ") AS ?tiposLampara) (COUNT(?lum) AS ?numLuminarias)
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:tipoLampara ?tipoURI .
+  ?tipoURI skos:prefLabel ?tipoLabel .
+  FILTER(LANG(?tipoLabel) = "es")
+}
+GROUP BY ?farola
+HAVING (COUNT(?lum) > 1)

@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-08
+# Statement: Una luminaria puede referenciar un modelo de catálogo
+# Verification: La cardinalidad es 0..1 (opcional, máximo 1)
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Luminarias con más de 1 modelo de catálogo (violación de cardinalidad)
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?luminaria (COUNT(?modelo) AS ?numModelos)
+WHERE {
+  ?luminaria a edintalu:Luminaria .
+  OPTIONAL { ?luminaria edintalu:modeloLuminaria ?modelo . }
+}
+GROUP BY ?luminaria
+HAVING (COUNT(?modelo) > 1)

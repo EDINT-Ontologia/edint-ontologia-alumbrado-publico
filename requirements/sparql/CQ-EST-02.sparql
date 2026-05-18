@@ -1,0 +1,46 @@
+# =============================================================================
+# QUERY: CQ-EST-02
+# Question: ¿Qué farolas han superado su vida útil L70?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infrastructures/alumbrado-publico#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Farolas cuyas lámparas han superado su vida útil L70
+# Compara: (fecha actual - fecha instalación) en horas > vidaUtilL70
+# Nota: Requiere función de fecha del motor SPARQL.
+# Aquí se usa una aproximación simplificada comparando la edad en horas.
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?fechaInstalacion ?vidaUtilL70 ?horasUsoEstimadas
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:fechaInstalacion ?fechaInstalacion ;
+        edintalu:vidaUtilL70 ?vidaUtilL70 .
+  # Estimación: horas de uso = días desde instalación × horas/día de funcionamiento
+  # Se necesita una función de fecha del motor SPARQL para calcular la diferencia
+  # Ejemplo con Jena: (NOW() - ?fechaInstalacion) * 24 * factorHorasDia
+  # Aquí se muestra la estructura de la consulta
+}
+ORDER BY ?vidaUtilL70
+
+# -----------------------------------------------------------------------------
+# Versión simplificada: lámparas con más de N horas estimadas de uso
+# comparado con su vida útil L70 (datos directos si se dispone de horas de uso)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?vidaUtilL70
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:vidaUtilL70 ?vidaUtilL70 ;
+        edintalu:fechaInstalacion ?fecha .
+  # Cálculo aproximado: asumiendo ~12h/día de funcionamiento
+  # horasUso = (NOW() - ?fecha) * 12
+  BIND((YEAR(NOW()) - YEAR(?fecha)) * 365.25 * 12 AS ?horasEstimadas)
+  FILTER(?horasEstimadas > xsd:decimal(?vidaUtilL70))
+}

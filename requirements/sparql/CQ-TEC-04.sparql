@@ -1,0 +1,45 @@
+# =============================================================================
+# QUERY: CQ-TEC-04
+# Question: ¿Qué modelos de luminaria existen y de qué fabricante?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Modelos de luminaria con su fabricante
+# -----------------------------------------------------------------------------
+
+SELECT ?modelo ?fabricante
+WHERE {
+  ?modelo a edintalu:ModeloLuminaria ;
+          edintalu:fabricadoPor ?fabricante .
+  ?fabricante a edintalu:Fabricante .
+}
+ORDER BY ?modelo
+
+# -----------------------------------------------------------------------------
+# Modelos de luminaria (incluyendo los que no tienen fabricante asignado)
+# -----------------------------------------------------------------------------
+
+SELECT ?modelo ?fabricante
+WHERE {
+  ?modelo a edintalu:ModeloLuminaria .
+  OPTIONAL {
+    ?modelo edintalu:fabricadoPor ?fab .
+    ?fab edintalu:nombre ?fabricante .
+  }
+}
+ORDER BY ?modelo
+
+# -----------------------------------------------------------------------------
+# Número de luminarias por modelo de catálogo
+# -----------------------------------------------------------------------------
+
+SELECT ?modelo (COUNT(?lum) AS ?usos)
+WHERE {
+  ?lum a edintalu:Luminaria ;
+       edintalu:modeloLuminaria ?modelo .
+  ?modelo a edintalu:ModeloLuminaria .
+}
+GROUP BY ?modelo
+ORDER BY DESC(?usos)

@@ -1,0 +1,35 @@
+# =============================================================================
+# QUERY: CQ-INV-03
+# Question: ¿Cuántas farolas hay de cada tipo de soporte?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+# -----------------------------------------------------------------------------
+# Número de farolas por tipo de soporte (usando label del concepto SKOS)
+# -----------------------------------------------------------------------------
+
+SELECT ?tipoLabel (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:poste ?poste .
+  ?poste edintalu:tipoSoporte ?tipo .
+  ?tipo skos:prefLabel ?tipoLabel .
+  FILTER(LANG(?tipoLabel) = "es")
+}
+GROUP BY ?tipoLabel
+ORDER BY DESC(?total)
+
+# -----------------------------------------------------------------------------
+# Número de farolas por tipo de soporte (sin label, usando URI del concepto)
+# -----------------------------------------------------------------------------
+
+SELECT ?tipo (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:poste ?poste .
+  ?poste edintalu:tipoSoporte ?tipo .
+}
+GROUP BY ?tipo
+ORDER BY DESC(?total)

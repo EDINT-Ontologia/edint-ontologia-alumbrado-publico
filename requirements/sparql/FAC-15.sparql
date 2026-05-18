@@ -1,0 +1,31 @@
+# =============================================================================
+# FACT: FAC-15
+# Statement: El estado de conservación usa SKOS de 5 niveles
+# Verification: La propiedad estadoConservacion apunta a skos:Concept
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+
+# -----------------------------------------------------------------------------
+# Conceptos de estado de conservación en el SKOS scheme
+# -----------------------------------------------------------------------------
+
+SELECT ?concepto ?label
+WHERE {
+  ?concepto a skos:Concept ;
+            skos:inScheme edintkos:ConservationStatus ;
+            skos:prefLabel ?label .
+  FILTER(LANG(?label) = "es")
+}
+ORDER BY ?label
+
+# -----------------------------------------------------------------------------
+# Verificar que la ontología declara rdfs:range skos:Concept
+# para la propiedad estadoConservacion
+# -----------------------------------------------------------------------------
+
+ASK {
+  edintalu:estadoConservacion rdfs:range skos:Concept .
+}

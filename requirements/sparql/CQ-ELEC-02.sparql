@@ -1,0 +1,18 @@
+# =============================================================================
+# QUERY: CQ-ELEC-02
+# Question: ¿Cuántas farolas dependen de cada centro de mando?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Número de farolas por centro de mando
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando (COUNT(?f) AS ?totalFarolas)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:centroDeMando ?centroDeMando .
+}
+GROUP BY ?centroDeMando
+ORDER BY DESC(?totalFarolas)

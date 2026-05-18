@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-11
+# Statement: Una farola puede disponer de reductor de flujo en la luminaria o al inicio
+# Verification: Cardinalidad 0..n (opcional)
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas con reductor de flujo y tipo (luminaria / inicio)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?enLuminaria ?enInicio
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:disponeReductorFlujo ?reductor .
+  ?reductor edintalu:esReductorFlujoLuminaria ?enLuminaria ;
+            edintalu:esReductorFlujoInicio ?enInicio .
+}
+ORDER BY ?farola

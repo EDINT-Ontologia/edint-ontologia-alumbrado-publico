@@ -1,0 +1,41 @@
+# =============================================================================
+# QUERY: CQ-TEC-01
+# Question: ¿Cuántas farolas usan LED vs descarga vs mixtas?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+# -----------------------------------------------------------------------------
+# Número de farolas por tipo de lámpara (LED, descarga, etc.)
+# Una farola puede tener múltiples luminarias (caso mixto)
+# -----------------------------------------------------------------------------
+
+SELECT ?tipoLampara (COUNT(DISTINCT ?f) AS ?totalFarolas)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:tipoLampara ?tipoURI .
+  ?tipoURI skos:prefLabel ?tipoLampara .
+  FILTER(LANG(?tipoLampara) = "es")
+}
+GROUP BY ?tipoLampara
+ORDER BY DESC(?totalFarolas)
+
+# -----------------------------------------------------------------------------
+# Farolas mixtas (LED + descarga): farolas con más de una luminaria
+# de distinto tipo de lámpara
+# -----------------------------------------------------------------------------
+
+SELECT ?farola (GROUP_CONCAT(DISTINCT ?tipoLabel; separator=", ") AS ?tiposLampara)
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:tipoLampara ?tipoURI .
+  ?tipoURI skos:prefLabel ?tipoLabel .
+  FILTER(LANG(?tipoLabel) = "es")
+}
+GROUP BY ?farola
+HAVING (COUNT(DISTINCT ?tipoURI) > 1)

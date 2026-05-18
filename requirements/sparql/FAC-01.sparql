@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-01
+# Statement: Una farola tiene exactamente un poste
+# Verification: Todas las farolas deben tener exactamente 1 poste
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas que NO cumplen: tienen 0 o más de 1 poste
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola (COUNT(?poste) AS ?numPostes)
+WHERE {
+  ?farola a edintalu:Farola .
+  OPTIONAL { ?farola edintalu:poste ?poste . }
+}
+GROUP BY ?farola
+HAVING (COUNT(?poste) != 1)
