@@ -2,13 +2,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkoslightclass: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/> .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> a skos:ConceptScheme ;
-    dc:title "Clases luminotécnicas según EN 13201"@es , "Lighting classes according to EN 13201"@en ;
-    dc:creator "FEMP" ;
-    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+edintkos:LightingClass a skos:ConceptScheme ;
+    dct:title "Clases luminotécnicas según EN 13201"@es , "Lighting classes according to EN 13201"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
     skos:definition """Clasificación luminotécnica según la norma UNE-EN 13201 para determinar 
         los requisitos mínimos de alumbrado. 
         A: autopistas, B: arteriales, C: colectoras, D: residenciales, E: peatonales."""@es ;
@@ -16,40 +18,40 @@
         minimum lighting requirements. 
         A: motorways, B: arterial, C: collector, D: residential, E: pedestrian."""@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/a> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> ;
+edintkoslightclass:a a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
     skos:notation "A" ;
     skos:prefLabel "Clase A"@es , "Class A"@en ;
     skos:altLabel "Autopista"@es , "Motorway"@en ;
     skos:definition "Vías de alta velocidad y tráfico denso: autopistas y autovías."@es ;
     skos:definition "High-speed, high-traffic roads: motorways and expressways."@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/b> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> ;
+edintkoslightclass:b a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
     skos:notation "B" ;
     skos:prefLabel "Clase B"@es , "Class B"@en ;
     skos:altLabel "Arterial"@es , "Arterial"@en ;
     skos:definition "Vías de velocidad media-alta: calles arteriales urbanas principales."@es ;
     skos:definition "Medium-high speed roads: main urban arterial streets."@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/c> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> ;
+edintkoslightclass:c a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
     skos:notation "C" ;
     skos:prefLabel "Clase C"@es , "Class C"@en ;
     skos:altLabel "Colectora"@es , "Collector"@en ;
     skos:definition "Vías de velocidad media: calles colectoras que distribuyen tráfico entre arteriales y residenciales."@es ;
     skos:definition "Medium speed roads: collector streets distributing traffic between arterial and residential."@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/d> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> ;
+edintkoslightclass:d a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
     skos:notation "D" ;
     skos:prefLabel "Clase D"@es , "Class D"@en ;
     skos:altLabel "Residencial"@es , "Residential"@en ;
     skos:definition "Vías de velocidad baja: calles residenciales con acceso a viviendas."@es ;
     skos:definition "Low speed roads: residential streets with housing access."@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/e> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica> ;
+edintkoslightclass:e a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
     skos:notation "E" ;
     skos:prefLabel "Clase E"@es , "Class E"@en ;
     skos:altLabel "Peatonal"@es , "Pedestrian"@en ;

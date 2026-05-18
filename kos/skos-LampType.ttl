@@ -1,0 +1,100 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkoslamptype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/> .
+
+edintkos:LampType a skos:ConceptScheme ;
+    dct:title "Tipos de lámpara de alumbrado público"@es , "Public lighting lamp types"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de lámpara (tecnología de fuente de luz). 12 conceptos."@es ;
+    skos:definition "Taxonomy of lamp types (light source technology). 12 concepts."@en .
+
+# --- LED ---
+
+edintkoslamptype:led a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "led" ;
+    skos:prefLabel "LED"@es , "LED"@en ;
+    skos:altLabel "Diodo emisor de luz"@es , "Light Emitting Diode"@en ;
+    skos:definition "Lámpara de diodos emisores de luz (estado sólido)."@es .
+
+# --- Descarga (categoría padre) ---
+
+edintkoslamptype:descarga a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "descarga" ;
+    skos:prefLabel "Descarga"@es , "Discharge"@en ;
+    skos:definition "Lámpara de descarga en gas (categoría general)."@es .
+
+edintkoslamptype:vapor-sodio-alta-presion a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:broader edintkoslamptype:descarga ;
+    skos:notation "vsap" ;
+    skos:prefLabel "Vapor de sodio alta presión"@es , "High-pressure sodium vapor"@en ;
+    skos:altLabel "VSAP"@es , "HPS"@en .
+
+edintkoslamptype:vapor-sodio-baja-presion a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:broader edintkoslamptype:descarga ;
+    skos:notation "vsbp" ;
+    skos:prefLabel "Vapor de sodio baja presión"@es , "Low-pressure sodium vapor"@en ;
+    skos:altLabel "VSBP"@es , "LPS"@en .
+
+edintkoslamptype:vapor-mercurio a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:broader edintkoslamptype:descarga ;
+    skos:notation "vm" ;
+    skos:prefLabel "Vapor de mercurio"@es , "Mercury vapor"@en ;
+    skos:altLabel "VM"@es , "MV"@en .
+
+edintkoslamptype:halogenuro-metalico a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:broader edintkoslamptype:descarga ;
+    skos:notation "hm" ;
+    skos:prefLabel "Halogenuro metálico"@es , "Metal halide"@en ;
+    skos:altLabel "HM"@es , "MH"@en .
+
+# --- Mixta ---
+
+edintkoslamptype:led-descarga a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "led-descarga" ;
+    skos:prefLabel "LED-Descarga"@es , "LED-Discharge"@en ;
+    skos:definition "Farola con luminarias mixtas LED y descarga (0.6% en Madrid)."@es .
+
+# --- Incandescencia ---
+
+edintkoslamptype:incandescente a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "incandescente" ;
+    skos:prefLabel "Incandescente"@es , "Incandescent"@en .
+
+edintkoslamptype:halogen a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "halogena" ;
+    skos:prefLabel "Halógena"@es , "Halogen"@en .
+
+# --- Fluorescente ---
+
+edintkoslamptype:fluorescente a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "fluorescente" ;
+    skos:prefLabel "Fluorescente"@es , "Fluorescent"@en .
+
+edintkoslamptype:induccion a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "induccion" ;
+    skos:prefLabel "Inducción"@es , "Induction"@en ;
+    skos:altLabel "Fluorescente por inducción"@es .
+
+# --- Sin lámpara ---
+
+edintkoslamptype:sin-lampara a skos:Concept ;
+    skos:inScheme edintkos:LampType ;
+    skos:notation "sin-lampara" ;
+    skos:prefLabel "Sin lámpara"@es , "No lamp"@en .

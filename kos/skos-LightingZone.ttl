@@ -2,14 +2,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkoslightzone: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/> .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado> a skos:ConceptScheme ;
-    dc:title "Zonas de alumbrado según REEAE"@es , "Lighting zones according to REEAE"@en ;
-    dc:creator "FEMP" ;
-    dcterms:created "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
-    dcterms:source <https://www.boe.es/eli/es/rd/2008/11/14/1890> ;
+edintkos:LightingZone a skos:ConceptScheme ;
+    dct:title "Zonas de alumbrado según REEAE"@es , "Lighting zones according to REEAE"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dct:source <https://www.boe.es/eli/es/rd/2008/11/14/1890> ;
     skos:definition """Clasificación de zonas ambientales de alumbrado según el Reglamento de Eficiencia Energética 
         de Instalaciones de Alumbrado Exterior (REEAE, RD 1890/2008). 
         E1: máxima protección, E2: alta, E3: media, E4: baja."""@es ;
@@ -17,8 +19,8 @@
         of Outdoor Lighting Installations (REEAE, RD 1890/2008). 
         E1: maximum protection, E2: high, E3: medium, E4: low."""@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/e1> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado> ;
+edintkoslightzone:e1 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
     skos:notation "E1" ;
     skos:prefLabel "E1"@es , "E1"@en ;
     skos:altLabel "Zona E1"@es ;
@@ -27,8 +29,8 @@
     skos:definition """Maximum protection zone. National parks, reserves, areas with natural dark landscapes. 
         Maximum FHS: 0%. Illuminance ≤ 1 lux."""@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/e2> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado> ;
+edintkoslightzone:e2 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
     skos:notation "E2" ;
     skos:prefLabel "E2"@es , "E2"@en ;
     skos:altLabel "Zona E2"@es ;
@@ -37,8 +39,8 @@
     skos:definition """High protection zone. Non-developable land, rural areas. 
         Maximum FHS: 5%. Illuminance ≤ 5 lux."""@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/e3> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado> ;
+edintkoslightzone:e3 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
     skos:notation "E3" ;
     skos:prefLabel "E3"@es , "E3"@en ;
     skos:altLabel "Zona E3"@es ;
@@ -47,8 +49,8 @@
     skos:definition """Medium protection zone. Urban and peri-urban residential areas. 
         Maximum FHS: 15%. Illuminance ≤ 10 lux."""@en .
 
-<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/e4> a skos:Concept ;
-    skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado> ;
+edintkoslightzone:e4 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
     skos:notation "E4" ;
     skos:prefLabel "E4"@es , "E4"@en ;
     skos:altLabel "Zona E4"@es ;
