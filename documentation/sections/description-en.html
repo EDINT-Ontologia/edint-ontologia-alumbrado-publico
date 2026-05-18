@@ -11,6 +11,7 @@ Figure 1. Conceptual model of the ontology</figcaption></center></p>
 <p>Street lighting classifications (support type, lamp type, conservation status, lighting zone, lighting class, etc.) are represented via object properties pointing to SKOS concepts, organized in independent concept schemes available in the <code>kos/</code> folder.</p>
 
 <p>The <a href="#Fabricante">manufacturer</a> and <a href="#Propietario">owner</a> are referenceable entities (not strings), allowing them to be linked to organizations or other agents. The <a href="#ModeloLuminaria">luminaire model</a> serves as a catalog entry, linking manufacturer, nominal power and specifications.</p>
+</span>
 
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
 @prefix edintalu: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#&gt; .
@@ -96,5 +97,6 @@ ex:geom-001 a gsp:Geometry ;
         matchBrackets: true
     });
 </script>
+<span class="markdown">
 The example above shows a portion of the RDF knowledge graph for a public lighting streetlight. The <strong>control center</strong> (CM-001) is the supply point on which the streetlight depends, and has an associated <strong>electricity supply</strong> contract with tariff 6.1. <strong>Energy consumption</strong> is represented as a SOSA observation: each instance (one per tariff period) has as result a <code>qudt:QuantityValue</code> with the numeric value and unit (kWh). The <strong>streetlight</strong> is an urban element with infrastructure type <code>StreeLamp</code> (EDINT SKOS), composed of a <strong>post</strong> (with its arm at 6.5 m), a <strong>luminaire</strong> (with a 72 W LED lamp) and a reference to a <strong>catalog model</strong>. Classifications (lighting type ME4b, zone E3, support type báculo, lamp type LED) are represented via SKOS concepts. The postal address reuses <code>esdir:DireccionPostal</code> and the geometry from GeoSPARQL.
 </span>

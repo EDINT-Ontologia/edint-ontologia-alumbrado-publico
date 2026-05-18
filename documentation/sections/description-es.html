@@ -11,6 +11,7 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
 <p>Las clasificaciones del alumbrado (tipo de soporte, tipo de lámpara, estado de conservación, zona de alumbrado, clase luminotécnica, etc.) se representan mediante propiedades de objeto que apuntan a conceptos SKOS, organizados en esquemas de conceptos independientes disponibles en la carpeta <code>kos/</code>.</p>
 
 <p>El <a href="#Fabricante">fabricante</a> y el <a href="#Propietario">propietario</a> son entidades referenciables (no strings), lo que permite vincularlos a organizaciones u otros agentes. El <a href="#ModeloLuminaria">modelo de luminaria</a> actúa como entrada del catálogo de modelos, permitiendo vincular fabricante, potencia nominal y especificaciones.</p>
+</span>
 
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
 @prefix edintalu: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#&gt; .
@@ -96,5 +97,6 @@ ex:geom-001 a gsp:Geometry ;
         matchBrackets: true
     });
 </script>
+<span class="markdown">
 En el ejemplo anterior se muestra una porción del grafo de conocimiento en RDF para una farola de alumbrado público. El <strong>centro de mando</strong> (CM-001) es el punto de suministro del que depende la farola, y tiene asociado un contrato de <strong>suministro eléctrico</strong> con tarifa 6.1. El <strong>consumo energético</strong> se representa como una observación SOSA: cada instancia (una por período tarifario) tiene como resultado un <code>qudt:QuantityValue</code> con el valor numérico y la unidad (kWh). La <strong>farola</strong> es un elemento urbano con tipo de infraestructura <code>StreeLamp</code> (SKOS de EDINT), compuesta por un <strong>poste</strong> (con su brazo a 6,5 m), una <strong>luminaria</strong> (con una lámpara LED de 72 W) y referencia a un <strong>modelo de catálogo</strong>. Las clasificaciones (tipo de alumbrado ME4b, zona E3, tipo de soporte báculo, tipo de lámpara LED) se representan mediante conceptos SKOS. La dirección postal se reutiliza de <code>esdir:DireccionPostal</code> y la geometría de GeoSPARQL.
 </span>
