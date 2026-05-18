@@ -1,66 +1,52 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintconservstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ConservationStatus/> .
-
-#################################################################
-#
-#    Concept Scheme
-#
-#################################################################
+@prefix edintkosconservsta: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ConservationStatus/> .
 
 edintkos:ConservationStatus a skos:ConceptScheme ;
-    dct:issued "2026-05-07"^^xsd:date ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
-    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
-    rdfs:label "Estado de conservación"@es ;
-    rdfs:label "Conservation status"@en ;
-    dct:title "Concept scheme grouping conservation status levels of streetlights according to the EIEL methodology."@en ;
-    dct:title "Esquema de conceptos agrupando niveles de estado de conservación de farolas según la metodología EIEL."@es ;
-    skos:definition "Conservation status of the streetlight according to the EIEL methodology. 5 levels: Excellent, Good, Regular, Poor, Under construction. Based on Castellón (B/R/M/E) and La Palma (B/R/M)."@en ;
-    skos:definition "Estado de conservación de la farola según la metodología EIEL. 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución. Basado en Castellón (B/R/M/E) y La Palma (B/R/M)."@es .
+    dct:title "Estado de conservación de farolas"@es , "Streetlight conservation status"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition """Estado de conservación de la farola según la metodología EIEL. 
+        5 niveles: Excelente, Bueno, Regular, Malo, En ejecución. 
+        Basado en Castellón (B/R/M/E) y La Palma (B/R/M)."""@es ;
+    skos:definition """Conservation status of the streetlight according to the EIEL methodology. 
+        5 levels: Excellent, Good, Regular, Poor, Under construction. 
+        Based on Castellón (B/R/M/E) and La Palma (B/R/M)."""@en .
 
-#################################################################
-#
-#    Concepts
-#
-#################################################################
-
-edintconservstatus:excelente a skos:Concept ;
+edintkosconservsta:excelente a skos:Concept ;
     skos:inScheme edintkos:ConservationStatus ;
     skos:notation "E" ;
     skos:prefLabel "Excelente"@es , "Excellent"@en ;
     skos:altLabel "E"@es ;
     skos:definition "Farola en perfecto estado de conservación y funcionamiento."@es .
 
-edintconservstatus:bueno a skos:Concept ;
+edintkosconservsta:bueno a skos:Concept ;
     skos:inScheme edintkos:ConservationStatus ;
     skos:notation "B" ;
     skos:prefLabel "Bueno"@es , "Good"@en ;
     skos:altLabel "B"@es ;
     skos:definition "Farola en buen estado con desgaste mínimo."@es .
 
-edintconservstatus:regular a skos:Concept ;
+edintkosconservsta:regular a skos:Concept ;
     skos:inScheme edintkos:ConservationStatus ;
     skos:notation "R" ;
     skos:prefLabel "Regular"@es , "Regular"@en ;
     skos:altLabel "R"@es ;
     skos:definition "Farola con desgaste apreciable que precisa mantenimiento preventivo."@es .
 
-edintconservstatus:malo a skos:Concept ;
+edintkosconservsta:malo a skos:Concept ;
     skos:inScheme edintkos:ConservationStatus ;
     skos:notation "M" ;
     skos:prefLabel "Malo"@es , "Poor"@en ;
     skos:altLabel "M"@es ;
     skos:definition "Farola en mal estado que precisa reparación o sustitución."@es .
 
-edintconservstatus:en-ejecucion a skos:Concept ;
+edintkosconservsta:en-ejecucion a skos:Concept ;
     skos:inScheme edintkos:ConservationStatus ;
     skos:notation "EJ" ;
     skos:prefLabel "En ejecución"@es , "Under construction"@en ;

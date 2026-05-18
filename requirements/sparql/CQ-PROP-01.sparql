@@ -1,18 +1,13 @@
 # =============================================================================
 # QUERY: CQ-PROP-01
 # Question: ¿Quién es el propietario de cada farola?
-# Note: Se usa edintinf:hasRegisteredOwner (de la ontología de infraestructura
-# EDINT) en lugar de edintalu:propietario, que ha sido eliminado.
-# Farola hereda de edintinf:UrbanElement → edintinf:InfrastructureElement,
-# que es el dominio de hasRegisteredOwner.
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
-PREFIX schema:   <http://schema.org/>
 
 # -----------------------------------------------------------------------------
-# Propietario (titular registrado) de cada farola
+# Propietario registrado de cada farola
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?propietario
@@ -23,8 +18,7 @@ WHERE {
 ORDER BY ?farola
 
 # -----------------------------------------------------------------------------
-# Propietario de cada farola (con nombre de la organización)
-# edintinf:Organization ⊂ schema:Organization, que tiene schema:name
+# Propietario de cada farola (con nombre del propietario)
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?nombrePropietario
@@ -32,7 +26,7 @@ WHERE {
   ?farola a edintalu:Farola ;
           edintinf:hasRegisteredOwner ?propietario .
   ?propietario a edintinf:Organization ;
-               schema:name ?nombrePropietario .
+               edintalu:nombre ?nombrePropietario .
 }
 ORDER BY ?nombrePropietario
 

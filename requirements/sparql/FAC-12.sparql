@@ -5,7 +5,6 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
-PREFIX schema:   <http://schema.org/>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 
 # -----------------------------------------------------------------------------

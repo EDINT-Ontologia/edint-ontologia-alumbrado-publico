@@ -6,7 +6,6 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
-PREFIX schema:   <http://schema.org/>
 
 # -----------------------------------------------------------------------------
 # Conteo de farolas por distrito (para calcular densidad, dividir por
@@ -28,7 +27,6 @@ ORDER BY DESC(?totalFarolas)
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
-PREFIX schema:   <http://schema.org/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?distrito (COUNT(?f) AS ?totalFarolas) ?superficieKm2

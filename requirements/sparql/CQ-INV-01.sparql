@@ -6,7 +6,6 @@
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
-PREFIX schema:   <http://schema.org/>
 
 # -----------------------------------------------------------------------------
 # Número total de farolas por municipio
@@ -24,11 +23,6 @@ ORDER BY DESC(?totalFarolas)
 # -----------------------------------------------------------------------------
 # Número total de farolas por distrito dentro de un municipio
 # -----------------------------------------------------------------------------
-
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
-PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
-PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
-PREFIX schema:   <http://schema.org/>
 
 SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
