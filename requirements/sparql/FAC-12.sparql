@@ -5,7 +5,6 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
-PREFIX schema:   <http://schema.org/>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 
 # -----------------------------------------------------------------------------
@@ -16,7 +15,7 @@ PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 SELECT ?farola
 WHERE {
   ?farola a edintalu:Farola .
-  FILTER NOT EXISTS { ?farola schema:address ?addr . }
+  FILTER NOT EXISTS { ?farola edintalu:direccion ?addr . }
 }
 
 # -----------------------------------------------------------------------------

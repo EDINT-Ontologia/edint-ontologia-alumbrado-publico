@@ -4,15 +4,16 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
 
 # -----------------------------------------------------------------------------
-# Propietario de cada farola
+# Propietario registrado de cada farola
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?propietario
 WHERE {
   ?farola a edintalu:Farola ;
-          edintalu:propietario ?propietario .
+          edintinf:hasRegisteredOwner ?propietario .
 }
 ORDER BY ?farola
 
@@ -23,8 +24,8 @@ ORDER BY ?farola
 SELECT ?farola ?nombrePropietario
 WHERE {
   ?farola a edintalu:Farola ;
-          edintalu:propietario ?propietario .
-  ?propietario a edintalu:Propietario ;
+          edintinf:hasRegisteredOwner ?propietario .
+  ?propietario a edintinf:Organization ;
                edintalu:nombre ?nombrePropietario .
 }
 ORDER BY ?nombrePropietario
@@ -36,7 +37,7 @@ ORDER BY ?nombrePropietario
 SELECT ?propietario (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:propietario ?propietario .
+     edintinf:hasRegisteredOwner ?propietario .
 }
 GROUP BY ?propietario
 ORDER BY DESC(?totalFarolas)
