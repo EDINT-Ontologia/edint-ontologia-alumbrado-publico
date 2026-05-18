@@ -3,7 +3,7 @@
 # Question: ¿Qué farolas han superado su vida útil L70?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infrastructures/alumbrado-publico#>
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------

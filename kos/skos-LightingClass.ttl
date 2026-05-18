@@ -1,0 +1,200 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintlightingclass: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:LightingClass a skos:ConceptScheme ;
+    dct:issued "2026-05-07"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Clase de alumbrado"@es ;
+    rdfs:label "Lighting class"@en ;
+    dct:title "Concept scheme grouping road lighting classes according to UNE-EN 13201."@en ;
+    dct:title "Esquema de conceptos agrupando clases de alumbrado vial según la norma UNE-EN 13201."@es ;
+    skos:definition "Road lighting classes according to UNE-EN 13201. M classes (carriageways), C classes (conflict zones), S classes (pedestrian)."@en ;
+    skos:definition "Clases de alumbrado vial según la norma UNE-EN 13201. Clases M (calzadas), C (zonas de conflicto), S (peatonales)."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+# --- Clases M (calzadas para vehículos) ---
+
+edintlightingclass:m1 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M1" ;
+    skos:prefLabel "M1"@es , "M1"@en ;
+    skos:definition "Clase M1 — calzadas de alta velocidad con mucho tráfico."@es .
+
+edintlightingclass:m2 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M2" ;
+    skos:prefLabel "M2"@es , "M2"@en .
+
+edintlightingclass:m3 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M3" ;
+    skos:prefLabel "M3"@es , "M3"@en .
+
+edintlightingclass:m4 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M4" ;
+    skos:prefLabel "M4"@es , "M4"@en .
+
+edintlightingclass:m5 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M5" ;
+    skos:prefLabel "M5"@es , "M5"@en .
+
+edintlightingclass:m6 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "M6" ;
+    skos:prefLabel "M6"@es , "M6"@en .
+
+# --- Clases C (zonas de conflicto) ---
+
+edintlightingclass:c0 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C0" ;
+    skos:prefLabel "C0"@es , "C0"@en .
+
+edintlightingclass:c1 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C1" ;
+    skos:prefLabel "C1"@es , "C1"@en .
+
+edintlightingclass:c2 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C2" ;
+    skos:prefLabel "C2"@es , "C2"@en .
+
+edintlightingclass:c3 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C3" ;
+    skos:prefLabel "C3"@es , "C3"@en .
+
+edintlightingclass:c4 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C4" ;
+    skos:prefLabel "C4"@es , "C4"@en .
+
+edintlightingclass:c5 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "C5" ;
+    skos:prefLabel "C5"@es , "C5"@en .
+
+# --- Clases S (peatonales) ---
+
+edintlightingclass:s1 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S1" ;
+    skos:prefLabel "S1"@es , "S1"@en .
+
+edintlightingclass:s2 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S2" ;
+    skos:prefLabel "S2"@es , "S2"@en .
+
+edintlightingclass:s3 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S3" ;
+    skos:prefLabel "S3"@es , "S3"@en .
+
+edintlightingclass:s4 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S4" ;
+    skos:prefLabel "S4"@es , "S4"@en .
+
+edintlightingclass:s5 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S5" ;
+    skos:prefLabel "S5"@es , "S5"@en .
+
+edintlightingclass:s6 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "S6" ;
+    skos:prefLabel "S6"@es , "S6"@en .
+
+# --- Clases ME (anteriores, mantenidas por compatibilidad) ---
+
+edintlightingclass:me1 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME1" ;
+    skos:prefLabel "ME1"@es , "ME1"@en ;
+    skos:definition "Clase ME1 (norma anterior). Mantenida por compatibilidad."@es .
+
+edintlightingclass:me2 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME2" ;
+    skos:prefLabel "ME2"@es , "ME2"@en .
+
+edintlightingclass:me3a a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME3a" ;
+    skos:prefLabel "ME3a"@es , "ME3a"@en .
+
+edintlightingclass:me3b a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME3b" ;
+    skos:prefLabel "ME3b"@es , "ME3b"@en .
+
+edintlightingclass:me3c a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME3c" ;
+    skos:prefLabel "ME3c"@es , "ME3c"@en .
+
+edintlightingclass:me4 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME4" ;
+    skos:prefLabel "ME4"@es , "ME4"@en .
+
+edintlightingclass:me5 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME5" ;
+    skos:prefLabel "ME5"@es , "ME5"@en .
+
+edintlightingclass:me6 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "ME6" ;
+    skos:prefLabel "ME6"@es , "ME6"@en .
+
+# --- Clases CE (anteriores, zonas de conflicto) ---
+
+edintlightingclass:ce1 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "CE1" ;
+    skos:prefLabel "CE1"@es , "CE1"@en .
+
+edintlightingclass:ce2 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "CE2" ;
+    skos:prefLabel "CE2"@es , "CE2"@en .
+
+edintlightingclass:ce3 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "CE3" ;
+    skos:prefLabel "CE3"@es , "CE3"@en .
+
+edintlightingclass:ce4 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "CE4" ;
+    skos:prefLabel "CE4"@es , "CE4"@en .
+
+edintlightingclass:ce5 a skos:Concept ;
+    skos:inScheme edintkos:LightingClass ;
+    skos:notation "CE5" ;
+    skos:prefLabel "CE5"@es , "CE5"@en .

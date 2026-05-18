@@ -1,31 +1,38 @@
 # =============================================================================
 # QUERY: CQ-PROP-01
 # Question: ¿Quién es el propietario de cada farola?
+# Note: Se usa edintinf:hasRegisteredOwner (de la ontología de infraestructura
+# EDINT) en lugar de edintalu:propietario, que ha sido eliminado.
+# Farola hereda de edintinf:UrbanElement → edintinf:InfrastructureElement,
+# que es el dominio de hasRegisteredOwner.
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX schema:   <http://schema.org/>
 
 # -----------------------------------------------------------------------------
-# Propietario de cada farola
+# Propietario (titular registrado) de cada farola
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?propietario
 WHERE {
   ?farola a edintalu:Farola ;
-          edintalu:propietario ?propietario .
+          edintinf:hasRegisteredOwner ?propietario .
 }
 ORDER BY ?farola
 
 # -----------------------------------------------------------------------------
-# Propietario de cada farola (con nombre del propietario)
+# Propietario de cada farola (con nombre de la organización)
+# edintinf:Organization ⊂ schema:Organization, que tiene schema:name
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?nombrePropietario
 WHERE {
   ?farola a edintalu:Farola ;
-          edintalu:propietario ?propietario .
-  ?propietario a edintalu:Propietario ;
-               edintalu:nombre ?nombrePropietario .
+          edintinf:hasRegisteredOwner ?propietario .
+  ?propietario a edintinf:Organization ;
+               schema:name ?nombrePropietario .
 }
 ORDER BY ?nombrePropietario
 
@@ -36,7 +43,7 @@ ORDER BY ?nombrePropietario
 SELECT ?propietario (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:propietario ?propietario .
+     edintinf:hasRegisteredOwner ?propietario .
 }
 GROUP BY ?propietario
 ORDER BY DESC(?totalFarolas)

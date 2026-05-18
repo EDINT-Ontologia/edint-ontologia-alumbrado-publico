@@ -15,7 +15,7 @@ PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 SELECT ?municipio ?estadoLabel (COUNT(?f) AS ?total)
 WHERE {
   ?f a edintalu:Farola ;
-     schema:address ?addr ;
+     edintalu:direccion ?addr ;
      edintalu:estadoConservacion ?estado .
   ?addr esdir:municipio ?municipio .
   ?estado skos:prefLabel ?estadoLabel .

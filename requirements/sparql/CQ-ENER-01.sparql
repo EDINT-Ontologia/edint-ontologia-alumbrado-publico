@@ -5,7 +5,7 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
-PREFIX schema:   <http://schema.org/>
+PREFIX schema:   <http://schema.org/>  # schema:streetAddress, schema:addressLocality etc. on esdir:DireccionPostal
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 SELECT ?municipio (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
 WHERE {
   ?f a edintalu:Farola ;
-     schema:address ?addr ;
+     edintalu:direccion ?addr ;
      edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
   ?lamp edintalu:potenciaNominal ?pot .
@@ -31,7 +31,7 @@ ORDER BY DESC(?potenciaTotalW)
 SELECT ?distrito (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
 WHERE {
   ?f a edintalu:Farola ;
-     schema:address ?addr ;
+     edintalu:direccion ?addr ;
      edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
   ?lamp edintalu:potenciaNominal ?pot .
