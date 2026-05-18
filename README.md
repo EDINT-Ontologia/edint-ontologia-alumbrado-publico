@@ -18,7 +18,7 @@ El prefijo de la ontología *Alumbrado Público* es: `edintalu` publicado bajo e
 
 # Modelo conceptual (Ontology conceptualization)
 
-![Diagrama del modelo conceptual](diagrams/modelo-conceptual.svg)
+![Diagrama del modelo conceptual](diagrams/edint-ontologia-alumbrado-publico.drawio.png)
 
 # Estructura del repositorio
 
