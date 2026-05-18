@@ -9,7 +9,7 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix qudtu: <http://qudt.org/vocab/unit/> .
 @prefix schema: <http://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #################################################################
@@ -46,7 +46,7 @@ ex:consumo-001-llano a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 8500 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
     edintalu:ejercicio "2024"^^xsd:gYear .
 
 ex:consumo-001-valle a edintalu:ConsumoEnergetico ;
@@ -55,7 +55,7 @@ ex:consumo-001-valle a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 4200 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/valle> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
     edintalu:ejercicio "2024"^^xsd:gYear .
 
 # --- Farola ---
@@ -66,14 +66,14 @@ ex:farola-001 a edintalu:Farola ;
     edintalu:poste ex:poste-001 ;
     edintalu:luminaria ex:lum-001 ;
     edintalu:caja ex:caja-001 ;
-    edintalu:propietario ex:ayto ;
+    edintinf:hasRegisteredOwner ex:ayto ;
     edintalu:disponeReductorFlujo ex:reductor-001 ;
-    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/ME4b> ;
-    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea> ;
-    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> ;
-    edintalu:estadoConservacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/estado-conservacion/bueno> ;
-    edintalu:zonaAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/zona-alumbrado/E3> ;
-    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/B> ;
+    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4> ;
+    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
+    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
+    edintalu:estadoConservacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/ConservationStatus/bueno> ;
+    edintalu:zonaAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/e3> ;
+    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/b> ;
     edintalu:horasDeFuncionamiento "22:00-07:00" ;
     edintalu:metodoDeControl "Reloj astronómico" ;
     edintalu:direccion ex:dir-001 ;
@@ -82,7 +82,7 @@ ex:farola-001 a edintalu:Farola ;
 # --- Poste ---
 
 ex:poste-001 a edintalu:Poste ;
-    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/bacula> ;
+    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
     edintalu:altura 8 ;
     qudt:applicableUnit qudtu:M ;
     edintalu:numeroDeBrazos 1 ;
@@ -100,7 +100,7 @@ ex:poste-001-brazo1 a edintalu:Brazo ;
 ex:lum-001 a edintalu:Luminaria ;
     edintalu:tieneLampara ex:lamp-001 ;
     edintalu:modeloLuminaria ex:modelo-speedstar ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viaria> ;
+    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
     edintalu:flujoHemisfericoSuperior 1 ;
     qudt:applicableUnit qudtu:PERCENT ;
     edintalu:material "Aluminio inyectado" ;
@@ -109,7 +109,7 @@ ex:lum-001 a edintalu:Luminaria ;
 # --- Lámpara (LED con parámetros fotométricos) ---
 
 ex:lamp-001 a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
     edintalu:potenciaNominal 72 ;
     qudt:applicableUnit qudtu:W ;
     edintalu:flujoLuminoso 8600 ;
@@ -125,7 +125,7 @@ ex:lamp-001 a edintalu:Lampara ;
 # --- Caja de conexiones ---
 
 ex:caja-001 a edintalu:Caja ;
-    edintalu:tipoCable <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-cable/ET106> ;
+    edintalu:tipoCable <http://vocab.linkeddata.es/datosabiertos/kos/edint/CableType/et106> ;
     edintalu:material "Policarbonato" .
 
 # --- Reductor de flujo ---
@@ -150,7 +150,7 @@ ex:fabricante-postes a edintalu:Fabricante ;
 
 # --- Propietario ---
 
-ex:ayto a edintalu:Propietario ;
+ex:ayto a edintinf:Organization ;
     edintalu:nombre "Ayuntamiento" .
 
 # --- Dirección ---

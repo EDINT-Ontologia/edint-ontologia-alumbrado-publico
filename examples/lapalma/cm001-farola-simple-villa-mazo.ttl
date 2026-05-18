@@ -7,7 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix qudtu: <http://qudt.org/vocab/unit/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ============================================================================
@@ -23,7 +23,7 @@
 
 exlp:cm-001 a edintalu:CentroDeMando ;
     edintalu:nombre "CM-001" ;
-    dcterms:spatial exlp:cm-001-loc .
+    dct:spatial exlp:cm-001-loc .
 
 exlp:cm-001-loc a esdir:DireccionPostal ;
     schema:streetAddress "Avenida Enrique Mederos" ;
@@ -38,10 +38,10 @@ exlp:f1002 a edintalu:Farola ;
     edintalu:centroDeMando exlp:cm-001 ;
     edintalu:poste exlp:f1002-poste ;
     edintalu:luminaria exlp:f1002-lum1 ;
-    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/clase-luminotecnica/C> ;
-    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/S3> ;
-    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea> ;
-    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> ;
+    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/c> ;
+    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/s3> ;
+    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
+    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
     edintalu:horasDeFuncionamiento "Noche entera" ;
     edintalu:numeroDeLuminarias 1 ;
     edintalu:calidadDato "B" ;
@@ -60,18 +60,18 @@ exlp:f1002-geom a gsp:Geometry ;
 # --- Poste ---
 
 exlp:f1002-poste a edintalu:Poste ;
-    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
     edintalu:altura 5 ;
     qudt:applicableUnit qudtu:M .
 
 # --- Luminaria + Lámpara (LED 80W) ---
 
 exlp:f1002-lum1 a edintalu:Luminaria ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariaVidrioPlano> ;
+    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
     edintalu:tieneLampara exlp:f1002-lum1-lamp .
 
 exlp:f1002-lum1-lamp a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
     edintalu:potenciaNominal 80 ;
     qudt:applicableUnit qudtu:W ;
     edintalu:temperaturaColor 4000 ;
