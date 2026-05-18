@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintpowersupplytype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:PowerSupplyType a skos:ConceptScheme ;
+    dct:issued "2026-05-07"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Tipo de alimentación"@es ;
+    rdfs:label "Power supply type"@en ;
+    dct:title "Concept scheme grouping types of electrical power supply for streetlights."@en ;
+    dct:title "Esquema de conceptos agrupando tipos de alimentación eléctrica de farolas."@es ;
+    skos:definition "Taxonomy of electrical power supply types for streetlights. Expanded from 3 to 5 concepts based on Tenerife."@en ;
+    skos:definition "Taxonomía de tipos de alimentación eléctrica de farolas. Ampliada de 3 a 5 conceptos según Tenerife."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintpowersupplytype:subterranea a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "subterranea" ;
+    skos:prefLabel "Subterránea"@es , "Underground"@en ;
+    skos:definition "Alimentación por cable subterráneo."@es .
+
+edintpowersupplytype:aerea a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "aerea" ;
+    skos:prefLabel "Aérea"@es , "Aerial"@en ;
+    skos:altLabel "Tensada"@es ;
+    skos:definition "Alimentación por cable aéreo."@es .
+
+edintpowersupplytype:fachada a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "fachada" ;
+    skos:prefLabel "Fachada"@es , "Wall"@en ;
+    skos:definition "Cable discurre por la fachada del edificio."@es .
+
+edintpowersupplytype:grapada a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "grapada" ;
+    skos:prefLabel "Grapada"@es , "Stapled"@en ;
+    skos:definition "Cable grapado a la pared o superficie (Tenerife)."@es .
+
+edintpowersupplytype:bateria a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "bateria" ;
+    skos:prefLabel "Batería"@es , "Battery"@en ;
+    skos:altLabel "Autónoma"@es ;
+    skos:definition "Alimentación por batería autónoma (placa solar, Tenerife)."@es .

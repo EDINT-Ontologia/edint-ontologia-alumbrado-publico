@@ -1,0 +1,41 @@
+# =============================================================================
+# QUERY: CQ-INV-01
+# Question: ¿Cuál es el número total de farolas por municipio y distrito?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX schema:   <http://schema.org/>
+
+# -----------------------------------------------------------------------------
+# Número total de farolas por municipio
+# -----------------------------------------------------------------------------
+
+SELECT ?municipio (COUNT(?f) AS ?totalFarolas)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:direccion ?addr .
+  ?addr esdir:municipio ?municipio .
+}
+GROUP BY ?municipio
+ORDER BY DESC(?totalFarolas)
+
+# -----------------------------------------------------------------------------
+# Número total de farolas por distrito dentro de un municipio
+# -----------------------------------------------------------------------------
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX schema:   <http://schema.org/>
+
+SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:direccion ?addr .
+  ?addr esdir:municipio <URI-MUNICIPIO> ;
+        esdir:distrito ?distrito .
+}
+GROUP BY ?distrito
+ORDER BY DESC(?totalFarolas)

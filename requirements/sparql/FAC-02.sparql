@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-02
+# Statement: Una farola puede tener una o más luminarias
+# Verification: Todas las farolas deben tener al menos 1 luminaria
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas que NO cumplen: tienen 0 luminarias
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola (COUNT(?lum) AS ?numLuminarias)
+WHERE {
+  ?farola a edintalu:Farola .
+  OPTIONAL { ?farola edintalu:luminaria ?lum . }
+}
+GROUP BY ?farola
+HAVING (COUNT(?lum) < 1)

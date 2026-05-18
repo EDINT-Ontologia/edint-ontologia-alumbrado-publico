@@ -1,0 +1,45 @@
+# =============================================================================
+# QUERY: CQ-ENER-02
+# Question: ¿Cuál es el consumo eléctrico anual por centro de mando y período tarifario?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Consumo eléctrico por centro de mando y período tarifario
+# Cada ConsumoEnergetico es una observación SOSA con resultado QUDT
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando ?periodo (SUM(xsd:decimal(?value)) AS ?consumoKWh)
+WHERE {
+  ?centroDeMando edintalu:tieneSuministro ?suministro .
+  ?suministro edintalu:tieneConsumo ?consumo .
+  ?consumo a edintalu:ConsumoEnergetico ;
+           sosa:hasResult ?result ;
+           edintalu:periodoTarifario ?periodoURI .
+  ?result qudt:numericValue ?value ;
+          qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+  ?periodoURI skos:prefLabel ?periodo .
+  FILTER(LANG(?periodo) = "es")
+}
+GROUP BY ?centroDeMando ?periodo
+ORDER BY ?centroDeMando ?periodo
+
+# -----------------------------------------------------------------------------
+# Consumo total anual de un centro de mando específico (todos los períodos)
+# -----------------------------------------------------------------------------
+
+SELECT (SUM(xsd:decimal(?value)) AS ?consumoTotalKWh)
+WHERE {
+  <URI-CENTRO-DE-MANDO> edintalu:tieneSuministro ?suministro .
+  ?suministro edintalu:tieneConsumo ?consumo .
+  ?consumo a edintalu:ConsumoEnergetico ;
+           sosa:hasResult ?result .
+  ?result qudt:numericValue ?value ;
+          qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+}

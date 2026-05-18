@@ -1,0 +1,42 @@
+# =============================================================================
+# QUERY: CQ-ENER-01
+# Question: ¿Cuál es la potencia total instalada por municipio/distrito?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:   <http://schema.org/>  # schema:streetAddress, schema:addressLocality etc. on esdir:DireccionPostal
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Potencia total instalada (W) por municipio
+# -----------------------------------------------------------------------------
+
+SELECT ?municipio (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:direccion ?addr ;
+     edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:potenciaNominal ?pot .
+  ?addr esdir:municipio ?municipio .
+}
+GROUP BY ?municipio
+ORDER BY DESC(?potenciaTotalW)
+
+# -----------------------------------------------------------------------------
+# Potencia total instalada (W) por distrito dentro de un municipio
+# -----------------------------------------------------------------------------
+
+SELECT ?distrito (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:direccion ?addr ;
+     edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:potenciaNominal ?pot .
+  ?addr esdir:municipio <URI-MUNICIPIO> ;
+       esdir:distrito ?distrito .
+}
+GROUP BY ?distrito
+ORDER BY DESC(?potenciaTotalW)

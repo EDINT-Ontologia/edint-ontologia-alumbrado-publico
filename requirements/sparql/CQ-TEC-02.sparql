@@ -1,0 +1,41 @@
+# =============================================================================
+# QUERY: CQ-TEC-02
+# Question: ¿Cuál es la eficacia luminosa media (lm/W) por tecnología?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Eficacia luminosa media (lm/W) por tipo de lámpara
+# Calcula flujoLuminoso / potenciaNominal por lámpara y luego promedia por tipo
+# -----------------------------------------------------------------------------
+
+SELECT ?tipoLampara (AVG(xsd:decimal(?flujo) / xsd:decimal(?pot)) AS ?eficaciaLmPorW)
+WHERE {
+  ?lamp a edintalu:Lampara ;
+        edintalu:tipoLampara ?tipoURI ;
+        edintalu:flujoLuminoso ?flujo ;
+        edintalu:potenciaNominal ?pot .
+  FILTER(xsd:decimal(?pot) > 0)
+  ?tipoURI skos:prefLabel ?tipoLampara .
+  FILTER(LANG(?tipoLampara) = "es")
+}
+GROUP BY ?tipoLampara
+ORDER BY DESC(?eficaciaLmPorW)
+
+# -----------------------------------------------------------------------------
+# Si la ontología tiene la propiedad edintalu:eficaciaLuminosa directamente
+# -----------------------------------------------------------------------------
+
+SELECT ?tipoLampara (AVG(xsd:decimal(?eficacia)) AS ?eficaciaLmPorW)
+WHERE {
+  ?lamp a edintalu:Lampara ;
+        edintalu:tipoLampara ?tipoURI ;
+        edintalu:eficaciaLuminosa ?eficacia .
+  ?tipoURI skos:prefLabel ?tipoLampara .
+  FILTER(LANG(?tipoLampara) = "es")
+}
+GROUP BY ?tipoLampara
+ORDER BY DESC(?eficaciaLmPorW)

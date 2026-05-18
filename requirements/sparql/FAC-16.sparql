@@ -1,0 +1,31 @@
+# =============================================================================
+# FACT: FAC-16
+# Statement: La zona de alumbrado se clasifica E1-E4 según REEAE
+# Verification: La propiedad zonaAlumbrado apunta a skos:Concept
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+
+# -----------------------------------------------------------------------------
+# Conceptos de zona de alumbrado en el SKOS scheme (E1-E4)
+# -----------------------------------------------------------------------------
+
+SELECT ?concepto ?label
+WHERE {
+  ?concepto a skos:Concept ;
+            skos:inScheme edintkos:LightingZone ;
+            skos:prefLabel ?label .
+  FILTER(LANG(?label) = "es")
+}
+ORDER BY ?label
+
+# -----------------------------------------------------------------------------
+# Verificar que la ontología declara rdfs:range skos:Concept
+# para la propiedad zonaAlumbrado
+# -----------------------------------------------------------------------------
+
+ASK {
+  edintalu:zonaAlumbrado rdfs:range skos:Concept .
+}

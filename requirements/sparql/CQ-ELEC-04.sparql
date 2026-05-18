@@ -1,0 +1,29 @@
+# =============================================================================
+# QUERY: CQ-ELEC-04
+# Question: ¿Cuál es la cobertura geográfica de cada centro de mando?
+# Note: Calcula el bounding box de las farolas asociadas a cada CM
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+
+# -----------------------------------------------------------------------------
+# Cobertura geográfica (bounding box) de cada centro de mando
+# calculada a partir de las geometrías de sus farolas
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando
+       (MIN(?lat) AS ?minLat) (MAX(?lat) AS ?maxLat)
+       (MIN(?lon) AS ?minLon) (MAX(?lon) AS ?maxLon)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:centroDeMando ?centroDeMando ;
+     gsp:hasGeometry ?geom .
+  ?geom gsp:asWKT ?wkt .
+  # Nota: la extracción de lat/lon desde WKT depende del motor SPARQL.
+  # Con Apache Jena, se pueden usar afn:spatial* functions.
+  # Aquí se asume que las coordenadas están disponibles como valores separados.
+  BIND(0 AS ?lat)  # Placeholder: reemplazar con extracción real del WKT
+  BIND(0 AS ?lon)  # Placeholder: reemplazar con extracción real del WKT
+}
+GROUP BY ?centroDeMando

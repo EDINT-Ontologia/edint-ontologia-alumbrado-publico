@@ -1,0 +1,39 @@
+# =============================================================================
+# QUERY: CQ-TEC-03
+# Question: ¿Qué farolas tienen eficacia luminosa inferior a X lm/W?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Farolas con lámparas de eficacia luminosa inferior a un umbral X lm/W
+# Sustituir 80 por el umbral deseado
+# Calcula eficacia como flujoLuminoso / potenciaNominal
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?flujo ?potencia (xsd:decimal(?flujo) / xsd:decimal(?pot) AS ?eficaciaLmPorW)
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:flujoLuminoso ?flujo ;
+        edintalu:potenciaNominal ?pot .
+  FILTER(xsd:decimal(?pot) > 0)
+  FILTER((xsd:decimal(?flujo) / xsd:decimal(?pot)) < 80)
+}
+ORDER BY ?eficaciaLmPorW
+
+# -----------------------------------------------------------------------------
+# Usando la propiedad edintalu:eficaciaLuminosa directamente
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?eficacia
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:eficaciaLuminosa ?eficacia .
+  FILTER(xsd:decimal(?eficacia) < 80)
+}
+ORDER BY ?eficacia

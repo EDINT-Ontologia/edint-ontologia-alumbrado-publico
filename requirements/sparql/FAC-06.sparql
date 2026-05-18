@@ -1,0 +1,18 @@
+# =============================================================================
+# FACT: FAC-06
+# Statement: Un centro de mando tiene un suministro eléctrico
+# Verification: Todos los centros de mando deben tener un suministro
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Centros de mando que NO cumplen: no tienen suministro eléctrico
+# (Resultado vacío = todos cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando
+WHERE {
+  ?centroDeMando a edintalu:CentroDeMando .
+  FILTER NOT EXISTS { ?centroDeMando edintalu:tieneSuministro ?sum . }
+}

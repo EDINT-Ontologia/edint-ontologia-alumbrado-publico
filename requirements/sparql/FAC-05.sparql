@@ -1,0 +1,18 @@
+# =============================================================================
+# FACT: FAC-05
+# Statement: Una farola depende de un centro de mando
+# Verification: Todas las farolas deben tener un centroDeMando
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas que NO cumplen: no tienen centro de mando asignado
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola .
+  FILTER NOT EXISTS { ?farola edintalu:centroDeMando ?cm . }
+}

@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edinttariffperiod: <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:TariffPeriod a skos:ConceptScheme ;
+    dct:issued "2026-05-07"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Período tarifario"@es ;
+    rdfs:label "Tariff period"@en ;
+    dct:title "Concept scheme grouping electricity billing time periods according to Spanish regulation."@en ;
+    dct:title "Esquema de conceptos agrupando períodos horarios de facturación eléctrica según la regulación española."@es ;
+    skos:definition "Electricity billing time periods according to Spanish regulation."@en ;
+    skos:definition "Períodos horarios de facturación eléctrica según la regulación española."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edinttariffperiod:activo a skos:Concept ;
+    skos:inScheme edintkos:TariffPeriod ;
+    skos:notation "activo" ;
+    skos:prefLabel "Activo"@es , "Active"@en ;
+    skos:definition "Período activo de la tarifa eléctrica con 2.0, 2.1 y 3.0"@es ;
+    skos:definition "Active period of the electricity tariff with 2.0, 2.1 and 3.0"@en ;
+    skos:topConceptOf edintkos:TariffPeriod .
+
+edinttariffperiod:llano a skos:Concept ;
+    skos:inScheme edintkos:TariffPeriod ;
+    skos:notation "llano" ;
+    skos:prefLabel "Llano"@es , "Standard"@en ;
+    skos:definition "Período llano o estándar de la tarifa eléctrica"@es ;
+    skos:definition "Standard period of the electricity tariff"@en ;
+    skos:topConceptOf edintkos:TariffPeriod .
+
+edinttariffperiod:valle a skos:Concept ;
+    skos:inScheme edintkos:TariffPeriod ;
+    skos:notation "valle" ;
+    skos:prefLabel "Valle"@es , "Off-peak"@en ;
+    skos:definition "Período valle o fuera punta de la tarifa eléctrica"@es ;
+    skos:definition "Off-peak period of the electricity tariff"@en ;
+    skos:topConceptOf edintkos:TariffPeriod .
+
+edinttariffperiod:punta a skos:Concept ;
+    skos:inScheme edintkos:TariffPeriod ;
+    skos:notation "punta" ;
+    skos:prefLabel "Punta"@es , "Peak"@en ;
+    skos:definition "Período punta de máxima demanda de la tarifa eléctrica"@es ;
+    skos:definition "Peak period of maximum demand of the electricity tariff"@en ;
+    skos:topConceptOf edintkos:TariffPeriod .

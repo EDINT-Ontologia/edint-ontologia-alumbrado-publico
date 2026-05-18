@@ -1,0 +1,41 @@
+# =============================================================================
+# QUERY: CQ-LUM-02
+# Question: ¿Cuál es la temperatura de color media en zonas residenciales?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Temperatura de color (CCT) media en zonas residenciales (E2)
+# -----------------------------------------------------------------------------
+
+SELECT (AVG(xsd:decimal(?cct)) AS ?temperaturaColorMediaK)
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:zonaAlumbrado ?zona ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:temperaturaColor ?cct .
+  ?zona skos:prefLabel ?zonaLabel .
+  FILTER(LANG(?zonaLabel) = "es")
+  FILTER(CONTAINS(?zonaLabel, "E2"))  # Zona residencial
+}
+
+# -----------------------------------------------------------------------------
+# Temperatura de color media por zona de alumbrado
+# -----------------------------------------------------------------------------
+
+SELECT ?zonaLabel (AVG(xsd:decimal(?cct)) AS ?temperaturaColorMediaK)
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:zonaAlumbrado ?zona ;
+          edintalu:luminaria ?lum .
+  ?lum edintalu:tieneLampara ?lamp .
+  ?lamp edintalu:temperaturaColor ?cct .
+  ?zona skos:prefLabel ?zonaLabel .
+  FILTER(LANG(?zonaLabel) = "es")
+}
+GROUP BY ?zonaLabel
+ORDER BY ?zonaLabel

@@ -1,0 +1,31 @@
+# =============================================================================
+# FACT: FAC-12
+# Statement: Una farola tiene dirección postal y coordenadas geográficas
+# Verification: Todas las farolas deben tener dirección y geometría
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX schema:   <http://schema.org/>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+
+# -----------------------------------------------------------------------------
+# Farolas sin dirección postal
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola .
+  FILTER NOT EXISTS { ?farola edintalu:direccion ?addr . }
+}
+
+# -----------------------------------------------------------------------------
+# Farolas sin coordenadas geográficas
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola .
+  FILTER NOT EXISTS { ?farola gsp:hasGeometry ?geom . }
+}

@@ -1,0 +1,34 @@
+# =============================================================================
+# QUERY: CQ-INV-04
+# Question: ¿Qué farolas están situadas en una calle específica?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:   <http://schema.org/>
+
+# -----------------------------------------------------------------------------
+# Farolas en una calle específica (búsqueda por nombre de vía)
+# Sustituir 'Calle Buscada' por el nombre de la calle deseada
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?direccionCompleta
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:direccion ?addr .
+  ?addr schema:streetAddress ?direccionCompleta .
+  FILTER(CONTAINS(?direccionCompleta, "Calle Buscada"))
+}
+ORDER BY ?direccionCompleta
+
+# -----------------------------------------------------------------------------
+# Farolas en una calle exacta (dirección completa)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?direccionCompleta
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:direccion ?addr .
+  ?addr schema:streetAddress ?direccionCompleta .
+  FILTER(?direccionCompleta = "C/ Alcalá, 25, Madrid")
+}

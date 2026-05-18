@@ -1,0 +1,41 @@
+# =============================================================================
+# QUERY: CQ-ENER-04
+# Question: ¿Cuál es la proporción de kWh renovables respecto al total?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Proporción de kWh renovables respecto al consumo total por centro de mando
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando
+       ?kwhRenovables
+       ?consumoTotalKWh
+       (xsd:decimal(?kwhRenovables) / ?consumoTotalKWh * 100 AS ?porcentajeRenovable)
+WHERE {
+  ?centroDeMando edintalu:tieneSuministro ?sum .
+  ?sum edintalu:kwhRenovables ?kwhRenovables ;
+       edintalu:tieneConsumo ?consumo .
+  ?consumo a edintalu:ConsumoEnergetico ;
+           sosa:hasResult ?result .
+  ?result qudt:numericValue ?value ;
+          qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+  {
+    SELECT ?centroDeMando (SUM(xsd:decimal(?v)) AS ?consumoTotalKWh)
+    WHERE {
+      ?centroDeMando edintalu:tieneSuministro ?sum2 .
+      ?sum2 edintalu:tieneConsumo ?cons2 .
+      ?cons2 a edintalu:ConsumoEnergetico ;
+             sosa:hasResult ?res2 .
+      ?res2 qudt:numericValue ?v ;
+            qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+    }
+    GROUP BY ?centroDeMando
+  }
+}
+ORDER BY DESC(?porcentajeRenovable)

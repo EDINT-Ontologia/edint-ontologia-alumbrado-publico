@@ -1,0 +1,19 @@
+# =============================================================================
+# FACT: FAC-13
+# Statement: Un poste puede tener uno o más brazos
+# Verification: Cardinalidad 0..n (opcional, sin límite superior)
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Postes con número de brazos
+# -----------------------------------------------------------------------------
+
+SELECT ?poste (COUNT(?brazo) AS ?numBrazos)
+WHERE {
+  ?poste a edintalu:Poste .
+  OPTIONAL { ?poste edintalu:tieneBrazo ?brazo . }
+}
+GROUP BY ?poste
+ORDER BY DESC(?numBrazos)

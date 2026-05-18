@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-04
+# Statement: Una farola puede tener opcionalmente una caja de conexiones
+# Verification: Las farolas pueden tener 0 o 1 caja
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas que NO cumplen: tienen más de 1 caja
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola (COUNT(?caja) AS ?numCajas)
+WHERE {
+  ?farola a edintalu:Farola .
+  OPTIONAL { ?farola edintalu:caja ?caja . }
+}
+GROUP BY ?farola
+HAVING (COUNT(?caja) > 1)

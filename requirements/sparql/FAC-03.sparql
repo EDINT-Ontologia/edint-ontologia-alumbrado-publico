@@ -1,0 +1,20 @@
+# =============================================================================
+# FACT: FAC-03
+# Statement: Cada luminaria aloja exactamente una lámpara
+# Verification: Todas las luminarias deben tener exactamente 1 lámpara
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Luminarias que NO cumplen: tienen 0 o más de 1 lámpara
+# (Resultado vacío = todas cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?luminaria (COUNT(?lamp) AS ?numLamparas)
+WHERE {
+  ?luminaria a edintalu:Luminaria .
+  OPTIONAL { ?luminaria edintalu:tieneLampara ?lamp . }
+}
+GROUP BY ?luminaria
+HAVING (COUNT(?lamp) != 1)

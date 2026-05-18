@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintphotometricclass: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PhotometricClass/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:PhotometricClass a skos:ConceptScheme ;
+    dct:issued "2026-05-07"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Clase luminotécnica"@es ;
+    rdfs:label "Photometric class"@en ;
+    dct:title "Concept scheme grouping photometric classes according to UNE-EN 13201 for determining minimum lighting requirements."@en ;
+    dct:title "Esquema de conceptos agrupando clases luminotécnicas según UNE-EN 13201 para determinar los requisitos mínimos de alumbrado."@es ;
+    skos:definition "Classification of lighting class according to UNE-EN 13201 for determining minimum lighting requirements. A: motorways, B: arterial, C: collector, D: residential, E: pedestrian."@en ;
+    skos:definition "Clasificación luminotécnica según la norma UNE-EN 13201 para determinar los requisitos mínimos de alumbrado. A: autopistas, B: arteriales, C: colectoras, D: residenciales, E: peatonales."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintphotometricclass:a a skos:Concept ;
+    skos:inScheme edintkos:PhotometricClass ;
+    skos:notation "A" ;
+    skos:prefLabel "Clase A"@es , "Class A"@en ;
+    skos:altLabel "Autopista"@es , "Motorway"@en ;
+    skos:definition "Vías de alta velocidad y tráfico denso: autopistas y autovías."@es ;
+    skos:definition "High-speed, high-traffic roads: motorways and expressways."@en .
+
+edintphotometricclass:b a skos:Concept ;
+    skos:inScheme edintkos:PhotometricClass ;
+    skos:notation "B" ;
+    skos:prefLabel "Clase B"@es , "Class B"@en ;
+    skos:altLabel "Arterial"@es , "Arterial"@en ;
+    skos:definition "Vías de velocidad media-alta: calles arteriales urbanas principales."@es ;
+    skos:definition "Medium-high speed roads: main urban arterial streets."@en .
+
+edintphotometricclass:c a skos:Concept ;
+    skos:inScheme edintkos:PhotometricClass ;
+    skos:notation "C" ;
+    skos:prefLabel "Clase C"@es , "Class C"@en ;
+    skos:altLabel "Colectora"@es , "Collector"@en ;
+    skos:definition "Vías de velocidad media: calles colectoras que distribuyen tráfico entre arteriales y residenciales."@es ;
+    skos:definition "Medium speed roads: collector streets distributing traffic between arterial and residential."@en .
+
+edintphotometricclass:d a skos:Concept ;
+    skos:inScheme edintkos:PhotometricClass ;
+    skos:notation "D" ;
+    skos:prefLabel "Clase D"@es , "Class D"@en ;
+    skos:altLabel "Residencial"@es , "Residential"@en ;
+    skos:definition "Vías de velocidad baja: calles residenciales con acceso a viviendas."@es ;
+    skos:definition "Low speed roads: residential streets with housing access."@en .
+
+edintphotometricclass:e a skos:Concept ;
+    skos:inScheme edintkos:PhotometricClass ;
+    skos:notation "E" ;
+    skos:prefLabel "Clase E"@es , "Class E"@en ;
+    skos:altLabel "Peatonal"@es , "Pedestrian"@en ;
+    skos:definition "Vías de velocidad muy baja: zonas peatonales, aceras, plazas y parques."@es ;
+    skos:definition "Very low speed areas: pedestrian zones, sidewalks, squares and parks."@en .

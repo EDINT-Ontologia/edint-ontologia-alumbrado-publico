@@ -1,0 +1,39 @@
+# =============================================================================
+# QUERY: CQ-EST-01
+# Question: ¿Cuántas farolas hay en cada estado de conservación por municipio?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:   <http://schema.org/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+# -----------------------------------------------------------------------------
+# Farolas por estado de conservación y municipio
+# -----------------------------------------------------------------------------
+
+SELECT ?municipio ?estadoLabel (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:direccion ?addr ;
+     edintalu:estadoConservacion ?estado .
+  ?addr esdir:municipio ?municipio .
+  ?estado skos:prefLabel ?estadoLabel .
+  FILTER(LANG(?estadoLabel) = "es")
+}
+GROUP BY ?municipio ?estadoLabel
+ORDER BY ?municipio ?estadoLabel
+
+# -----------------------------------------------------------------------------
+# Farolas por estado de conservación (global, sin desglose municipal)
+# -----------------------------------------------------------------------------
+
+SELECT ?estadoLabel (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:estadoConservacion ?estado .
+  ?estado skos:prefLabel ?estadoLabel .
+  FILTER(LANG(?estadoLabel) = "es")
+}
+GROUP BY ?estadoLabel
+ORDER BY DESC(?total)

@@ -1,0 +1,33 @@
+# =============================================================================
+# QUERY: CQ-ELEC-03
+# Question: ¿Cuántas farolas hay de cada tipo de alimentación?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+# -----------------------------------------------------------------------------
+# Número de farolas por tipo de alimentación (usando label SKOS)
+# -----------------------------------------------------------------------------
+
+SELECT ?tipoLabel (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:tipoAlimentacion ?tipo .
+  ?tipo skos:prefLabel ?tipoLabel .
+  FILTER(LANG(?tipoLabel) = "es")
+}
+GROUP BY ?tipoLabel
+ORDER BY DESC(?total)
+
+# -----------------------------------------------------------------------------
+# Número de farolas por tipo de alimentación (URI del concepto)
+# -----------------------------------------------------------------------------
+
+SELECT ?tipo (COUNT(?f) AS ?total)
+WHERE {
+  ?f a edintalu:Farola ;
+     edintalu:tipoAlimentacion ?tipo .
+}
+GROUP BY ?tipo
+ORDER BY DESC(?total)

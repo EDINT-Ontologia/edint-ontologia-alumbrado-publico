@@ -1,0 +1,21 @@
+# =============================================================================
+# FACT: FAC-07
+# Statement: Un centro de mando agrupa múltiples farolas
+# Verification: Cada centro de mando debe tener al menos 1 farola asociada
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Centros de mando sin farolas asociadas
+# (Resultado vacío = todos cumplen)
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando
+WHERE {
+  ?centroDeMando a edintalu:CentroDeMando .
+  FILTER NOT EXISTS {
+    ?f a edintalu:Farola ;
+       edintalu:centroDeMando ?centroDeMando .
+  }
+}

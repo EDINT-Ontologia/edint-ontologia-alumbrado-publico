@@ -1,0 +1,45 @@
+# =============================================================================
+# QUERY: CQ-ENER-05
+# Question: ¿Qué farolas tienen reductores de flujo y de qué tipo?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Farolas con reductor de flujo: tipo en luminaria y/o al inicio
+# -----------------------------------------------------------------------------
+
+SELECT ?farola ?enLuminaria ?enInicio
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:disponeReductorFlujo ?reductor .
+  ?reductor a edintalu:ReductorFlujo ;
+            edintalu:esReductorFlujoLuminaria ?enLuminaria ;
+            edintalu:esReductorFlujoInicio ?enInicio .
+}
+ORDER BY ?farola
+
+# -----------------------------------------------------------------------------
+# Farolas con reductor de flujo en luminaria únicamente
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:disponeReductorFlujo ?reductor .
+  ?reductor a edintalu:ReductorFlujo ;
+            edintalu:esReductorFlujoLuminaria true ;
+            edintalu:esReductorFlujoInicio false .
+}
+
+# -----------------------------------------------------------------------------
+# Farolas con reductor de flujo al inicio (regulador de cabecera)
+# -----------------------------------------------------------------------------
+
+SELECT ?farola
+WHERE {
+  ?farola a edintalu:Farola ;
+          edintalu:disponeReductorFlujo ?reductor .
+  ?reductor a edintalu:ReductorFlujo ;
+            edintalu:esReductorFlujoInicio true .
+}

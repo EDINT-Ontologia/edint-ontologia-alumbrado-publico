@@ -1,0 +1,29 @@
+# =============================================================================
+# QUERY: CQ-ENER-03
+# Question: ¿Cuántos kWh de fuentes renovables consume el alumbrado público?
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# -----------------------------------------------------------------------------
+# Total de kWh renovables consumidos por el alumbrado público
+# -----------------------------------------------------------------------------
+
+SELECT (SUM(xsd:decimal(?kwhRen)) AS ?totalKWhRenovables)
+WHERE {
+  ?sum a edintalu:SuministroElectrico ;
+       edintalu:kwhRenovables ?kwhRen .
+}
+
+# -----------------------------------------------------------------------------
+# kWh renovables por centro de mando
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando ?kwhRenovables
+WHERE {
+  ?centroDeMando edintalu:tieneSuministro ?sum .
+  ?sum a edintalu:SuministroElectrico ;
+       edintalu:kwhRenovables ?kwhRenovables .
+}
+ORDER BY DESC(?kwhRenovables)
