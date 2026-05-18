@@ -2,3 +2,7 @@
 analysis*
 widoco*
 .venv
+
+# Local symlinks to other repos (not for publication)
+other_ontos
+sample_onto
