@@ -563,15 +563,4 @@ edintalu:Farola rdfs:seeAlso <http://vocab.linkeddata.es/datosabiertos/def/urban
 
 # esdir:DireccionPostal rdfs:subClassOf schema:PostalAddress .
 
-# QUDT unit declarations (referenced)
-qudtu:W a rdfs:Resource .      # watt
-qudtu:KiloW a rdfs:Resource .  # kilowatt
-qudtu:LM a rdfs:Resource .    # lumen
-qudtu:K a rdfs:Resource .     # kelvin
-qudtu:CD a rdfs:Resource .    # candela
-qudtu:KiloW-HR a rdfs:Resource . # kilowatt-hour
-qudtu:HR a rdfs:Resource .    # hour
-qudtu:M a rdfs:Resource .     # meter
-qudtu:PERCENT a rdfs:Resource . # percent
-qudtu:EUR a rdfs:Resource .   # euro
-qudtu:V a rdfs:Resource .     # volt
+
