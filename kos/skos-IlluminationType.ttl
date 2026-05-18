@@ -8,7 +8,7 @@
 @prefix edintkosillumtype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/> .
 
 edintkos:IlluminationType a skos:ConceptScheme ;
-    dct:title "Clases de alumbrado según EN 13201"@es , "Lighting classes according to EN 13201"@en ;
+    dct:title "Clases de iluminación según EN 13201"@es , "Illumination classes according to EN 13201"@en ;
     dct:creator "FEMP" ;
     dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
     skos:definition "Clases de alumbrado vial según la norma UNE-EN 13201. Clases M (calzadas), C (zonas de conflicto), S (peatonales)."@es ;

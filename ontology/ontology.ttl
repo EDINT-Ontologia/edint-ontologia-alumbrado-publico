@@ -266,7 +266,7 @@ edintalu:tipoLampara a owl:ObjectProperty ;
 edintalu:tipoAlumbrado a owl:ObjectProperty ;
     rdfs:domain edintalu:Farola ;
     rdfs:range skos:Concept ;
-    rdfs:label "tipo de alumbrado"@es , "lighting class"@en ;
+    rdfs:label "tipo de alumbrado"@es , "illumination class"@en ;
     rdfs:comment "Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@es ;
     rdfs:comment "Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@en .
 
@@ -308,7 +308,7 @@ edintalu:zonaAlumbrado a owl:ObjectProperty ;
 edintalu:claseLuminotecnica a owl:ObjectProperty ;
     rdfs:domain edintalu:Farola ;
     rdfs:range skos:Concept ;
-    rdfs:label "clase luminotécnica"@es , "lighting class"@en ;
+    rdfs:label "clase luminotécnica"@es , "road lighting class"@en ;
     rdfs:comment "Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales)."@es ;
     rdfs:comment "Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian)."@en .
 

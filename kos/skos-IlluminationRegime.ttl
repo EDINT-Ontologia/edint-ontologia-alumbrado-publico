@@ -8,7 +8,7 @@
 @prefix edintkosillumregime: <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/> .
 
 edintkos:IlluminationRegime a skos:ConceptScheme ;
-    dct:title "Tipos de iluminación"@es , "Illumination types"@en ;
+    dct:title "Régimen de iluminación"@es , "Illumination regime"@en ;
     dct:creator "FEMP" ;
     dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
     skos:definition "Clasificación del régimen de iluminación: nocturna o permanente."@es ;
