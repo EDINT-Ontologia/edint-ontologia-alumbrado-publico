@@ -5,6 +5,7 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
@@ -12,13 +13,15 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 # Calcula flujoLuminoso / potenciaNominal por lámpara y luego promedia por tipo
 # -----------------------------------------------------------------------------
 
-SELECT ?tipoLampara (AVG(xsd:decimal(?flujo) / xsd:decimal(?pot)) AS ?eficaciaLmPorW)
+SELECT ?tipoLampara (AVG(xsd:decimal(?flujoVal) / xsd:decimal(?potVal)) AS ?eficaciaLmPorW)
 WHERE {
   ?lamp a edintalu:Lampara ;
         edintalu:tipoLampara ?tipoURI ;
-        edintalu:flujoLuminoso ?flujo ;
-        edintalu:potenciaNominal ?pot .
-  FILTER(xsd:decimal(?pot) > 0)
+        edintalu:flujoLuminoso ?flujoQv ;
+        edintalu:potenciaNominal ?potQv .
+  ?flujoQv qudt:numericValue ?flujoVal .
+  ?potQv qudt:numericValue ?potVal .
+  FILTER(xsd:decimal(?potVal) > 0)
   ?tipoURI skos:prefLabel ?tipoLampara .
   FILTER(LANG(?tipoLampara) = "es")
 }

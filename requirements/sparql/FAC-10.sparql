@@ -1,7 +1,7 @@
 # =============================================================================
 # FACT: FAC-10
 # Statement: La potencia puede venir en W o kW y debe normalizarse
-# Verification: Comprobar coherencia de unidades QUDT en potenciaNominal
+# Verification: Comprobar unidades QUDT usadas en potenciaNominal
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
@@ -9,17 +9,8 @@ PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX qudtu:    <http://qudt.org/vocab/unit/>
 
 # -----------------------------------------------------------------------------
-# La ontología declara applicableUnit para W y KiloW en potenciaNominal
-# -----------------------------------------------------------------------------
-
-ASK {
-  edintalu:potenciaNominal qudt:applicableUnit qudtu:W .
-  edintalu:potenciaNominal qudt:applicableUnit qudtu:KiloW .
-}
-
-# -----------------------------------------------------------------------------
-# Si los datos usan qudt:QuantityValue para potencia:
-# instancias con unidad W vs KiloW
+# La ontología define potenciaNominal con rango qudt:QuantityValue
+# Verificar qué unidades se usan en los datos de instancia
 # -----------------------------------------------------------------------------
 
 SELECT ?unit (COUNT(?qval) AS ?total)
@@ -30,3 +21,29 @@ WHERE {
         qudt:hasUnit ?unit .
 }
 GROUP BY ?unit
+
+# -----------------------------------------------------------------------------
+# Lámparas con potenciaNominal usando unidad W
+# -----------------------------------------------------------------------------
+
+SELECT ?lampara ?val
+WHERE {
+  ?lampara a edintalu:Lampara ;
+           edintalu:potenciaNominal ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val ;
+      qudt:hasUnit qudtu:W .
+}
+
+# -----------------------------------------------------------------------------
+# Lámparas con potenciaNominal usando unidad KiloW
+# -----------------------------------------------------------------------------
+
+SELECT ?lampara ?val
+WHERE {
+  ?lampara a edintalu:Lampara ;
+           edintalu:potenciaNominal ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val ;
+      qudt:hasUnit qudtu:KiloW .
+}

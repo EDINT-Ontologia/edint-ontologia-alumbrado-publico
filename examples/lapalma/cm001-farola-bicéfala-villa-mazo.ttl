@@ -62,8 +62,7 @@ exlp:f1001-geom a gsp:Geometry ;
 
 exlp:f1001-poste a edintalu:Poste ;
     edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura 6 ;
-    qudt:applicableUnit qudtu:M .
+    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 6 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria 1 + Lámpara 1 (VSBP 55W) ---
 
@@ -73,8 +72,7 @@ exlp:f1001-lum1 a edintalu:Luminaria ;
 
 exlp:f1001-lum1-lamp a edintalu:Lampara ;
     edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-baja-presion> ;
-    edintalu:potenciaNominal 55 ;
-    qudt:applicableUnit qudtu:W .
+    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 55 ; qudt:hasUnit qudtu:W ] .
 
 # --- Luminaria 2 + Lámpara 2 (VSAP 250W) ---
 
@@ -84,5 +82,4 @@ exlp:f1001-lum2 a edintalu:Luminaria ;
 
 exlp:f1001-lum2-lamp a edintalu:Lampara ;
     edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
-    edintalu:potenciaNominal 250 ;
-    qudt:applicableUnit qudtu:W .
+    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 250 ; qudt:hasUnit qudtu:W ] .

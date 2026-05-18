@@ -318,12 +318,11 @@ edintalu:claseLuminotecnica a owl:ObjectProperty ;
 
 # --- Poste ---
 
-edintalu:altura a owl:DatatypeProperty ;
-    rdfs:range xsd:decimal ;
+edintalu:altura a owl:ObjectProperty ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "altura"@es , "height"@en ;
-    rdfs:comment "Altura en metros (m). Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo)."@es ;
-    rdfs:comment "Height in meters (m). Applies to: Post (total height), Arm (height of the arm above ground)."@en ;
-    qudt:applicableUnit qudtu:M .
+    rdfs:comment "Altura del componente. Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en metros (M)."@es ;
+    rdfs:comment "Height of the component. Applies to: Post (total height), Arm (height of the arm above ground). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in meters (M)."@en .
 
 edintalu:tieneBrazo a owl:ObjectProperty ;
     rdfs:domain edintalu:Poste ;
@@ -362,39 +361,35 @@ edintalu:numeroDeLuminarias a owl:DatatypeProperty ;
     rdfs:comment "Número de luminarias en la farola."@es ;
     rdfs:comment "Number of luminaires in the streetlight."@en .
 
-edintalu:flujoHemisfericoSuperior a owl:DatatypeProperty ;
+edintalu:flujoHemisfericoSuperior a owl:ObjectProperty ;
     rdfs:domain edintalu:Luminaria ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "flujo hemisférico superior"@es , "upper hemisphere flux"@en ;
-    rdfs:comment "Flujo hemisférico superior (FHS/ULOR) de la luminaria como porcentaje. Clave para el cumplimiento del REEAE en zonas E1-E4."@es ;
-    rdfs:comment "Upper hemisphere flux (FHS/ULOR) of the luminaire as a percentage. Key for REEAE compliance in zones E1-E4."@en ;
-    qudt:applicableUnit qudtu:PERCENT .
+    rdfs:comment "Flujo hemisférico superior (FHS/ULOR) de la luminaria. Clave para el cumplimiento del REEAE en zonas E1-E4. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en porcentaje (PERCENT)."@es ;
+    rdfs:comment "Upper hemisphere flux (FHS/ULOR) of the luminaire. Key for REEAE compliance in zones E1-E4. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in percent (PERCENT)."@en .
 
 # --- Lámpara ---
 
-edintalu:potenciaNominal a owl:DatatypeProperty ;
+edintalu:potenciaNominal a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "potencia nominal"@es , "nominal power"@en ;
-    rdfs:comment "Potencia nominal de la lámpara. En vatios (W)."@es ;
-    rdfs:comment "Nominal power of the lamp. In watts (W)."@en ;
-    qudt:applicableUnit qudtu:W , qudtu:KiloW .
+    rdfs:comment "Potencia nominal de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en vatios (W) o kilovatios (KiloW)."@es ;
+    rdfs:comment "Nominal power of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in watts (W) or kilowatts (KiloW)."@en .
 
-edintalu:flujoLuminoso a owl:DatatypeProperty ;
+edintalu:flujoLuminoso a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "flujo luminoso"@es , "luminous flux"@en ;
-    rdfs:comment "Flujo luminoso de la lámpara en lúmenes (lm)."@es ;
-    rdfs:comment "Luminous flux of the lamp in lumens (lm)."@en ;
-    qudt:applicableUnit qudtu:LM .
+    rdfs:comment "Flujo luminoso de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en lúmenes (LM)."@es ;
+    rdfs:comment "Luminous flux of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in lumens (LM)."@en .
 
-edintalu:temperaturaColor a owl:DatatypeProperty ;
+edintalu:temperaturaColor a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "temperatura de color"@es , "correlated color temperature"@en ;
-    rdfs:comment "Temperatura de color correlacionada (CCT) de la lámpara en kelvin (K)."@es ;
-    rdfs:comment "Correlated color temperature (CCT) of the lamp in kelvin (K)."@en ;
-    qudt:applicableUnit qudtu:K .
+    rdfs:comment "Temperatura de color correlacionada (CCT) de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kelvin (K)."@es ;
+    rdfs:comment "Correlated color temperature (CCT) of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kelvin (K)."@en .
 
 edintalu:indiceReproduccionCromatica a owl:DatatypeProperty ;
     rdfs:domain edintalu:Lampara ;
@@ -410,29 +405,26 @@ edintalu:eficaciaLuminosa a owl:DatatypeProperty ;
     rdfs:comment "Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W)."@es ;
     rdfs:comment "Luminous efficacy of the lamp in lumens per watt (lm/W)."@en .
 
-edintalu:intensidadLuminica a owl:DatatypeProperty ;
+edintalu:intensidadLuminica a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "intensidad lumínica"@es , "luminous intensity"@en ;
-    rdfs:comment "Intensidad lumínica de la lámpara en candelas (cd)."@es ;
-    rdfs:comment "Luminous intensity of the lamp in candelas (cd)."@en ;
-    qudt:applicableUnit qudtu:CD .
+    rdfs:comment "Intensidad lumínica de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en candelas (CD)."@es ;
+    rdfs:comment "Luminous intensity of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in candelas (CD)."@en .
 
-edintalu:vidaUtilL70 a owl:DatatypeProperty ;
+edintalu:vidaUtilL70 a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "vida útil L70"@es , "rated life L70"@en ;
-    rdfs:comment "Vida útil nominal de la lámpara al 70% de flujo mantenido (L70) en horas."@es ;
-    rdfs:comment "Rated life of the lamp at 70% maintained flux (L70) in hours."@en ;
-    qudt:applicableUnit qudtu:HR .
+    rdfs:comment "Vida útil nominal de la lámpara al 70% de flujo mantenido (L70). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es ;
+    rdfs:comment "Rated life of the lamp at 70% maintained flux (L70). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en .
 
-edintalu:vidaUtilL80 a owl:DatatypeProperty ;
+edintalu:vidaUtilL80 a owl:ObjectProperty ;
     rdfs:domain edintalu:Lampara ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "vida útil L80"@es , "rated life L80"@en ;
-    rdfs:comment "Vida útil nominal de la lámpara al 80% de flujo mantenido (L80) en horas."@es ;
-    rdfs:comment "Rated life of the lamp at 80% maintained flux (L80) in hours."@en ;
-    qudt:applicableUnit qudtu:HR .
+    rdfs:comment "Vida útil nominal de la lámpara al 80% de flujo mantenido (L80). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es ;
+    rdfs:comment "Rated life of the lamp at 80% maintained flux (L80). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en .
 
 edintalu:modeloBombilla a owl:DatatypeProperty ;
     rdfs:domain edintalu:Lampara ;
@@ -501,21 +493,19 @@ edintalu:tarifa a owl:DatatypeProperty ;
     rdfs:comment "Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4)."@es ;
     rdfs:comment "Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4)."@en .
 
-edintalu:tension a owl:DatatypeProperty ;
+edintalu:tension a owl:ObjectProperty ;
     rdfs:domain edintalu:SuministroElectrico ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "tensión"@es , "voltage"@en ;
-    rdfs:comment "Tensión de alimentación del suministro en voltios (V)."@es ;
-    rdfs:comment "Supply voltage in volts (V)."@en ;
-    qudt:applicableUnit qudtu:V .
+    rdfs:comment "Tensión de alimentación del suministro. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en voltios (V)."@es ;
+    rdfs:comment "Supply voltage. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in volts (V)."@en .
 
-edintalu:kwhRenovables a owl:DatatypeProperty ;
+edintalu:kwhRenovables a owl:ObjectProperty ;
     rdfs:domain edintalu:SuministroElectrico ;
-    rdfs:range xsd:decimal ;
+    rdfs:range qudt:QuantityValue ;
     rdfs:label "kWh renovables"@es , "renewable kWh"@en ;
-    rdfs:comment "Consumo en kWh de fuentes de energía renovable con sistemas de autoconsumo."@es ;
-    rdfs:comment "Consumption in kWh from renewable energy sources with self-consumption systems."@en ;
-    qudt:applicableUnit qudtu:KiloW-HR .
+    rdfs:comment "Consumo de fuentes de energía renovable con sistemas de autoconsumo. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kilovatios-hora (KiloW-HR)."@es ;
+    rdfs:comment "Consumption from renewable energy sources with self-consumption systems. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kilowatt-hours (KiloW-HR)."@en .
 
 
 

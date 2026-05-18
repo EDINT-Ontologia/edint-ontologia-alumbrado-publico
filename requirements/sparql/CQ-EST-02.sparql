@@ -4,43 +4,42 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
 # Farolas cuyas lámparas han superado su vida útil L70
 # Compara: (fecha actual - fecha instalación) en horas > vidaUtilL70
 # Nota: Requiere función de fecha del motor SPARQL.
-# Aquí se usa una aproximación simplificada comparando la edad en horas.
 # -----------------------------------------------------------------------------
 
-SELECT ?farola ?fechaInstalacion ?vidaUtilL70 ?horasUsoEstimadas
+SELECT ?farola ?fechaInstalacion ?vidaUtilL70Val ?horasUsoEstimadas
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
   ?lamp edintalu:fechaInstalacion ?fechaInstalacion ;
-        edintalu:vidaUtilL70 ?vidaUtilL70 .
+        edintalu:vidaUtilL70 ?vidaQv .
+  ?vidaQv qudt:numericValue ?vidaUtilL70Val .
   # Estimación: horas de uso = días desde instalación × horas/día de funcionamiento
   # Se necesita una función de fecha del motor SPARQL para calcular la diferencia
-  # Ejemplo con Jena: (NOW() - ?fechaInstalacion) * 24 * factorHorasDia
-  # Aquí se muestra la estructura de la consulta
 }
-ORDER BY ?vidaUtilL70
+ORDER BY ?vidaUtilL70Val
 
 # -----------------------------------------------------------------------------
 # Versión simplificada: lámparas con más de N horas estimadas de uso
 # comparado con su vida útil L70 (datos directos si se dispone de horas de uso)
 # -----------------------------------------------------------------------------
 
-SELECT ?farola ?vidaUtilL70
+SELECT ?farola ?vidaUtilL70Val
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:vidaUtilL70 ?vidaUtilL70 ;
+  ?lamp edintalu:vidaUtilL70 ?vidaQv ;
         edintalu:fechaInstalacion ?fecha .
+  ?vidaQv qudt:numericValue ?vidaUtilL70Val .
   # Cálculo aproximado: asumiendo ~12h/día de funcionamiento
-  # horasUso = (NOW() - ?fecha) * 12
   BIND((YEAR(NOW()) - YEAR(?fecha)) * 365.25 * 12 AS ?horasEstimadas)
-  FILTER(?horasEstimadas > xsd:decimal(?vidaUtilL70))
+  FILTER(?horasEstimadas > xsd:decimal(?vidaUtilL70Val))
 }

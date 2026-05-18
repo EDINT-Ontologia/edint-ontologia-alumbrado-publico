@@ -5,19 +5,25 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
+PREFIX qudtu:    <http://qudt.org/vocab/unit/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
 # Potencia total instalada (W) por municipio
+# Nota: si la unidad es KiloW, se convierte a W multiplicando por 1000
 # -----------------------------------------------------------------------------
 
-SELECT ?municipio (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
+SELECT ?municipio (SUM(IF(?unit = qudtu:KiloW, xsd:decimal(?val) * 1000, xsd:decimal(?val))) AS ?potenciaTotalW)
 WHERE {
   ?f a edintalu:Farola ;
      edintalu:direccion ?addr ;
      edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:potenciaNominal ?pot .
+  ?lamp edintalu:potenciaNominal ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val ;
+      qudt:hasUnit ?unit .
   ?addr esdir:municipio ?municipio .
 }
 GROUP BY ?municipio
@@ -27,13 +33,16 @@ ORDER BY DESC(?potenciaTotalW)
 # Potencia total instalada (W) por distrito dentro de un municipio
 # -----------------------------------------------------------------------------
 
-SELECT ?distrito (SUM(xsd:decimal(?pot)) AS ?potenciaTotalW)
+SELECT ?distrito (SUM(IF(?unit = qudtu:KiloW, xsd:decimal(?val) * 1000, xsd:decimal(?val))) AS ?potenciaTotalW)
 WHERE {
   ?f a edintalu:Farola ;
      edintalu:direccion ?addr ;
      edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:potenciaNominal ?pot .
+  ?lamp edintalu:potenciaNominal ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val ;
+      qudt:hasUnit ?unit .
   ?addr esdir:municipio <URI-MUNICIPIO> ;
        esdir:distrito ?distrito .
 }

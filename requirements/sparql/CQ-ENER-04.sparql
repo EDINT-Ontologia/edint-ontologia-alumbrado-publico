@@ -7,6 +7,7 @@ PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraes
 PREFIX edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>
+PREFIX qudtu:    <http://qudt.org/vocab/unit/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
@@ -14,17 +15,18 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 # -----------------------------------------------------------------------------
 
 SELECT ?centroDeMando
-       ?kwhRenovables
+       ?kwhRenVal
        ?consumoTotalKWh
-       (xsd:decimal(?kwhRenovables) / ?consumoTotalKWh * 100 AS ?porcentajeRenovable)
+       (xsd:decimal(?kwhRenVal) / ?consumoTotalKWh * 100 AS ?porcentajeRenovable)
 WHERE {
   ?centroDeMando edintalu:tieneSuministro ?sum .
-  ?sum edintalu:kwhRenovables ?kwhRenovables ;
-       edintalu:tieneConsumo ?consumo .
+  ?sum edintalu:kwhRenovables ?kwhRenQv .
+  ?kwhRenQv qudt:numericValue ?kwhRenVal .
+  ?sum edintalu:tieneConsumo ?consumo .
   ?consumo a edintalu:ConsumoEnergetico ;
            sosa:hasResult ?result .
   ?result qudt:numericValue ?value ;
-          qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+          qudt:hasUnit qudtu:KiloW-HR .
   {
     SELECT ?centroDeMando (SUM(xsd:decimal(?v)) AS ?consumoTotalKWh)
     WHERE {
@@ -33,7 +35,7 @@ WHERE {
       ?cons2 a edintalu:ConsumoEnergetico ;
              sosa:hasResult ?res2 .
       ?res2 qudt:numericValue ?v ;
-            qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
+            qudt:hasUnit qudtu:KiloW-HR .
     }
     GROUP BY ?centroDeMando
   }

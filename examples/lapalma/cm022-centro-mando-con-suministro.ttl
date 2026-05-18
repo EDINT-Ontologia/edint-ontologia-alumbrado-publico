@@ -78,8 +78,7 @@ exlp:f2201-geom a gsp:Geometry ;
 
 exlp:f2201-poste a edintalu:Poste ;
     edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura 4 ;
-    qudt:applicableUnit qudtu:M .
+    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 4 ; qudt:hasUnit qudtu:M ] .
 
 exlp:f2201-lum1 a edintalu:Luminaria ;
     edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
@@ -87,5 +86,4 @@ exlp:f2201-lum1 a edintalu:Luminaria ;
 
 exlp:f2201-lum1-lamp a edintalu:Lampara ;
     edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
-    edintalu:potenciaNominal 150 ;
-    qudt:applicableUnit qudtu:W .
+    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 150 ; qudt:hasUnit qudtu:W ] .
