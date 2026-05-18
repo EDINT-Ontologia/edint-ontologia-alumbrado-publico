@@ -33,7 +33,7 @@
     edintalu:tieneLampara :lamp_002_led .
 
 :lamp_002_led a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
     edintalu:modeloBombilla "LBE120" .
 
 # --- Luminaria de descarga (original) ---
@@ -43,7 +43,7 @@
     edintalu:tieneLampara :lamp_002_desc .
 
 :lamp_002_desc a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapor-sodio-alta-presion> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
     edintalu:modeloBombilla "LBE120" .
 
 # --- Modelo de luminaria (catálogo) ---

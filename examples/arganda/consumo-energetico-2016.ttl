@@ -42,7 +42,7 @@ exarg:consumo-barriadas-activo a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 132257 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/activo> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-barriadas-llano a edintalu:ConsumoEnergetico ;
@@ -51,7 +51,7 @@ exarg:consumo-barriadas-llano a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 99869 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-barriadas-valle a edintalu:ConsumoEnergetico ;
@@ -60,7 +60,7 @@ exarg:consumo-barriadas-valle a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 990554 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/valle> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-barriadas-punta a edintalu:ConsumoEnergetico ;
@@ -69,7 +69,7 @@ exarg:consumo-barriadas-punta a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 276329 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/punta> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 # --- Zona: Alumbrado Público Pueblo ---
@@ -91,7 +91,7 @@ exarg:consumo-pueblo-activo a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 0 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/activo> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-pueblo-llano a edintalu:ConsumoEnergetico ;
@@ -100,7 +100,7 @@ exarg:consumo-pueblo-llano a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 193220 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-pueblo-valle a edintalu:ConsumoEnergetico ;
@@ -109,7 +109,7 @@ exarg:consumo-pueblo-valle a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 719973 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/valle> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
     edintalu:ejercicio "2016"^^xsd:gYear .
 
 exarg:consumo-pueblo-punta a edintalu:ConsumoEnergetico ;
@@ -118,5 +118,5 @@ exarg:consumo-pueblo-punta a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 189774 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/punta> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
     edintalu:ejercicio "2016"^^xsd:gYear .

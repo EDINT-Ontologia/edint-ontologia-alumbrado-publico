@@ -35,7 +35,7 @@
     edintalu:tieneLampara :lamp_001 .
 
 :lamp_001 a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
     edintalu:modeloBombilla "GLED001" .
 
 # --- Modelo de luminaria (catálogo) ---

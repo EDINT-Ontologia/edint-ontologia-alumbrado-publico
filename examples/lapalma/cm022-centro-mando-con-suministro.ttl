@@ -9,7 +9,7 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix qudtu: <http://qudt.org/vocab/unit/> .
 @prefix schema: <http://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ============================================================================
@@ -26,7 +26,7 @@
 exlp:cm-022 a edintalu:CentroDeMando ;
     edintalu:nombre "CM-022" ;
     edintalu:observaciones "San Antonio, El Monte"@es ;
-    dcterms:spatial exlp:cm-022-dir ;
+    dct:spatial exlp:cm-022-dir ;
     edintalu:tieneSuministro exlp:cm-022-suministro .
 
 exlp:cm-022-dir a esdir:DireccionPostal ;
@@ -50,7 +50,7 @@ exlp:cm-022-consumo2014 a edintalu:ConsumoEnergetico ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 4520 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/periodo-tarifario/llano> ;
+    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
     edintalu:ejercicio "2014"^^xsd:gYear .
 
 # --- Farolas del CM-022 (muestra de 2) ---
@@ -60,9 +60,9 @@ exlp:f2201 a edintalu:Farola ;
     edintalu:centroDeMando exlp:cm-022 ;
     edintalu:poste exlp:f2201-poste ;
     edintalu:luminaria exlp:f2201-lum1 ;
-    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/S4> ;
-    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/aerea> ;
-    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> ;
+    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/s4> ;
+    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/aerea> ;
+    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
     edintalu:calidadDato "R" ;
     edintalu:direccion exlp:f2201-dir ;
     gsp:hasGeometry exlp:f2201-geom .
@@ -77,15 +77,15 @@ exlp:f2201-geom a gsp:Geometry ;
     gsp:asWKT "POINT (-17.7690 28.6120)"^^gsp:wktLiteral .
 
 exlp:f2201-poste a edintalu:Poste ;
-    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/baculo> ;
+    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
     edintalu:altura 4 ;
     qudt:applicableUnit qudtu:M .
 
 exlp:f2201-lum1 a edintalu:Luminaria ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariaVidrioPlano> ;
+    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
     edintalu:tieneLampara exlp:f2201-lum1-lamp .
 
 exlp:f2201-lum1-lamp a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vsap> ;
+    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
     edintalu:potenciaNominal 150 ;
     qudt:applicableUnit qudtu:W .
