@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkosluminairtype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/> .
+
+edintkos:LuminaireType a skos:ConceptScheme ;
+    dct:title "Tipos de luminaria de alumbrado público"@es , "Public lighting luminaire types"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de luminaria según su forma y uso. 8 conceptos."@es ;
+    skos:definition "Taxonomy of luminaire types by shape and use. 8 concepts."@en .
+
+edintkosluminairtype:viaria a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "viaria" ;
+    skos:prefLabel "Viaria"@es , "Road"@en ;
+    skos:definition "Luminaria diseñada para la iluminación de vías de circulación."@es ;
+    skos:definition "Luminaire designed for road lighting."@en .
+
+edintkosluminairtype:proyector a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "proyector" ;
+    skos:prefLabel "Proyector"@es , "Projector"@en ;
+    skos:altLabel "Floodlight"@en ;
+    skos:definition "Luminaria de haz concentrado para iluminación de grandes superficies."@es .
+
+edintkosluminairtype:empotrado-pared a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "empotrado-pared" ;
+    skos:prefLabel "Empotrado en pared"@es , "Wall recessed"@en ;
+    skos:altLabel "Aplique"@es , "Wall-mounted"@en .
+
+edintkosluminairtype:baliza a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "baliza" ;
+    skos:prefLabel "Baliza"@es , "Bollard"@en ;
+    skos:definition "Luminaria baja tipo baliza para iluminación peatonal o decorativa."@es .
+
+edintkosluminairtype:artistica a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "artistica" ;
+    skos:prefLabel "Artística"@es , "Artistic"@en ;
+    skos:definition "Luminaria con diseño ornamental o histórico."@es .
+
+edintkosluminairtype:colgante a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "colgante" ;
+    skos:prefLabel "Colgante"@es , "Pendant"@en .
+
+edintkosluminairtype:suspension a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "suspension" ;
+    skos:prefLabel "Suspensión"@es , "Suspended"@en ;
+    skos:altLabel "Catenaria"@es .
+
+edintkosluminairtype:techo a skos:Concept ;
+    skos:inScheme edintkos:LuminaireType ;
+    skos:notation "techo" ;
+    skos:prefLabel "Techo"@es , "Ceiling"@en ;
+    skos:definition "Luminaria montada en techo o bóveda."@es .

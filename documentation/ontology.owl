@@ -6,9 +6,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
@@ -23,8 +21,8 @@
         <dc:creator>M. Martín Blázquez</dc:creator>
         <dc:creator>María Poveda</dc:creator>
         <dc:creator>Oscar Corcho</dc:creator>
-        <dc:description xml:lang="en">Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer and owner, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT.</dc:description>
-        <dc:description xml:lang="es">Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante y propietario, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT.</dc:description>
+        <dc:description xml:lang="en">Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT.</dc:description>
+        <dc:description xml:lang="es">Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT.</dc:description>
         <dc:publisher>FEMP — Federación Española de Municipios y Provincias</dc:publisher>
         <dc:title xml:lang="es">Ontología de Alumbrado Público</dc:title>
         <dc:title xml:lang="en">Public Street Lighting Ontology</dc:title>
@@ -125,13 +123,6 @@
     
 
 
-    <!-- http://qudt.org/schema/qudt/applicableUnit -->
-
-
-    <owl:AnnotationProperty rdf:about="http://qudt.org/schema/qudt/applicableUnit"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -170,6 +161,19 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="es">Altura del componente. Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en metros (M).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Height of the component. Applies to: Post (total height), Arm (height of the arm above ground). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in meters (M).</rdfs:comment>
+        <rdfs:label xml:lang="es">altura</rdfs:label>
+        <rdfs:label xml:lang="en">height</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja -->
 
 
@@ -178,7 +182,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja"/>
         <rdfs:comment xml:lang="es">Caja de conexiones de la farola. Cardinalidad: 0..1 (opcional).</rdfs:comment>
         <rdfs:comment xml:lang="en">Junction box of the streetlight. Cardinality: 0..1 (optional).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">caja</rdfs:label>
         <rdfs:label xml:lang="en">junction box</rdfs:label>
     </owl:ObjectProperty>
@@ -193,7 +196,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando"/>
         <rdfs:comment xml:lang="es">Centro de mando del que depende la farola.</rdfs:comment>
         <rdfs:comment xml:lang="en">Control center on which the streetlight depends.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">centro de mando</rdfs:label>
         <rdfs:label xml:lang="en">control center</rdfs:label>
     </owl:ObjectProperty>
@@ -208,9 +210,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales).</rdfs:comment>
         <rdfs:comment xml:lang="en">Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">clase luminotécnica</rdfs:label>
-        <rdfs:label xml:lang="en">lighting class</rdfs:label>
+        <rdfs:label xml:lang="en">road lighting class</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -223,7 +224,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
         <rdfs:comment xml:lang="es">Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address.</rdfs:comment>
         <rdfs:comment xml:lang="en">Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">address</rdfs:label>
         <rdfs:label xml:lang="es">dirección</rdfs:label>
     </owl:ObjectProperty>
@@ -237,7 +237,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo"/>
         <rdfs:comment xml:lang="en">Associated flow reducer. Applies to: Streetlight. Cardinality: 0..n.</rdfs:comment>
         <rdfs:comment xml:lang="es">Reductor de flujo asociado. Aplica a: Farola. Cardinalidad: 0..n.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">dispone de reductor de flujo</rdfs:label>
         <rdfs:label xml:lang="en">has flow reducer</rdfs:label>
     </owl:ObjectProperty>
@@ -252,7 +251,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">Conservation status of the streetlight. SKOS with 5 levels: Excellent, Good, Regular, Poor, Under construction.</rdfs:comment>
         <rdfs:comment xml:lang="es">Estado de conservación de la farola. SKOS con 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">conservation status</rdfs:label>
         <rdfs:label xml:lang="es">estado de conservación</rdfs:label>
     </owl:ObjectProperty>
@@ -266,9 +264,64 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante"/>
         <rdfs:comment xml:lang="es">Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1.</rdfs:comment>
         <rdfs:comment xml:lang="en">Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">fabricado por</rdfs:label>
         <rdfs:label xml:lang="en">manufactured by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="es">Flujo hemisférico superior (FHS/ULOR) de la luminaria. Clave para el cumplimiento del REEAE en zonas E1-E4. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en porcentaje (PERCENT).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Upper hemisphere flux (FHS/ULOR) of the luminaire. Key for REEAE compliance in zones E1-E4. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in percent (PERCENT).</rdfs:comment>
+        <rdfs:label xml:lang="es">flujo hemisférico superior</rdfs:label>
+        <rdfs:label xml:lang="en">upper hemisphere flux</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="es">Flujo luminoso de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en lúmenes (LM).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Luminous flux of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in lumens (LM).</rdfs:comment>
+        <rdfs:label xml:lang="es">flujo luminoso</rdfs:label>
+        <rdfs:label xml:lang="en">luminous flux</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="es">Intensidad lumínica de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en candelas (CD).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Luminous intensity of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in candelas (CD).</rdfs:comment>
+        <rdfs:label xml:lang="es">intensidad lumínica</rdfs:label>
+        <rdfs:label xml:lang="en">luminous intensity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="es">Consumo de fuentes de energía renovable con sistemas de autoconsumo. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kilovatios-hora (KiloW-HR).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Consumption from renewable energy sources with self-consumption systems. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kilowatt-hours (KiloW-HR).</rdfs:comment>
+        <rdfs:label xml:lang="es">kWh renovables</rdfs:label>
+        <rdfs:label xml:lang="en">renewable kWh</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -281,7 +334,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"/>
         <rdfs:comment xml:lang="es">Aparato de iluminación de la farola. Cardinalidad: 1 o más (caso LED+DESCARGA).</rdfs:comment>
         <rdfs:comment xml:lang="en">Lighting apparatus of the streetlight. Cardinality: 1 or more (e.g., LED+DISCHARGE).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">luminaire</rdfs:label>
         <rdfs:label xml:lang="es">luminaria</rdfs:label>
     </owl:ObjectProperty>
@@ -296,7 +348,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria"/>
         <rdfs:comment xml:lang="en">Reference to the luminaire&apos;s catalog model. Cardinality: 0..1.</rdfs:comment>
         <rdfs:comment xml:lang="es">Referencia al modelo de catálogo de la luminaria. Cardinalidad: 0..1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">luminaire model</rdfs:label>
         <rdfs:label xml:lang="es">modelo de luminaria</rdfs:label>
     </owl:ObjectProperty>
@@ -311,7 +362,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Período tarifario al que corresponde el consumo. SKOS: activo, llano, valle, punta. Cada instancia de ConsumoEnergetico representa UN período tarifario; el total se obtiene sumando las instancias del mismo ejercicio.</rdfs:comment>
         <rdfs:comment xml:lang="en">Tariff period to which the consumption corresponds. SKOS: active, standard, off-peak, peak. Each ConsumoEnergetico instance represents ONE tariff period; the total is obtained by summing instances of the same fiscal year.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">período tarifario</rdfs:label>
         <rdfs:label xml:lang="en">tariff period</rdfs:label>
     </owl:ObjectProperty>
@@ -326,24 +376,64 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
         <rdfs:comment xml:lang="en">Physical support of the streetlight. Cardinality: exactly 1.</rdfs:comment>
         <rdfs:comment xml:lang="es">Soporte físico de la farola. Cardinalidad: exactamente 1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">post</rdfs:label>
         <rdfs:label xml:lang="es">poste</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal -->
 
 
-    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"/>
-        <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario"/>
-        <rdfs:comment xml:lang="es">Entidad titular de la farola. Cardinalidad: 0..1.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Entity that owns the streetlight. Cardinality: 0..1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">owner</rdfs:label>
-        <rdfs:label xml:lang="es">propietario</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">Nominal power of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in watts (W) or kilowatts (KiloW).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Potencia nominal de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en vatios (W) o kilovatios (KiloW).</rdfs:comment>
+        <rdfs:label xml:lang="en">nominal power</rdfs:label>
+        <rdfs:label xml:lang="es">potencia nominal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">Correlated color temperature (CCT) of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kelvin (K).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Temperatura de color correlacionada (CCT) de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kelvin (K).</rdfs:comment>
+        <rdfs:label xml:lang="en">correlated color temperature</rdfs:label>
+        <rdfs:label xml:lang="es">temperatura de color</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">Supply voltage. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in volts (V).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tensión de alimentación del suministro. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en voltios (V).</rdfs:comment>
+        <rdfs:label xml:lang="es">tensión</rdfs:label>
+        <rdfs:label xml:lang="en">voltage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
+        <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo"/>
+        <rdfs:comment xml:lang="en">Arm of the post. Cardinality: 0..n.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Brazo del poste. Cardinalidad: 0..n.</rdfs:comment>
+        <rdfs:label xml:lang="en">has arm</rdfs:label>
+        <rdfs:label xml:lang="es">tiene brazo</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -356,7 +446,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico"/>
         <rdfs:comment xml:lang="en">Energy consumption record of the supply. Cardinality: 0..n.</rdfs:comment>
         <rdfs:comment xml:lang="es">Registro de consumo energético del suministro. Cardinalidad: 0..n.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">has consumption</rdfs:label>
         <rdfs:label xml:lang="es">tiene consumo</rdfs:label>
     </owl:ObjectProperty>
@@ -371,7 +460,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
         <rdfs:comment xml:lang="en">Lamp housed in the luminaire. Cardinality: exactly 1.</rdfs:comment>
         <rdfs:comment xml:lang="es">Lámpara alojada en la luminaria. Cardinalidad: exactamente 1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">has lamp</rdfs:label>
         <rdfs:label xml:lang="es">tiene lámpara</rdfs:label>
     </owl:ObjectProperty>
@@ -386,7 +474,6 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"/>
         <rdfs:comment xml:lang="es">Contrato de suministro eléctrico asociado al centro de mando. Cardinalidad: 0..1.</rdfs:comment>
         <rdfs:comment xml:lang="en">Electricity supply contract associated with the control center. Cardinality: 0..1.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">has supply</rdfs:label>
         <rdfs:label xml:lang="es">tiene suministro</rdfs:label>
     </owl:ObjectProperty>
@@ -401,7 +488,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Tipo de alimentación eléctrica. SKOS con 5 conceptos (Subterránea, Aérea, Fachada, Grapada, Batería).</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of electrical supply. SKOS with 5 concepts (Underground, Aerial, Wall, Stapled, Battery).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">power supply type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de alimentación</rdfs:label>
     </owl:ObjectProperty>
@@ -416,8 +502,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5.</rdfs:comment>
         <rdfs:comment xml:lang="en">Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">lighting class</rdfs:label>
+        <rdfs:label xml:lang="en">illumination class</rdfs:label>
         <rdfs:label xml:lang="es">tipo de alumbrado</rdfs:label>
     </owl:ObjectProperty>
     
@@ -431,7 +516,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">Cable type in the junction box. SKOS: ET103, ET106, ET107, ET112, ET113.</rdfs:comment>
         <rdfs:comment xml:lang="es">Tipo de cable en la caja de conexiones. SKOS: ET103, ET106, ET107, ET112, ET113.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">cable type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de cable</rdfs:label>
     </owl:ObjectProperty>
@@ -446,7 +530,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Tipo de iluminación. SKOS: Nocturna, Permanente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of illumination. SKOS: Nighttime, Permanent.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">illumination type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de iluminación</rdfs:label>
     </owl:ObjectProperty>
@@ -461,7 +544,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Tipo de lámpara. SKOS con 12 conceptos (LED, Vapor sodio, Vapor mercurio, Halogenuro metálico, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of lamp. SKOS with 12 concepts (LED, Sodium vapor, Mercury vapor, Metal halide, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">lamp type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de lámpara</rdfs:label>
     </owl:ObjectProperty>
@@ -476,7 +558,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Tipo de luminaria. SKOS con 8 conceptos (Proyector, Empotrado pared, Baliza, Viaria, Artística, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of luminaire. SKOS with 8 concepts (Projector, Recessed wall, Bollard, Road, Artistic, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">luminaire type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de luminaria</rdfs:label>
     </owl:ObjectProperty>
@@ -491,9 +572,36 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Tipo de soporte físico del poste. SKOS con ~35 conceptos. ConceptScheme: tipo-soporte.</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of physical support of the post. SKOS with ~35 concepts. ConceptScheme: tipo-soporte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">support type</rdfs:label>
         <rdfs:label xml:lang="es">tipo de soporte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70 -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">Rated life of the lamp at 70% maintained flux (L70). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vida útil nominal de la lámpara al 70% de flujo mantenido (L70). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR).</rdfs:comment>
+        <rdfs:label xml:lang="en">rated life L70</rdfs:label>
+        <rdfs:label xml:lang="es">vida útil L70</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80 -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">Rated life of the lamp at 80% maintained flux (L80). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vida útil nominal de la lámpara al 80% de flujo mantenido (L80). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR).</rdfs:comment>
+        <rdfs:label xml:lang="en">rated life L80</rdfs:label>
+        <rdfs:label xml:lang="es">vida útil L80</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -506,7 +614,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">Clasificación de zona según REEAE (RD 1890/2008) para control de contaminación lumínica. SKOS: E1 (protección máxima), E2 (protección alta), E3 (protección media), E4 (protección baja).</rdfs:comment>
         <rdfs:comment xml:lang="en">Zone classification according to REEAE (RD 1890/2008) for light pollution control. SKOS: E1 (maximum protection), E2 (high protection), E3 (medium protection), E4 (low protection).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">lighting zone</rdfs:label>
         <rdfs:label xml:lang="es">zona de alumbrado</rdfs:label>
     </owl:ObjectProperty>
@@ -540,57 +647,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Accesorios montados en el poste (medidores, cámaras, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">Accessories mounted on the post (meters, cameras, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">accesorios</rdfs:label>
         <rdfs:label xml:lang="en">accessories</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
-        <rdfs:comment xml:lang="es">Altura total del poste desde el suelo hasta la parte más alta. En metros (m).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Total height of the post from ground to top. In meters (m).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">altura</rdfs:label>
-        <rdfs:label xml:lang="en">height</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1 -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
-        <rdfs:comment xml:lang="es">Altura del primer brazo del poste. En metros (m).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Height of the first arm of the post. In meters (m).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">altura del brazo 1</rdfs:label>
-        <rdfs:label xml:lang="en">arm height 1</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2 -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
-        <rdfs:comment xml:lang="es">Altura del segundo brazo del poste. En metros (m).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Height of the second arm of the post. In meters (m).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">altura del brazo 2</rdfs:label>
-        <rdfs:label xml:lang="en">arm height 2</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -603,7 +661,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Calidad del dato: B (buena), R (regular), M (mala), E (en ejecución).</rdfs:comment>
         <rdfs:comment xml:lang="en">Data quality: B (good), R (regular), M (poor), E (under construction).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">calidad del dato</rdfs:label>
         <rdfs:label xml:lang="en">data quality</rdfs:label>
     </owl:DatatypeProperty>
@@ -618,7 +675,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="es">Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W).</rdfs:comment>
         <rdfs:comment xml:lang="en">Luminous efficacy of the lamp in lumens per watt (lm/W).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">eficacia luminosa</rdfs:label>
         <rdfs:label xml:lang="en">luminous efficacy</rdfs:label>
     </owl:DatatypeProperty>
@@ -632,7 +688,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
         <rdfs:comment xml:lang="es">Año de referencia de los datos. Aplica a: ConsumoEnergetico, SuministroElectrico.</rdfs:comment>
         <rdfs:comment xml:lang="en">Reference year of the data. Applies to: ConsumoEnergetico, SuministroElectrico.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">ejercicio</rdfs:label>
         <rdfs:label xml:lang="en">fiscal year</rdfs:label>
     </owl:DatatypeProperty>
@@ -647,7 +702,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Indica si dispone de sistema de reducción de flujo al inicio de la instalación (regulador de cabecera).</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates whether a flow reduction system is available at the start of the installation (head-end regulator).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">es reductor de flujo al inicio</rdfs:label>
         <rdfs:label xml:lang="en">is head-end flow reducer</rdfs:label>
     </owl:DatatypeProperty>
@@ -662,7 +716,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Indica si dispone de sistema de reducción de flujo en la luminaria.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates whether a flow reduction system is available in the luminaire.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">es reductor de flujo en luminaria</rdfs:label>
         <rdfs:label xml:lang="en">is luminaire flow reducer</rdfs:label>
     </owl:DatatypeProperty>
@@ -677,41 +730,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">Fecha de instalación de la lámpara.</rdfs:comment>
         <rdfs:comment xml:lang="en">Installation date of the lamp.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">fecha de instalación</rdfs:label>
         <rdfs:label xml:lang="en">installation date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
-        <rdfs:comment xml:lang="es">Flujo hemisférico superior (FHS/ULOR) de la luminaria como porcentaje. Clave para el cumplimiento del REEAE en zonas E1-E4.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Upper hemisphere flux (FHS/ULOR) of the luminaire as a percentage. Key for REEAE compliance in zones E1-E4.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">flujo hemisférico superior</rdfs:label>
-        <rdfs:label xml:lang="en">upper hemisphere flux</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LM"/>
-        <rdfs:comment xml:lang="es">Flujo luminoso de la lámpara en lúmenes (lm).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Luminous flux of the lamp in lumens (lm).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">flujo luminoso</rdfs:label>
-        <rdfs:label xml:lang="en">luminous flux</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -724,7 +744,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Horario en que el alumbrado está encendido (ej: &apos;22:00-07:00&apos;).</rdfs:comment>
         <rdfs:comment xml:lang="en">Schedule when the lighting is on (e.g., &apos;22:00-07:00&apos;).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">horas de funcionamiento</rdfs:label>
         <rdfs:label xml:lang="en">operating hours</rdfs:label>
     </owl:DatatypeProperty>
@@ -739,41 +758,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Color rendering index (CRI) of the lamp (0-100).</rdfs:comment>
         <rdfs:comment xml:lang="es">Índice de reproducción cromática (CRI/IRC) de la lámpara (0-100).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">color rendering index</rdfs:label>
         <rdfs:label xml:lang="es">índice de reproducción cromática</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CD"/>
-        <rdfs:comment xml:lang="es">Intensidad lumínica de la lámpara en candelas (cd).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Luminous intensity of the lamp in candelas (cd).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">intensidad lumínica</rdfs:label>
-        <rdfs:label xml:lang="en">luminous intensity</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
-        <rdfs:comment xml:lang="es">Consumo en kWh de fuentes de energía renovable con sistemas de autoconsumo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Consumption in kWh from renewable energy sources with self-consumption systems.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">kWh renovables</rdfs:label>
-        <rdfs:label xml:lang="en">renewable kWh</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -785,7 +771,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Material del componente. Aplica a: Poste, Luminaria, Lampara, Caja.</rdfs:comment>
         <rdfs:comment xml:lang="en">Material of the component. Applies to: Post, Luminaire, Lamp, JunctionBox.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">material</rdfs:label>
         <rdfs:label xml:lang="es">material</rdfs:label>
     </owl:DatatypeProperty>
@@ -800,7 +785,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Method for switching the lighting on/off (astronomical clock, photocell, remote management, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="es">Método de activación/desactivación del alumbrado (reloj astronómico, fotocélula, telegestión, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">control method</rdfs:label>
         <rdfs:label xml:lang="es">método de control</rdfs:label>
     </owl:DatatypeProperty>
@@ -815,7 +799,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Code or model of the bulb.</rdfs:comment>
         <rdfs:comment xml:lang="es">Código o modelo de la bombilla.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">bulb model</rdfs:label>
         <rdfs:label xml:lang="es">modelo de bombilla</rdfs:label>
     </owl:DatatypeProperty>
@@ -828,8 +811,7 @@
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#nombre">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, Propietario, ModeloLuminaria.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
+        <rdfs:comment xml:lang="es">Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, ModeloLuminaria.</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
         <rdfs:label xml:lang="es">nombre</rdfs:label>
     </owl:DatatypeProperty>
@@ -842,9 +824,8 @@
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Number of arms of the post.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Número de brazos del poste.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
+        <rdfs:comment xml:lang="es">Número total de brazos del poste.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Total number of arms of the post.</rdfs:comment>
         <rdfs:label xml:lang="en">number of arms</rdfs:label>
         <rdfs:label xml:lang="es">número de brazos</rdfs:label>
     </owl:DatatypeProperty>
@@ -855,11 +836,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Number of luminaires in the streetlight.</rdfs:comment>
         <rdfs:comment xml:lang="es">Número de luminarias en la farola.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">number of luminaires</rdfs:label>
         <rdfs:label xml:lang="es">número de luminarias</rdfs:label>
     </owl:DatatypeProperty>
@@ -873,26 +853,22 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Notes about the streetlight or component. Applies to: Streetlight, Post, Luminaire, Lamp, JunctionBox.</rdfs:comment>
         <rdfs:comment xml:lang="es">Observaciones sobre la farola o componente. Aplica a: Farola, Poste, Luminaria, Lampara, Caja.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">notes</rdfs:label>
         <rdfs:label xml:lang="es">observaciones</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo -->
 
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/W"/>
-        <rdfs:comment xml:lang="en">Nominal power of the lamp. In watts (W).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Potencia nominal de la lámpara. En vatios (W).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">nominal power</rdfs:label>
-        <rdfs:label xml:lang="es">potencia nominal</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Ordinal position of the arm on the post (1, 2, 3...).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Posición ordinal del brazo en el poste (1, 2, 3...).</rdfs:comment>
+        <rdfs:label xml:lang="en">arm order</rdfs:label>
+        <rdfs:label xml:lang="es">orden del brazo</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -905,73 +881,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4).</rdfs:comment>
         <rdfs:comment xml:lang="en">Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">tarifa</rdfs:label>
         <rdfs:label xml:lang="en">tariff</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/K"/>
-        <rdfs:comment xml:lang="en">Correlated color temperature (CCT) of the lamp in kelvin (K).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Temperatura de color correlacionada (CCT) de la lámpara en kelvin (K).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">correlated color temperature</rdfs:label>
-        <rdfs:label xml:lang="es">temperatura de color</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/V"/>
-        <rdfs:comment xml:lang="en">Supply voltage in volts (V).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Tensión de alimentación del suministro en voltios (V).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="es">tensión</rdfs:label>
-        <rdfs:label xml:lang="en">voltage</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70 -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HR"/>
-        <rdfs:comment xml:lang="en">Rated life of the lamp at 70% maintained flux (L70) in hours.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Vida útil nominal de la lámpara al 70% de flujo mantenido (L70) en horas.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">rated life L70</rdfs:label>
-        <rdfs:label xml:lang="es">vida útil L70</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80 -->
-
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HR"/>
-        <rdfs:comment xml:lang="en">Rated life of the lamp at 80% maintained flux (L80) in hours.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Vida útil nominal de la lámpara al 80% de flujo mantenido (L80) en horas.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">rated life L80</rdfs:label>
-        <rdfs:label xml:lang="es">vida útil L80</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -988,13 +899,31 @@
     
 
 
+    <!-- http://qudt.org/schema/qudt/QuantityValue -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo -->
+
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">
+        <rdfs:comment xml:lang="en">Arm of the post that supports a luminaire. A post can have multiple arms, each with its own height.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Brazo del poste que soporta una luminaria. Un poste puede tener múltiples brazos, cada uno con su propia altura.</rdfs:comment>
+        <rdfs:label xml:lang="en">Arm</rdfs:label>
+        <rdfs:label xml:lang="es">Brazo</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja -->
 
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja">
         <rdfs:comment xml:lang="es">Caja de conexiones o registro de acceso a los cables eléctricos de la farola. Opcional: no todas las farolas tienen una caja accesible.</rdfs:comment>
         <rdfs:comment xml:lang="en">Junction box or access point for the streetlight&apos;s electrical cables. Optional: not all streetlights have an accessible box.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">Caja</rdfs:label>
         <rdfs:label xml:lang="en">Junction Box</rdfs:label>
     </owl:Class>
@@ -1008,7 +937,6 @@
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint"/>
         <rdfs:comment xml:lang="es">Cuadro eléctrico o centro de control del que dependen una o más farolas. Es un punto de suministro (edintsum:UtilitySupplyPoint), punto donde llega la electricidad a la instalación de alumbrado.</rdfs:comment>
         <rdfs:comment xml:lang="en">Electrical panel or control center on which one or more streetlights depend. It is a utility supply point (edintsum:UtilitySupplyPoint), the point where electricity reaches the lighting installation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">Centro de mando</rdfs:label>
         <rdfs:label xml:lang="en">Control Center</rdfs:label>
     </owl:Class>
@@ -1022,7 +950,6 @@
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption"/>
         <rdfs:comment xml:lang="es">Observación de consumo eléctrico en un período tarifario determinado. Al heredar de edintsum:UtilityConsumption ⊂ sosa:Observation, usa el patrón SOSA: – sosa:hasFeatureOfInterest → el CentroDeMando (punto de suministro) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:periodoTarifario → concepto SKOS (activo, llano, valle, punta) Cada instancia representa el consumo en UN período tarifario. El total se obtiene sumando las instancias del mismo ejercicio.</rdfs:comment>
         <rdfs:comment xml:lang="en">Observation of electricity consumption in a specific tariff period. By inheriting from edintsum:UtilityConsumption ⊂ sosa:Observation, uses the SOSA pattern: – sosa:hasFeatureOfInterest → the CentroDeMando (supply point) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:periodoTarifario → SKOS concept (active, standard, off-peak, peak) Each instance represents consumption in ONE tariff period. The total is obtained by summing instances of the same fiscal year.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">Consumo energético</rdfs:label>
         <rdfs:label xml:lang="en">Energy Consumption</rdfs:label>
     </owl:Class>
@@ -1035,7 +962,6 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante">
         <rdfs:comment xml:lang="es">Entidad que fabrica componentes del alumbrado (postes, luminarias, lámparas, cajas o modelos).</rdfs:comment>
         <rdfs:comment xml:lang="en">Entity that manufactures street lighting components (posts, luminaires, lamps, boxes or models).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">Fabricante</rdfs:label>
         <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
     </owl:Class>
@@ -1055,7 +981,6 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A complete point of light, composed of a post, one or more luminaires (which in turn contain lamps) and optionally a junction box. It is an urban element (edintinf:UrbanElement) and, by inheritance, an InfrastructureElement that can have a utility supply point (edintsum:hasUtilitySupplyPoint). Every instance of Farola has infrastructure type &apos;Street lamp&apos; (edintkosinftype:StreeLamp) from the EDINT SKOS.</rdfs:comment>
         <rdfs:comment xml:lang="es">Punto de luz completo, compuesto por un poste, una o más luminarias (que a su vez contienen lámparas) y opcionalmente una caja de conexiones. Es un elemento urbano (edintinf:UrbanElement) y, por herencia, un InfrastructureElement que puede tener punto de suministro (edintsum:hasUtilitySupplyPoint). Toda instancia de Farola tiene como tipo de infraestructura &apos;Street lamp&apos; (edintkosinftype:StreeLamp) del SKOS de EDINT.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="es">Farola</rdfs:label>
         <rdfs:label xml:lang="en">Streetlight</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/v1.0-rc/Farola"/>
@@ -1069,7 +994,6 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">
         <rdfs:comment xml:lang="es">Fuente de luz: bombilla, módulo LED o convertidor de energía eléctrica en luz. Cada luminaria aloja exactamente una lámpara. Incluye propiedades fotométricas (potencia, flujo, CCT, CRI) y de vida útil (L70, L80).</rdfs:comment>
         <rdfs:comment xml:lang="en">Light source: bulb, LED module or converter of electrical energy into light. Each luminaire houses exactly one lamp. Includes photometric properties (power, luminous flux, CCT, CRI) and rated life (L70, L80).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">Lamp</rdfs:label>
         <rdfs:label xml:lang="es">Lámpara</rdfs:label>
     </owl:Class>
@@ -1082,7 +1006,6 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">
         <rdfs:comment xml:lang="es">Aparato de iluminación que aloja, dirige y filtra la luz de la lámpara. Una farola puede tener múltiples luminarias (caso LED+DESCARGA). Puede referenciar un modelo del catálogo (ModeloLuminaria).</rdfs:comment>
         <rdfs:comment xml:lang="en">Lighting apparatus that houses, directs and filters the light from the lamp. A streetlight can have multiple luminaires (e.g., LED+DISCHARGE). Can reference a catalog model (ModeloLuminaria).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">Luminaire</rdfs:label>
         <rdfs:label xml:lang="es">Luminaria</rdfs:label>
     </owl:Class>
@@ -1095,7 +1018,6 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria">
         <rdfs:comment xml:lang="es">Entrada del catálogo de modelos de luminaria. Permite vincular fabricante, potencia nominal, tecnología y especificaciones fotométricas.</rdfs:comment>
         <rdfs:comment xml:lang="en">Entry in the luminaire model catalog. Allows linking manufacturer, nominal power, technology and photometric specifications.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">Luminaire Model</rdfs:label>
         <rdfs:label xml:lang="es">Modelo de luminaria</rdfs:label>
     </owl:Class>
@@ -1106,24 +1028,10 @@
 
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">
-        <rdfs:comment xml:lang="en">Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
+        <rdfs:comment xml:lang="en">Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS). A post can have one or more arms.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS). Un poste puede tener uno o más brazos.</rdfs:comment>
         <rdfs:label xml:lang="en">Post</rdfs:label>
         <rdfs:label xml:lang="es">Poste</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario -->
-
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario">
-        <rdfs:comment xml:lang="es">Entidad titular de la farola: ayuntamiento, compañía eléctrica, comunidad de vecinos, etc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Entity that owns the streetlight: municipality, electricity company, community of owners, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
-        <rdfs:label xml:lang="en">Owner</rdfs:label>
-        <rdfs:label xml:lang="es">Propietario</rdfs:label>
     </owl:Class>
     
 
@@ -1134,7 +1042,6 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo">
         <rdfs:comment xml:lang="en">Energy saving system that reduces luminous flux. Can be located in the luminaire (lamp regulator) or at the start of the installation (head-end regulator).</rdfs:comment>
         <rdfs:comment xml:lang="es">Sistema de ahorro energético que reduce el flujo luminoso. Puede estar ubicado en la luminaria (regulador de lámpara) o al inicio de la instalación (regulador de cabecera).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">Flow Reducer</rdfs:label>
         <rdfs:label xml:lang="es">Reductor de flujo</rdfs:label>
     </owl:Class>
@@ -1148,7 +1055,6 @@
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract"/>
         <rdfs:comment xml:lang="es">Contrato de suministro eléctrico asociado a un centro de mando. Incluye tarifa, tensión y consumo por períodos tarifarios. Es un contrato de suministro (edintsum:UtilityContract), con tarifa y punto de suministro asociado.</rdfs:comment>
         <rdfs:comment xml:lang="en">Electricity supply contract associated with a control center. Includes tariff, voltage, and consumption by tariff periods. It is a utility contract (edintsum:UtilityContract), with rate and associated supply point.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <rdfs:label xml:lang="en">Electricity Supply</rdfs:label>
         <rdfs:label xml:lang="es">Suministro eléctrico</rdfs:label>
     </owl:Class>
@@ -1200,6 +1106,13 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
     
 
 

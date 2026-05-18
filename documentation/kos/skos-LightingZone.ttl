@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkoslightzone: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/> .
+
+edintkos:LightingZone a skos:ConceptScheme ;
+    dct:title "Zonas de alumbrado según REEAE"@es , "Lighting zones according to REEAE"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dct:source <https://www.boe.es/eli/es/rd/2008/11/14/1890> ;
+    skos:definition """Clasificación de zonas ambientales de alumbrado según el Reglamento de Eficiencia Energética 
+        de Instalaciones de Alumbrado Exterior (REEAE, RD 1890/2008). 
+        E1: máxima protección, E2: alta, E3: media, E4: baja."""@es ;
+    skos:definition """Classification of environmental lighting zones according to the Regulation on Energy Efficiency 
+        of Outdoor Lighting Installations (REEAE, RD 1890/2008). 
+        E1: maximum protection, E2: high, E3: medium, E4: low."""@en .
+
+edintkoslightzone:e1 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
+    skos:notation "E1" ;
+    skos:prefLabel "E1"@es , "E1"@en ;
+    skos:altLabel "Zona E1"@es ;
+    skos:definition """Zona de protección máxima. Parques nacionales, reservas, zonas con paisaje 
+        oscuro natural. FHS máximo: 0%. Iluminancia ≤ 1 lux."""@es ;
+    skos:definition """Maximum protection zone. National parks, reserves, areas with natural dark landscapes. 
+        Maximum FHS: 0%. Illuminance ≤ 1 lux."""@en .
+
+edintkoslightzone:e2 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
+    skos:notation "E2" ;
+    skos:prefLabel "E2"@es , "E2"@en ;
+    skos:altLabel "Zona E2"@es ;
+    skos:definition """Zona de protección alta. Suelo no urbanizable, áreas rurales. 
+        FHS máximo: 5%. Iluminancia ≤ 5 lux."""@es ;
+    skos:definition """High protection zone. Non-developable land, rural areas. 
+        Maximum FHS: 5%. Illuminance ≤ 5 lux."""@en .
+
+edintkoslightzone:e3 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
+    skos:notation "E3" ;
+    skos:prefLabel "E3"@es , "E3"@en ;
+    skos:altLabel "Zona E3"@es ;
+    skos:definition """Zona de protección media. Áreas residenciales urbanas y periurbanas. 
+        FHS máximo: 15%. Iluminancia ≤ 10 lux."""@es ;
+    skos:definition """Medium protection zone. Urban and peri-urban residential areas. 
+        Maximum FHS: 15%. Illuminance ≤ 10 lux."""@en .
+
+edintkoslightzone:e4 a skos:Concept ;
+    skos:inScheme edintkos:LightingZone ;
+    skos:notation "E4" ;
+    skos:prefLabel "E4"@es , "E4"@en ;
+    skos:altLabel "Zona E4"@es ;
+    skos:definition """Zona de protección baja. Centros urbanos, zonas comerciales e industriales de alta 
+        actividad nocturna. FHS máximo: 25%. Iluminancia ≤ 25 lux."""@es ;
+    skos:definition """Low protection zone. Urban centers, commercial and industrial areas with high 
+        nighttime activity. Maximum FHS: 25%. Illuminance ≤ 25 lux."""@en .
