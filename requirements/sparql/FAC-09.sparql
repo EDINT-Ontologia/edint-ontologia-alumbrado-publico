@@ -1,28 +1,24 @@
 # =============================================================================
 # FACT: FAC-09
-# Statement: La potencia se expresa en vatios con qudt:unit
-# Verification: Las lámparas con potencia deben tener resultado QUDT
+# Statement: La potencia se expresa con qudt:QuantityValue (numericValue + hasUnit)
+# Verification: Las lámparas con potenciaNominal deben usar qudt:QuantityValue
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 
 # -----------------------------------------------------------------------------
-# Lámparas con potenciaNominal que no usan qudt:applicableUnit
-# (Verificación de consistencia de unidades)
+# Lámparas con potenciaNominal que NO usan qudt:QuantityValue
+# (Resultado vacío = todas cumplen)
 # -----------------------------------------------------------------------------
 
-SELECT ?lampara ?potencia
+SELECT ?lampara
 WHERE {
   ?lampara a edintalu:Lampara ;
-           edintalu:potenciaNominal ?potencia .
-  FILTER NOT EXISTS { edintalu:potenciaNominal <http://qudt.org/schema/qudt#applicableUnit> ?unit . }
-}
-
-# -----------------------------------------------------------------------------
-# Verificar que la propiedad potenciaNominal tiene applicableUnit declarado
-# en la ontología (metadatos, no datos de instancia)
-# -----------------------------------------------------------------------------
-
-ASK {
-  edintalu:potenciaNominal <http://qudt.org/schema/qudt#applicableUnit> ?unit .
+           edintalu:potenciaNominal ?qv .
+  FILTER NOT EXISTS {
+    ?qv a qudt:QuantityValue ;
+        qudt:numericValue ?val ;
+        qudt:hasUnit ?unit .
+  }
 }

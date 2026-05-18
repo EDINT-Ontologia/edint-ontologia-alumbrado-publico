@@ -61,8 +61,7 @@ exlp:f1002-geom a gsp:Geometry ;
 
 exlp:f1002-poste a edintalu:Poste ;
     edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura 5 ;
-    qudt:applicableUnit qudtu:M .
+    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 5 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria + Lámpara (LED 80W) ---
 
@@ -72,8 +71,6 @@ exlp:f1002-lum1 a edintalu:Luminaria ;
 
 exlp:f1002-lum1-lamp a edintalu:Lampara ;
     edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
-    edintalu:potenciaNominal 80 ;
-    qudt:applicableUnit qudtu:W ;
-    edintalu:temperaturaColor 4000 ;
-    qudt:applicableUnit qudtu:K ;
+    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 80 ; qudt:hasUnit qudtu:W ] ;
+    edintalu:temperaturaColor [ a qudt:QuantityValue ; qudt:numericValue 4000 ; qudt:hasUnit qudtu:K ] ;
     edintalu:indiceReproduccionCromatica 80 .

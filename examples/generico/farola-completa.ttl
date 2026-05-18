@@ -32,10 +32,8 @@ ex:cm-001 a edintalu:CentroDeMando ;
 ex:suministro-001 a edintalu:SuministroElectrico ;
     edintalu:ejercicio "2024"^^xsd:gYear ;
     edintalu:tarifa "6.1" ;
-    edintalu:tension 230 ;
-    qudt:applicableUnit qudtu:V ;
-    edintalu:kwhRenovables 1200 ;
-    qudt:applicableUnit qudtu:KiloW-HR ;
+    edintalu:tension [ a qudt:QuantityValue ; qudt:numericValue 230 ; qudt:hasUnit qudtu:V ] ;
+    edintalu:kwhRenovables [ a qudt:QuantityValue ; qudt:numericValue 1200 ; qudt:hasUnit qudtu:KiloW-HR ] ;
     edintalu:tieneConsumo ex:consumo-001-llano , ex:consumo-001-valle .
 
 # --- Consumo energético (SOSA) ---
@@ -83,8 +81,7 @@ ex:farola-001 a edintalu:Farola ;
 
 ex:poste-001 a edintalu:Poste ;
     edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura 8 ;
-    qudt:applicableUnit qudtu:M ;
+    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 8 ; qudt:hasUnit qudtu:M ] ;
     edintalu:numeroDeBrazos 1 ;
     edintalu:tieneBrazo ex:poste-001-brazo1 ;
     edintalu:material "Acero galvanizado" ;
@@ -92,8 +89,7 @@ ex:poste-001 a edintalu:Poste ;
 
 ex:poste-001-brazo1 a edintalu:Brazo ;
     edintalu:ordenBrazo 1 ;
-    edintalu:altura 6.5 ;
-    qudt:applicableUnit qudtu:M .
+    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 6.5 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria ---
 
@@ -101,8 +97,7 @@ ex:lum-001 a edintalu:Luminaria ;
     edintalu:tieneLampara ex:lamp-001 ;
     edintalu:modeloLuminaria ex:modelo-speedstar ;
     edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
-    edintalu:flujoHemisfericoSuperior 1 ;
-    qudt:applicableUnit qudtu:PERCENT ;
+    edintalu:flujoHemisfericoSuperior [ a qudt:QuantityValue ; qudt:numericValue 1 ; qudt:hasUnit qudtu:PERCENT ] ;
     edintalu:material "Aluminio inyectado" ;
     edintalu:fabricadoPor ex:fabricante-luminarias .
 
@@ -110,16 +105,12 @@ ex:lum-001 a edintalu:Luminaria ;
 
 ex:lamp-001 a edintalu:Lampara ;
     edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
-    edintalu:potenciaNominal 72 ;
-    qudt:applicableUnit qudtu:W ;
-    edintalu:flujoLuminoso 8600 ;
-    qudt:applicableUnit qudtu:LM ;
-    edintalu:temperaturaColor 3000 ;
-    qudt:applicableUnit qudtu:K ;
+    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 72 ; qudt:hasUnit qudtu:W ] ;
+    edintalu:flujoLuminoso [ a qudt:QuantityValue ; qudt:numericValue 8600 ; qudt:hasUnit qudtu:LM ] ;
+    edintalu:temperaturaColor [ a qudt:QuantityValue ; qudt:numericValue 3000 ; qudt:hasUnit qudtu:K ] ;
     edintalu:indiceReproduccionCromatica 70 ;
     edintalu:eficaciaLuminosa 119 ;
-    edintalu:vidaUtilL70 100000 ;
-    qudt:applicableUnit qudtu:HR ;
+    edintalu:vidaUtilL70 [ a qudt:QuantityValue ; qudt:numericValue 100000 ; qudt:hasUnit qudtu:HR ] ;
     edintalu:fechaInstalacion "2024-03-15T00:00:00"^^xsd:dateTime .
 
 # --- Caja de conexiones ---

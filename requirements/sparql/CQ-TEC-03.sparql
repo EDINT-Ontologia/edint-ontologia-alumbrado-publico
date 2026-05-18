@@ -4,6 +4,7 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
@@ -12,15 +13,17 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 # Calcula eficacia como flujoLuminoso / potenciaNominal
 # -----------------------------------------------------------------------------
 
-SELECT ?farola ?flujo ?potencia (xsd:decimal(?flujo) / xsd:decimal(?pot) AS ?eficaciaLmPorW)
+SELECT ?farola ?flujoVal ?potenciaVal (xsd:decimal(?flujoVal) / xsd:decimal(?potVal) AS ?eficaciaLmPorW)
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:flujoLuminoso ?flujo ;
-        edintalu:potenciaNominal ?pot .
-  FILTER(xsd:decimal(?pot) > 0)
-  FILTER((xsd:decimal(?flujo) / xsd:decimal(?pot)) < 80)
+  ?lamp edintalu:flujoLuminoso ?flujoQv ;
+        edintalu:potenciaNominal ?potQv .
+  ?flujoQv qudt:numericValue ?flujoVal .
+  ?potQv qudt:numericValue ?potVal .
+  FILTER(xsd:decimal(?potVal) > 0)
+  FILTER((xsd:decimal(?flujoVal) / xsd:decimal(?potVal)) < 80)
 }
 ORDER BY ?eficaciaLmPorW
 

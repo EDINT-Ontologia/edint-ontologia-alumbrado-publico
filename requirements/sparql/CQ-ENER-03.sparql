@@ -4,26 +4,31 @@
 # =============================================================================
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
 # Total de kWh renovables consumidos por el alumbrado público
 # -----------------------------------------------------------------------------
 
-SELECT (SUM(xsd:decimal(?kwhRen)) AS ?totalKWhRenovables)
+SELECT (SUM(xsd:decimal(?val)) AS ?totalKWhRenovables)
 WHERE {
   ?sum a edintalu:SuministroElectrico ;
-       edintalu:kwhRenovables ?kwhRen .
+       edintalu:kwhRenovables ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val .
 }
 
 # -----------------------------------------------------------------------------
 # kWh renovables por centro de mando
 # -----------------------------------------------------------------------------
 
-SELECT ?centroDeMando ?kwhRenovables
+SELECT ?centroDeMando ?val
 WHERE {
   ?centroDeMando edintalu:tieneSuministro ?sum .
   ?sum a edintalu:SuministroElectrico ;
-       edintalu:kwhRenovables ?kwhRenovables .
+       edintalu:kwhRenovables ?qv .
+  ?qv a qudt:QuantityValue ;
+      qudt:numericValue ?val .
 }
-ORDER BY DESC(?kwhRenovables)
+ORDER BY DESC(?val)

@@ -5,6 +5,7 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
@@ -18,12 +19,13 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 #   E4: FHS ≤ 25%   (zonas de alta luminosidad)
 # -----------------------------------------------------------------------------
 
-SELECT ?farola ?zonaLabel ?fhs ?umbralMaximo
+SELECT ?farola ?zonaLabel ?fhsVal ?umbralMaximo
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:zonaAlumbrado ?zona ;
           edintalu:luminaria ?lum .
-  ?lum edintalu:flujoHemisfericoSuperior ?fhs .
+  ?lum edintalu:flujoHemisfericoSuperior ?fhsQv .
+  ?fhsQv qudt:numericValue ?fhsVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
 
@@ -36,7 +38,7 @@ WHERE {
     AS ?umbralMaximo
   )
 
-  FILTER(xsd:decimal(?fhs) > ?umbralMaximo)
+  FILTER(xsd:decimal(?fhsVal) > ?umbralMaximo)
 }
 ORDER BY ?zonaLabel ?farola
 
@@ -45,11 +47,12 @@ ORDER BY ?zonaLabel ?farola
 # cuando el label no está disponible
 # -----------------------------------------------------------------------------
 
-SELECT ?farola ?zona ?fhs
+SELECT ?farola ?zona ?fhsVal
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:zonaAlumbrado ?zona ;
           edintalu:luminaria ?lum .
-  ?lum edintalu:flujoHemisfericoSuperior ?fhs .
-  FILTER(xsd:decimal(?fhs) > 25)  # Umbral para E4 como ejemplo
+  ?lum edintalu:flujoHemisfericoSuperior ?fhsQv .
+  ?fhsQv qudt:numericValue ?fhsVal .
+  FILTER(xsd:decimal(?fhsVal) > 25)  # Umbral para E4 como ejemplo
 }

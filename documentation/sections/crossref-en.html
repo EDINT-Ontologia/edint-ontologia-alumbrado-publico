@@ -3,6 +3,7 @@ This section provides details for each class and property defined by alumbrado-p
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Arm</a></li>
   <li><a href="#CentroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando">Control Center</a></li>
   <li><a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Electricity Supply</a></li>
   <li><a href="#ConsumoEnergetico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico">Energy Consumption</a></li>
@@ -12,25 +13,37 @@ This section provides details for each class and property defined by alumbrado-p
   <li><a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaire</a></li>
   <li><a href="#ModeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria">Luminaire Model</a></li>
   <li><a href="#Fabricante" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante">Manufacturer</a></li>
-  <li><a href="#Propietario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario">Owner</a></li>
   <li><a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Post</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">Postal address</a></li>
   <li><a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a></li>
  </ul>
+ <div class="entity" id="Brazo">
+  <h3>Arm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo</p>
+  <div class="comment">
+   <span class="markdown">Arm of the post that supports a luminaire. A post can have multiple arms, each with its own height.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ordenBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo">arm order</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">has arm</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="CentroDeMando">
   <h3>Control Center<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando</p>
   <div class="comment">
    <span class="markdown">Electrical panel or control center on which one or more streetlights depend. It is a utility supply point (edintsum:UtilitySupplyPoint), the point where electricity reaches the lighting installation.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -58,14 +71,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Electricity supply contract associated with a control center. Includes tariff, voltage, and consumption by tariff periods. It is a utility contract (edintsum:UtilityContract), with rate and associated supply point.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -77,7 +82,7 @@ This section provides details for each class and property defined by alumbrado-p
     is in domain of
    </dt>
    <dd>
-    <a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">has consumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">renewable kWh</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tarifa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa">tariff</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">voltage</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">has consumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">renewable kWh</a> <sup class="type-op" title="object property">op</sup>, <a href="#tarifa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa">tariff</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">voltage</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -93,14 +98,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Observation of electricity consumption in a specific tariff period. By inheriting from edintsum:UtilityConsumption ⊂ sosa:Observation, uses the SOSA pattern: – sosa:hasFeatureOfInterest → the CentroDeMando (supply point) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:periodoTarifario → SKOS concept (active, standard, off-peak, peak) Each instance represents consumption in ONE tariff period. The total is obtained by summing instances of the same fiscal year.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -128,14 +125,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Energy saving system that reduces luminous flux. Can be located in the luminaire (lamp regulator) or at the start of the installation (head-end regulator).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in domain of
@@ -157,14 +146,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Junction box or access point for the streetlight's electrical cables. Optional: not all streetlights have an accessible box.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in domain of
@@ -186,20 +167,12 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Light source: bulb, LED module or converter of electrical energy into light. Each luminaire houses exactly one lamp. Includes photometric properties (power, luminous flux, CCT, CRI) and rated life (L70, L80).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#modeloBombilla" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla">bulb model</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indiceReproduccionCromatica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica">color rendering index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">correlated color temperature</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#fechaInstalacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion">installation date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara">lamp type</a> <sup class="type-op" title="object property">op</sup>, <a href="#eficaciaLuminosa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa">luminous efficacy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">luminous flux</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">luminous intensity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">nominal power</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">rated life L70</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">rated life L80</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#modeloBombilla" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla">bulb model</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indiceReproduccionCromatica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica">color rendering index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">correlated color temperature</a> <sup class="type-op" title="object property">op</sup>, <a href="#fechaInstalacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion">installation date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara">lamp type</a> <sup class="type-op" title="object property">op</sup>, <a href="#eficaciaLuminosa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa">luminous efficacy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">luminous flux</a> <sup class="type-op" title="object property">op</sup>, <a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">luminous intensity</a> <sup class="type-op" title="object property">op</sup>, <a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">nominal power</a> <sup class="type-op" title="object property">op</sup>, <a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">rated life L70</a> <sup class="type-op" title="object property">op</sup>, <a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">rated life L80</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -215,20 +188,12 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Lighting apparatus that houses, directs and filters the light from the lamp. A streetlight can have multiple luminaires (e.g., LED+DISCHARGE). Can reference a catalog model (ModeloLuminaria).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">has lamp</a> <sup class="type-op" title="object property">op</sup>, <a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">luminaire model</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria">luminaire type</a> <sup class="type-op" title="object property">op</sup>, <a href="#numeroDeLuminarias" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">number of luminaires</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">upper hemisphere flux</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">has lamp</a> <sup class="type-op" title="object property">op</sup>, <a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">luminaire model</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria">luminaire type</a> <sup class="type-op" title="object property">op</sup>, <a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">upper hemisphere flux</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -244,14 +209,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Entry in the luminaire model catalog. Allows linking manufacturer, nominal power, technology and photometric specifications.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in range of
@@ -267,14 +224,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Entity that manufactures street lighting components (posts, luminaires, lamps, boxes or models).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in range of
@@ -284,49 +233,18 @@ This section provides details for each class and property defined by alumbrado-p
    </dd>
   </dl>
  </div>
- <div class="entity" id="Propietario">
-  <h3>Owner<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario</p>
-  <div class="comment">
-   <span class="markdown">Entity that owns the streetlight: municipality, electricity company, community of owners, etc.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#propietario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario">owner</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="Poste">
   <h3>Post<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste</p>
   <div class="comment">
-   <span class="markdown">Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS).</span>
+   <span class="markdown">Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS). A post can have one or more arms.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#accesorios" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios">accessories</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#alturaBrazo1" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1">arm height 1</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#alturaBrazo2" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2">arm height 2</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#altura" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">height</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#numeroDeBrazos" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">number of arms</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoSoporte" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte">support type</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#accesorios" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios">accessories</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">has arm</a> <sup class="type-op" title="object property">op</sup>, <a href="#numeroDeBrazos" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">number of arms</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoSoporte" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte">support type</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -365,14 +283,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">A complete point of light, composed of a post, one or more luminaires (which in turn contain lamps) and optionally a junction box. It is an urban element (edintinf:UrbanElement) and, by inheritance, an InfrastructureElement that can have a utility supply point (edintsum:hasUtilitySupplyPoint). Every instance of Farola has infrastructure type 'Street lamp' (edintkosinftype:StreeLamp) from the EDINT SKOS.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -384,7 +294,7 @@ This section provides details for each class and property defined by alumbrado-p
     is in domain of
    </dt>
    <dd>
-    <a href="#direccion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#estadoConservacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion">conservation status</a> <sup class="type-op" title="object property">op</sup>, <a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">control center</a> <sup class="type-op" title="object property">op</sup>, <a href="#metodoDeControl" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl">control method</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#calidadDato" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato">data quality</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoIluminacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion">illumination type</a> <sup class="type-op" title="object property">op</sup>, <a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">junction box</a> <sup class="type-op" title="object property">op</sup>, <a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">lighting class</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">lighting class</a> <sup class="type-op" title="object property">op</sup>, <a href="#zonaAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado">lighting zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaire</a> <sup class="type-op" title="object property">op</sup>, <a href="#horasDeFuncionamiento" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento">operating hours</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#propietario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario">owner</a> <sup class="type-op" title="object property">op</sup>, <a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">post</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoAlimentacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion">power supply type</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#direccion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">address</a> <sup class="type-op" title="object property">op</sup>, <a href="#estadoConservacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion">conservation status</a> <sup class="type-op" title="object property">op</sup>, <a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">control center</a> <sup class="type-op" title="object property">op</sup>, <a href="#metodoDeControl" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl">control method</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#calidadDato" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato">data quality</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">illumination class</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoIluminacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion">illumination type</a> <sup class="type-op" title="object property">op</sup>, <a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">junction box</a> <sup class="type-op" title="object property">op</sup>, <a href="#zonaAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado">lighting zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaire</a> <sup class="type-op" title="object property">op</sup>, <a href="#numeroDeLuminarias" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">number of luminaires</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#horasDeFuncionamiento" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento">operating hours</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">post</a> <sup class="type-op" title="object property">op</sup>, <a href="#tipoAlimentacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion">power supply type</a> <sup class="type-op" title="object property">op</sup>, <a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">road lighting class</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -395,25 +305,35 @@ This section provides details for each class and property defined by alumbrado-p
   <li><a href="#tipoCable" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable">cable type</a></li>
   <li><a href="#estadoConservacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion">conservation status</a></li>
   <li><a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">control center</a></li>
+  <li><a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">correlated color temperature</a></li>
+  <li><a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">has arm</a></li>
   <li><a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">has consumption</a></li>
   <li><a href="#disponeReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo">has flow reducer</a></li>
   <li><a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">has lamp</a></li>
   <li><a href="#tieneSuministro" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro">has supply</a></li>
+  <li><a href="#altura" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">height</a></li>
+  <li><a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">illumination class</a></li>
   <li><a href="#tipoIluminacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion">illumination type</a></li>
   <li><a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">junction box</a></li>
   <li><a href="#tipoLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara">lamp type</a></li>
-  <li><a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">lighting class</a></li>
-  <li><a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">lighting class</a></li>
   <li><a href="#zonaAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado">lighting zone</a></li>
   <li><a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaire</a></li>
   <li><a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">luminaire model</a></li>
   <li><a href="#tipoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria">luminaire type</a></li>
+  <li><a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">luminous flux</a></li>
+  <li><a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">luminous intensity</a></li>
   <li><a href="#fabricadoPor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor">manufactured by</a></li>
-  <li><a href="#propietario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario">owner</a></li>
+  <li><a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">nominal power</a></li>
   <li><a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">post</a></li>
   <li><a href="#tipoAlimentacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion">power supply type</a></li>
+  <li><a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">rated life L70</a></li>
+  <li><a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">rated life L80</a></li>
+  <li><a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">renewable kWh</a></li>
+  <li><a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">road lighting class</a></li>
   <li><a href="#tipoSoporte" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte">support type</a></li>
   <li><a href="#periodoTarifario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#periodoTarifario">tariff period</a></li>
+  <li><a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">upper hemisphere flux</a></li>
+  <li><a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">voltage</a></li>
  </ul>
  <div class="entity" id="direccion">
   <h3>address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -421,14 +341,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -452,14 +364,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Cable type in the junction box. SKOS: ET103, ET106, ET107, ET112, ET113.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -483,14 +387,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Conservation status of the streetlight. SKOS with 5 levels: Excellent, Good, Regular, Poor, Under construction.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -514,14 +410,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Control center on which the streetlight depends.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -539,20 +427,58 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
+ <div class="entity" id="temperaturaColor">
+  <h3>correlated color temperature<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor</p>
+  <div class="comment">
+   <span class="markdown">Correlated color temperature (CCT) of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kelvin (K).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="tieneBrazo">
+  <h3>has arm<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo</p>
+  <div class="comment">
+   <span class="markdown">Arm of the post. Cardinality: 0..n.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Post</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Arm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="tieneConsumo">
   <h3>has consumption<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo</p>
   <div class="comment">
    <span class="markdown">Energy consumption record of the supply. Cardinality: 0..n.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -576,14 +502,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Associated flow reducer. Applies to: Streetlight. Cardinality: 0..n.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -601,14 +519,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Lamp housed in the luminaire. Cardinality: exactly 1.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -632,14 +542,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Electricity supply contract associated with the control center. Cardinality: 0..1.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -657,20 +559,52 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
+ <div class="entity" id="altura">
+  <h3>height<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura</p>
+  <div class="comment">
+   <span class="markdown">Height of the component. Applies to: Post (total height), Arm (height of the arm above ground). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in meters (M).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="tipoAlumbrado">
+  <h3>illumination class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado</p>
+  <div class="comment">
+   <span class="markdown">Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="tipoIluminacion">
   <h3>illumination type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion</p>
   <div class="comment">
    <span class="markdown">Type of illumination. SKOS: Nighttime, Permanent.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -694,14 +628,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Junction box of the streetlight. Cardinality: 0..1 (optional).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -725,14 +651,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Type of lamp. SKOS with 12 concepts (LED, Sodium vapor, Mercury vapor, Metal halide, etc.).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -750,82 +668,12 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="claseLuminotecnica">
-  <h3>lighting class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica</p>
-  <div class="comment">
-   <span class="markdown">Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="tipoAlumbrado">
-  <h3>lighting class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado</p>
-  <div class="comment">
-   <span class="markdown">Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="zonaAlumbrado">
   <h3>lighting zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado</p>
   <div class="comment">
    <span class="markdown">Zone classification according to REEAE (RD 1890/2008) for light pollution control. SKOS: E1 (maximum protection), E2 (high protection), E3 (medium protection), E4 (low protection).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -849,14 +697,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Lighting apparatus of the streetlight. Cardinality: 1 or more (e.g., LED+DISCHARGE).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -880,14 +720,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Reference to the luminaire's catalog model. Cardinality: 0..1.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -911,14 +743,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Type of luminaire. SKOS with 8 concepts (Projector, Recessed wall, Bollard, Road, Artistic, etc.).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -936,20 +760,58 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
+ <div class="entity" id="flujoLuminoso">
+  <h3>luminous flux<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso</p>
+  <div class="comment">
+   <span class="markdown">Luminous flux of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in lumens (LM).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="intensidadLuminica">
+  <h3>luminous intensity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica</p>
+  <div class="comment">
+   <span class="markdown">Luminous intensity of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in candelas (CD).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="fabricadoPor">
   <h3>manufactured by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor</p>
   <div class="comment">
    <span class="markdown">Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -961,33 +823,25 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="propietario">
-  <h3>owner<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario</p>
+ <div class="entity" id="potenciaNominal">
+  <h3>nominal power<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal</p>
   <div class="comment">
-   <span class="markdown">Entity that owns the streetlight. Cardinality: 0..1.</span>
+   <span class="markdown">Nominal power of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in watts (W) or kilowatts (KiloW).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Propietario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Propietario">Owner</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -998,14 +852,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Physical support of the streetlight. Cardinality: exactly 1.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1029,14 +875,98 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Type of electrical supply. SKOS with 5 concepts (Underground, Aerial, Wall, Stapled, Battery).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="vidaUtilL70">
+  <h3>rated life L70<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70</p>
+  <div class="comment">
+   <span class="markdown">Rated life of the lamp at 70% maintained flux (L70). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="vidaUtilL80">
+  <h3>rated life L80<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80</p>
+  <div class="comment">
+   <span class="markdown">Rated life of the lamp at 80% maintained flux (L80). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="kwhRenovables">
+  <h3>renewable kWh<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables</p>
+  <div class="comment">
+   <span class="markdown">Consumption from renewable energy sources with self-consumption systems. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kilowatt-hours (KiloW-HR).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Electricity Supply</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="claseLuminotecnica">
+  <h3>road lighting class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica</p>
+  <div class="comment">
+   <span class="markdown">Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian).</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1060,14 +990,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Type of physical support of the post. SKOS with ~35 concepts. ConceptScheme: tipo-soporte.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1091,14 +1013,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Tariff period to which the consumption corresponds. SKOS: active, standard, off-peak, peak. Each ConsumoEnergetico instance represents ONE tariff period; the total is obtained by summing instances of the same fiscal year.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1116,38 +1030,73 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
+ <div class="entity" id="flujoHemisfericoSuperior">
+  <h3>upper hemisphere flux<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior</p>
+  <div class="comment">
+   <span class="markdown">Upper hemisphere flux (FHS/ULOR) of the luminaire. Key for REEAE compliance in zones E1-E4. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in percent (PERCENT).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaire</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="tension">
+  <h3>voltage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension</p>
+  <div class="comment">
+   <span class="markdown">Supply voltage. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in volts (V).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Electricity Supply</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#accesorios" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios">accessories</a></li>
-  <li><a href="#alturaBrazo1" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1">arm height 1</a></li>
-  <li><a href="#alturaBrazo2" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2">arm height 2</a></li>
+  <li><a href="#ordenBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo">arm order</a></li>
   <li><a href="#modeloBombilla" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla">bulb model</a></li>
   <li><a href="#indiceReproduccionCromatica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica">color rendering index</a></li>
   <li><a href="#metodoDeControl" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl">control method</a></li>
-  <li><a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">correlated color temperature</a></li>
   <li><a href="#calidadDato" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato">data quality</a></li>
   <li><a href="#ejercicio" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ejercicio">fiscal year</a></li>
-  <li><a href="#altura" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">height</a></li>
   <li><a href="#fechaInstalacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion">installation date</a></li>
   <li><a href="#esReductorFlujoInicio" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoInicio">is head-end flow reducer</a></li>
   <li><a href="#esReductorFlujoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoLuminaria">is luminaire flow reducer</a></li>
   <li><a href="#eficaciaLuminosa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa">luminous efficacy</a></li>
-  <li><a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">luminous flux</a></li>
-  <li><a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">luminous intensity</a></li>
   <li><a href="#material" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material">material</a></li>
   <li><a href="#nombre" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#nombre">name</a></li>
-  <li><a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">nominal power</a></li>
   <li><a href="#observaciones" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#observaciones">notes</a></li>
   <li><a href="#numeroDeBrazos" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">number of arms</a></li>
   <li><a href="#numeroDeLuminarias" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">number of luminaires</a></li>
   <li><a href="#horasDeFuncionamiento" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento">operating hours</a></li>
-  <li><a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">rated life L70</a></li>
-  <li><a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">rated life L80</a></li>
-  <li><a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">renewable kWh</a></li>
   <li><a href="#tarifa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa">tariff</a></li>
-  <li><a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">upper hemisphere flux</a></li>
-  <li><a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">voltage</a></li>
  </ul>
  <div class="entity" id="accesorios">
   <h3>accessories<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -1155,14 +1104,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Accessories mounted on the post (meters, cameras, etc.).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1180,64 +1121,25 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="alturaBrazo1">
-  <h3>arm height 1<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1</p>
+ <div class="entity" id="ordenBrazo">
+  <h3>arm order<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo</p>
   <div class="comment">
-   <span class="markdown">Height of the first arm of the post. In meters (m).</span>
+   <span class="markdown">Ordinal position of the arm on the post (1, 2, 3...).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Post</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Arm</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="alturaBrazo2">
-  <h3>arm height 2<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2</p>
-  <div class="comment">
-   <span class="markdown">Height of the second arm of the post. In meters (m).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Post</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>
@@ -1248,14 +1150,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Code or model of the bulb.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1279,14 +1173,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Color rendering index (CRI) of the lamp (0-100).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1310,14 +1196,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Method for switching the lighting on/off (astronomical clock, photocell, remote management, etc.).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1335,51 +1213,12 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="temperaturaColor">
-  <h3>correlated color temperature<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor</p>
-  <div class="comment">
-   <span class="markdown">Correlated color temperature (CCT) of the lamp in kelvin (K).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="calidadDato">
   <h3>data quality<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato</p>
   <div class="comment">
    <span class="markdown">Data quality: B (good), R (regular), M (poor), E (under construction).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1403,14 +1242,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Reference year of the data. Applies to: ConsumoEnergetico, SuministroElectrico.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1422,51 +1253,12 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="altura">
-  <h3>height<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura</p>
-  <div class="comment">
-   <span class="markdown">Total height of the post from ground to top. In meters (m).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Post</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="fechaInstalacion">
   <h3>installation date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion</p>
   <div class="comment">
    <span class="markdown">Installation date of the lamp.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1490,14 +1282,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Indicates whether a flow reduction system is available at the start of the installation (head-end regulator).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1521,14 +1305,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Indicates whether a flow reduction system is available in the luminaire.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1552,76 +1328,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Luminous efficacy of the lamp in lumens per watt (lm/W).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="flujoLuminoso">
-  <h3>luminous flux<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso</p>
-  <div class="comment">
-   <span class="markdown">Luminous flux of the lamp in lumens (lm).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="intensidadLuminica">
-  <h3>luminous intensity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica</p>
-  <div class="comment">
-   <span class="markdown">Luminous intensity of the lamp in candelas (cd).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1645,14 +1351,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Material of the component. Applies to: Post, Luminaire, Lamp, JunctionBox.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1670,14 +1368,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1689,51 +1379,12 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="potenciaNominal">
-  <h3>nominal power<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal</p>
-  <div class="comment">
-   <span class="markdown">Nominal power of the lamp. In watts (W).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="observaciones">
   <h3>notes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#observaciones</p>
   <div class="comment">
    <span class="markdown">Notes about the streetlight or component. Applies to: Streetlight, Post, Luminaire, Lamp, JunctionBox.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1749,16 +1400,8 @@ This section provides details for each class and property defined by alumbrado-p
   <h3>number of arms<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos</p>
   <div class="comment">
-   <span class="markdown">Number of arms of the post.</span>
+   <span class="markdown">Total number of arms of the post.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1782,21 +1425,13 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Number of luminaires in the streetlight.</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaire</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Streetlight</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1813,14 +1448,6 @@ This section provides details for each class and property defined by alumbrado-p
   <div class="comment">
    <span class="markdown">Schedule when the lighting is on (e.g., '22:00-07:00').</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1838,113 +1465,12 @@ This section provides details for each class and property defined by alumbrado-p
    </dl>
   </div>
  </div>
- <div class="entity" id="vidaUtilL70">
-  <h3>rated life L70<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70</p>
-  <div class="comment">
-   <span class="markdown">Rated life of the lamp at 70% maintained flux (L70) in hours.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="vidaUtilL80">
-  <h3>rated life L80<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80</p>
-  <div class="comment">
-   <span class="markdown">Rated life of the lamp at 80% maintained flux (L80) in hours.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="kwhRenovables">
-  <h3>renewable kWh<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables</p>
-  <div class="comment">
-   <span class="markdown">Consumption in kWh from renewable energy sources with self-consumption systems.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Electricity Supply</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="tarifa">
   <h3>tariff<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa</p>
   <div class="comment">
    <span class="markdown">Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4).</span>
   </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1958,68 +1484,6 @@ This section provides details for each class and property defined by alumbrado-p
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="flujoHemisfericoSuperior">
-  <h3>upper hemisphere flux<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior</p>
-  <div class="comment">
-   <span class="markdown">Upper hemisphere flux (FHS/ULOR) of the luminaire as a percentage. Key for REEAE compliance in zones E1-E4.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaire</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="tension">
-  <h3>voltage<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension</p>
-  <div class="comment">
-   <span class="markdown">Supply voltage in volts (V).</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Electricity Supply</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>

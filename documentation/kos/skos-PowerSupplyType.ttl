@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintkospowersupply: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/> .
+
+edintkos:PowerSupplyType a skos:ConceptScheme ;
+    dct:title "Tipos de alimentación eléctrica"@es , "Electrical power supply types"@en ;
+    dct:creator "FEMP" ;
+    dct:issued "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    skos:definition "Taxonomía de tipos de alimentación eléctrica de farolas. Ampliada de 3 a 5 conceptos según Tenerife."@es ;
+    skos:definition "Taxonomy of electrical power supply types for streetlights. Expanded from 3 to 5 concepts based on Tenerife."@en .
+
+edintkospowersupply:subterranea a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "subterranea" ;
+    skos:prefLabel "Subterránea"@es , "Underground"@en ;
+    skos:definition "Alimentación por cable subterráneo."@es .
+
+edintkospowersupply:aerea a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "aerea" ;
+    skos:prefLabel "Aérea"@es , "Aerial"@en ;
+    skos:altLabel "Tensada"@es ;
+    skos:definition "Alimentación por cable aéreo."@es .
+
+edintkospowersupply:fachada a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "fachada" ;
+    skos:prefLabel "Fachada"@es , "Wall"@en ;
+    skos:definition "Cable discurre por la fachada del edificio."@es .
+
+edintkospowersupply:grapada a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "grapada" ;
+    skos:prefLabel "Grapada"@es , "Stapled"@en ;
+    skos:definition "Cable grapado a la pared o superficie (Tenerife)."@es .
+
+edintkospowersupply:bateria a skos:Concept ;
+    skos:inScheme edintkos:PowerSupplyType ;
+    skos:notation "bateria" ;
+    skos:prefLabel "Batería"@es , "Battery"@en ;
+    skos:altLabel "Autónoma"@es ;
+    skos:definition "Alimentación por batería autónoma (placa solar, Tenerife)."@es .

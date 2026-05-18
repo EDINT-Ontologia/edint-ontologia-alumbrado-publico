@@ -5,19 +5,21 @@
 
 PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 # -----------------------------------------------------------------------------
 # Temperatura de color (CCT) media en zonas residenciales (E2)
 # -----------------------------------------------------------------------------
 
-SELECT (AVG(xsd:decimal(?cct)) AS ?temperaturaColorMediaK)
+SELECT (AVG(xsd:decimal(?cctVal)) AS ?temperaturaColorMediaK)
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:zonaAlumbrado ?zona ;
           edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:temperaturaColor ?cct .
+  ?lamp edintalu:temperaturaColor ?cctQv .
+  ?cctQv qudt:numericValue ?cctVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
   FILTER(CONTAINS(?zonaLabel, "E2"))  # Zona residencial
@@ -27,13 +29,14 @@ WHERE {
 # Temperatura de color media por zona de alumbrado
 # -----------------------------------------------------------------------------
 
-SELECT ?zonaLabel (AVG(xsd:decimal(?cct)) AS ?temperaturaColorMediaK)
+SELECT ?zonaLabel (AVG(xsd:decimal(?cctVal)) AS ?temperaturaColorMediaK)
 WHERE {
   ?farola a edintalu:Farola ;
           edintalu:zonaAlumbrado ?zona ;
           edintalu:luminaria ?lum .
   ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:temperaturaColor ?cct .
+  ?lamp edintalu:temperaturaColor ?cctQv .
+  ?cctQv qudt:numericValue ?cctVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
 }

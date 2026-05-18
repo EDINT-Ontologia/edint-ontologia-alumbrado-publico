@@ -31,8 +31,7 @@ El prefijo de la ontología *Alumbrado Público* es: `edintalu` publicado bajo e
 | **ontology/** | Contiene los archivos de implementación de la ontología en formatos como `.owl`, `.rdf`, `.ttl`, o `.jsonld`. |
 | **requirements/** | Contiene todos los documentos utilizados para definir los requisitos de la ontología: ejemplos de datos, preguntas de competencia, requisitos funcionales, casos de uso, etc. |
 | **shapes/** | Contiene las formas SHACL utilizadas para definir y validar las restricciones de la ontología. |
-| **tests/** | Contiene pruebas diseñadas para verificar que la ontología cumple con sus requisitos definidos. |
-| **resources/** | Almacena recursos del proyecto como logotipos e imágenes. |
+
 
 # Mantenimiento y evolución (Maintenance and evolution)
 
