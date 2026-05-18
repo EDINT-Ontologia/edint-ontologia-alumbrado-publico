@@ -16,7 +16,7 @@ PREFIX schema:   <http://schema.org/>
 SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+     schema:address ?addr .
   ?addr esdir:distrito ?distrito .
 }
 GROUP BY ?distrito
@@ -35,7 +35,7 @@ SELECT ?distrito (COUNT(?f) AS ?totalFarolas) ?superficieKm2
        (xsd:decimal(COUNT(?f)) / ?superficieKm2 AS ?densidadFarolasPorKm2)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+     schema:address ?addr .
   ?addr esdir:distrito ?distrito .
   ?distrito <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#areaKm2> ?superficieKm2 .
 }

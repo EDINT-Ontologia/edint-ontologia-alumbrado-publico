@@ -15,7 +15,7 @@ PREFIX schema:   <http://schema.org/>
 SELECT ?municipio (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+     schema:address ?addr .
   ?addr esdir:municipio ?municipio .
 }
 GROUP BY ?municipio
@@ -33,7 +33,7 @@ PREFIX schema:   <http://schema.org/>
 SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+     schema:address ?addr .
   ?addr esdir:municipio <URI-MUNICIPIO> ;
         esdir:distrito ?distrito .
 }

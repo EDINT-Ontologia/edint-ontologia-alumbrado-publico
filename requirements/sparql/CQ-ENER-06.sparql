@@ -1,0 +1,20 @@
+# =============================================================================
+# QUERY: CQ-ENER-06
+# Question: ¿Cuál es el coste anual del suministro eléctrico de cada centro de mando?
+# Note: Ningún dataset publicado tiene coste individual actualmente.
+# =============================================================================
+
+PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+# -----------------------------------------------------------------------------
+# Coste anual del suministro eléctrico por centro de mando
+# (requiere la propiedad edintalu:costeAnual en SuministroElectrico)
+# -----------------------------------------------------------------------------
+
+SELECT ?centroDeMando ?costeAnual
+WHERE {
+  ?centroDeMando edintalu:tieneSuministro ?suministro .
+  ?suministro a edintalu:SuministroElectrico ;
+              edintalu:costeAnual ?costeAnual .
+}
+ORDER BY DESC(?costeAnual)
