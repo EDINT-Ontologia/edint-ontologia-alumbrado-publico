@@ -29,8 +29,8 @@
     dc:title "Ontología de Alumbrado Público"@es , "Public Street Lighting Ontology"@en ;
     dc:abstract "Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica."@es ;
     dc:abstract "Ontology for representing public street lighting data. Models the modular composition of streetlights, electrical infrastructure, energy consumption, and photometric and light pollution parameters."@en ;
-    dc:description "Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante y propietario, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT."@es ;
-    dc:description "Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer and owner, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT."@en ;
+    dc:description "Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT."@es ;
+    dc:description "Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT."@en ;
     rdfs:label "Ontología de Alumbrado Público"@es , "Public Street Lighting Ontology"@en ;
     rdfs:comment "Ontología para la representación de datos de alumbrado público."@es ;
     rdfs:comment "Ontology for representing public street lighting data."@en ;
@@ -147,10 +147,7 @@ edintalu:Fabricante a owl:Class ;
     rdfs:comment "Entidad que fabrica componentes del alumbrado (postes, luminarias, lámparas, cajas o modelos)."@es ;
     rdfs:comment "Entity that manufactures street lighting components (posts, luminaires, lamps, boxes or models)."@en .
 
-edintalu:Propietario a owl:Class ;
-    rdfs:label "Propietario"@es , "Owner"@en ;
-    rdfs:comment "Entidad titular de la farola: ayuntamiento, compañía eléctrica, comunidad de vecinos, etc."@es ;
-    rdfs:comment "Entity that owns the streetlight: municipality, electricity company, community of owners, etc."@en .
+
 
 # ============================================================
 # OBJECT PROPERTIES
@@ -224,12 +221,7 @@ edintalu:fabricadoPor a owl:ObjectProperty ;
     rdfs:comment "Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1."@es ;
     rdfs:comment "Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1."@en .
 
-edintalu:propietario a owl:ObjectProperty ;
-    rdfs:domain edintalu:Farola ;
-    rdfs:range edintalu:Propietario ;
-    rdfs:label "propietario"@es , "owner"@en ;
-    rdfs:comment "Entidad titular de la farola. Cardinalidad: 0..1."@es ;
-    rdfs:comment "Entity that owns the streetlight. Cardinality: 0..1."@en .
+
 
 # --- Localización ---
 
@@ -548,7 +540,7 @@ edintalu:esReductorFlujoInicio a owl:DatatypeProperty ;
 edintalu:nombre a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "nombre"@es , "name"@en ;
-    rdfs:comment "Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, Propietario, ModeloLuminaria."@es ;
+    rdfs:comment "Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, ModeloLuminaria."@es ;
     rdfs:comment "Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel."@en .
 
 # --- Compartidos: material, identifier ---
@@ -578,7 +570,7 @@ edintalu:Farola rdfs:seeAlso <http://vocab.linkeddata.es/datosabiertos/def/urban
 # edintalu:Farola rdfs:seeAlso <https://uri.fiware.org/ns/data-models##Streetlight> ;
 #     rdfs:comment "See FIWARE Streetlight model for IoT-oriented extensions."@en .
 #
-# edintalu:Propietario rdfs:subClassOf schema:Organization .
+
 # esdir:DireccionPostal rdfs:subClassOf schema:PostalAddress .
 
 # QUDT unit declarations (referenced)
