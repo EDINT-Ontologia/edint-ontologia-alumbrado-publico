@@ -356,7 +356,7 @@ edintalu:accesorios a owl:DatatypeProperty ;
 # --- Luminaria ---
 
 edintalu:numeroDeLuminarias a owl:DatatypeProperty ;
-    rdfs:domain edintalu:Luminaria ;
+    rdfs:domain edintalu:Farola ;
     rdfs:range xsd:integer ;
     rdfs:label "número de luminarias"@es , "number of luminaires"@en ;
     rdfs:comment "Número de luminarias en la farola."@es ;
