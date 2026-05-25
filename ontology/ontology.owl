@@ -23,8 +23,6 @@
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <dcterms:abstract xml:lang="en">Ontology for representing public street lighting data. Models the modular composition of streetlights, electrical infrastructure, energy consumption, and photometric and light pollution parameters.</dcterms:abstract>
-        <dcterms:abstract xml:lang="es">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
         <dcterms:contributor>Ontology Engineering Group, Universidad Politécnica de Madrid</dcterms:contributor>
         <dcterms:creator>Daniel Doña</dcterms:creator>
         <dcterms:creator>Edna Ruckhaus</dcterms:creator>
