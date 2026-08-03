@@ -22,26 +22,26 @@
 
 # --- Farola ---
 
-:farola_001 a edintalu:Farola ;
+:farola_001 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
-    edintalu:luminaria :lum_001 ;
-    edintalu:direccion :dir_001 ;
+    edintalu:luminaire :lum_001 ;
+    edintalu:address :dir_001 ;
     gsp:hasGeometry :geom_001 .
 
 # --- Luminaria + Lámpara ---
 
-:lum_001 a edintalu:Luminaria ;
-    edintalu:modeloLuminaria :modelo_GLED001 ;
-    edintalu:tieneLampara :lamp_001 .
+:lum_001 a edintalu:Luminaire ;
+    edintalu:luminaireModel :modelo_GLED001 ;
+    edintalu:hasLamp :lamp_001 .
 
-:lamp_001 a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
-    edintalu:modeloBombilla "GLED001" .
+:lamp_001 a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
+    edintalu:bulbModel "GLED001" .
 
 # --- Modelo de luminaria (catálogo) ---
 
-:modelo_GLED001 a edintalu:ModeloLuminaria ;
-    edintalu:nombre "GLED001" .
+:modelo_GLED001 a edintalu:LuminaireModel ;
+    edintalu:name "GLED001" .
 
 # --- Dirección ---
 

@@ -21,8 +21,8 @@
 
 # --- Centro de mando CM-001 ---
 
-exlp:cm-001 a edintalu:CentroDeMando ;
-    edintalu:nombre "CM-001" ;
+exlp:cm-001 a edintalu:ControlCenter ;
+    edintalu:name "CM-001" ;
     dct:spatial exlp:cm-001-loc .
 
 exlp:cm-001-loc a esdir:DireccionPostal ;
@@ -33,19 +33,19 @@ exlp:cm-001-loc a esdir:DireccionPostal ;
 
 # --- Farola simple (1 luminaria) ---
 
-exlp:f1002 a edintalu:Farola ;
+exlp:f1002 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
-    edintalu:centroDeMando exlp:cm-001 ;
-    edintalu:poste exlp:f1002-poste ;
-    edintalu:luminaria exlp:f1002-lum1 ;
-    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/c> ;
-    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/s3> ;
-    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
-    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
-    edintalu:horasDeFuncionamiento "Noche entera" ;
-    edintalu:numeroDeLuminarias 1 ;
-    edintalu:calidadDato "B" ;
-    edintalu:direccion exlp:f1002-dir ;
+    edintalu:controlCenter exlp:cm-001 ;
+    edintalu:post exlp:f1002-poste ;
+    edintalu:luminaire exlp:f1002-lum1 ;
+    edintalu:lightingClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/c> ;
+    edintalu:illuminationClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/s3> ;
+    edintalu:powerSupplyType <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
+    edintalu:illuminationType <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
+    edintalu:operatingHours "Noche entera" ;
+    edintalu:numberOfLuminaires 1 ;
+    edintalu:dataQuality "B" ;
+    edintalu:address exlp:f1002-dir ;
     gsp:hasGeometry exlp:f1002-geom .
 
 exlp:f1002-dir a esdir:DireccionPostal ;
@@ -59,18 +59,18 @@ exlp:f1002-geom a gsp:Geometry ;
 
 # --- Poste ---
 
-exlp:f1002-poste a edintalu:Poste ;
-    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 5 ; qudt:hasUnit qudtu:M ] .
+exlp:f1002-poste a edintalu:Post ;
+    edintalu:supportType <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
+    edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 5 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria + Lámpara (LED 80W) ---
 
-exlp:f1002-lum1 a edintalu:Luminaria ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
-    edintalu:tieneLampara exlp:f1002-lum1-lamp .
+exlp:f1002-lum1 a edintalu:Luminaire ;
+    edintalu:luminaireType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
+    edintalu:hasLamp exlp:f1002-lum1-lamp .
 
-exlp:f1002-lum1-lamp a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
-    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 80 ; qudt:hasUnit qudtu:W ] ;
-    edintalu:temperaturaColor [ a qudt:QuantityValue ; qudt:numericValue 4000 ; qudt:hasUnit qudtu:K ] ;
-    edintalu:indiceReproduccionCromatica 80 .
+exlp:f1002-lum1-lamp a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
+    edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 80 ; qudt:hasUnit qudtu:W ] ;
+    edintalu:correlatedColorTemperature [ a qudt:QuantityValue ; qudt:numericValue 4000 ; qudt:hasUnit qudtu:K ] ;
+    edintalu:colorRenderingIndex 80 .

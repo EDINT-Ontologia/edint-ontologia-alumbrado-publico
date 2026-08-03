@@ -20,36 +20,36 @@
 
 # --- Farola ---
 
-:farola_002 a edintalu:Farola ;
+:farola_002 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
-    edintalu:luminaria :lum_002_led , :lum_002_desc ;
-    edintalu:direccion :dir_002 ;
+    edintalu:luminaire :lum_002_led , :lum_002_desc ;
+    edintalu:address :dir_002 ;
     gsp:hasGeometry :geom_002 .
 
 # --- Luminaria LED (añadida) ---
 
-:lum_002_led a edintalu:Luminaria ;
-    edintalu:modeloLuminaria :modelo_LBE120 ;
-    edintalu:tieneLampara :lamp_002_led .
+:lum_002_led a edintalu:Luminaire ;
+    edintalu:luminaireModel :modelo_LBE120 ;
+    edintalu:hasLamp :lamp_002_led .
 
-:lamp_002_led a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
-    edintalu:modeloBombilla "LBE120" .
+:lamp_002_led a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
+    edintalu:bulbModel "LBE120" .
 
 # --- Luminaria de descarga (original) ---
 
-:lum_002_desc a edintalu:Luminaria ;
-    edintalu:modeloLuminaria :modelo_LBE120 ;
-    edintalu:tieneLampara :lamp_002_desc .
+:lum_002_desc a edintalu:Luminaire ;
+    edintalu:luminaireModel :modelo_LBE120 ;
+    edintalu:hasLamp :lamp_002_desc .
 
-:lamp_002_desc a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
-    edintalu:modeloBombilla "LBE120" .
+:lamp_002_desc a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
+    edintalu:bulbModel "LBE120" .
 
 # --- Modelo de luminaria (catálogo) ---
 
-:modelo_LBE120 a edintalu:ModeloLuminaria ;
-    edintalu:nombre "LBE120" .
+:modelo_LBE120 a edintalu:LuminaireModel ;
+    edintalu:name "LBE120" .
 
 # --- Dirección ---
 
