@@ -134,8 +134,8 @@ xsd:gYear rdf:type rdfs:Datatype .
                                "road lighting class"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion
-:direccion rdf:type owl:ObjectProperty ;
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:ObjectProperty ;
            rdfs:domain :Farola ;
            rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
            rdfs:comment "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es ,

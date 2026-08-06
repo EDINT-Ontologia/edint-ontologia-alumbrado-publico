@@ -25,7 +25,7 @@
 :farola_001 a edintalu:Farola ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
     edintalu:luminaria :lum_001 ;
-    edintalu:direccion :dir_001 ;
+    schema:address :dir_001 ;
     gsp:hasGeometry :geom_001 .
 
 # --- Luminaria + Lámpara ---

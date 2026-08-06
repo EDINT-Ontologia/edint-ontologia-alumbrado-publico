@@ -64,7 +64,7 @@ exlp:f2201 a edintalu:Farola ;
     edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/aerea> ;
     edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
     edintalu:calidadDato "R" ;
-    edintalu:direccion exlp:f2201-dir ;
+    schema:address exlp:f2201-dir ;
     gsp:hasGeometry exlp:f2201-geom .
 
 exlp:f2201-dir a esdir:DireccionPostal ;
