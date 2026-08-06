@@ -74,7 +74,7 @@ ex:farola-001 a edintalu:Farola ;
     edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/b> ;
     edintalu:horasDeFuncionamiento "22:00-07:00" ;
     edintalu:metodoDeControl "Reloj astronómico" ;
-    edintalu:direccion ex:dir-001 ;
+    schema:address ex:dir-001 ;
     gsp:hasGeometry ex:geom-001 .
 
 # --- Poste ---

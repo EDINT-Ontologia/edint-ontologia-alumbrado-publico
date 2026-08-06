@@ -46,7 +46,7 @@ exlp:f1001 a edintalu:Farola ;
     edintalu:horasDeFuncionamiento "Noche entera" ;
     edintalu:numeroDeLuminarias 2 ;
     edintalu:calidadDato "B" ;
-    edintalu:direccion exlp:f1001-dir ;
+    schema:address exlp:f1001-dir ;
     gsp:hasGeometry exlp:f1001-geom .
 
 exlp:f1001-dir a esdir:DireccionPostal ;

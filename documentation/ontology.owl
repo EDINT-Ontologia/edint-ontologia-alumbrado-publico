@@ -216,10 +216,10 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion -->
+    <!-- http://schema.org/address -->
 
 
-    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">
+    <owl:ObjectProperty rdf:about="http://schema.org/address">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
         <rdfs:comment xml:lang="es">Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address.</rdfs:comment>

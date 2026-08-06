@@ -126,14 +126,14 @@
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica> <http://www.w3.org/2000/01/rdf-schema#label> "clase luminotécnica"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica> <http://www.w3.org/2000/01/rdf-schema#label> "road lighting class"@en .
 # 
-# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#comment> "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
