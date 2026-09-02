@@ -21,9 +21,9 @@
 
 # --- Centro de mando CM-001 ---
 
-exlp:cm-001 a edintalu:CentroDeMando ;
-    edintalu:nombre "CM-001" ;
-    edintalu:observaciones "Pueblo Norte, Camino Judas"@es ;
+exlp:cm-001 a edintalu:ControlCenter ;
+    edintalu:name "CM-001" ;
+    edintalu:notes "Pueblo Norte, Camino Judas"@es ;
     dct:spatial exlp:cm-001-dir .
 
 exlp:cm-001-dir a esdir:DireccionPostal ;
@@ -34,19 +34,19 @@ exlp:cm-001-dir a esdir:DireccionPostal ;
 
 # --- Farola bicéfala (2 luminarias) ---
 
-exlp:f1001 a edintalu:Farola ;
+exlp:f1001 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
-    edintalu:centroDeMando exlp:cm-001 ;
-    edintalu:poste exlp:f1001-poste ;
-    edintalu:luminaria exlp:f1001-lum1 , exlp:f1001-lum2 ;
-    edintalu:claseLuminotecnica <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/a> ;
-    edintalu:tipoAlumbrado <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4> ;
-    edintalu:tipoAlimentacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
-    edintalu:tipoIluminacion <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
-    edintalu:horasDeFuncionamiento "Noche entera" ;
-    edintalu:numeroDeLuminarias 2 ;
-    edintalu:calidadDato "B" ;
-    edintalu:direccion exlp:f1001-dir ;
+    edintalu:controlCenter exlp:cm-001 ;
+    edintalu:post exlp:f1001-poste ;
+    edintalu:luminaire exlp:f1001-lum1 , exlp:f1001-lum2 ;
+    edintalu:lightingClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/a> ;
+    edintalu:illuminationClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4> ;
+    edintalu:powerSupplyType <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
+    edintalu:illuminationType <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
+    edintalu:operatingHours "Noche entera" ;
+    edintalu:numberOfLuminaires 2 ;
+    edintalu:dataQuality "B" ;
+    edintalu:address exlp:f1001-dir ;
     gsp:hasGeometry exlp:f1001-geom .
 
 exlp:f1001-dir a esdir:DireccionPostal ;
@@ -60,26 +60,26 @@ exlp:f1001-geom a gsp:Geometry ;
 
 # --- Poste ---
 
-exlp:f1001-poste a edintalu:Poste ;
-    edintalu:tipoSoporte <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
-    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 6 ; qudt:hasUnit qudtu:M ] .
+exlp:f1001-poste a edintalu:Post ;
+    edintalu:supportType <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
+    edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 6 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria 1 + Lámpara 1 (VSBP 55W) ---
 
-exlp:f1001-lum1 a edintalu:Luminaria ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
-    edintalu:tieneLampara exlp:f1001-lum1-lamp .
+exlp:f1001-lum1 a edintalu:Luminaire ;
+    edintalu:luminaireType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
+    edintalu:hasLamp exlp:f1001-lum1-lamp .
 
-exlp:f1001-lum1-lamp a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-baja-presion> ;
-    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 55 ; qudt:hasUnit qudtu:W ] .
+exlp:f1001-lum1-lamp a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-baja-presion> ;
+    edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 55 ; qudt:hasUnit qudtu:W ] .
 
 # --- Luminaria 2 + Lámpara 2 (VSAP 250W) ---
 
-exlp:f1001-lum2 a edintalu:Luminaria ;
-    edintalu:tipoLuminaria <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
-    edintalu:tieneLampara exlp:f1001-lum2-lamp .
+exlp:f1001-lum2 a edintalu:Luminaire ;
+    edintalu:luminaireType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
+    edintalu:hasLamp exlp:f1001-lum2-lamp .
 
-exlp:f1001-lum2-lamp a edintalu:Lampara ;
-    edintalu:tipoLampara <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
-    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 250 ; qudt:hasUnit qudtu:W ] .
+exlp:f1001-lum2-lamp a edintalu:Lamp ;
+    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
+    edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 250 ; qudt:hasUnit qudtu:W ] .

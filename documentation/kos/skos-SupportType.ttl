@@ -26,7 +26,7 @@ edintkossupport:columna-triconica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-triconica" ;
-    skos:prefLabel "Columna troncónica"@es , "Conical column"@en .
+    skos:prefLabel "Columna troncónica"@es , "Tapered column"@en .
 
 edintkossupport:columna-cilindrica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -38,7 +38,7 @@ edintkossupport:columna-clasica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-clasica" ;
-    skos:prefLabel "Columna clásica"@es , "Classic column"@en .
+    skos:prefLabel "Columna clásica"@es , "Classical column"@en .
 
 edintkossupport:columna-prim a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -97,7 +97,7 @@ edintkossupport:brazo-fachada a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:fachada ;
     skos:notation "brazo-fachada" ;
-    skos:prefLabel "Brazo en fachada"@es , "Wall arm"@en .
+    skos:prefLabel "Brazo en fachada"@es , "Wall-mounted arm"@en .
 
 edintkossupport:pared-tunel a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -115,28 +115,28 @@ edintkossupport:postelete-zanca-hormigon a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:postelete ;
     skos:notation "postelete-zanca-hormigon" ;
-    skos:prefLabel "Postelete zanca hormigón"@es , "Short post concrete bracket"@en .
+    skos:prefLabel "Postelete zanca hormigón"@es , "Concrete trench small post"@en .
 
-edintkossupport:poste-zanja a skos:Concept ;
+edintkossupport:post-zanja a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "poste-zanja" ;
     skos:prefLabel "Poste en zanja"@es , "Trench post"@en .
 
-edintkossupport:poste-zanca a skos:Concept ;
+edintkossupport:post-zanca a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "poste-zanca" ;
-    skos:prefLabel "Poste en zanca"@es , "Bracket post"@en .
+    skos:prefLabel "Poste en zanca"@es , "Trench post"@en .
 
-edintkossupport:poste-zanca-hormigon a skos:Concept ;
+edintkossupport:post-zanca-hormigon a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
-    skos:broader edintkossupport:poste-zanca ;
+    skos:broader edintkossupport:post-zanca ;
     skos:notation "poste-zanca-hormigon" ;
-    skos:prefLabel "Poste en zanca hormigón"@es , "Concrete bracket post"@en .
+    skos:prefLabel "Poste en zanca hormigón"@es , "Concrete trench post"@en .
 
 edintkossupport:farola-suelo a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "farola-suelo" ;
-    skos:prefLabel "Farola en suelo"@es , "Ground-level streetlight"@en .
+    skos:prefLabel "Farola en suelo"@es , "Ground streetlight"@en .
 
 edintkossupport:cable-acero a skos:Concept ;
     skos:inScheme edintkos:SupportType ;

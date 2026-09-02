@@ -72,19 +72,19 @@ edintkoslamptype:led-descarga a skos:Concept ;
 edintkoslamptype:incandescente a skos:Concept ;
     skos:inScheme edintkos:LampType ;
     skos:notation "incandescente" ;
-    skos:prefLabel "Incandescente"@es , "Incandescent"@en .
+    skos:prefLabel "Incandescente"@es , "Incandescent"@en , "Incandescent"@en .
 
 edintkoslamptype:halogen a skos:Concept ;
     skos:inScheme edintkos:LampType ;
     skos:notation "halogena" ;
-    skos:prefLabel "Halógena"@es , "Halogen"@en .
+    skos:prefLabel "Halógena"@es , "Halogen"@en , "Halogen"@en .
 
 # --- Fluorescente ---
 
 edintkoslamptype:fluorescente a skos:Concept ;
     skos:inScheme edintkos:LampType ;
     skos:notation "fluorescente" ;
-    skos:prefLabel "Fluorescente"@es , "Fluorescent"@en .
+    skos:prefLabel "Fluorescente"@es , "Fluorescent"@en , "Fluorescent"@en .
 
 edintkoslamptype:induccion a skos:Concept ;
     skos:inScheme edintkos:LampType ;
@@ -97,4 +97,4 @@ edintkoslamptype:induccion a skos:Concept ;
 edintkoslamptype:sin-lampara a skos:Concept ;
     skos:inScheme edintkos:LampType ;
     skos:notation "sin-lampara" ;
-    skos:prefLabel "Sin lámpara"@es , "No lamp"@en .
+    skos:prefLabel "Sin lámpara"@es , "No lamp"@en , "No lamp"@en .
