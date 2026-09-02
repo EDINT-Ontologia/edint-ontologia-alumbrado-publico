@@ -49,7 +49,7 @@ edintkosluminairtype:artistica a skos:Concept ;
 edintkosluminairtype:colgante a skos:Concept ;
     skos:inScheme edintkos:LuminaireType ;
     skos:notation "colgante" ;
-    skos:prefLabel "Colgante"@es , "Pendant"@en , "Pendant"@en .
+    skos:prefLabel "Colgante"@es , "Pendant"@en .
 
 edintkosluminairtype:suspension a skos:Concept ;
     skos:inScheme edintkos:LuminaireType ;

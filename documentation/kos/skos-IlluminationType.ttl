@@ -25,91 +25,91 @@ edintkosillumtype:m1 a skos:Concept ;
 edintkosillumtype:m2 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "M2" ;
-    skos:prefLabel "M2"@es , "M2"@en , "M2"@en .
+    skos:prefLabel "M2"@es , "M2"@en .
 
 edintkosillumtype:m3 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "M3" ;
-    skos:prefLabel "M3"@es , "M3"@en , "M3"@en .
+    skos:prefLabel "M3"@es , "M3"@en .
 
 edintkosillumtype:m4 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "M4" ;
-    skos:prefLabel "M4"@es , "M4"@en , "M4"@en .
+    skos:prefLabel "M4"@es , "M4"@en .
 
 edintkosillumtype:m5 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "M5" ;
-    skos:prefLabel "M5"@es , "M5"@en , "M5"@en .
+    skos:prefLabel "M5"@es , "M5"@en .
 
 edintkosillumtype:m6 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "M6" ;
-    skos:prefLabel "M6"@es , "M6"@en , "M6"@en .
+    skos:prefLabel "M6"@es , "M6"@en .
 
 # --- Clases C (zonas de conflicto) ---
 
 edintkosillumtype:c0 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C0" ;
-    skos:prefLabel "C0"@es , "C0"@en , "C0"@en .
+    skos:prefLabel "C0"@es , "C0"@en .
 
 edintkosillumtype:c1 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C1" ;
-    skos:prefLabel "C1"@es , "C1"@en , "C1"@en .
+    skos:prefLabel "C1"@es , "C1"@en .
 
 edintkosillumtype:c2 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C2" ;
-    skos:prefLabel "C2"@es , "C2"@en , "C2"@en .
+    skos:prefLabel "C2"@es , "C2"@en .
 
 edintkosillumtype:c3 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C3" ;
-    skos:prefLabel "C3"@es , "C3"@en , "C3"@en .
+    skos:prefLabel "C3"@es , "C3"@en .
 
 edintkosillumtype:c4 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C4" ;
-    skos:prefLabel "C4"@es , "C4"@en , "C4"@en .
+    skos:prefLabel "C4"@es , "C4"@en .
 
 edintkosillumtype:c5 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "C5" ;
-    skos:prefLabel "C5"@es , "C5"@en , "C5"@en .
+    skos:prefLabel "C5"@es , "C5"@en .
 
 # --- Clases S (peatonales) ---
 
 edintkosillumtype:s1 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S1" ;
-    skos:prefLabel "S1"@es , "S1"@en , "S1"@en .
+    skos:prefLabel "S1"@es , "S1"@en .
 
 edintkosillumtype:s2 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S2" ;
-    skos:prefLabel "S2"@es , "S2"@en , "S2"@en .
+    skos:prefLabel "S2"@es , "S2"@en .
 
 edintkosillumtype:s3 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S3" ;
-    skos:prefLabel "S3"@es , "S3"@en , "S3"@en .
+    skos:prefLabel "S3"@es , "S3"@en .
 
 edintkosillumtype:s4 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S4" ;
-    skos:prefLabel "S4"@es , "S4"@en , "S4"@en .
+    skos:prefLabel "S4"@es , "S4"@en .
 
 edintkosillumtype:s5 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S5" ;
-    skos:prefLabel "S5"@es , "S5"@en , "S5"@en .
+    skos:prefLabel "S5"@es , "S5"@en .
 
 edintkosillumtype:s6 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "S6" ;
-    skos:prefLabel "S6"@es , "S6"@en , "S6"@en .
+    skos:prefLabel "S6"@es , "S6"@en .
 
 # --- Clases ME (anteriores, mantenidas por compatibilidad) ---
 
@@ -122,61 +122,61 @@ edintkosillumtype:me1 a skos:Concept ;
 edintkosillumtype:me2 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME2" ;
-    skos:prefLabel "ME2"@es , "ME2"@en , "ME2"@en .
+    skos:prefLabel "ME2"@es , "ME2"@en .
 
 edintkosillumtype:me3a a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME3a" ;
-    skos:prefLabel "ME3a"@es , "ME3a"@en , "ME3a"@en .
+    skos:prefLabel "ME3a"@es , "ME3a"@en .
 
 edintkosillumtype:me3b a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME3b" ;
-    skos:prefLabel "ME3b"@es , "ME3b"@en , "ME3b"@en .
+    skos:prefLabel "ME3b"@es , "ME3b"@en .
 
 edintkosillumtype:me3c a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME3c" ;
-    skos:prefLabel "ME3c"@es , "ME3c"@en , "ME3c"@en .
+    skos:prefLabel "ME3c"@es , "ME3c"@en .
 
 edintkosillumtype:me4 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME4" ;
-    skos:prefLabel "ME4"@es , "ME4"@en , "ME4"@en .
+    skos:prefLabel "ME4"@es , "ME4"@en .
 
 edintkosillumtype:me5 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME5" ;
-    skos:prefLabel "ME5"@es , "ME5"@en , "ME5"@en .
+    skos:prefLabel "ME5"@es , "ME5"@en .
 
 edintkosillumtype:me6 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "ME6" ;
-    skos:prefLabel "ME6"@es , "ME6"@en , "ME6"@en .
+    skos:prefLabel "ME6"@es , "ME6"@en .
 
 # --- Clases CE (anteriores, zonas de conflicto) ---
 
 edintkosillumtype:ce1 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "CE1" ;
-    skos:prefLabel "CE1"@es , "CE1"@en , "CE1"@en .
+    skos:prefLabel "CE1"@es , "CE1"@en .
 
 edintkosillumtype:ce2 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "CE2" ;
-    skos:prefLabel "CE2"@es , "CE2"@en , "CE2"@en .
+    skos:prefLabel "CE2"@es , "CE2"@en .
 
 edintkosillumtype:ce3 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "CE3" ;
-    skos:prefLabel "CE3"@es , "CE3"@en , "CE3"@en .
+    skos:prefLabel "CE3"@es , "CE3"@en .
 
 edintkosillumtype:ce4 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "CE4" ;
-    skos:prefLabel "CE4"@es , "CE4"@en , "CE4"@en .
+    skos:prefLabel "CE4"@es , "CE4"@en .
 
 edintkosillumtype:ce5 a skos:Concept ;
     skos:inScheme edintkos:IlluminationType ;
     skos:notation "CE5" ;
-    skos:prefLabel "CE5"@es , "CE5"@en , "CE5"@en .
+    skos:prefLabel "CE5"@es , "CE5"@en .
