@@ -4,7 +4,7 @@
 # Verification: Todos los centros de mando deben tener un suministro
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Centros de mando que NO cumplen: no tienen suministro eléctrico

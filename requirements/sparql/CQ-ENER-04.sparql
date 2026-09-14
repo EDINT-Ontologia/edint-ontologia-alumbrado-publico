@@ -3,7 +3,7 @@
 # Question: ¿Cuál es la proporción de kWh renovables respecto al total?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>

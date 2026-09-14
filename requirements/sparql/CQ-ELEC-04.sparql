@@ -4,7 +4,7 @@
 # Note: Calcula el bounding box de las farolas asociadas a cada CM
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 
 # -----------------------------------------------------------------------------

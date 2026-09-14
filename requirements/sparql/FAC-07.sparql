@@ -4,7 +4,7 @@
 # Verification: Cada centro de mando debe tener al menos 1 farola asociada
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Centros de mando sin farolas asociadas

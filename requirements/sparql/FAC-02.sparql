@@ -4,7 +4,7 @@
 # Verification: Todas las farolas deben tener al menos 1 luminaria
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas que NO cumplen: tienen 0 luminarias

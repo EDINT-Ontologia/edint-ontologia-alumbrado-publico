@@ -4,7 +4,7 @@
 # Note: Requiere dato externo de superficie del distrito
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 
 # -----------------------------------------------------------------------------
@@ -25,7 +25,7 @@ ORDER BY DESC(?totalFarolas)
 # Densidad si se dispone de superficie (en km²) como dato asociado al distrito
 # -----------------------------------------------------------------------------
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 

@@ -3,7 +3,7 @@
 # Question: ¿Qué farolas tienen reductores de flujo y de qué tipo?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas con reductor de flujo: tipo en luminaria y/o al inicio

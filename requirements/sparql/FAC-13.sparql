@@ -4,7 +4,7 @@
 # Verification: Cardinalidad 0..n (opcional, sin límite superior)
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Postes con número de brazos

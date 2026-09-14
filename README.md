@@ -14,7 +14,7 @@ El alcance cubre: composición modular de farolas, infraestructura eléctrica, c
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
-El prefijo de la ontología *Alumbrado Público* es: `edintalu` publicado bajo el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#)
+El prefijo de la ontología *Alumbrado Público* es: `edintalu` publicado bajo el espacio de nombres: [https://edint.es/def/alumbrado-publico#](https://edint.es/def/alumbrado-publico#)
 
 # Modelo conceptual (Ontology conceptualization)
 

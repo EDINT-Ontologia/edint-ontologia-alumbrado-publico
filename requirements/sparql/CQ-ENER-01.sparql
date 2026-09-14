@@ -3,7 +3,7 @@
 # Question: ¿Cuál es la potencia total instalada por municipio/distrito?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX qudtu:    <http://qudt.org/vocab/unit/>

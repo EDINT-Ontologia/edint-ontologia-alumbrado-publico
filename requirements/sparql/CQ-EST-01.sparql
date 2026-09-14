@@ -3,7 +3,7 @@
 # Question: ¿Cuántas farolas hay en cada estado de conservación por municipio?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 

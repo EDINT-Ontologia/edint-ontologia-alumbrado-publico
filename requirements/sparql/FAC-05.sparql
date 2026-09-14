@@ -4,7 +4,7 @@
 # Verification: Todas las farolas deben tener un centroDeMando
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas que NO cumplen: no tienen centro de mando asignado

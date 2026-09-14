@@ -4,7 +4,7 @@
 # Verification: Cardinalidad 0..n (opcional)
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas con reductor de flujo y tipo (luminaria / inicio)
