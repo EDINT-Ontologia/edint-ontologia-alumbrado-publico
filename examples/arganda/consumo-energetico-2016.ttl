@@ -20,103 +20,103 @@
 #            sosa:hasResult → qudt:QuantityValue (numericValue + hasUnit),
 #            sosa:observedProperty → edintsum:electricityConsumption,
 #            sosa:hasFeatureOfInterest → CentroDeMando,
-#            edintalu:periodoTarifario → concepto SKOS.
+#            edintalu:tariffPeriod → concepto SKOS.
 # ============================================================================
 
 # --- Zona: Alumbrado Público Barriadas ---
 
-exarg:cm-barriadas a edintalu:CentroDeMando ;
-    edintalu:nombre "Barriadas" ;
-    edintalu:tieneSuministro exarg:suministro-barriadas .
+exarg:cm-barriadas a edintalu:ControlCenter ;
+    edintalu:name "Barriadas" ;
+    edintalu:hasSupply exarg:suministro-barriadas .
 
-exarg:suministro-barriadas a edintalu:SuministroElectrico ;
-    edintalu:ejercicio "2016"^^xsd:gYear ;
-    edintalu:tieneConsumo exarg:consumo-barriadas-activo ,
+exarg:suministro-barriadas a edintalu:ElectricitySupply ;
+    edintalu:fiscalYear "2016"^^xsd:gYear ;
+    edintalu:hasConsumption exarg:consumo-barriadas-activo ,
                           exarg:consumo-barriadas-llano ,
                           exarg:consumo-barriadas-valle ,
                           exarg:consumo-barriadas-punta .
 
-exarg:consumo-barriadas-activo a edintalu:ConsumoEnergetico ;
+exarg:consumo-barriadas-activo a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-barriadas ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 132257 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-barriadas-llano a edintalu:ConsumoEnergetico ;
+exarg:consumo-barriadas-llano a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-barriadas ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 99869 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-barriadas-valle a edintalu:ConsumoEnergetico ;
+exarg:consumo-barriadas-valle a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-barriadas ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 990554 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-barriadas-punta a edintalu:ConsumoEnergetico ;
+exarg:consumo-barriadas-punta a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-barriadas ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 276329 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
 # --- Zona: Alumbrado Público Pueblo ---
 
-exarg:cm-pueblo a edintalu:CentroDeMando ;
-    edintalu:nombre "Pueblo" ;
-    edintalu:tieneSuministro exarg:suministro-pueblo .
+exarg:cm-pueblo a edintalu:ControlCenter ;
+    edintalu:name "Pueblo" ;
+    edintalu:hasSupply exarg:suministro-pueblo .
 
-exarg:suministro-pueblo a edintalu:SuministroElectrico ;
-    edintalu:ejercicio "2016"^^xsd:gYear ;
-    edintalu:tieneConsumo exarg:consumo-pueblo-activo ,
+exarg:suministro-pueblo a edintalu:ElectricitySupply ;
+    edintalu:fiscalYear "2016"^^xsd:gYear ;
+    edintalu:hasConsumption exarg:consumo-pueblo-activo ,
                           exarg:consumo-pueblo-llano ,
                           exarg:consumo-pueblo-valle ,
                           exarg:consumo-pueblo-punta .
 
-exarg:consumo-pueblo-activo a edintalu:ConsumoEnergetico ;
+exarg:consumo-pueblo-activo a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-pueblo ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 0 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/activo> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-pueblo-llano a edintalu:ConsumoEnergetico ;
+exarg:consumo-pueblo-llano a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-pueblo ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 193220 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-pueblo-valle a edintalu:ConsumoEnergetico ;
+exarg:consumo-pueblo-valle a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-pueblo ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 719973 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .
 
-exarg:consumo-pueblo-punta a edintalu:ConsumoEnergetico ;
+exarg:consumo-pueblo-punta a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest exarg:cm-pueblo ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 189774 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
-    edintalu:ejercicio "2016"^^xsd:gYear .
+    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/punta> ;
+    edintalu:fiscalYear "2016"^^xsd:gYear .

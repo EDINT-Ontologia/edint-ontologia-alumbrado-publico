@@ -26,66 +26,66 @@ edintkossupport:columna-triconica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-triconica" ;
-    skos:prefLabel "Columna troncónica"@es , "Conical column"@en .
+    skos:prefLabel "Columna troncónica"@es , "Tapered column"@en , "Conical column"@en .
 
 edintkossupport:columna-cilindrica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-cilindrica" ;
-    skos:prefLabel "Columna cilíndrica"@es , "Cylindrical column"@en .
+    skos:prefLabel "Columna cilíndrica"@es , "Cylindrical column"@en , "Cylindrical column"@en .
 
 edintkossupport:columna-clasica a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-clasica" ;
-    skos:prefLabel "Columna clásica"@es , "Classic column"@en .
+    skos:prefLabel "Columna clásica"@es , "Classical column"@en , "Classic column"@en .
 
 edintkossupport:columna-prim a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-prim" ;
-    skos:prefLabel "Columna prim"@es , "Prim column"@en .
+    skos:prefLabel "Columna prim"@es , "Prim column"@en , "Prim column"@en .
 
 edintkossupport:columna-nickolson a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-nickolson" ;
-    skos:prefLabel "Columna Nickolson"@es , "Nickolson column"@en .
+    skos:prefLabel "Columna Nickolson"@es , "Nickolson column"@en , "Nickolson column"@en .
 
 edintkossupport:columna-doble-luminaria a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-doble-luminaria" ;
-    skos:prefLabel "Columna doble luminaria"@es , "Double luminaire column"@en .
+    skos:prefLabel "Columna doble luminaria"@es , "Double luminaire column"@en , "Double luminaire column"@en .
 
 edintkossupport:columna-diseno a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:columna ;
     skos:notation "columna-diseno" ;
-    skos:prefLabel "Columna diseño"@es , "Design column"@en .
+    skos:prefLabel "Columna diseño"@es , "Design column"@en , "Design column"@en .
 
 edintkossupport:baculo a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "baculo" ;
-    skos:prefLabel "Báculo"@es , "Bracket"@en .
+    skos:prefLabel "Báculo"@es , "Bracket"@en , "Bracket"@en .
 
 edintkossupport:baculo-doble a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:baculo ;
     skos:notation "baculo-doble" ;
-    skos:prefLabel "Báculo doble"@es , "Double bracket"@en .
+    skos:prefLabel "Báculo doble"@es , "Double bracket"@en , "Double bracket"@en .
 
 edintkossupport:baculo-dos-brazos a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:baculo ;
     skos:notation "baculo-dos-brazos" ;
-    skos:prefLabel "Báculo de dos brazos"@es , "Two-arm bracket"@en .
+    skos:prefLabel "Báculo de dos brazos"@es , "Two-arm bracket"@en , "Two-arm bracket"@en .
 
 edintkossupport:baculo-tres-brazos a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:baculo ;
     skos:notation "baculo-tres-brazos" ;
-    skos:prefLabel "Báculo de tres brazos"@es , "Three-arm bracket"@en .
+    skos:prefLabel "Báculo de tres brazos"@es , "Three-arm bracket"@en , "Three-arm bracket"@en .
 
 edintkossupport:fachada a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -97,13 +97,13 @@ edintkossupport:brazo-fachada a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:fachada ;
     skos:notation "brazo-fachada" ;
-    skos:prefLabel "Brazo en fachada"@es , "Wall arm"@en .
+    skos:prefLabel "Brazo en fachada"@es , "Wall-mounted arm"@en , "Wall arm"@en .
 
 edintkossupport:pared-tunel a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:fachada ;
     skos:notation "pared-tunel" ;
-    skos:prefLabel "Pared túnel"@es , "Tunnel wall"@en .
+    skos:prefLabel "Pared túnel"@es , "Tunnel wall"@en , "Tunnel wall"@en .
 
 edintkossupport:postelete a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -115,68 +115,68 @@ edintkossupport:postelete-zanca-hormigon a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:broader edintkossupport:postelete ;
     skos:notation "postelete-zanca-hormigon" ;
-    skos:prefLabel "Postelete zanca hormigón"@es , "Short post concrete bracket"@en .
+    skos:prefLabel "Postelete zanca hormigón"@es , "Concrete trench small post"@en , "Short post concrete bracket"@en .
 
-edintkossupport:poste-zanja a skos:Concept ;
+edintkossupport:post-zanja a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "poste-zanja" ;
-    skos:prefLabel "Poste en zanja"@es , "Trench post"@en .
+    skos:prefLabel "Poste en zanja"@es , "Trench post"@en , "Trench post"@en .
 
-edintkossupport:poste-zanca a skos:Concept ;
+edintkossupport:post-zanca a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "poste-zanca" ;
-    skos:prefLabel "Poste en zanca"@es , "Bracket post"@en .
+    skos:prefLabel "Poste en zanca"@es , "Trench post"@en , "Bracket post"@en .
 
-edintkossupport:poste-zanca-hormigon a skos:Concept ;
+edintkossupport:post-zanca-hormigon a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
-    skos:broader edintkossupport:poste-zanca ;
+    skos:broader edintkossupport:post-zanca ;
     skos:notation "poste-zanca-hormigon" ;
-    skos:prefLabel "Poste en zanca hormigón"@es , "Concrete bracket post"@en .
+    skos:prefLabel "Poste en zanca hormigón"@es , "Concrete trench post"@en , "Concrete bracket post"@en .
 
 edintkossupport:farola-suelo a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "farola-suelo" ;
-    skos:prefLabel "Farola en suelo"@es , "Ground-level streetlight"@en .
+    skos:prefLabel "Farola en suelo"@es , "Ground streetlight"@en , "Ground-level streetlight"@en .
 
 edintkossupport:cable-acero a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "cable-acero" ;
-    skos:prefLabel "Cable de acero"@es , "Steel cable"@en .
+    skos:prefLabel "Cable de acero"@es , "Steel cable"@en , "Steel cable"@en .
 
 edintkossupport:catenaria-tranvia a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "catenaria-tranvia" ;
-    skos:prefLabel "Catenaria de tranvía"@es , "Tram catenary"@en .
+    skos:prefLabel "Catenaria de tranvía"@es , "Tram catenary"@en , "Tram catenary"@en .
 
 edintkossupport:brazo a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "brazo" ;
-    skos:prefLabel "Brazo"@es , "Arm"@en .
+    skos:prefLabel "Brazo"@es , "Arm"@en , "Arm"@en .
 
 edintkossupport:puente a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "puente" ;
-    skos:prefLabel "Puente"@es , "Bridge"@en .
+    skos:prefLabel "Puente"@es , "Bridge"@en , "Bridge"@en .
 
 edintkossupport:marquesina a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "marquesina" ;
-    skos:prefLabel "Marquesina"@es , "Canopy"@en .
+    skos:prefLabel "Marquesina"@es , "Canopy"@en , "Canopy"@en .
 
 edintkossupport:punto-techo a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "punto-techo" ;
-    skos:prefLabel "Punto en techo"@es , "Ceiling point"@en .
+    skos:prefLabel "Punto en techo"@es , "Ceiling point"@en , "Ceiling point"@en .
 
 edintkossupport:pilona a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "pilona" ;
-    skos:prefLabel "Pilona"@es , "Bollard"@en .
+    skos:prefLabel "Pilona"@es , "Bollard"@en , "Bollard"@en .
 
 edintkossupport:colgante a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "colgante" ;
-    skos:prefLabel "Colgante"@es , "Pendant"@en .
+    skos:prefLabel "Colgante"@es , "Pendant"@en , "Pendant"@en .
 
 edintkossupport:baliza a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
@@ -187,4 +187,4 @@ edintkossupport:baliza a skos:Concept ;
 edintkossupport:sin-soporte a skos:Concept ;
     skos:inScheme edintkos:SupportType ;
     skos:notation "sin-soporte" ;
-    skos:prefLabel "Sin soporte"@es , "No support"@en .
+    skos:prefLabel "Sin soporte"@es , "No support"@en , "No support"@en .

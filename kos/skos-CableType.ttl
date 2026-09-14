@@ -23,19 +23,19 @@ edintkoscabletype:et103 a skos:Concept ;
 edintkoscabletype:et106 a skos:Concept ;
     skos:inScheme edintkos:CableType ;
     skos:notation "ET106" ;
-    skos:prefLabel "ET106"@es , "ET106"@en .
+    skos:prefLabel "ET106"@es , "ET106"@en , "ET106"@en .
 
 edintkoscabletype:et107 a skos:Concept ;
     skos:inScheme edintkos:CableType ;
     skos:notation "ET107" ;
-    skos:prefLabel "ET107"@es , "ET107"@en .
+    skos:prefLabel "ET107"@es , "ET107"@en , "ET107"@en .
 
 edintkoscabletype:et112 a skos:Concept ;
     skos:inScheme edintkos:CableType ;
     skos:notation "ET112" ;
-    skos:prefLabel "ET112"@es , "ET112"@en .
+    skos:prefLabel "ET112"@es , "ET112"@en , "ET112"@en .
 
 edintkoscabletype:et113 a skos:Concept ;
     skos:inScheme edintkos:CableType ;
     skos:notation "ET113" ;
-    skos:prefLabel "ET113"@es , "ET113"@en .
+    skos:prefLabel "ET113"@es , "ET113"@en , "ET113"@en .

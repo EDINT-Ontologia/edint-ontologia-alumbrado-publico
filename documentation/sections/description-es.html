@@ -27,59 +27,59 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # --- Centro de mando ---
-ex:cm-001 a edintalu:CentroDeMando ;
-    edintalu:nombre "CM-001" ;
-    edintalu:tieneSuministro ex:sum-001 .
+ex:cm-001 a edintalu:ControlCenter ;
+    edintalu:name "CM-001" ;
+    edintalu:hasSupply ex:sum-001 .
 
 # --- Suministro eléctrico ---
-ex:sum-001 a edintalu:SuministroElectrico ;
-    edintalu:ejercicio "2024"^^xsd:gYear ;
-    edintalu:tarifa "6.1" ;
-    edintalu:tieneConsumo ex:cons-001-llano .
+ex:sum-001 a edintalu:ElectricitySupply ;
+    edintalu:fiscalYear "2024"^^xsd:gYear ;
+    edintalu:tariff "6.1" ;
+    edintalu:hasConsumption ex:cons-001-llano .
 
 # --- Consumo energético (SOSA) ---
-ex:cons-001-llano a edintalu:ConsumoEnergetico ;
+ex:cons-001-llano a edintalu:EnergyConsumption ;
     sosa:hasFeatureOfInterest ex:cm-001 ;
     sosa:observedProperty edintsum:electricityConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 8500 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:periodoTarifario &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano&gt; ;
-    edintalu:ejercicio "2024"^^xsd:gYear .
+    edintalu:tariffPeriod &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano&gt; ;
+    edintalu:fiscalYear "2024"^^xsd:gYear .
 
 # --- Farola ---
-ex:farola-001 a edintalu:Farola ;
+ex:farola-001 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
-    edintalu:centroDeMando ex:cm-001 ;
-    edintalu:poste ex:poste-001 ;
-    edintalu:luminaria ex:lum-001 ;
-    edintalu:tipoAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4&gt; ;
-    edintalu:zonaAlumbrado &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/e3&gt; ;
-    edintalu:direccion ex:dir-001 ;
+    edintalu:controlCenter ex:cm-001 ;
+    edintalu:post ex:post-001 ;
+    edintalu:luminaire ex:lum-001 ;
+    edintalu:illuminationClass &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4&gt; ;
+    edintalu:lightingZone &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/e3&gt; ;
+    edintalu:address ex:dir-001 ;
     gsp:hasGeometry ex:geom-001 .
 
 # --- Poste con brazo ---
-ex:poste-001 a edintalu:Poste ;
-    edintalu:tipoSoporte &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo&gt; ;
-    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 8 ; qudt:hasUnit qudtu:M ] ;
-    edintalu:tieneBrazo ex:brazo-001 .
+ex:post-001 a edintalu:Post ;
+    edintalu:supportType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo&gt; ;
+    edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 8 ; qudt:hasUnit qudtu:M ] ;
+    edintalu:hasArm ex:brazo-001 .
 
-ex:brazo-001 a edintalu:Brazo ;
-    edintalu:ordenBrazo 1 ;
-    edintalu:altura [ a qudt:QuantityValue ; qudt:numericValue 6.5 ; qudt:hasUnit qudtu:M ] .
+ex:brazo-001 a edintalu:Arm ;
+    edintalu:armOrder 1 ;
+    edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 6.5 ; qudt:hasUnit qudtu:M ] .
 
 # --- Luminaria + Lámpara ---
-ex:lum-001 a edintalu:Luminaria ;
-    edintalu:tieneLampara ex:lamp-001 ;
-    edintalu:modeloLuminaria ex:modelo-001 .
+ex:lum-001 a edintalu:Luminaire ;
+    edintalu:hasLamp ex:lamp-001 ;
+    edintalu:luminaireModel ex:modelo-001 .
 
-ex:lamp-001 a edintalu:Lampara ;
-    edintalu:tipoLampara &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led&gt; ;
-    edintalu:potenciaNominal [ a qudt:QuantityValue ; qudt:numericValue 72 ; qudt:hasUnit qudtu:W ] .
+ex:lamp-001 a edintalu:Lamp ;
+    edintalu:lampType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led&gt; ;
+    edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 72 ; qudt:hasUnit qudtu:W ] .
 
 # --- Modelo de catálogo ---
-ex:modelo-001 a edintalu:ModeloLuminaria ;
-    edintalu:nombre "SpeedStar LED 72W" .
+ex:modelo-001 a edintalu:LuminaireModel ;
+    edintalu:name "SpeedStar LED 72W" .
 
 # --- Dirección postal ---
 ex:dir-001 a esdir:DireccionPostal ;
