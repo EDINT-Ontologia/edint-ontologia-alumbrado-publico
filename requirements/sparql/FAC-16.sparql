@@ -4,7 +4,7 @@
 # Verification: La propiedad zonaAlumbrado apunta a skos:Concept
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
 

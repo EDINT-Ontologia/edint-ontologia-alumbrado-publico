@@ -4,7 +4,7 @@
 # Verification: La cardinalidad es 0..1 (opcional, máximo 1)
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Luminarias con más de 1 modelo de catálogo (violación de cardinalidad)

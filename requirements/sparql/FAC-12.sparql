@@ -4,7 +4,7 @@
 # Verification: Todas las farolas deben tener dirección y geometría
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 
 # -----------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 # Verification: Todas las farolas deben tener exactamente 1 poste
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas que NO cumplen: tienen 0 o más de 1 poste

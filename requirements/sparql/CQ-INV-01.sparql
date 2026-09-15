@@ -3,7 +3,7 @@
 # Question: ¿Cuál es el número total de farolas por municipio y distrito?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 

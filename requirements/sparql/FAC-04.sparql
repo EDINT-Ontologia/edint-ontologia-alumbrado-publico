@@ -4,7 +4,7 @@
 # Verification: Las farolas pueden tener 0 o 1 caja
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas que NO cumplen: tienen más de 1 caja

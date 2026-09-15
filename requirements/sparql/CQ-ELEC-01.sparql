@@ -3,7 +3,7 @@
 # Question: ¿Qué farolas dependen de cada centro de mando?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Farolas agrupadas por centro de mando

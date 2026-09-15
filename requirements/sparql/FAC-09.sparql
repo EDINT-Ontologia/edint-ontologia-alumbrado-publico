@@ -4,7 +4,7 @@
 # Verification: Las lámparas con potenciaNominal deben usar qudt:QuantityValue
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>
 
 # -----------------------------------------------------------------------------

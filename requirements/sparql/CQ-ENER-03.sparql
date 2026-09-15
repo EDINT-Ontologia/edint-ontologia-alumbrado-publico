@@ -3,7 +3,7 @@
 # Question: ¿Cuántos kWh de fuentes renovables consume el alumbrado público?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 

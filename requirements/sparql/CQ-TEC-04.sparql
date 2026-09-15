@@ -3,7 +3,7 @@
 # Question: ¿Qué modelos de luminaria existen y de qué fabricante?
 # =============================================================================
 
-PREFIX edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 # -----------------------------------------------------------------------------
 # Modelos de luminaria con su fabricante
