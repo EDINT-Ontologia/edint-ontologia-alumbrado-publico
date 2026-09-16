@@ -19,7 +19,7 @@
      xmlns:edintalu="https://edint.es/def/alumbrado-publico#"
      xmlns:edintinf="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#"
      xmlns:edintsum="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#"
-     xmlns:edintkosinftype="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/">
+     xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -910,7 +910,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType"/>
-                <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp"/>
+                <owl:hasValue rdf:resource="https://edint.es/kos/InfrastructureType/StreeLamp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A complete point of light, composed of a post, one or more luminaires (which in turn contain lamps) and optionally a junction box. It is an urban element (edintinf:UrbanElement) and, by inheritance, an InfrastructureElement that can have a utility supply point (edintsum:hasUtilitySupplyPoint). Every instance of Farola has infrastructure type &apos;Street lamp&apos; (edintkosinftype:StreeLamp) from the EDINT SKOS.</rdfs:comment>
@@ -1042,9 +1042,9 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp -->
+    <!-- https://edint.es/kos/InfrastructureType/StreeLamp -->
 
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp"/>
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/InfrastructureType/StreeLamp"/>
 </rdf:RDF>
 
 
