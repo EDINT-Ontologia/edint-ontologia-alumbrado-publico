@@ -1,7 +1,7 @@
 @prefix : <http://example.org/madrid/alumbrado/> .
 @prefix edintalu: <https://edint.es/def/alumbrado-publico#> .
 @prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
-@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
@@ -33,7 +33,7 @@
     edintalu:hasLamp :lamp_002_led .
 
 :lamp_002_led a edintalu:Lamp ;
-    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
+    edintalu:lampType <https://edint.es/kos/LampType/led> ;
     edintalu:bulbModel "LBE120" .
 
 # --- Luminaria de descarga (original) ---
@@ -43,7 +43,7 @@
     edintalu:hasLamp :lamp_002_desc .
 
 :lamp_002_desc a edintalu:Lamp ;
-    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
+    edintalu:lampType <https://edint.es/kos/LampType/vapor-sodio-alta-presion> ;
     edintalu:bulbModel "LBE120" .
 
 # --- Modelo de luminaria (catálogo) ---

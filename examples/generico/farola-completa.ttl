@@ -2,7 +2,7 @@
 @prefix edintalu: <https://edint.es/def/alumbrado-publico#> .
 @prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
 @prefix edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#> .
-@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -44,7 +44,7 @@ ex:consumo-001-llano a edintalu:EnergyConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 8500 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
+    edintalu:tariffPeriod <https://edint.es/kos/TariffPeriod/llano> ;
     edintalu:fiscalYear "2024"^^xsd:gYear .
 
 ex:consumo-001-valle a edintalu:EnergyConsumption ;
@@ -53,7 +53,7 @@ ex:consumo-001-valle a edintalu:EnergyConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 4200 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/valle> ;
+    edintalu:tariffPeriod <https://edint.es/kos/TariffPeriod/valle> ;
     edintalu:fiscalYear "2024"^^xsd:gYear .
 
 # --- Farola ---
@@ -66,12 +66,12 @@ ex:farola-001 a edintalu:Streetlight ;
     edintalu:junctionBox ex:junctionBox-001 ;
     edintinf:hasRegisteredOwner ex:ayto ;
     edintalu:hasFlowReducer ex:reductor-001 ;
-    edintalu:illuminationClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4> ;
-    edintalu:powerSupplyType <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/subterranea> ;
-    edintalu:illuminationType <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
-    edintalu:conservationStatus <http://vocab.linkeddata.es/datosabiertos/kos/edint/ConservationStatus/bueno> ;
-    edintalu:lightingZone <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/e3> ;
-    edintalu:lightingClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingClass/b> ;
+    edintalu:illuminationClass <https://edint.es/kos/IlluminationType/me4> ;
+    edintalu:powerSupplyType <https://edint.es/kos/PowerSupplyType/subterranea> ;
+    edintalu:illuminationType <https://edint.es/kos/IlluminationRegime/nocturna> ;
+    edintalu:conservationStatus <https://edint.es/kos/ConservationStatus/bueno> ;
+    edintalu:lightingZone <https://edint.es/kos/LightingZone/e3> ;
+    edintalu:lightingClass <https://edint.es/kos/LightingClass/b> ;
     edintalu:operatingHours "22:00-07:00" ;
     edintalu:controlMethod "Reloj astronómico" ;
     edintalu:address ex:dir-001 ;
@@ -80,7 +80,7 @@ ex:farola-001 a edintalu:Streetlight ;
 # --- Poste ---
 
 ex:post-001 a edintalu:Post ;
-    edintalu:supportType <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
+    edintalu:supportType <https://edint.es/kos/SupportType/baculo> ;
     edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 8 ; qudt:hasUnit qudtu:M ] ;
     edintalu:numberOfArms 1 ;
     edintalu:hasArm ex:post-001-brazo1 ;
@@ -96,7 +96,7 @@ ex:post-001-brazo1 a edintalu:Arm ;
 ex:lum-001 a edintalu:Luminaire ;
     edintalu:hasLamp ex:lamp-001 ;
     edintalu:luminaireModel ex:modelo-speedstar ;
-    edintalu:luminaireType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
+    edintalu:luminaireType <https://edint.es/kos/LuminaireType/viaria> ;
     edintalu:upperHemisphereFlux [ a qudt:QuantityValue ; qudt:numericValue 1 ; qudt:hasUnit qudtu:PERCENT ] ;
     edintalu:material "Aluminio inyectado" ;
     edintalu:manufacturedBy ex:fabricante-luminarias .
@@ -104,7 +104,7 @@ ex:lum-001 a edintalu:Luminaire ;
 # --- Lámpara (LED con parámetros fotométricos) ---
 
 ex:lamp-001 a edintalu:Lamp ;
-    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led> ;
+    edintalu:lampType <https://edint.es/kos/LampType/led> ;
     edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 72 ; qudt:hasUnit qudtu:W ] ;
     edintalu:luminousFlux [ a qudt:QuantityValue ; qudt:numericValue 8600 ; qudt:hasUnit qudtu:LM ] ;
     edintalu:correlatedColorTemperature [ a qudt:QuantityValue ; qudt:numericValue 3000 ; qudt:hasUnit qudtu:K ] ;
@@ -116,7 +116,7 @@ ex:lamp-001 a edintalu:Lamp ;
 # --- Caja de conexiones ---
 
 ex:junctionBox-001 a edintalu:JunctionBox ;
-    edintalu:cableType <http://vocab.linkeddata.es/datosabiertos/kos/edint/CableType/et106> ;
+    edintalu:cableType <https://edint.es/kos/CableType/et106> ;
     edintalu:material "Policarbonato" .
 
 # --- Reductor de flujo ---

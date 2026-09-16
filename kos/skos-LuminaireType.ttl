@@ -4,8 +4,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkosluminairtype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkosluminairtype: <https://edint.es/kos/LuminaireType/> .
 
 edintkos:LuminaireType a skos:ConceptScheme ;
     dct:title "Tipos de luminaria de alumbrado público"@es , "Public lighting luminaire types"@en ;
@@ -49,7 +49,7 @@ edintkosluminairtype:artistica a skos:Concept ;
 edintkosluminairtype:colgante a skos:Concept ;
     skos:inScheme edintkos:LuminaireType ;
     skos:notation "colgante" ;
-    skos:prefLabel "Colgante"@es , "Pendant"@en , "Pendant"@en .
+    skos:prefLabel "Colgante"@es , "Pendant"@en .
 
 edintkosluminairtype:suspension a skos:Concept ;
     skos:inScheme edintkos:LuminaireType ;
