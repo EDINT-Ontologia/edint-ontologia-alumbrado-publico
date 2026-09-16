@@ -20,7 +20,8 @@
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintsum="https://edint.es/def/suministro#"
      xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/"
-     xmlns:bibo="http://purl.org/ontology/bibo/">
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#">
     <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico#0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -47,6 +48,7 @@
         <rdfs:label xml:lang="en">Public Street Lighting Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
         <owl:priorVersion rdf:resource="https://raw.githubusercontent.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico/main/v1.0-rc/ontology/ontology.owl"/>
+        <voaf:extends rdf:resource="https://edint.es/def/infraestructura"/>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Alumbrado Público. EDINT. Revision: v0.1.0.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
