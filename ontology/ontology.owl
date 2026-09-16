@@ -34,8 +34,8 @@
         <dcterms:description xml:lang="en">Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT.</dcterms:description>
         <dcterms:description xml:lang="es">Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT.</dcterms:description>
         <dcterms:publisher>FEMP — Federación Española de Municipios y Provincias</dcterms:publisher>
-        <dcterms:title xml:lang="es">Ontología de Alumbrado Público</dcterms:title>
-        <dcterms:title xml:lang="en">Public Street Lighting Ontology</dcterms:title>
+        <dcterms:title xml:lang="es">Ontología EDINT de Alumbrado Público</dcterms:title>
+        <dcterms:title xml:lang="en">EDINT Public Street Lighting Ontology</dcterms:title>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:created>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>

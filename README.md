@@ -1,4 +1,4 @@
-# Ontología de Alumbrado Público (Public Street Lighting Ontology)
+# Ontología EDINT de Alumbrado Público
 
 Ontología para la representación de datos de alumbrado público en el contexto de la Federación Española de Municipios y Provincias (FEMP). Evolución de la ontología [OpenCityData](https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico) (v1.0-rc).
 
