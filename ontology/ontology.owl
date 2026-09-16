@@ -19,7 +19,8 @@
      xmlns:edintalu="https://edint.es/def/alumbrado-publico#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintsum="https://edint.es/def/suministro#"
-     xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/">
+     xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/"
+     xmlns:bibo="http://purl.org/ontology/bibo/">
     <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico#0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -47,7 +48,11 @@
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
         <owl:priorVersion rdf:resource="https://raw.githubusercontent.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico/main/v1.0-rc/ontology/ontology.owl"/>
         <owl:versionInfo>0.1.0</owl:versionInfo>
-    </owl:Ontology>
+        <dcterms:bibliographicCitation xml:lang="es">Ontología de Alumbrado Público. EDINT. Revision: v0.1.0.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
+</owl:Ontology>
     
 
 
