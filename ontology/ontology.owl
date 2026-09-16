@@ -21,17 +21,34 @@
      xmlns:edintsum="https://edint.es/def/suministro#"
      xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/"
      xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:voaf="http://purl.org/vocommons/voaf#">
-    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
+     xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico#0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dcterms:contributor>Ontology Engineering Group, Universidad Politécnica de Madrid</dcterms:contributor>
-        <dcterms:creator>Daniel Doña</dcterms:creator>
-        <dcterms:creator>Edna Ruckhaus</dcterms:creator>
-        <dcterms:creator>Lucía Sánchez</dcterms:creator>
-        <dcterms:creator>M. Martín Blázquez</dcterms:creator>
-        <dcterms:creator>María Poveda</dcterms:creator>
-        <dcterms:creator>Oscar Corcho</dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Daniel Doña</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Edna Ruckhaus</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Lucía Sánchez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>M. Martín Blázquez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>María Poveda</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Oscar Corcho</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
         <dcterms:description xml:lang="en">Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT.</dcterms:description>
         <dcterms:description xml:lang="es">Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT.</dcterms:description>
         <dcterms:publisher>FEMP — Federación Española de Municipios y Provincias</dcterms:publisher>
@@ -55,6 +72,9 @@
     <dcterms:abstract xml:lang="es">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
 </owl:Ontology>
+    <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
+        <foaf:name>Ontology Engineering Group, UPM</foaf:name>
+    </foaf:Organization>
     
 
 
