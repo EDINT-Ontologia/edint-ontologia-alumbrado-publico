@@ -4,7 +4,7 @@
 # =============================================================================
 
 PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#>
+PREFIX edintsum: <https://edint.es/def/suministro#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX qudt:     <http://qudt.org/schema/qudt/>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>

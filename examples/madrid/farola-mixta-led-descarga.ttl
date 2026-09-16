@@ -1,6 +1,6 @@
 @prefix : <http://example.org/madrid/alumbrado/> .
 @prefix edintalu: <https://edint.es/def/alumbrado-publico#> .
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
 @prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .

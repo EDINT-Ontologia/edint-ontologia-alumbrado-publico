@@ -4,7 +4,7 @@
 # =============================================================================
 
 PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 
 # -----------------------------------------------------------------------------
 # Propietario registrado de cada farola

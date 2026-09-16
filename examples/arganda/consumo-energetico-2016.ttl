@@ -1,6 +1,6 @@
 @prefix exarg: <http://example.org/arganda/alumbrado/> .
 @prefix edintalu: <https://edint.es/def/alumbrado-publico#> .
-@prefix edintsum: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#> .
+@prefix edintsum: <https://edint.es/def/suministro#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix qudtu: <http://qudt.org/vocab/unit/> .
