@@ -17,8 +17,8 @@
      xmlns:schema="http://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:edintalu="https://edint.es/def/alumbrado-publico#"
-     xmlns:edintinf="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#"
-     xmlns:edintsum="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#"
+     xmlns:edintinf="https://edint.es/def/infraestructura#"
+     xmlns:edintsum="https://edint.es/def/suministro#"
      xmlns:edintkosinftype="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/0.1.0"/>
@@ -582,9 +582,9 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType -->
+    <!-- https://edint.es/def/infraestructura#hasInfrastructureType -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType"/>
+    <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#hasInfrastructureType"/>
     
 
 
@@ -871,7 +871,7 @@
     <!-- https://edint.es/def/alumbrado-publico#ControlCenter -->
 
     <owl:Class rdf:about="https://edint.es/def/alumbrado-publico#ControlCenter">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/suministro#UtilitySupplyPoint"/>
         <rdfs:comment xml:lang="es">Cuadro eléctrico o centro de control del que dependen una o más farolas. Es un punto de suministro (edintsum:UtilitySupplyPoint), punto donde llega la electricidad a la instalación de alumbrado.</rdfs:comment>
         <rdfs:comment xml:lang="en">Electrical panel or control center on which one or more streetlights depend. It is a utility supply point (edintsum:UtilitySupplyPoint), the point where electricity reaches the lighting installation.</rdfs:comment>
         <rdfs:label xml:lang="es">Centro de mando</rdfs:label>
@@ -883,7 +883,7 @@
     <!-- https://edint.es/def/alumbrado-publico#EnergyConsumption -->
 
     <owl:Class rdf:about="https://edint.es/def/alumbrado-publico#EnergyConsumption">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/suministro#UtilityConsumption"/>
         <rdfs:comment xml:lang="es">Observación de consumo eléctrico en un período tarifario determinado. Al heredar de edintsum:UtilityConsumption ⊂ sosa:Observation, usa el patrón SOSA: – sosa:hasFeatureOfInterest → el CentroDeMando (punto de suministro) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:tariffPeriod → concepto SKOS (activo, llano, valle, punta) Cada instancia representa el consumo en UN período tarifario. El total se obtiene sumando las instancias del mismo ejercicio.</rdfs:comment>
         <rdfs:comment xml:lang="en">Observation of electricity consumption in a specific tariff period. By inheriting from edintsum:UtilityConsumption ⊂ sosa:Observation, uses the SOSA pattern: – sosa:hasFeatureOfInterest → the CentroDeMando (supply point) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:tariffPeriod → SKOS concept (active, standard, off-peak, peak) Each instance represents consumption in ONE tariff period. The total is obtained by summing instances of the same fiscal year.</rdfs:comment>
         <rdfs:label xml:lang="es">Consumo energético</rdfs:label>
@@ -906,10 +906,10 @@
     <!-- https://edint.es/def/alumbrado-publico#Streetlight -->
 
     <owl:Class rdf:about="https://edint.es/def/alumbrado-publico#Streetlight">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/infraestructura#UrbanElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType"/>
+                <owl:onProperty rdf:resource="https://edint.es/def/infraestructura#hasInfrastructureType"/>
                 <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/StreeLamp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -980,7 +980,7 @@
     <!-- https://edint.es/def/alumbrado-publico#ElectricitySupply -->
 
     <owl:Class rdf:about="https://edint.es/def/alumbrado-publico#ElectricitySupply">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract"/>
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/suministro#UtilityContract"/>
         <rdfs:comment xml:lang="es">Contrato de suministro eléctrico asociado a un centro de mando. Incluye tarifa, tensión y consumo por períodos tarifarios. Es un contrato de suministro (edintsum:UtilityContract), con tarifa y punto de suministro asociado.</rdfs:comment>
         <rdfs:comment xml:lang="en">Electricity supply contract associated with a control center. Includes tariff, voltage, and consumption by tariff periods. It is a utility contract (edintsum:UtilityContract), with rate and associated supply point.</rdfs:comment>
         <rdfs:label xml:lang="en">Electricity Supply</rdfs:label>
@@ -1001,27 +1001,27 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement -->
+    <!-- https://edint.es/def/infraestructura#UrbanElement -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement"/>
+    <owl:Class rdf:about="https://edint.es/def/infraestructura#UrbanElement"/>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption -->
+    <!-- https://edint.es/def/suministro#UtilityConsumption -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption"/>
+    <owl:Class rdf:about="https://edint.es/def/suministro#UtilityConsumption"/>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract -->
+    <!-- https://edint.es/def/suministro#UtilityContract -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract"/>
+    <owl:Class rdf:about="https://edint.es/def/suministro#UtilityContract"/>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint -->
+    <!-- https://edint.es/def/suministro#UtilitySupplyPoint -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint"/>
+    <owl:Class rdf:about="https://edint.es/def/suministro#UtilitySupplyPoint"/>
     
 
 
