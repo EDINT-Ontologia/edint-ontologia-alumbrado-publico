@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://edint.es/def/alumbrado-publico#"
-     xml:base="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+     xml:base="https://edint.es/def/alumbrado-publico#"
      xmlns:gsp="http://www.opengis.net/ont/geosparql#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -20,7 +20,7 @@
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintsum="https://edint.es/def/suministro#"
      xmlns:edintkosinftype="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/">
-    <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
+    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico#0.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <dcterms:contributor>Ontology Engineering Group, Universidad Politécnica de Madrid</dcterms:contributor>
