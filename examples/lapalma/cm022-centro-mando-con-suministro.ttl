@@ -2,7 +2,7 @@
 @prefix edintalu: <https://edint.es/def/alumbrado-publico#> .
 @prefix edintinf: <https://edint.es/def/infraestructura#> .
 @prefix edintsum: <https://edint.es/def/suministro#> .
-@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -50,7 +50,7 @@ exlp:cm-022-consumo2014 a edintalu:EnergyConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 4520 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:tariffPeriod <http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano> ;
+    edintalu:tariffPeriod <https://edint.es/kos/TariffPeriod/llano> ;
     edintalu:fiscalYear "2014"^^xsd:gYear .
 
 # --- Farolas del CM-022 (muestra de 2) ---
@@ -60,9 +60,9 @@ exlp:f2201 a edintalu:Streetlight ;
     edintalu:controlCenter exlp:cm-022 ;
     edintalu:post exlp:f2201-poste ;
     edintalu:luminaire exlp:f2201-lum1 ;
-    edintalu:illuminationClass <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/s4> ;
-    edintalu:powerSupplyType <http://vocab.linkeddata.es/datosabiertos/kos/edint/PowerSupplyType/aerea> ;
-    edintalu:illuminationType <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/nocturna> ;
+    edintalu:illuminationClass <https://edint.es/kos/IlluminationType/s4> ;
+    edintalu:powerSupplyType <https://edint.es/kos/PowerSupplyType/aerea> ;
+    edintalu:illuminationType <https://edint.es/kos/IlluminationRegime/nocturna> ;
     edintalu:dataQuality "R" ;
     edintalu:address exlp:f2201-dir ;
     gsp:hasGeometry exlp:f2201-geom .
@@ -77,13 +77,13 @@ exlp:f2201-geom a gsp:Geometry ;
     gsp:asWKT "POINT (-17.7690 28.6120)"^^gsp:wktLiteral .
 
 exlp:f2201-poste a edintalu:Post ;
-    edintalu:supportType <http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo> ;
+    edintalu:supportType <https://edint.es/kos/SupportType/baculo> ;
     edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 4 ; qudt:hasUnit qudtu:M ] .
 
 exlp:f2201-lum1 a edintalu:Luminaire ;
-    edintalu:luminaireType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LuminaireType/viaria> ;
+    edintalu:luminaireType <https://edint.es/kos/LuminaireType/viaria> ;
     edintalu:hasLamp exlp:f2201-lum1-lamp .
 
 exlp:f2201-lum1-lamp a edintalu:Lamp ;
-    edintalu:lampType <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/vapor-sodio-alta-presion> ;
+    edintalu:lampType <https://edint.es/kos/LampType/vapor-sodio-alta-presion> ;
     edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 150 ; qudt:hasUnit qudtu:W ] .
