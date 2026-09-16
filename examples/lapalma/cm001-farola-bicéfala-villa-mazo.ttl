@@ -1,6 +1,6 @@
 @prefix exlp: <http://example.org/lapalma/alumbrado/> .
 @prefix edintalu: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
 @prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
