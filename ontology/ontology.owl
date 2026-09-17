@@ -67,6 +67,7 @@
         <rdfs:label xml:lang="en">Public Street Lighting Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0"/>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico"/>
         <voaf:extends rdf:resource="https://edint.es/def/infraestructura"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:created>
