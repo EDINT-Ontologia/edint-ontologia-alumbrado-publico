@@ -24,7 +24,6 @@
      xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico/0.1.1"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <dcterms:contributor>Ontology Engineering Group, Universidad Politécnica de Madrid</dcterms:contributor>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
