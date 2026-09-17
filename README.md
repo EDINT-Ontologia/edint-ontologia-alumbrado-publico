@@ -1,5 +1,8 @@
 # Ontología de Alumbrado Público (Public Street Lighting Ontology)
 
+![Prefijo](https://img.shields.io/badge/prefijo-edintalu-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
+
 Ontología para la representación de datos de alumbrado público en el contexto de la Federación Española de Municipios y Provincias (FEMP). Evolución de la ontología [OpenCityData](https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico) (v1.0-rc).
 
 # Propósito y alcance de la ontología (Purpose and scope of the ontology)
