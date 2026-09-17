@@ -1,5 +1,6 @@
 # Ontología de Alumbrado Público (Public Street Lighting Ontology)
 
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/alumbrado-publico)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintalu-informational)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
