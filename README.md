@@ -6,7 +6,7 @@
 
 Ontología para la representación de datos de alumbrado público en el contexto de la Federación Española de Municipios y Provincias (FEMP). Evolución de la ontología [OpenCityData](https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico) (v1.0-rc).
 
-# Propósito y alcance de la ontología (Purpose and scope of the ontology)
+## Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
 El propósito de esta ontología es modelar los datos de alumbrado público publicados por entidades locales españolas, permitiendo:
 
@@ -16,15 +16,15 @@ El propósito de esta ontología es modelar los datos de alumbrado público publ
 
 El alcance cubre: composición modular de farolas, infraestructura eléctrica, consumo energético, catálogo de modelos, parámetros fotométricos y contaminación lumínica.
 
-# Prefijo y espacio de nombres (Prefix and namespace)
+## Prefijo y espacio de nombres (Prefix and namespace)
 
 El prefijo de esta ontología es `edintalu` y se publica bajo el espacio de nombres https://edint.es/def/alumbrado-publico#
 
-# Modelo conceptual (Ontology conceptualization)
+## Modelo conceptual (Ontology conceptualization)
 
 ![Diagrama del modelo conceptual](diagrams/edint-ontologia-alumbrado-publico.drawio.png)
 
-# Estructura del repositorio
+## Estructura del repositorio
 
 | Carpeta | Descripción |
 |--------|--------------|
@@ -37,11 +37,11 @@ El prefijo de esta ontología es `edintalu` y se publica bajo el espacio de nomb
 | **shapes/** | Contiene las formas SHACL utilizadas para definir y validar las restricciones de la ontología. |
 
 
-# Mantenimiento y evolución (Maintenance and evolution)
+## Mantenimiento y evolución (Maintenance and evolution)
 
 Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir la guía proporcionada en [ISSUES.md](ISSUES.md) para generar una incidencia.
 
-# Financiación (Funding)
+## Financiación (Funding)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
 
