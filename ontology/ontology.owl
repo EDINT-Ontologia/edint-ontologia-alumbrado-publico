@@ -14,40 +14,75 @@
      xmlns:esadm="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
      xmlns:esdir="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#"
      xmlns:qudtu="http://qudt.org/vocab/unit/"
-     xmlns:schema="http://schema.org/"
+     xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:edintalu="https://edint.es/def/alumbrado-publico#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
      xmlns:edintsum="https://edint.es/def/suministro#"
-     xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/">
-    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
-        <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico#0.1.0"/>
+     xmlns:edintkosinftype="https://edint.es/kos/InfrastructureType/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
+        <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico/0.1.1"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-        <dcterms:contributor>Ontology Engineering Group, Universidad Politécnica de Madrid</dcterms:contributor>
-        <dcterms:creator>Daniel Doña</dcterms:creator>
-        <dcterms:creator>Edna Ruckhaus</dcterms:creator>
-        <dcterms:creator>Lucía Sánchez</dcterms:creator>
-        <dcterms:creator>M. Martín Blázquez</dcterms:creator>
-        <dcterms:creator>María Poveda</dcterms:creator>
-        <dcterms:creator>Oscar Corcho</dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Daniel Doña</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Edna Ruckhaus</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Lucía Sánchez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>M. Martín Blázquez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>María Poveda</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+        <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Oscar Corcho</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
         <dcterms:description xml:lang="en">Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT.</dcterms:description>
         <dcterms:description xml:lang="es">Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT.</dcterms:description>
-        <dcterms:publisher>FEMP — Federación Española de Municipios y Provincias</dcterms:publisher>
-        <dcterms:title xml:lang="es">Ontología de Alumbrado Público</dcterms:title>
-        <dcterms:title xml:lang="en">Public Street Lighting Ontology</dcterms:title>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:created>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:issued>
+        <dcterms:publisher rdf:parseType="Resource">
+            <foaf:name>FEMP</foaf:name>
+            <foaf:homepage rdf:resource="https://www.femp.es/"/>
+            <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
+        </dcterms:publisher>
+        <dcterms:title xml:lang="es">Ontología EDINT de Alumbrado Público</dcterms:title>
+        <dcterms:title xml:lang="en">EDINT Public Street Lighting Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Alumbrado Público</rdfs:label>
+        <rdfs:label xml:lang="en">Public Street Lighting</rdfs:label>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://edint.es/def/alumbrado-publico#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/alumbrado-publico#"/>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
         <rdfs:comment xml:lang="es">Ontología para la representación de datos de alumbrado público.</rdfs:comment>
-        <rdfs:label xml:lang="es">Ontología de Alumbrado Público</rdfs:label>
-        <rdfs:label xml:lang="en">Public Street Lighting Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
-        <owl:priorVersion rdf:resource="https://raw.githubusercontent.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico/main/v1.0-rc/ontology/ontology.owl"/>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
-    </owl:Ontology>
+        <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0"/>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
+        <voaf:extends rdf:resource="https://edint.es/def/infraestructura"/>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</dcterms:created>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
+        <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Alumbrado Público. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
+        <dcterms:bibliographicCitation xml:lang="en">EDINT Public Street Lighting Ontology. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+    <dcterms:abstract xml:lang="es">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</dcterms:abstract>
+</owl:Ontology>
+    <foaf:Organization rdf:about="https://oeg.fi.upm.es/">
+        <foaf:name>Ontology Engineering Group, UPM</foaf:name>
+    </foaf:Organization>
     
 
 
@@ -1045,6 +1080,48 @@
     <!-- https://edint.es/kos/InfrastructureType/StreeLamp -->
 
     <owl:NamedIndividual rdf:about="https://edint.es/kos/InfrastructureType/StreeLamp"/>
+    <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
+    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+                <rdfs:label xml:lang="es">QUDT</rdfs:label>
+                <rdfs:label xml:lang="en">QUDT</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal"/>
+                <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+                <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+                <rdfs:label xml:lang="es">SKOS</rdfs:label>
+                <rdfs:label xml:lang="en">SKOS</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/infraestructura"/>
+                <rdfs:label xml:lang="es">Infraestructura (edintinf)</rdfs:label>
+                <rdfs:label xml:lang="en">Infrastructure (edintinf)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/suministro"/>
+                <rdfs:label xml:lang="es">Suministros (edintsum)</rdfs:label>
+                <rdfs:label xml:lang="en">Utilities (edintsum)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+</owl:Ontology>
 </rdf:RDF>
 
 
