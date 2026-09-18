@@ -4,8 +4,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkosillumtype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkosillumtype: <https://edint.es/kos/IlluminationType/> .
 
 edintkos:IlluminationType a skos:ConceptScheme ;
     dct:title "Clases de iluminación según EN 13201"@es , "Illumination classes according to EN 13201"@en ;

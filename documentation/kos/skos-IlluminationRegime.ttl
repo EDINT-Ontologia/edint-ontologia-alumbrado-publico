@@ -4,8 +4,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkosillumregime: <http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationRegime/> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkosillumregime: <https://edint.es/kos/IlluminationRegime/> .
 
 edintkos:IlluminationRegime a skos:ConceptScheme ;
     dct:title "Régimen de iluminación"@es , "Illumination regime"@en ;
