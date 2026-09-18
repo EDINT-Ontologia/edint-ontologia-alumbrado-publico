@@ -14,7 +14,7 @@
      xmlns:esadm="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#"
      xmlns:esdir="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#"
      xmlns:qudtu="http://qudt.org/vocab/unit/"
-     xmlns:schema="http://schema.org/"
+     xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:edintalu="https://edint.es/def/alumbrado-publico#"
      xmlns:edintinf="https://edint.es/def/infraestructura#"
@@ -62,7 +62,7 @@
         <rdfs:label xml:lang="en">Public Street Lighting</rdfs:label>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://edint.es/def/alumbrado-publico#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/alumbrado-publico#"/>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
         <rdfs:comment xml:lang="es">Ontología para la representación de datos de alumbrado público.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
