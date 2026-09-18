@@ -58,13 +58,13 @@
         </dcterms:publisher>
         <dcterms:title xml:lang="es">Ontología EDINT de Alumbrado Público</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Public Street Lighting Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Alumbrado Público</rdfs:label>
+        <rdfs:label xml:lang="en">Public Street Lighting</rdfs:label>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://edint.es/def/alumbrado-publico#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
         <rdfs:comment xml:lang="es">Ontología para la representación de datos de alumbrado público.</rdfs:comment>
-        <rdfs:label xml:lang="es">Ontología de Alumbrado Público</rdfs:label>
-        <rdfs:label xml:lang="en">Public Street Lighting Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico"/>
