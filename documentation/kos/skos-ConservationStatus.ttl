@@ -4,8 +4,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkosconservsta: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ConservationStatus/> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkosconservsta: <https://edint.es/kos/ConservationStatus/> .
 
 edintkos:ConservationStatus a skos:ConceptScheme ;
     dct:title "Estado de conservación de farolas"@es , "Streetlight conservation status"@en ;

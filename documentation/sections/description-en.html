@@ -2,11 +2,11 @@
 <span class="markdown"><p>Figure 1 shows the conceptual model of the ontology with its classes and relationships (object properties).</p></span>
 <p><center><img src="images/diagrama-conceptual.png" style="width:100%;"/><figcaption>
 Figure 1. Conceptual model of the ontology</figcaption></center></p>
-<span class="markdown"><p>The ontology models the modular composition of a <a href="#Farola">streetlight</a> as an urban element (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement">edintinf:UrbanElement</a>), composed of a <a href="#Poste">post</a> (with one or more <a href="#Brazo">arms</a>), one or more <a href="#Luminaria">luminaires</a> (each housing a <a href="#Lampara">lamp</a>) and optionally a <a href="#Caja">junction box</a>.</p>
+<span class="markdown"><p>The ontology models the modular composition of a <a href="#Farola">streetlight</a> as an urban element (<a href="#https://edint.es/def/infraestructura##UrbanElement">edintinf:UrbanElement</a>), composed of a <a href="#Poste">post</a> (with one or more <a href="#Brazo">arms</a>), one or more <a href="#Luminaria">luminaires</a> (each housing a <a href="#Lampara">lamp</a>) and optionally a <a href="#Caja">junction box</a>.</p>
 
-<p>The electrical infrastructure is represented by the <a href="#CentroDeMando">control center</a>, which is a utility supply point (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) on which one or more streetlights depend. The control center may have an <a href="#SuministroElectrico">electricity supply</a> contract (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract">edintsum:UtilityContract</a>).</p>
+<p>The electrical infrastructure is represented by the <a href="#CentroDeMando">control center</a>, which is a utility supply point (<a href="#https://edint.es/def/suministro##UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) on which one or more streetlights depend. The control center may have an <a href="#SuministroElectrico">electricity supply</a> contract (<a href="#https://edint.es/def/suministro##UtilityContract">edintsum:UtilityContract</a>).</p>
 
-<p>Energy <a href="#ConsumoEnergetico">consumption</a> is modeled as a SOSA observation (<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), where each instance represents the consumption for a specific tariff period. The consumption value is represented via <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, expressing the magnitude through <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> and the unit of measure through <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (e.g., <code>unit:KiloW-HR</code> for kilowatt-hours). The tariff period is indicated by the <a href="#periodoTarifario">periodoTarifario</a> property linked to a SKOS concept (active, standard, off-peak, peak).</p>
+<p>Energy <a href="#ConsumoEnergetico">consumption</a> is modeled as a SOSA observation (<a href="#https://edint.es/def/suministro##UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), where each instance represents the consumption for a specific tariff period. The consumption value is represented via <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, expressing the magnitude through <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> and the unit of measure through <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (e.g., <code>unit:KiloW-HR</code> for kilowatt-hours). The tariff period is indicated by the <a href="#periodoTarifario">periodoTarifario</a> property linked to a SKOS concept (active, standard, off-peak, peak).</p>
 
 <p>Street lighting classifications (support type, lamp type, conservation status, lighting zone, lighting class, etc.) are represented via object properties pointing to SKOS concepts, organized in independent concept schemes available in the <code>kos/</code> folder.</p>
 
@@ -14,10 +14,10 @@ Figure 1. Conceptual model of the ontology</figcaption></center></p>
 </span>
 
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
-@prefix edintalu: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#&gt; .
-@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
-@prefix edintsum: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#&gt; .
-@prefix edintkosinftype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/&gt; .
+@prefix edintalu: &lt;https://edint.es/def/alumbrado-publico#&gt; .
+@prefix edintinf: &lt;https://edint.es/def/infraestructura##&gt; .
+@prefix edintsum: &lt;https://edint.es/def/suministro##&gt; .
+@prefix edintkosinftype: &lt;https://edint.es/kos/InfrastructureType/&gt; .
 @prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
 @prefix gsp: &lt;http://www.opengis.net/ont/geosparql#&gt; .
 @prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
@@ -44,7 +44,7 @@ ex:cons-001-llano a edintalu:EnergyConsumption ;
     sosa:hasResult [ a qudt:QuantityValue ;
                      qudt:numericValue 8500 ;
                      qudt:hasUnit qudtu:KiloW-HR ] ;
-    edintalu:tariffPeriod &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/TariffPeriod/llano&gt; ;
+    edintalu:tariffPeriod &lt;https://edint.es/kos/TariffPeriod/llano&gt; ;
     edintalu:fiscalYear "2024"^^xsd:gYear .
 
 # --- Streetlight ---
@@ -53,14 +53,14 @@ ex:farola-001 a edintalu:Streetlight ;
     edintalu:controlCenter ex:cm-001 ;
     edintalu:post ex:post-001 ;
     edintalu:luminaire ex:lum-001 ;
-    edintalu:illuminationClass &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/IlluminationType/me4&gt; ;
-    edintalu:lightingZone &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LightingZone/e3&gt; ;
+    edintalu:illuminationClass &lt;https://edint.es/kos/IlluminationType/me4&gt; ;
+    edintalu:lightingZone &lt;https://edint.es/kos/LightingZone/e3&gt; ;
     edintalu:address ex:dir-001 ;
     gsp:hasGeometry ex:geom-001 .
 
 # --- Post with arm ---
 ex:post-001 a edintalu:Post ;
-    edintalu:supportType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/SupportType/baculo&gt; ;
+    edintalu:supportType &lt;https://edint.es/kos/SupportType/baculo&gt; ;
     edintalu:height [ a qudt:QuantityValue ; qudt:numericValue 8 ; qudt:hasUnit qudtu:M ] ;
     edintalu:hasArm ex:brazo-001 .
 
@@ -74,7 +74,7 @@ ex:lum-001 a edintalu:Luminaire ;
     edintalu:luminaireModel ex:modelo-001 .
 
 ex:lamp-001 a edintalu:Lamp ;
-    edintalu:lampType &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/led&gt; ;
+    edintalu:lampType &lt;https://edint.es/kos/LampType/led&gt; ;
     edintalu:nominalPower [ a qudt:QuantityValue ; qudt:numericValue 72 ; qudt:hasUnit qudtu:W ] .
 
 # --- Catalog model ---

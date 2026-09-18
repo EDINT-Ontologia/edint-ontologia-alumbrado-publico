@@ -4,8 +4,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkoslamptype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/LampType/> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkoslamptype: <https://edint.es/kos/LampType/> .
 
 edintkos:LampType a skos:ConceptScheme ;
     dct:title "Tipos de lámpara de alumbrado público"@es , "Public lighting lamp types"@en ;
