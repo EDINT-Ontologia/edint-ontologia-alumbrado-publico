@@ -22,7 +22,7 @@ El prefijo de esta ontología es `edintalu` y se publica bajo el espacio de nomb
 
 ## Modelo conceptual (Ontology conceptualization)
 
-![Diagrama del modelo conceptual](diagrams/edint-ontologia-alumbrado-publico.drawio.png)
+![Diagrama del modelo conceptual](diagrams/diagrama-conceptual.png)
 
 ## Estructura del repositorio
 
