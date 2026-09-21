@@ -2,8 +2,8 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/0.1.0> a prov:Entity;
-	 dc:title "Ontología de Alumbrado Público";
+<https://edint.es/def/alumbrado-publico/0.1.1> a prov:Entity;
+	 dc:title "Ontología EDINT de Alumbrado Público";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
@@ -11,13 +11,13 @@
 	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo :agent5;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:specializationOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico>;
-	 prov:wasRevisionOf <https://raw.githubusercontent.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico/main/v1.0-rc/ontology/ontology.owl>;
-	 prov:wasGeneratedAt "Date created";
+	 prov:specializationOf <https://edint.es/def/alumbrado-publico>;
+	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0>;
+	 prov:wasGeneratedAt "2026-05-07";
 .
-:agent0 a prov:Agent; foaf:name "María Poveda".
-:agent1 a prov:Agent; foaf:name "M. Martín Blázquez".
-:agent2 a prov:Agent; foaf:name "Oscar Corcho".
+:agent0 a prov:Agent; foaf:name "Oscar Corcho".
+:agent1 a prov:Agent; foaf:name "María Poveda".
+:agent2 a prov:Agent; foaf:name "M. Martín Blázquez".
 :agent3 a prov:Agent; foaf:name "Daniel Doña".
 :agent4 a prov:Agent; foaf:name "Edna Ruckhaus".
 :agent5 a prov:Agent; foaf:name "Lucía Sánchez".

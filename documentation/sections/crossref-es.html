@@ -1,1075 +1,895 @@
-<h2 id="crossreference" class="list">T&eacute;rminos de alumbrado-publico para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
-Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por alumbrado-publico.
+<h2 id="crossreference" class="list">T&eacute;rminos de Alumbrado Público para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Alumbrado Público.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Clases</h3>
  <ul class="hlist">
-  <li><a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Brazo</a></li>
-  <li><a href="#Caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja">Caja</a></li>
-  <li><a href="#CentroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando">Centro de mando</a></li>
-  <li><a href="#ConsumoEnergetico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico">Consumo energético</a></li>
-  <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">Dirección postal</a></li>
-  <li><a href="#Fabricante" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante">Fabricante</a></li>
-  <li><a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a></li>
-  <li><a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a></li>
-  <li><a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a></li>
-  <li><a href="#ModeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria">Modelo de luminaria</a></li>
-  <li><a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a></li>
-  <li><a href="#ReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo">Reductor de flujo</a></li>
-  <li><a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a></li>
+  <li><a href="#Arm" title="https://edint.es/def/alumbrado-publico#Arm">Brazo</a></li>
+  <li><a href="#JunctionBox" title="https://edint.es/def/alumbrado-publico#JunctionBox">Caja</a></li>
+  <li><a href="#ControlCenter" title="https://edint.es/def/alumbrado-publico#ControlCenter">Centro de mando</a></li>
+  <li><a href="#EnergyConsumption" title="https://edint.es/def/alumbrado-publico#EnergyConsumption">Consumo energético</a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal">Dirección postal</a></li>
+  <li><a href="#Manufacturer" title="https://edint.es/def/alumbrado-publico#Manufacturer">Fabricante</a></li>
+  <li><a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a></li>
+  <li><a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a></li>
+  <li><a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a></li>
+  <li><a href="#LuminaireModel" title="https://edint.es/def/alumbrado-publico#LuminaireModel">Modelo de luminaria</a></li>
+  <li><a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a></li>
+  <li><a href="#FlowReducer" title="https://edint.es/def/alumbrado-publico#FlowReducer">Reductor de flujo</a></li>
+  <li><a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a></li>
  </ul>
- <div class="entity" id="Brazo">
+ <div class="entity" id="Arm">
   <h3>Brazo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Arm</p>
   <div class="comment">
    <span class="markdown">Brazo del poste que soporta una luminaria. Un poste puede tener múltiples brazos, cada uno con su propia altura.</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#ordenBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo">orden del brazo</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+    <a href="#armOrder" title="https://edint.es/def/alumbrado-publico#armOrder">orden del brazo</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">tiene brazo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasArm" title="https://edint.es/def/alumbrado-publico#hasArm">tiene brazo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Caja">
+ <div class="entity" id="JunctionBox">
   <h3>Caja<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#JunctionBox</p>
   <div class="comment">
    <span class="markdown">Caja de conexiones o registro de acceso a los cables eléctricos de la farola. Opcional: no todas las farolas tienen una caja accesible.</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#tipoCable" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable">tipo de cable</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#cableType" title="https://edint.es/def/alumbrado-publico#cableType">tipo de cable</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">caja</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#junctionBox" title="https://edint.es/def/alumbrado-publico#junctionBox">caja</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="CentroDeMando">
+ <div class="entity" id="ControlCenter">
   <h3>Centro de mando<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#ControlCenter</p>
   <div class="comment">
    <span class="markdown">Cuadro eléctrico o centro de control del que dependen una o más farolas. Es un punto de suministro (edintsum:UtilitySupplyPoint), punto donde llega la electricidad a la instalación de alumbrado.</span>
   </div>
   <dl class="description">
-   <dt>
-    tiene superclases
-   </dt>
+   <dt>tiene superclases</dt>
    <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint" target="_blank" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilitySupplyPoint">Utility Supply Point</a> <sup class="type-c" title="clase">c</sup>
+    <a href="https://edint.es/def/suministro#UtilitySupplyPoint" target="_blank" title="https://edint.es/def/suministro#UtilitySupplyPoint">Utility Supply Point</a> <sup class="type-c" title="clase">c</sup>
    </dd>
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#tieneSuministro" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro">tiene suministro</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasSupply" title="https://edint.es/def/alumbrado-publico#hasSupply">tiene suministro</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">centro de mando</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#controlCenter" title="https://edint.es/def/alumbrado-publico#controlCenter">centro de mando</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ConsumoEnergetico">
+ <div class="entity" id="EnergyConsumption">
   <h3>Consumo energético<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#EnergyConsumption</p>
   <div class="comment">
    <span class="markdown">Observación de consumo eléctrico en un período tarifario determinado. Al heredar de edintsum:UtilityConsumption ⊂ sosa:Observation, usa el patrón SOSA: – sosa:hasFeatureOfInterest → el CentroDeMando (punto de suministro) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:tariffPeriod → concepto SKOS (activo, llano, valle, punta) Cada instancia representa el consumo en UN período tarifario. El total se obtiene sumando las instancias del mismo ejercicio.</span>
   </div>
   <dl class="description">
-   <dt>
-    tiene superclases
-   </dt>
+   <dt>tiene superclases</dt>
    <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption" target="_blank" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityConsumption">Utility Consumption</a> <sup class="type-c" title="clase">c</sup>
+    <a href="https://edint.es/def/suministro#UtilityConsumption" target="_blank" title="https://edint.es/def/suministro#UtilityConsumption">Utility Consumption</a> <sup class="type-c" title="clase">c</sup>
    </dd>
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#periodoTarifario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#periodoTarifario">período tarifario</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#tariffPeriod" title="https://edint.es/def/alumbrado-publico#tariffPeriod">período tarifario</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">tiene consumo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasConsumption" title="https://edint.es/def/alumbrado-publico#hasConsumption">tiene consumo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal">
   <h3>Dirección postal<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</p>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal</p>
   <div class="comment">
    <span class="markdown">Dirección postal en España. Especialización de schema:PostalAddress, vcard:Address y locn:Address. Permite representar la dirección de una farola con propiedades como streetAddress, addressLocality, postalCode, etc.</span>
   </div>
   <dl class="definedBy">
-   <dt>
-    Definida por
-   </dt>
+   <dt>Definida por</dt>
    <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal</a>
+    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal</a>
    </dd>
   </dl>
   <dl class="description">
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#direccion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">dirección</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#address" title="https://edint.es/def/alumbrado-publico#address">dirección</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Fabricante">
+ <div class="entity" id="Manufacturer">
   <h3>Fabricante<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Manufacturer</p>
   <div class="comment">
    <span class="markdown">Entidad que fabrica componentes del alumbrado (postes, luminarias, lámparas, cajas o modelos).</span>
   </div>
   <dl class="description">
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#fabricadoPor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor">fabricado por</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#manufacturedBy" title="https://edint.es/def/alumbrado-publico#manufacturedBy">fabricado por</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Farola">
+ <div class="entity" id="Streetlight">
   <h3>Farola<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Streetlight</p>
   <div class="comment">
    <span class="markdown">Punto de luz completo, compuesto por un poste, una o más luminarias (que a su vez contienen lámparas) y opcionalmente una caja de conexiones. Es un elemento urbano (edintinf:UrbanElement) y, por herencia, un InfrastructureElement que puede tener punto de suministro (edintsum:hasUtilitySupplyPoint). Toda instancia de Farola tiene como tipo de infraestructura 'Street lamp' (edintkosinftype:StreeLamp) del SKOS de EDINT.</span>
   </div>
   <dl class="description">
-   <dt>
-    tiene superclases
-   </dt>
+   <dt>tiene superclases</dt>
    <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement" target="_blank" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement">Urban Element</a> <sup class="type-c" title="clase">c</sup>
+    <a href="https://edint.es/def/infraestructura#UrbanElement" target="_blank" title="https://edint.es/def/infraestructura#UrbanElement">Urban Element</a> <sup class="type-c" title="clase">c</sup>
    </dd>
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">caja</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#calidadDato" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato">calidad del dato</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">centro de mando</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">clase luminotécnica</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#direccion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">dirección</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#estadoConservacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion">estado de conservación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#horasDeFuncionamiento" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento">horas de funcionamiento</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#metodoDeControl" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl">método de control</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#numeroDeLuminarias" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">número de luminarias</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">poste</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoAlimentacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion">tipo de alimentación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">tipo de alumbrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoIluminacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion">tipo de iluminación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#zonaAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado">zona de alumbrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#junctionBox" title="https://edint.es/def/alumbrado-publico#junctionBox">caja</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#dataQuality" title="https://edint.es/def/alumbrado-publico#dataQuality">calidad del dato</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#controlCenter" title="https://edint.es/def/alumbrado-publico#controlCenter">centro de mando</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#lightingClass" title="https://edint.es/def/alumbrado-publico#lightingClass">clase luminotécnica</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#address" title="https://edint.es/def/alumbrado-publico#address">dirección</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#conservationStatus" title="https://edint.es/def/alumbrado-publico#conservationStatus">estado de conservación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#operatingHours" title="https://edint.es/def/alumbrado-publico#operatingHours">horas de funcionamiento</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#luminaire" title="https://edint.es/def/alumbrado-publico#luminaire">luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#controlMethod" title="https://edint.es/def/alumbrado-publico#controlMethod">método de control</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#numberOfLuminaires" title="https://edint.es/def/alumbrado-publico#numberOfLuminaires">número de luminarias</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#post" title="https://edint.es/def/alumbrado-publico#post">poste</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#powerSupplyType" title="https://edint.es/def/alumbrado-publico#powerSupplyType">tipo de alimentación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#illuminationClass" title="https://edint.es/def/alumbrado-publico#illuminationClass">tipo de alumbrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#illuminationType" title="https://edint.es/def/alumbrado-publico#illuminationType">tipo de iluminación</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#lightingZone" title="https://edint.es/def/alumbrado-publico#lightingZone">zona de alumbrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Luminaria">
+ <div class="entity" id="Luminaire">
   <h3>Luminaria<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Luminaire</p>
   <div class="comment">
    <span class="markdown">Aparato de iluminación que aloja, dirige y filtra la luz de la lámpara. Una farola puede tener múltiples luminarias (caso LED+DESCARGA). Puede referenciar un modelo del catálogo (ModeloLuminaria).</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">flujo hemisférico superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">modelo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">tiene lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria">tipo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#upperHemisphereFlux" title="https://edint.es/def/alumbrado-publico#upperHemisphereFlux">flujo hemisférico superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#luminaireModel" title="https://edint.es/def/alumbrado-publico#luminaireModel">modelo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasLamp" title="https://edint.es/def/alumbrado-publico#hasLamp">tiene lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#luminaireType" title="https://edint.es/def/alumbrado-publico#luminaireType">tipo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#luminaire" title="https://edint.es/def/alumbrado-publico#luminaire">luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Lampara">
+ <div class="entity" id="Lamp">
   <h3>Lámpara<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Lamp</p>
   <div class="comment">
    <span class="markdown">Fuente de luz: bombilla, módulo LED o convertidor de energía eléctrica en luz. Cada luminaria aloja exactamente una lámpara. Incluye propiedades fotométricas (potencia, flujo, CCT, CRI) y de vida útil (L70, L80).</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#eficaciaLuminosa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa">eficacia luminosa</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#fechaInstalacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion">fecha de instalación</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">flujo luminoso</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">intensidad lumínica</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#modeloBombilla" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla">modelo de bombilla</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">potencia nominal</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">temperatura de color</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara">tipo de lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">vida útil L70</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">vida útil L80</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#indiceReproduccionCromatica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica">índice de reproducción cromática</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+    <a href="#luminousEfficacy" title="https://edint.es/def/alumbrado-publico#luminousEfficacy">eficacia luminosa</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#installationDate" title="https://edint.es/def/alumbrado-publico#installationDate">fecha de instalación</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#luminousFlux" title="https://edint.es/def/alumbrado-publico#luminousFlux">flujo luminoso</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#luminousIntensity" title="https://edint.es/def/alumbrado-publico#luminousIntensity">intensidad lumínica</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#bulbModel" title="https://edint.es/def/alumbrado-publico#bulbModel">modelo de bombilla</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#nominalPower" title="https://edint.es/def/alumbrado-publico#nominalPower">potencia nominal</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#correlatedColorTemperature" title="https://edint.es/def/alumbrado-publico#correlatedColorTemperature">temperatura de color</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#lampType" title="https://edint.es/def/alumbrado-publico#lampType">tipo de lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#ratedLifeL70" title="https://edint.es/def/alumbrado-publico#ratedLifeL70">vida útil L70</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#ratedLifeL80" title="https://edint.es/def/alumbrado-publico#ratedLifeL80">vida útil L80</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#colorRenderingIndex" title="https://edint.es/def/alumbrado-publico#colorRenderingIndex">índice de reproducción cromática</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">tiene lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasLamp" title="https://edint.es/def/alumbrado-publico#hasLamp">tiene lámpara</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ModeloLuminaria">
+ <div class="entity" id="LuminaireModel">
   <h3>Modelo de luminaria<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#LuminaireModel</p>
   <div class="comment">
    <span class="markdown">Entrada del catálogo de modelos de luminaria. Permite vincular fabricante, potencia nominal, tecnología y especificaciones fotométricas.</span>
   </div>
   <dl class="description">
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">modelo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#luminaireModel" title="https://edint.es/def/alumbrado-publico#luminaireModel">modelo de luminaria</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Poste">
+ <div class="entity" id="Post">
   <h3>Poste<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#Post</p>
   <div class="comment">
    <span class="markdown">Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS). Un poste puede tener uno o más brazos.</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#accesorios" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios">accesorios</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#numeroDeBrazos" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">número de brazos</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">tiene brazo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoSoporte" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte">tipo de soporte</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#accessories" title="https://edint.es/def/alumbrado-publico#accessories">accesorios</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#numberOfArms" title="https://edint.es/def/alumbrado-publico#numberOfArms">número de brazos</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasArm" title="https://edint.es/def/alumbrado-publico#hasArm">tiene brazo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#supportType" title="https://edint.es/def/alumbrado-publico#supportType">tipo de soporte</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">poste</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#post" title="https://edint.es/def/alumbrado-publico#post">poste</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ReductorFlujo">
+ <div class="entity" id="FlowReducer">
   <h3>Reductor de flujo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#FlowReducer</p>
   <div class="comment">
    <span class="markdown">Sistema de ahorro energético que reduce el flujo luminoso. Puede estar ubicado en la luminaria (regulador de lámpara) o al inicio de la instalación (regulador de cabecera).</span>
   </div>
   <dl class="description">
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#esReductorFlujoInicio" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoInicio">es reductor de flujo al inicio</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#esReductorFlujoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoLuminaria">es reductor de flujo en luminaria</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+    <a href="#hasHeadEndFlowReducer" title="https://edint.es/def/alumbrado-publico#hasHeadEndFlowReducer">es reductor de flujo al inicio</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasLuminaireFlowReducer" title="https://edint.es/def/alumbrado-publico#hasLuminaireFlowReducer">es reductor de flujo en luminaria</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#disponeReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo">dispone de reductor de flujo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasFlowReducer" title="https://edint.es/def/alumbrado-publico#hasFlowReducer">dispone de reductor de flujo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="SuministroElectrico">
+ <div class="entity" id="ElectricitySupply">
   <h3>Suministro eléctrico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#ElectricitySupply</p>
   <div class="comment">
    <span class="markdown">Contrato de suministro eléctrico asociado a un centro de mando. Incluye tarifa, tensión y consumo por períodos tarifarios. Es un contrato de suministro (edintsum:UtilityContract), con tarifa y punto de suministro asociado.</span>
   </div>
   <dl class="description">
-   <dt>
-    tiene superclases
-   </dt>
+   <dt>tiene superclases</dt>
    <dd>
-    <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract" target="_blank" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/suministro#UtilityContract">Utility Contract</a> <sup class="type-c" title="clase">c</sup>
+    <a href="https://edint.es/def/suministro#UtilityContract" target="_blank" title="https://edint.es/def/suministro#UtilityContract">Utility Contract</a> <sup class="type-c" title="clase">c</sup>
    </dd>
-   <dt>
-    en dominio de
-   </dt>
+   <dt>en dominio de</dt>
    <dd>
-    <a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">kWh renovables</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tarifa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa">tarifa</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">tensión</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">tiene consumo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#renewableKwh" title="https://edint.es/def/alumbrado-publico#renewableKwh">kWh renovables</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tariff" title="https://edint.es/def/alumbrado-publico#tariff">tarifa</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#voltage" title="https://edint.es/def/alumbrado-publico#voltage">tensión</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasConsumption" title="https://edint.es/def/alumbrado-publico#hasConsumption">tiene consumo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
-   <dt>
-    en rango de
-   </dt>
+   <dt>en rango de</dt>
    <dd>
-    <a href="#tieneSuministro" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro">tiene suministro</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasSupply" title="https://edint.es/def/alumbrado-publico#hasSupply">tiene suministro</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h2>Propiedades entre objetos</h2>
  <ul class="hlist">
-  <li><a href="#altura" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">altura</a></li>
-  <li><a href="#caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">caja</a></li>
-  <li><a href="#centroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando">centro de mando</a></li>
-  <li><a href="#claseLuminotecnica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica">clase luminotécnica</a></li>
-  <li><a href="#direccion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion">dirección</a></li>
-  <li><a href="#disponeReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo">dispone de reductor de flujo</a></li>
-  <li><a href="#estadoConservacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion">estado de conservación</a></li>
-  <li><a href="#fabricadoPor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor">fabricado por</a></li>
-  <li><a href="#flujoHemisfericoSuperior" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior">flujo hemisférico superior</a></li>
-  <li><a href="#flujoLuminoso" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso">flujo luminoso</a></li>
-  <li><a href="#intensidadLuminica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica">intensidad lumínica</a></li>
-  <li><a href="#kwhRenovables" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables">kWh renovables</a></li>
-  <li><a href="#luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminaria</a></li>
-  <li><a href="#modeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria">modelo de luminaria</a></li>
-  <li><a href="#periodoTarifario" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#periodoTarifario">período tarifario</a></li>
-  <li><a href="#poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">poste</a></li>
-  <li><a href="#potenciaNominal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal">potencia nominal</a></li>
-  <li><a href="#temperaturaColor" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor">temperatura de color</a></li>
-  <li><a href="#tension" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension">tensión</a></li>
-  <li><a href="#tieneBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo">tiene brazo</a></li>
-  <li><a href="#tieneConsumo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo">tiene consumo</a></li>
-  <li><a href="#tieneLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">tiene lámpara</a></li>
-  <li><a href="#tieneSuministro" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro">tiene suministro</a></li>
-  <li><a href="#tipoAlimentacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion">tipo de alimentación</a></li>
-  <li><a href="#tipoAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado">tipo de alumbrado</a></li>
-  <li><a href="#tipoCable" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable">tipo de cable</a></li>
-  <li><a href="#tipoIluminacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion">tipo de iluminación</a></li>
-  <li><a href="#tipoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria">tipo de luminaria</a></li>
-  <li><a href="#tipoLampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara">tipo de lámpara</a></li>
-  <li><a href="#tipoSoporte" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte">tipo de soporte</a></li>
-  <li><a href="#vidaUtilL70" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70">vida útil L70</a></li>
-  <li><a href="#vidaUtilL80" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80">vida útil L80</a></li>
-  <li><a href="#zonaAlumbrado" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado">zona de alumbrado</a></li>
+  <li><a href="#height" title="https://edint.es/def/alumbrado-publico#height">altura</a></li>
+  <li><a href="#junctionBox" title="https://edint.es/def/alumbrado-publico#junctionBox">caja</a></li>
+  <li><a href="#controlCenter" title="https://edint.es/def/alumbrado-publico#controlCenter">centro de mando</a></li>
+  <li><a href="#lightingClass" title="https://edint.es/def/alumbrado-publico#lightingClass">clase luminotécnica</a></li>
+  <li><a href="#address" title="https://edint.es/def/alumbrado-publico#address">dirección</a></li>
+  <li><a href="#hasFlowReducer" title="https://edint.es/def/alumbrado-publico#hasFlowReducer">dispone de reductor de flujo</a></li>
+  <li><a href="#conservationStatus" title="https://edint.es/def/alumbrado-publico#conservationStatus">estado de conservación</a></li>
+  <li><a href="#manufacturedBy" title="https://edint.es/def/alumbrado-publico#manufacturedBy">fabricado por</a></li>
+  <li><a href="#upperHemisphereFlux" title="https://edint.es/def/alumbrado-publico#upperHemisphereFlux">flujo hemisférico superior</a></li>
+  <li><a href="#luminousFlux" title="https://edint.es/def/alumbrado-publico#luminousFlux">flujo luminoso</a></li>
+  <li><a href="#luminousIntensity" title="https://edint.es/def/alumbrado-publico#luminousIntensity">intensidad lumínica</a></li>
+  <li><a href="#renewableKwh" title="https://edint.es/def/alumbrado-publico#renewableKwh">kWh renovables</a></li>
+  <li><a href="#luminaire" title="https://edint.es/def/alumbrado-publico#luminaire">luminaria</a></li>
+  <li><a href="#luminaireModel" title="https://edint.es/def/alumbrado-publico#luminaireModel">modelo de luminaria</a></li>
+  <li><a href="#tariffPeriod" title="https://edint.es/def/alumbrado-publico#tariffPeriod">período tarifario</a></li>
+  <li><a href="#post" title="https://edint.es/def/alumbrado-publico#post">poste</a></li>
+  <li><a href="#nominalPower" title="https://edint.es/def/alumbrado-publico#nominalPower">potencia nominal</a></li>
+  <li><a href="#correlatedColorTemperature" title="https://edint.es/def/alumbrado-publico#correlatedColorTemperature">temperatura de color</a></li>
+  <li><a href="#voltage" title="https://edint.es/def/alumbrado-publico#voltage">tensión</a></li>
+  <li><a href="#hasArm" title="https://edint.es/def/alumbrado-publico#hasArm">tiene brazo</a></li>
+  <li><a href="#hasConsumption" title="https://edint.es/def/alumbrado-publico#hasConsumption">tiene consumo</a></li>
+  <li><a href="#hasLamp" title="https://edint.es/def/alumbrado-publico#hasLamp">tiene lámpara</a></li>
+  <li><a href="#hasSupply" title="https://edint.es/def/alumbrado-publico#hasSupply">tiene suministro</a></li>
+  <li><a href="#powerSupplyType" title="https://edint.es/def/alumbrado-publico#powerSupplyType">tipo de alimentación</a></li>
+  <li><a href="#illuminationClass" title="https://edint.es/def/alumbrado-publico#illuminationClass">tipo de alumbrado</a></li>
+  <li><a href="#cableType" title="https://edint.es/def/alumbrado-publico#cableType">tipo de cable</a></li>
+  <li><a href="#illuminationType" title="https://edint.es/def/alumbrado-publico#illuminationType">tipo de iluminación</a></li>
+  <li><a href="#luminaireType" title="https://edint.es/def/alumbrado-publico#luminaireType">tipo de luminaria</a></li>
+  <li><a href="#lampType" title="https://edint.es/def/alumbrado-publico#lampType">tipo de lámpara</a></li>
+  <li><a href="#supportType" title="https://edint.es/def/alumbrado-publico#supportType">tipo de soporte</a></li>
+  <li><a href="#ratedLifeL70" title="https://edint.es/def/alumbrado-publico#ratedLifeL70">vida útil L70</a></li>
+  <li><a href="#ratedLifeL80" title="https://edint.es/def/alumbrado-publico#ratedLifeL80">vida útil L80</a></li>
+  <li><a href="#lightingZone" title="https://edint.es/def/alumbrado-publico#lightingZone">zona de alumbrado</a></li>
  </ul>
- <div class="entity" id="altura">
+ <div class="entity" id="height">
   <h3>altura<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#height</p>
   <div class="comment">
    <span class="markdown">Altura del componente. Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en metros (M).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="caja">
+ <div class="entity" id="junctionBox">
   <h3>caja<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#junctionBox</p>
   <div class="comment">
    <span class="markdown">Caja de conexiones de la farola. Cardinalidad: 0..1 (opcional).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja">Caja</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#JunctionBox" title="https://edint.es/def/alumbrado-publico#JunctionBox">Caja</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="centroDeMando">
+ <div class="entity" id="controlCenter">
   <h3>centro de mando<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#centroDeMando</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#controlCenter</p>
   <div class="comment">
    <span class="markdown">Centro de mando del que depende la farola.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#CentroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando">Centro de mando</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ControlCenter" title="https://edint.es/def/alumbrado-publico#ControlCenter">Centro de mando</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="claseLuminotecnica">
+ <div class="entity" id="lightingClass">
   <h3>clase luminotécnica<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#claseLuminotecnica</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#lightingClass</p>
   <div class="comment">
    <span class="markdown">Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="direccion">
+ <div class="entity" id="address">
   <h3>dirección<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#direccion</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#address</p>
   <div class="comment">
    <span class="markdown">Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">Dirección postal</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal">Dirección postal</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="disponeReductorFlujo">
+ <div class="entity" id="hasFlowReducer">
   <h3>dispone de reductor de flujo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disponeReductorFlujo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasFlowReducer</p>
   <div class="comment">
    <span class="markdown">Reductor de flujo asociado. Aplica a: Farola. Cardinalidad: 0..n.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#ReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#FlowReducer" title="https://edint.es/def/alumbrado-publico#FlowReducer">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="estadoConservacion">
+ <div class="entity" id="conservationStatus">
   <h3>estado de conservación<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#estadoConservacion</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#conservationStatus</p>
   <div class="comment">
    <span class="markdown">Estado de conservación de la farola. SKOS con 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="fabricadoPor">
+ <div class="entity" id="manufacturedBy">
   <h3>fabricado por<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricadoPor</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#manufacturedBy</p>
   <div class="comment">
    <span class="markdown">Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Fabricante" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Fabricante">Fabricante</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Manufacturer" title="https://edint.es/def/alumbrado-publico#Manufacturer">Fabricante</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="flujoHemisfericoSuperior">
+ <div class="entity" id="upperHemisphereFlux">
   <h3>flujo hemisférico superior<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoHemisfericoSuperior</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#upperHemisphereFlux</p>
   <div class="comment">
    <span class="markdown">Flujo hemisférico superior (FHS/ULOR) de la luminaria. Clave para el cumplimiento del REEAE en zonas E1-E4. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en porcentaje (PERCENT).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="flujoLuminoso">
+ <div class="entity" id="luminousFlux">
   <h3>flujo luminoso<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#flujoLuminoso</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminousFlux</p>
   <div class="comment">
    <span class="markdown">Flujo luminoso de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en lúmenes (LM).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="intensidadLuminica">
+ <div class="entity" id="luminousIntensity">
   <h3>intensidad lumínica<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminousIntensity</p>
   <div class="comment">
    <span class="markdown">Intensidad lumínica de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en candelas (CD).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="kwhRenovables">
+ <div class="entity" id="renewableKwh">
   <h3>kWh renovables<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#kwhRenovables</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#renewableKwh</p>
   <div class="comment">
    <span class="markdown">Consumo de fuentes de energía renovable con sistemas de autoconsumo. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kilovatios-hora (KiloW-HR).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="luminaria">
+ <div class="entity" id="luminaire">
   <h3>luminaria<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminaire</p>
   <div class="comment">
    <span class="markdown">Aparato de iluminación de la farola. Cardinalidad: 1 o más (caso LED+DESCARGA).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="modeloLuminaria">
+ <div class="entity" id="luminaireModel">
   <h3>modelo de luminaria<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloLuminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminaireModel</p>
   <div class="comment">
    <span class="markdown">Referencia al modelo de catálogo de la luminaria. Cardinalidad: 0..1.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#ModeloLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ModeloLuminaria">Modelo de luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#LuminaireModel" title="https://edint.es/def/alumbrado-publico#LuminaireModel">Modelo de luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="periodoTarifario">
+ <div class="entity" id="tariffPeriod">
   <h3>período tarifario<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#periodoTarifario</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#tariffPeriod</p>
   <div class="comment">
    <span class="markdown">Período tarifario al que corresponde el consumo. SKOS: activo, llano, valle, punta. Cada instancia de ConsumoEnergetico representa UN período tarifario; el total se obtiene sumando las instancias del mismo ejercicio.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#ConsumoEnergetico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico">Consumo energético</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#EnergyConsumption" title="https://edint.es/def/alumbrado-publico#EnergyConsumption">Consumo energético</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="poste">
+ <div class="entity" id="post">
   <h3>poste<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#post</p>
   <div class="comment">
    <span class="markdown">Soporte físico de la farola. Cardinalidad: exactamente 1.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="potenciaNominal">
+ <div class="entity" id="nominalPower">
   <h3>potencia nominal<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potenciaNominal</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#nominalPower</p>
   <div class="comment">
    <span class="markdown">Potencia nominal de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en vatios (W) o kilovatios (KiloW).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="temperaturaColor">
+ <div class="entity" id="correlatedColorTemperature">
   <h3>temperatura de color<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#temperaturaColor</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#correlatedColorTemperature</p>
   <div class="comment">
    <span class="markdown">Temperatura de color correlacionada (CCT) de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kelvin (K).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tension">
+ <div class="entity" id="voltage">
   <h3>tensión<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tension</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#voltage</p>
   <div class="comment">
    <span class="markdown">Tensión de alimentación del suministro. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en voltios (V).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tieneBrazo">
+ <div class="entity" id="hasArm">
   <h3>tiene brazo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneBrazo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasArm</p>
   <div class="comment">
    <span class="markdown">Brazo del poste. Cardinalidad: 0..n.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Brazo</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Arm" title="https://edint.es/def/alumbrado-publico#Arm">Brazo</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tieneConsumo">
+ <div class="entity" id="hasConsumption">
   <h3>tiene consumo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneConsumo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasConsumption</p>
   <div class="comment">
    <span class="markdown">Registro de consumo energético del suministro. Cardinalidad: 0..n.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#ConsumoEnergetico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ConsumoEnergetico">Consumo energético</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#EnergyConsumption" title="https://edint.es/def/alumbrado-publico#EnergyConsumption">Consumo energético</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tieneLampara">
+ <div class="entity" id="hasLamp">
   <h3>tiene lámpara<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasLamp</p>
   <div class="comment">
    <span class="markdown">Lámpara alojada en la luminaria. Cardinalidad: exactamente 1.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tieneSuministro">
+ <div class="entity" id="hasSupply">
   <h3>tiene suministro<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneSuministro</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasSupply</p>
   <div class="comment">
    <span class="markdown">Contrato de suministro eléctrico asociado al centro de mando. Cardinalidad: 0..1.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#CentroDeMando" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#CentroDeMando">Centro de mando</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ControlCenter" title="https://edint.es/def/alumbrado-publico#ControlCenter">Centro de mando</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoAlimentacion">
+ <div class="entity" id="powerSupplyType">
   <h3>tipo de alimentación<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#powerSupplyType</p>
   <div class="comment">
    <span class="markdown">Tipo de alimentación eléctrica. SKOS con 5 conceptos (Subterránea, Aérea, Fachada, Grapada, Batería).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoAlumbrado">
+ <div class="entity" id="illuminationClass">
   <h3>tipo de alumbrado<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#illuminationClass</p>
   <div class="comment">
    <span class="markdown">Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoCable">
+ <div class="entity" id="cableType">
   <h3>tipo de cable<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#cableType</p>
   <div class="comment">
    <span class="markdown">Tipo de cable en la caja de conexiones. SKOS: ET103, ET106, ET107, ET112, ET113.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Caja" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja">Caja</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#JunctionBox" title="https://edint.es/def/alumbrado-publico#JunctionBox">Caja</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoIluminacion">
+ <div class="entity" id="illuminationType">
   <h3>tipo de iluminación<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#illuminationType</p>
   <div class="comment">
    <span class="markdown">Tipo de iluminación. SKOS: Nocturna, Permanente.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoLuminaria">
+ <div class="entity" id="luminaireType">
   <h3>tipo de luminaria<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminaireType</p>
   <div class="comment">
    <span class="markdown">Tipo de luminaria. SKOS con 8 conceptos (Proyector, Empotrado pared, Baliza, Viaria, Artística, etc.).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Luminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminaria</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Luminaire" title="https://edint.es/def/alumbrado-publico#Luminaire">Luminaria</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoLampara">
+ <div class="entity" id="lampType">
   <h3>tipo de lámpara<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#lampType</p>
   <div class="comment">
    <span class="markdown">Tipo de lámpara. SKOS con 12 conceptos (LED, Vapor sodio, Vapor mercurio, Halogenuro metálico, etc.).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tipoSoporte">
+ <div class="entity" id="supportType">
   <h3>tipo de soporte<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#supportType</p>
   <div class="comment">
    <span class="markdown">Tipo de soporte físico del poste. SKOS con ~35 conceptos. ConceptScheme: tipo-soporte.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="vidaUtilL70">
+ <div class="entity" id="ratedLifeL70">
   <h3>vida útil L70<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL70</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#ratedLifeL70</p>
   <div class="comment">
    <span class="markdown">Vida útil nominal de la lámpara al 70% de flujo mantenido (L70). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="vidaUtilL80">
+ <div class="entity" id="ratedLifeL80">
   <h3>vida útil L80<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#vidaUtilL80</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#ratedLifeL80</p>
   <div class="comment">
    <span class="markdown">Vida útil nominal de la lámpara al 80% de flujo mantenido (L80). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="zonaAlumbrado">
+ <div class="entity" id="lightingZone">
   <h3>zona de alumbrado<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zonaAlumbrado</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#lightingZone</p>
   <div class="comment">
    <span class="markdown">Clasificación de zona según REEAE (RD 1890/2008) para control de contaminación lumínica. SKOS: E1 (protección máxima), E2 (protección alta), E3 (protección media), E4 (protección baja).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup>
     </dd>
@@ -1079,197 +899,167 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
  <ul class="hlist">
-  <li><a href="#accesorios" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios">accesorios</a></li>
-  <li><a href="#calidadDato" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato">calidad del dato</a></li>
-  <li><a href="#eficaciaLuminosa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa">eficacia luminosa</a></li>
-  <li><a href="#ejercicio" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ejercicio">ejercicio</a></li>
-  <li><a href="#esReductorFlujoInicio" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoInicio">es reductor de flujo al inicio</a></li>
-  <li><a href="#esReductorFlujoLuminaria" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoLuminaria">es reductor de flujo en luminaria</a></li>
-  <li><a href="#fechaInstalacion" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion">fecha de instalación</a></li>
-  <li><a href="#horasDeFuncionamiento" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento">horas de funcionamiento</a></li>
-  <li><a href="#material" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material">material</a></li>
-  <li><a href="#modeloBombilla" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla">modelo de bombilla</a></li>
-  <li><a href="#metodoDeControl" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl">método de control</a></li>
-  <li><a href="#nombre" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#nombre">nombre</a></li>
-  <li><a href="#numeroDeBrazos" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">número de brazos</a></li>
-  <li><a href="#numeroDeLuminarias" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">número de luminarias</a></li>
-  <li><a href="#observaciones" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#observaciones">observaciones</a></li>
-  <li><a href="#ordenBrazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo">orden del brazo</a></li>
-  <li><a href="#tarifa" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa">tarifa</a></li>
-  <li><a href="#indiceReproduccionCromatica" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica">índice de reproducción cromática</a></li>
+  <li><a href="#accessories" title="https://edint.es/def/alumbrado-publico#accessories">accesorios</a></li>
+  <li><a href="#dataQuality" title="https://edint.es/def/alumbrado-publico#dataQuality">calidad del dato</a></li>
+  <li><a href="#luminousEfficacy" title="https://edint.es/def/alumbrado-publico#luminousEfficacy">eficacia luminosa</a></li>
+  <li><a href="#fiscalYear" title="https://edint.es/def/alumbrado-publico#fiscalYear">ejercicio</a></li>
+  <li><a href="#hasHeadEndFlowReducer" title="https://edint.es/def/alumbrado-publico#hasHeadEndFlowReducer">es reductor de flujo al inicio</a></li>
+  <li><a href="#hasLuminaireFlowReducer" title="https://edint.es/def/alumbrado-publico#hasLuminaireFlowReducer">es reductor de flujo en luminaria</a></li>
+  <li><a href="#installationDate" title="https://edint.es/def/alumbrado-publico#installationDate">fecha de instalación</a></li>
+  <li><a href="#operatingHours" title="https://edint.es/def/alumbrado-publico#operatingHours">horas de funcionamiento</a></li>
+  <li><a href="#material" title="https://edint.es/def/alumbrado-publico#material">material</a></li>
+  <li><a href="#bulbModel" title="https://edint.es/def/alumbrado-publico#bulbModel">modelo de bombilla</a></li>
+  <li><a href="#controlMethod" title="https://edint.es/def/alumbrado-publico#controlMethod">método de control</a></li>
+  <li><a href="#name" title="https://edint.es/def/alumbrado-publico#name">nombre</a></li>
+  <li><a href="#numberOfArms" title="https://edint.es/def/alumbrado-publico#numberOfArms">número de brazos</a></li>
+  <li><a href="#numberOfLuminaires" title="https://edint.es/def/alumbrado-publico#numberOfLuminaires">número de luminarias</a></li>
+  <li><a href="#notes" title="https://edint.es/def/alumbrado-publico#notes">observaciones</a></li>
+  <li><a href="#armOrder" title="https://edint.es/def/alumbrado-publico#armOrder">orden del brazo</a></li>
+  <li><a href="#tariff" title="https://edint.es/def/alumbrado-publico#tariff">tarifa</a></li>
+  <li><a href="#colorRenderingIndex" title="https://edint.es/def/alumbrado-publico#colorRenderingIndex">índice de reproducción cromática</a></li>
  </ul>
- <div class="entity" id="accesorios">
+ <div class="entity" id="accessories">
   <h3>accesorios<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#accessories</p>
   <div class="comment">
    <span class="markdown">Accesorios montados en el poste (medidores, cámaras, etc.).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="calidadDato">
+ <div class="entity" id="dataQuality">
   <h3>calidad del dato<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calidadDato</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#dataQuality</p>
   <div class="comment">
    <span class="markdown">Calidad del dato: B (buena), R (regular), M (mala), E (en ejecución).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="eficaciaLuminosa">
+ <div class="entity" id="luminousEfficacy">
   <h3>eficacia luminosa<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#eficaciaLuminosa</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#luminousEfficacy</p>
   <div class="comment">
    <span class="markdown">Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="ejercicio">
+ <div class="entity" id="fiscalYear">
   <h3>ejercicio<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ejercicio</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#fiscalYear</p>
   <div class="comment">
    <span class="markdown">Año de referencia de los datos. Aplica a: ConsumoEnergetico, SuministroElectrico.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#gYear" target="_blank" title="http://www.w3.org/2001/XMLSchema#gYear">g Year</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="esReductorFlujoInicio">
+ <div class="entity" id="hasHeadEndFlowReducer">
   <h3>es reductor de flujo al inicio<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoInicio</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasHeadEndFlowReducer</p>
   <div class="comment">
    <span class="markdown">Indica si dispone de sistema de reducción de flujo al inicio de la instalación (regulador de cabecera).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#ReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#FlowReducer" title="https://edint.es/def/alumbrado-publico#FlowReducer">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="esReductorFlujoLuminaria">
+ <div class="entity" id="hasLuminaireFlowReducer">
   <h3>es reductor de flujo en luminaria<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#esReductorFlujoLuminaria</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#hasLuminaireFlowReducer</p>
   <div class="comment">
    <span class="markdown">Indica si dispone de sistema de reducción de flujo en la luminaria.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#ReductorFlujo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ReductorFlujo">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#FlowReducer" title="https://edint.es/def/alumbrado-publico#FlowReducer">Reductor de flujo</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="fechaInstalacion">
+ <div class="entity" id="installationDate">
   <h3>fecha de instalación<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaInstalacion</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#installationDate</p>
   <div class="comment">
    <span class="markdown">Fecha de instalación de la lámpara.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="horasDeFuncionamiento">
+ <div class="entity" id="operatingHours">
   <h3>horas de funcionamiento<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#operatingHours</p>
   <div class="comment">
    <span class="markdown">Horario en que el alumbrado está encendido (ej: '22:00-07:00').</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
@@ -1278,362 +1068,181 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
  </div>
  <div class="entity" id="material">
   <h3>material<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#material</p>
   <div class="comment">
    <span class="markdown">Material del componente. Aplica a: Poste, Luminaria, Lampara, Caja.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="modeloBombilla">
+ <div class="entity" id="bulbModel">
   <h3>modelo de bombilla<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#bulbModel</p>
   <div class="comment">
    <span class="markdown">Código o modelo de la bombilla.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="metodoDeControl">
+ <div class="entity" id="controlMethod">
   <h3>método de control<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#controlMethod</p>
   <div class="comment">
    <span class="markdown">Método de activación/desactivación del alumbrado (reloj astronómico, fotocélula, telegestión, etc.).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="nombre">
+ <div class="entity" id="name">
   <h3>nombre<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#nombre</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#name</p>
   <div class="comment">
    <span class="markdown">Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, ModeloLuminaria.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="numeroDeBrazos">
+ <div class="entity" id="numberOfArms">
   <h3>número de brazos<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#numberOfArms</p>
   <div class="comment">
    <span class="markdown">Número total de brazos del poste.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Poste" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Poste</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Post" title="https://edint.es/def/alumbrado-publico#Post">Poste</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="numeroDeLuminarias">
+ <div class="entity" id="numberOfLuminaires">
   <h3>número de luminarias<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#numberOfLuminaires</p>
   <div class="comment">
    <span class="markdown">Número de luminarias en la farola.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">Farola</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Streetlight" title="https://edint.es/def/alumbrado-publico#Streetlight">Farola</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="observaciones">
+ <div class="entity" id="notes">
   <h3>observaciones<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#observaciones</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#notes</p>
   <div class="comment">
    <span class="markdown">Observaciones sobre la farola o componente. Aplica a: Farola, Poste, Luminaria, Lampara, Caja.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="ordenBrazo">
+ <div class="entity" id="armOrder">
   <h3>orden del brazo<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ordenBrazo</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#armOrder</p>
   <div class="comment">
    <span class="markdown">Posición ordinal del brazo en el poste (1, 2, 3...).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Brazo" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Brazo">Brazo</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Arm" title="https://edint.es/def/alumbrado-publico#Arm">Brazo</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="tarifa">
+ <div class="entity" id="tariff">
   <h3>tarifa<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tarifa</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#tariff</p>
   <div class="comment">
    <span class="markdown">Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#SuministroElectrico" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#SuministroElectrico">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#ElectricitySupply" title="https://edint.es/def/alumbrado-publico#ElectricitySupply">Suministro eléctrico</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="indiceReproduccionCromatica">
+ <div class="entity" id="colorRenderingIndex">
   <h3>índice de reproducción cromática<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#indiceReproduccionCromatica</p>
+  <p><strong>IRI:</strong> https://edint.es/def/alumbrado-publico#colorRenderingIndex</p>
   <div class="comment">
    <span class="markdown">Índice de reproducción cromática (CRI/IRC) de la lámpara (0-100).</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     dominio
-    </dt>
+    <dt>dominio</dt>
     <dd>
-     <a href="#Lampara" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lámpara</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#Lamp" title="https://edint.es/def/alumbrado-publico#Lamp">Lámpara</a> <sup class="type-c" title="clase">c</sup>
     </dd>
-    <dt>
-     rango
-    </dt>
+    <dt>rango</dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
- </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
- <h3 id="namedindividuals" class="list">Individuos</h3>
- <ul class="hlist">
-  <li><a href="#http://qudt.org/vocab/unit/CD" title="http://qudt.org/vocab/unit/CD"> <span>C D</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/EUR" title="http://qudt.org/vocab/unit/EUR"> <span>E U R</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/HR" title="http://qudt.org/vocab/unit/HR"> <span>H R</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/K" title="http://qudt.org/vocab/unit/K"> <span>K</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/KiloW" title="http://qudt.org/vocab/unit/KiloW"> <span>Kilo W</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/KiloW-HR" title="http://qudt.org/vocab/unit/KiloW-HR"> <span>Kilo W H R</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/LM" title="http://qudt.org/vocab/unit/LM"> <span>L M</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/M" title="http://qudt.org/vocab/unit/M"> <span>M</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/PERCENT" title="http://qudt.org/vocab/unit/PERCENT"> <span>P E R C E N T</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/V" title="http://qudt.org/vocab/unit/V"> <span>V</span> </a></li>
-  <li><a href="#http://qudt.org/vocab/unit/W" title="http://qudt.org/vocab/unit/W"> <span>W</span> </a></li>
- </ul>
- <div class="entity" id="http://qudt.org/vocab/unit/CD">
-  <h3>C D<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/CD</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/EUR">
-  <h3>E U R<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/EUR</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/HR">
-  <h3>H R<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/HR</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/K">
-  <h3>K<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/K</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/KiloW">
-  <h3>Kilo W<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/KiloW</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/KiloW-HR">
-  <h3>Kilo W H R<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/KiloW-HR</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/LM">
-  <h3>L M<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/LM</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/M">
-  <h3>M<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/M</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/PERCENT">
-  <h3>P E R C E N T<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/PERCENT</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/V">
-  <h3>V<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/V</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://qudt.org/vocab/unit/W">
-  <h3>W<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> http://qudt.org/vocab/unit/W</p>
-  <dl class="description">
-   <dt>
-    pertenece a
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
  </div>
 </div><div id="legend">
 <h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
@@ -1641,6 +1250,5 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 <sup class="type-c" title="Clases">c</sup>: Clases <br/>
 <sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
 <sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
-<sup class="type-ni" title="Individuos">ni</sup>: Individuos <br/>
 </div>
 </div>
