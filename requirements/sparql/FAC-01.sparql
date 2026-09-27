@@ -13,7 +13,7 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?farola (COUNT(?poste) AS ?numPostes)
 WHERE {
-  ?farola a edintalu:Farola .
+  ?farola a edintalu:Streetlight .
   OPTIONAL { ?farola edintalu:poste ?poste . }
 }
 GROUP BY ?farola

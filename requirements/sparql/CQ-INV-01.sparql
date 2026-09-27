@@ -13,8 +13,8 @@ PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/te
 
 SELECT ?municipio (COUNT(?f) AS ?totalFarolas)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+  ?f a edintalu:Streetlight ;
+     edintalu:address ?addr .
   ?addr esdir:municipio ?municipio .
 }
 GROUP BY ?municipio
@@ -26,8 +26,8 @@ ORDER BY DESC(?totalFarolas)
 
 SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:direccion ?addr .
+  ?f a edintalu:Streetlight ;
+     edintalu:address ?addr .
   ?addr esdir:municipio <URI-MUNICIPIO> ;
         esdir:distrito ?distrito .
 }

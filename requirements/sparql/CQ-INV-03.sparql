@@ -12,9 +12,9 @@ PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?tipoLabel (COUNT(?f) AS ?total)
 WHERE {
-  ?f a edintalu:Farola ;
+  ?f a edintalu:Streetlight ;
      edintalu:poste ?poste .
-  ?poste edintalu:tipoSoporte ?tipo .
+  ?poste edintalu:supportType ?tipo .
   ?tipo skos:prefLabel ?tipoLabel .
   FILTER(LANG(?tipoLabel) = "es")
 }
@@ -27,9 +27,9 @@ ORDER BY DESC(?total)
 
 SELECT ?tipo (COUNT(?f) AS ?total)
 WHERE {
-  ?f a edintalu:Farola ;
+  ?f a edintalu:Streetlight ;
      edintalu:poste ?poste .
-  ?poste edintalu:tipoSoporte ?tipo .
+  ?poste edintalu:supportType ?tipo .
 }
 GROUP BY ?tipo
 ORDER BY DESC(?total)

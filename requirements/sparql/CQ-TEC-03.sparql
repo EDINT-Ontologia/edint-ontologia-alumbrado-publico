@@ -15,11 +15,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?farola ?flujoVal ?potenciaVal (xsd:decimal(?flujoVal) / xsd:decimal(?potVal) AS ?eficaciaLmPorW)
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:flujoLuminoso ?flujoQv ;
-        edintalu:potenciaNominal ?potQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:luminousFlux ?flujoQv ;
+        edintalu:nominalPower ?potQv .
   ?flujoQv qudt:numericValue ?flujoVal .
   ?potQv qudt:numericValue ?potVal .
   FILTER(xsd:decimal(?potVal) > 0)
@@ -28,15 +28,15 @@ WHERE {
 ORDER BY ?eficaciaLmPorW
 
 # -----------------------------------------------------------------------------
-# Usando la propiedad edintalu:eficaciaLuminosa directamente
+# Usando la propiedad edintalu:luminousEfficacy directamente
 # -----------------------------------------------------------------------------
 
 SELECT ?farola ?eficacia
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:eficaciaLuminosa ?eficacia .
+  ?farola a edintalu:Streetlight ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:luminousEfficacy ?eficacia .
   FILTER(xsd:decimal(?eficacia) < 80)
 }
 ORDER BY ?eficacia

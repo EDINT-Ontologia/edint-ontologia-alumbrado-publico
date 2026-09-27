@@ -16,11 +16,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?municipio (SUM(IF(?unit = qudtu:KiloW, xsd:decimal(?val) * 1000, xsd:decimal(?val))) AS ?potenciaTotalW)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:direccion ?addr ;
-     edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:potenciaNominal ?qv .
+  ?f a edintalu:Streetlight ;
+     edintalu:address ?addr ;
+     edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:nominalPower ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val ;
       qudt:hasUnit ?unit .
@@ -35,11 +35,11 @@ ORDER BY DESC(?potenciaTotalW)
 
 SELECT ?distrito (SUM(IF(?unit = qudtu:KiloW, xsd:decimal(?val) * 1000, xsd:decimal(?val))) AS ?potenciaTotalW)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:direccion ?addr ;
-     edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:potenciaNominal ?qv .
+  ?f a edintalu:Streetlight ;
+     edintalu:address ?addr ;
+     edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:nominalPower ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val ;
       qudt:hasUnit ?unit .
