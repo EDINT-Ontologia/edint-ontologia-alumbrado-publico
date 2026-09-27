@@ -13,8 +13,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?farola (COUNT(?caja) AS ?numCajas)
 WHERE {
-  ?farola a edintalu:Farola .
-  OPTIONAL { ?farola edintalu:caja ?caja . }
+  ?farola a edintalu:Streetlight .
+  OPTIONAL { ?farola edintalu:junctionBox ?caja . }
 }
 GROUP BY ?farola
 HAVING (COUNT(?caja) > 1)

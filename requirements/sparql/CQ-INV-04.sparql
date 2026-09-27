@@ -14,8 +14,8 @@ PREFIX schema:   <http://schema.org/>
 
 SELECT ?farola ?direccionCompleta
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:direccion ?addr .
+  ?farola a edintalu:Streetlight ;
+          edintalu:address ?addr .
   ?addr schema:streetAddress ?direccionCompleta .
   FILTER(CONTAINS(?direccionCompleta, "Calle Buscada"))
 }
@@ -27,8 +27,8 @@ ORDER BY ?direccionCompleta
 
 SELECT ?farola ?direccionCompleta
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:direccion ?addr .
+  ?farola a edintalu:Streetlight ;
+          edintalu:address ?addr .
   ?addr schema:streetAddress ?direccionCompleta .
   FILTER(?direccionCompleta = "C/ Alcalá, 25, Madrid")
 }

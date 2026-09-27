@@ -13,9 +13,9 @@ PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?municipio ?estadoLabel (COUNT(?f) AS ?total)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:direccion ?addr ;
-     edintalu:estadoConservacion ?estado .
+  ?f a edintalu:Streetlight ;
+     edintalu:address ?addr ;
+     edintalu:conservationStatus ?estado .
   ?addr esdir:municipio ?municipio .
   ?estado skos:prefLabel ?estadoLabel .
   FILTER(LANG(?estadoLabel) = "es")
@@ -29,8 +29,8 @@ ORDER BY ?municipio ?estadoLabel
 
 SELECT ?estadoLabel (COUNT(?f) AS ?total)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:estadoConservacion ?estado .
+  ?f a edintalu:Streetlight ;
+     edintalu:conservationStatus ?estado .
   ?estado skos:prefLabel ?estadoLabel .
   FILTER(LANG(?estadoLabel) = "es")
 }

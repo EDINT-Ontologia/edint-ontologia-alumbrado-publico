@@ -12,9 +12,9 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?farola ?enLuminaria ?enInicio
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:disponeReductorFlujo ?reductor .
-  ?reductor edintalu:esReductorFlujoLuminaria ?enLuminaria ;
-            edintalu:esReductorFlujoInicio ?enInicio .
+  ?farola a edintalu:Streetlight ;
+          edintalu:hasFlowReducer ?reductor .
+  ?reductor edintalu:hasLuminaireFlowReducer ?enLuminaria ;
+            edintalu:hasHeadEndFlowReducer ?enInicio .
 }
 ORDER BY ?farola
