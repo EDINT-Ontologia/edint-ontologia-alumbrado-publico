@@ -60,7 +60,7 @@
         <dcterms:title xml:lang="en">EDINT Public Street Lighting Ontology</dcterms:title>
         <rdfs:label xml:lang="es">Alumbrado Público</rdfs:label>
         <rdfs:label xml:lang="en">Public Street Lighting</rdfs:label>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/alumbrado-publico#"/>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
