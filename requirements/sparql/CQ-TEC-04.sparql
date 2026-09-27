@@ -13,7 +13,7 @@ SELECT ?modelo ?fabricante
 WHERE {
   ?modelo a edintalu:LuminaireModel ;
           edintalu:manufacturedBy ?fabricante .
-  ?fabricante a edintalu:Fabricante .
+  ?fabricante a edintalu:Manufacturer .
 }
 ORDER BY ?modelo
 
