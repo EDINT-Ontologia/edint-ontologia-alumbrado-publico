@@ -28,7 +28,7 @@
         <dc:title xml:lang="es">Ontología de Alumbrado Público</dc:title>
         <dc:title xml:lang="en">Public Street Lighting Ontology</dc:title>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</terms:created>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
