@@ -13,8 +13,8 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT (SUM(xsd:decimal(?val)) AS ?totalKWhRenovables)
 WHERE {
-  ?sum a edintalu:SuministroElectrico ;
-       edintalu:kwhRenovables ?qv .
+  ?sum a edintalu:ElectricitySupply ;
+       edintalu:renewableKwh ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val .
 }
@@ -25,9 +25,9 @@ WHERE {
 
 SELECT ?centroDeMando ?val
 WHERE {
-  ?centroDeMando edintalu:tieneSuministro ?sum .
-  ?sum a edintalu:SuministroElectrico ;
-       edintalu:kwhRenovables ?qv .
+  ?centroDeMando edintalu:hasSupply ?sum .
+  ?sum a edintalu:ElectricitySupply ;
+       edintalu:renewableKwh ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val .
 }

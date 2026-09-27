@@ -11,8 +11,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?modelo ?fabricante
 WHERE {
-  ?modelo a edintalu:ModeloLuminaria ;
-          edintalu:fabricadoPor ?fabricante .
+  ?modelo a edintalu:LuminaireModel ;
+          edintalu:manufacturedBy ?fabricante .
   ?fabricante a edintalu:Fabricante .
 }
 ORDER BY ?modelo
@@ -23,10 +23,10 @@ ORDER BY ?modelo
 
 SELECT ?modelo ?fabricante
 WHERE {
-  ?modelo a edintalu:ModeloLuminaria .
+  ?modelo a edintalu:LuminaireModel .
   OPTIONAL {
-    ?modelo edintalu:fabricadoPor ?fab .
-    ?fab edintalu:nombre ?fabricante .
+    ?modelo edintalu:manufacturedBy ?fab .
+    ?fab edintalu:name ?fabricante .
   }
 }
 ORDER BY ?modelo
@@ -37,9 +37,9 @@ ORDER BY ?modelo
 
 SELECT ?modelo (COUNT(?lum) AS ?usos)
 WHERE {
-  ?lum a edintalu:Luminaria ;
-       edintalu:modeloLuminaria ?modelo .
-  ?modelo a edintalu:ModeloLuminaria .
+  ?lum a edintalu:Luminaire ;
+       edintalu:luminaireModel ?modelo .
+  ?modelo a edintalu:LuminaireModel .
 }
 GROUP BY ?modelo
 ORDER BY DESC(?usos)
