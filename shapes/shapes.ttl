@@ -1,0 +1,906 @@
+@prefix : <https://edint.es/def/alumbrado-publico#> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
+@prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
+@prefix edintsum: <https://edint.es/def/suministro#> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://astrea.linkeddata.es/shapes#1ff329612e4ca79eef0821f89eae8b0d> a sh:NodeShape ;
+    rdfs:label "Postal address"@en,
+        "Dirección postal"@es ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal> ;
+    sh:description "Postal address in Spain. Specialisation of schema:PostalAddress, vcard:Address and locn:Address. Allows representing a streetlight's address with properties like streetAddress, addressLocality, postalCode, etc."@en,
+        "Dirección postal en España. Especialización de schema:PostalAddress, vcard:Address y locn:Address. Permite representar la dirección de una farola con propiedades como streetAddress, addressLocality, postalCode, etc."@es ;
+    sh:name "Postal address"@en,
+        "Dirección postal"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass esdir:DireccionPostal .
+
+<https://astrea.linkeddata.es/shapes#2085f48b12d7c20673204996726e9b54> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintinf:UrbanElement .
+
+<https://astrea.linkeddata.es/shapes#2f98d1c3f40e935755bbdc838f0731e7> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintsum:UtilitySupplyPoint .
+
+<https://astrea.linkeddata.es/shapes#414edc6ef95036e24a9c176d8e4015a5> a sh:NodeShape ;
+    rdfs:label "Post"@en,
+        "Poste"@es ;
+    sh:description "Physical support of the streetlight: column, bracket, wall, short post, etc. The specific type is indicated via tipoSoporte (SKOS). A post can have one or more arms."@en,
+        "Soporte físico de la farola: columna, báculo, fachada, postelete, etc. El tipo concreto se indica mediante tipoSoporte (SKOS). Un poste puede tener uno o más brazos."@es ;
+    sh:name "Post"@en,
+        "Poste"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#2a76004ce0950a7e777b313db7bdaf4f>,
+        <https://astrea.linkeddata.es/shapes#64c4cba2bd8e2daf05c58f98887ddcc3>,
+        <https://astrea.linkeddata.es/shapes#6bb098cd79419c4081bfc36f1561ab7e>,
+        <https://astrea.linkeddata.es/shapes#dc164d28dfaebc580de026a5ceef700e> ;
+    sh:targetClass :Post .
+
+<https://astrea.linkeddata.es/shapes#57641836fd88fb7d8ec56dfe026fc923> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#608e2513f66105cc158bbd164c5a686a> a sh:PropertyShape ;
+    rdfs:label "Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel."@en,
+        "name"@en,
+        "Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, ModeloLuminaria."@es,
+        "nombre"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Name of the entity. Applies to: ControlCenter, Manufacturer, Owner, LuminaireModel."@en,
+        "Nombre de la entidad. Aplica a: CentroDeMando, Fabricante, ModeloLuminaria."@es ;
+    sh:name "name"@en,
+        "nombre"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :name ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#7fa0ba7763b13982e81c9807c4a629f4> a sh:NodeShape ;
+    rdfs:label "Luminaire"@en,
+        "Luminaria"@es ;
+    sh:description "Lighting apparatus that houses, directs and filters the light from the lamp. A streetlight can have multiple luminaires (e.g., LED+DISCHARGE). Can reference a catalog model (ModeloLuminaria)."@en,
+        "Aparato de iluminación que aloja, dirige y filtra la luz de la lámpara. Una farola puede tener múltiples luminarias (caso LED+DESCARGA). Puede referenciar un modelo del catálogo (ModeloLuminaria)."@es ;
+    sh:name "Luminaire"@en,
+        "Luminaria"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#1e53bd62d3cb6535faa11faf9a7ccd2b>,
+        <https://astrea.linkeddata.es/shapes#23e419692d3d25358a397e3f16a75407>,
+        <https://astrea.linkeddata.es/shapes#965c0260cdfa273401b06a46d62f59e7>,
+        <https://astrea.linkeddata.es/shapes#98a5031e888bc0cb23a243da1b4a918c> ;
+    sh:targetClass :Luminaire .
+
+<https://astrea.linkeddata.es/shapes#8c9900de1b8b5874498f0b3dc13a371b> a sh:NodeShape ;
+    rdfs:label "Lamp"@en,
+        "Lámpara"@es ;
+    sh:description "Light source: bulb, LED module or converter of electrical energy into light. Each luminaire houses exactly one lamp. Includes photometric properties (power, luminous flux, CCT, CRI) and rated life (L70, L80)."@en,
+        "Fuente de luz: bombilla, módulo LED o convertidor de energía eléctrica en luz. Cada luminaria aloja exactamente una lámpara. Incluye propiedades fotométricas (potencia, flujo, CCT, CRI) y de vida útil (L70, L80)."@es ;
+    sh:name "Lamp"@en,
+        "Lámpara"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#135da652aa178c6be2d9571ad5b97c1e>,
+        <https://astrea.linkeddata.es/shapes#16eea60f3b01feed18eff9e9daf0127a>,
+        <https://astrea.linkeddata.es/shapes#2044677975e6d9aca7cd2e4cca71d938>,
+        <https://astrea.linkeddata.es/shapes#8516711ce517ebc8a91109946466e781>,
+        <https://astrea.linkeddata.es/shapes#90df37974d1d2baaf7dd91e0401035cf>,
+        <https://astrea.linkeddata.es/shapes#94d52328242bb2aeeb93b156eaa3c9f6>,
+        <https://astrea.linkeddata.es/shapes#a9cf8309ba3dd63f31cf82d3bfd9da73>,
+        <https://astrea.linkeddata.es/shapes#b1524b5b3ee7cb38a78febbf84c5fa92>,
+        <https://astrea.linkeddata.es/shapes#e1c0d170632640bf0a6a2b6dcc4256f0>,
+        <https://astrea.linkeddata.es/shapes#fb76579a5ad1f41c91cb6938c05861e4>,
+        <https://astrea.linkeddata.es/shapes#fffdf5b59679717bf64d4fc035629d6c> ;
+    sh:targetClass :Lamp .
+
+<https://astrea.linkeddata.es/shapes#930f3f3770efbef27719d16436e6e6f5> a sh:NodeShape ;
+    rdfs:label "Energy Consumption"@en,
+        "Consumo energético"@es ;
+    sh:description "Observation of electricity consumption in a specific tariff period. By inheriting from edintsum:UtilityConsumption ⊂ sosa:Observation, uses the SOSA pattern: – sosa:hasFeatureOfInterest → the CentroDeMando (supply point) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:tariffPeriod → SKOS concept (active, standard, off-peak, peak) Each instance represents consumption in ONE tariff period. The total is obtained by summing instances of the same fiscal year."@en,
+        "Observación de consumo eléctrico en un período tarifario determinado. Al heredar de edintsum:UtilityConsumption ⊂ sosa:Observation, usa el patrón SOSA: – sosa:hasFeatureOfInterest → el CentroDeMando (punto de suministro) – sosa:observedProperty → edintsum:electricityConsumption – sosa:hasResult → qudt:QuantityValue (qudt:numericValue + qudt:hasUnit) – edintalu:tariffPeriod → concepto SKOS (activo, llano, valle, punta) Cada instancia representa el consumo en UN período tarifario. El total se obtiene sumando las instancias del mismo ejercicio."@es ;
+    sh:name "Energy Consumption"@en,
+        "Consumo energético"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#51e0e8f19f0663f609c6d7e1181dfeb8> ;
+    sh:targetClass :EnergyConsumption .
+
+<https://astrea.linkeddata.es/shapes#9f0c157117bd24858c26beb37c017046> a sh:PropertyShape ;
+    rdfs:label "Material of the component. Applies to: Post, Luminaire, Lamp, JunctionBox."@en,
+        "material"@en,
+        "Material del componente. Aplica a: Poste, Luminaria, Lampara, Caja."@es,
+        "material"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Material of the component. Applies to: Post, Luminaire, Lamp, JunctionBox."@en,
+        "Material del componente. Aplica a: Poste, Luminaria, Lampara, Caja."@es ;
+    sh:name "material"@en,
+        "material"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :material ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#ad822eccfab7eb1964e501fb03b47967> a sh:NodeShape ;
+    rdfs:label "Control Center"@en,
+        "Centro de mando"@es ;
+    sh:description "Electrical panel or control center on which one or more streetlights depend. It is a utility supply point (edintsum:UtilitySupplyPoint), the point where electricity reaches the lighting installation."@en,
+        "Cuadro eléctrico o centro de control del que dependen una o más farolas. Es un punto de suministro (edintsum:UtilitySupplyPoint), punto donde llega la electricidad a la instalación de alumbrado."@es ;
+    sh:name "Control Center"@en,
+        "Centro de mando"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#c9316e1a1859c34cc4c4ad821e95e2aa> ;
+    sh:targetClass :ControlCenter .
+
+<https://astrea.linkeddata.es/shapes#b3cd120abe96b2e55f23b19082a59ee4> a sh:PropertyShape ;
+    rdfs:label "Height of the component. Applies to: Post (total height), Arm (height of the arm above ground). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in meters (M)."@en,
+        "height"@en,
+        "Altura del componente. Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en metros (M)."@es,
+        "altura"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Height of the component. Applies to: Post (total height), Arm (height of the arm above ground). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in meters (M)."@en,
+        "Altura del componente. Aplica a: Poste (altura total), Brazo (altura del brazo sobre el suelo). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en metros (M)."@es ;
+    sh:name "height"@en,
+        "altura"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :height .
+
+<https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca> sh:nodeKind sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#ba9b59ddeaf0f250c13466b48c51d566> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintsum:UtilityContract .
+
+<https://astrea.linkeddata.es/shapes#bc58e1f5d15d9cf88038e963c2224569> a sh:PropertyShape ;
+    rdfs:label "Associated flow reducer. Applies to: Streetlight. Cardinality: 0..n."@en,
+        "has flow reducer"@en,
+        "Reductor de flujo asociado. Aplica a: Farola. Cardinalidad: 0..n."@es,
+        "dispone de reductor de flujo"@es ;
+    sh:class :FlowReducer ;
+    sh:description "Associated flow reducer. Applies to: Streetlight. Cardinality: 0..n."@en,
+        "Reductor de flujo asociado. Aplica a: Farola. Cardinalidad: 0..n."@es ;
+    sh:name "has flow reducer"@en,
+        "dispone de reductor de flujo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasFlowReducer .
+
+<https://astrea.linkeddata.es/shapes#c7525aaa386f63f30141a8a3611981e7> a sh:NodeShape ;
+    rdfs:label "Manufacturer"@en,
+        "Fabricante"@es ;
+    sh:description "Entity that manufactures street lighting components (posts, luminaires, lamps, boxes or models)."@en,
+        "Entidad que fabrica componentes del alumbrado (postes, luminarias, lámparas, cajas o modelos)."@es ;
+    sh:name "Manufacturer"@en,
+        "Fabricante"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :Manufacturer .
+
+<https://astrea.linkeddata.es/shapes#c8ea5a736f9d149390fbb1691064012a> a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path edintinf:hasInfrastructureType .
+
+<https://astrea.linkeddata.es/shapes#d57f2dd5b79e6f4a183e68f7771a75ad> a sh:NodeShape ;
+    rdfs:label "Luminaire Model"@en,
+        "Modelo de luminaria"@es ;
+    sh:description "Entry in the luminaire model catalog. Allows linking manufacturer, nominal power, technology and photometric specifications."@en,
+        "Entrada del catálogo de modelos de luminaria. Permite vincular fabricante, potencia nominal, tecnología y especificaciones fotométricas."@es ;
+    sh:name "Luminaire Model"@en,
+        "Modelo de luminaria"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass :LuminaireModel .
+
+<https://astrea.linkeddata.es/shapes#df37a4fac662d79e51bfd32331f3ad83> a sh:PropertyShape ;
+    rdfs:label "Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1."@en,
+        "manufactured by"@en,
+        "Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1."@es,
+        "fabricado por"@es ;
+    sh:class :Manufacturer ;
+    sh:description "Manufacturer of the component. Applies to: Post, Luminaire, Lamp, JunctionBox, LuminaireModel. Cardinality: 0..1."@en,
+        "Fabricante del componente. Aplica a: Poste, Luminaria, Lampara, Caja, ModeloLuminaria. Cardinalidad: 0..1."@es ;
+    sh:name "manufactured by"@en,
+        "fabricado por"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :manufacturedBy .
+
+<https://astrea.linkeddata.es/shapes#e2f7ec686b48abd6eeb3b71899b9b902> a sh:NodeShape ;
+    rdfs:label "Electricity Supply"@en,
+        "Suministro eléctrico"@es ;
+    sh:description "Electricity supply contract associated with a control center. Includes tariff, voltage, and consumption by tariff periods. It is a utility contract (edintsum:UtilityContract), with rate and associated supply point."@en,
+        "Contrato de suministro eléctrico asociado a un centro de mando. Incluye tarifa, tensión y consumo por períodos tarifarios. Es un contrato de suministro (edintsum:UtilityContract), con tarifa y punto de suministro asociado."@es ;
+    sh:name "Electricity Supply"@en,
+        "Suministro eléctrico"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#196b08046b607f18f4c62cec7e404d1a>,
+        <https://astrea.linkeddata.es/shapes#50761658a82564b894012ddbf9dc7367>,
+        <https://astrea.linkeddata.es/shapes#c7f94a75bbe7b47d865693c22706b64e>,
+        <https://astrea.linkeddata.es/shapes#f961701d843bdfcdc41373dd649460cb> ;
+    sh:targetClass :ElectricitySupply .
+
+<https://astrea.linkeddata.es/shapes#e38641458f4357a043f6bcfd0fd01a1e> a sh:NodeShape ;
+    rdfs:label "Junction Box"@en,
+        "Caja"@es ;
+    sh:description "Junction box or access point for the streetlight's electrical cables. Optional: not all streetlights have an accessible box."@en,
+        "Caja de conexiones o registro de acceso a los cables eléctricos de la farola. Opcional: no todas las farolas tienen una caja accesible."@es ;
+    sh:name "Junction Box"@en,
+        "Caja"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#9545c7c315e77d1a111dec7296ac20a3> ;
+    sh:targetClass :JunctionBox .
+
+<https://astrea.linkeddata.es/shapes#e549c9c73d84069d4c49d8a28915d18b> a sh:NodeShape ;
+    rdfs:label "Flow Reducer"@en,
+        "Reductor de flujo"@es ;
+    sh:description "Energy saving system that reduces luminous flux. Can be located in the luminaire (lamp regulator) or at the start of the installation (head-end regulator)."@en,
+        "Sistema de ahorro energético que reduce el flujo luminoso. Puede estar ubicado en la luminaria (regulador de lámpara) o al inicio de la instalación (regulador de cabecera)."@es ;
+    sh:name "Flow Reducer"@en,
+        "Reductor de flujo"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#821ab2abe4fdb58380454bd3ec3fd36f>,
+        <https://astrea.linkeddata.es/shapes#eb80f9f7706944593565caac6fe49bed> ;
+    sh:targetClass :FlowReducer .
+
+<https://astrea.linkeddata.es/shapes#eae3335ab530d27c0b62b5c65233281b> a sh:PropertyShape ;
+    rdfs:label "Notes about the streetlight or component. Applies to: Streetlight, Post, Luminaire, Lamp, JunctionBox."@en,
+        "notes"@en,
+        "Observaciones sobre la farola o componente. Aplica a: Farola, Poste, Luminaria, Lampara, Caja."@es,
+        "observaciones"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Notes about the streetlight or component. Applies to: Streetlight, Post, Luminaire, Lamp, JunctionBox."@en,
+        "Observaciones sobre la farola o componente. Aplica a: Farola, Poste, Luminaria, Lampara, Caja."@es ;
+    sh:name "notes"@en,
+        "observaciones"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :notes ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#ec920603f1eacb06aad431eb1b5a9967> a sh:PropertyShape ;
+    rdfs:label "Reference year of the data. Applies to: ConsumoEnergetico, SuministroElectrico."@en,
+        "fiscal year"@en,
+        "Año de referencia de los datos. Aplica a: ConsumoEnergetico, SuministroElectrico."@es,
+        "ejercicio"@es ;
+    sh:datatype xsd:gYear ;
+    sh:description "Reference year of the data. Applies to: ConsumoEnergetico, SuministroElectrico."@en,
+        "Año de referencia de los datos. Aplica a: ConsumoEnergetico, SuministroElectrico."@es ;
+    sh:name "fiscal year"@en,
+        "ejercicio"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :fiscalYear ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#ee7b43b90f9c4e187ea5bea285667936> a sh:NodeShape ;
+    rdfs:label "Streetlight"@en,
+        "Farola"@es ;
+    rdfs:seeAlso <https://edint.es/def/alumbrado-publico#v1.0-rc/Streetlight> ;
+    sh:description "A complete point of light, composed of a post, one or more luminaires (which in turn contain lamps) and optionally a junction box. It is an urban element (edintinf:UrbanElement) and, by inheritance, an InfrastructureElement that can have a utility supply point (edintsum:hasUtilitySupplyPoint). Every instance of Farola has infrastructure type 'Street lamp' (edintkosinftype:StreeLamp) from the EDINT SKOS."@en,
+        "Punto de luz completo, compuesto por un poste, una o más luminarias (que a su vez contienen lámparas) y opcionalmente una caja de conexiones. Es un elemento urbano (edintinf:UrbanElement) y, por herencia, un InfrastructureElement que puede tener punto de suministro (edintsum:hasUtilitySupplyPoint). Toda instancia de Farola tiene como tipo de infraestructura 'Street lamp' (edintkosinftype:StreeLamp) del SKOS de EDINT."@es ;
+    sh:name "Streetlight"@en,
+        "Farola"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#0d9eb514f83c8026d8a5f517d8edd1ff>,
+        <https://astrea.linkeddata.es/shapes#330766b0e336769db99ecf87bf589b23>,
+        <https://astrea.linkeddata.es/shapes#47ef6704c705df47d9c9afba630996a5>,
+        <https://astrea.linkeddata.es/shapes#59ff3df37cf1fbb0e40a095e495d75bf>,
+        <https://astrea.linkeddata.es/shapes#66f8425553904964fa05c1889cee1eb5>,
+        <https://astrea.linkeddata.es/shapes#9a43e4890cbd6ea188a60f13761c9097>,
+        <https://astrea.linkeddata.es/shapes#a4348cda6f943e4dff5318f91cc17f06>,
+        <https://astrea.linkeddata.es/shapes#a94b0043bcc94660e1059ee27f103290>,
+        <https://astrea.linkeddata.es/shapes#a97bfcadb54220897887e23683187d9b>,
+        <https://astrea.linkeddata.es/shapes#c878a57063ac05481f2cc9331decb2de>,
+        <https://astrea.linkeddata.es/shapes#cfaea631f5666330b1d206e2fde9f680>,
+        <https://astrea.linkeddata.es/shapes#d554a21bf734e25dfd5ec424ad036595>,
+        <https://astrea.linkeddata.es/shapes#dfbd3b6e9905d7baadc74ac05c9fd15d>,
+        <https://astrea.linkeddata.es/shapes#ec24c3b195130be4211f1c921af95197>,
+        <https://astrea.linkeddata.es/shapes#f17df34f34e243c96ca6fb6bf1b01c9a>,
+        <https://astrea.linkeddata.es/shapes#f4da46971e8740bf53e1f42b0ff6bbe9> ;
+    sh:targetClass :Streetlight .
+
+<https://astrea.linkeddata.es/shapes#f08fd4b50b913efabb8760263760379b> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass edintsum:UtilityConsumption .
+
+<https://astrea.linkeddata.es/shapes#fa78cfbce37dbcb34ab378481e7243c2> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass qudt:QuantityValue .
+
+<https://astrea.linkeddata.es/shapes#fcf91a760496bff6542a524293e93153> a sh:NodeShape ;
+    rdfs:label "Arm"@en,
+        "Brazo"@es ;
+    sh:description "Arm of the post that supports a luminaire. A post can have multiple arms, each with its own height."@en,
+        "Brazo del poste que soporta una luminaria. Un poste puede tener múltiples brazos, cada uno con su propia altura."@es ;
+    sh:name "Arm"@en,
+        "Brazo"@es ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#cd176c9a8d420f99d4ad05937489160d> ;
+    sh:targetClass :Arm .
+
+<https://astrea.linkeddata.es/shapes#ffeaf0d3664c31215f614a64f5bb45a5> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass skos:Concept .
+
+<https://astrea.linkeddata.es/shapes#0d9eb514f83c8026d8a5f517d8edd1ff> a sh:PropertyShape ;
+    rdfs:label "Type of electrical supply. SKOS with 5 concepts (Underground, Aerial, Wall, Stapled, Battery)."@en,
+        "power supply type"@en,
+        "Tipo de alimentación eléctrica. SKOS con 5 conceptos (Subterránea, Aérea, Fachada, Grapada, Batería)."@es,
+        "tipo de alimentación"@es ;
+    sh:class skos:Concept ;
+    sh:description "Type of electrical supply. SKOS with 5 concepts (Underground, Aerial, Wall, Stapled, Battery)."@en,
+        "Tipo de alimentación eléctrica. SKOS con 5 conceptos (Subterránea, Aérea, Fachada, Grapada, Batería)."@es ;
+    sh:name "power supply type"@en,
+        "tipo de alimentación"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :powerSupplyType .
+
+<https://astrea.linkeddata.es/shapes#135da652aa178c6be2d9571ad5b97c1e> a sh:PropertyShape ;
+    rdfs:label "Luminous efficacy of the lamp in lumens per watt (lm/W)."@en,
+        "luminous efficacy"@en,
+        "Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W)."@es,
+        "eficacia luminosa"@es ;
+    sh:datatype xsd:decimal ;
+    sh:description "Luminous efficacy of the lamp in lumens per watt (lm/W)."@en,
+        "Eficacia luminosa de la lámpara en lúmenes por vatio (lm/W)."@es ;
+    sh:name "luminous efficacy"@en,
+        "eficacia luminosa"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :luminousEfficacy ;
+    sh:pattern "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#16eea60f3b01feed18eff9e9daf0127a> a sh:PropertyShape ;
+    rdfs:label "Nominal power of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in watts (W) or kilowatts (KiloW)."@en,
+        "nominal power"@en,
+        "Potencia nominal de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en vatios (W) o kilovatios (KiloW)."@es,
+        "potencia nominal"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Nominal power of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in watts (W) or kilowatts (KiloW)."@en,
+        "Potencia nominal de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en vatios (W) o kilovatios (KiloW)."@es ;
+    sh:name "nominal power"@en,
+        "potencia nominal"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :nominalPower .
+
+<https://astrea.linkeddata.es/shapes#196b08046b607f18f4c62cec7e404d1a> a sh:PropertyShape ;
+    rdfs:label "Supply voltage. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in volts (V)."@en,
+        "voltage"@en,
+        "Tensión de alimentación del suministro. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en voltios (V)."@es,
+        "tensión"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Supply voltage. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in volts (V)."@en,
+        "Tensión de alimentación del suministro. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en voltios (V)."@es ;
+    sh:name "voltage"@en,
+        "tensión"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :voltage .
+
+<https://astrea.linkeddata.es/shapes#1e53bd62d3cb6535faa11faf9a7ccd2b> a sh:PropertyShape ;
+    rdfs:label "Lamp housed in the luminaire. Cardinality: exactly 1."@en,
+        "has lamp"@en,
+        "Lámpara alojada en la luminaria. Cardinalidad: exactamente 1."@es,
+        "tiene lámpara"@es ;
+    sh:class :Lamp ;
+    sh:description "Lamp housed in the luminaire. Cardinality: exactly 1."@en,
+        "Lámpara alojada en la luminaria. Cardinalidad: exactamente 1."@es ;
+    sh:name "has lamp"@en,
+        "tiene lámpara"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasLamp .
+
+<https://astrea.linkeddata.es/shapes#2044677975e6d9aca7cd2e4cca71d938> a sh:PropertyShape ;
+    rdfs:label "Rated life of the lamp at 80% maintained flux (L80). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en,
+        "rated life L80"@en,
+        "Vida útil nominal de la lámpara al 80% de flujo mantenido (L80). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es,
+        "vida útil L80"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Rated life of the lamp at 80% maintained flux (L80). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en,
+        "Vida útil nominal de la lámpara al 80% de flujo mantenido (L80). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es ;
+    sh:name "rated life L80"@en,
+        "vida útil L80"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :ratedLifeL80 .
+
+<https://astrea.linkeddata.es/shapes#23e419692d3d25358a397e3f16a75407> a sh:PropertyShape ;
+    rdfs:label "Type of luminaire. SKOS with 8 concepts (Projector, Recessed wall, Bollard, Road, Artistic, etc.)."@en,
+        "luminaire type"@en,
+        "Tipo de luminaria. SKOS con 8 conceptos (Proyector, Empotrado pared, Baliza, Viaria, Artística, etc.)."@es,
+        "tipo de luminaria"@es ;
+    sh:class skos:Concept ;
+    sh:description "Type of luminaire. SKOS with 8 concepts (Projector, Recessed wall, Bollard, Road, Artistic, etc.)."@en,
+        "Tipo de luminaria. SKOS con 8 conceptos (Proyector, Empotrado pared, Baliza, Viaria, Artística, etc.)."@es ;
+    sh:name "luminaire type"@en,
+        "tipo de luminaria"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :luminaireType .
+
+<https://astrea.linkeddata.es/shapes#2a76004ce0950a7e777b313db7bdaf4f> a sh:PropertyShape ;
+    rdfs:label "Total number of arms of the post."@en,
+        "number of arms"@en,
+        "Número total de brazos del poste."@es,
+        "número de brazos"@es ;
+    sh:datatype xsd:integer ;
+    sh:description "Total number of arms of the post."@en,
+        "Número total de brazos del poste."@es ;
+    sh:name "number of arms"@en,
+        "número de brazos"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :numberOfArms ;
+    sh:pattern "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#330766b0e336769db99ecf87bf589b23> a sh:PropertyShape ;
+    rdfs:label "Control center on which the streetlight depends."@en,
+        "control center"@en,
+        "Centro de mando del que depende la farola."@es,
+        "centro de mando"@es ;
+    sh:class :ControlCenter ;
+    sh:description "Control center on which the streetlight depends."@en,
+        "Centro de mando del que depende la farola."@es ;
+    sh:name "control center"@en,
+        "centro de mando"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :controlCenter .
+
+<https://astrea.linkeddata.es/shapes#47ef6704c705df47d9c9afba630996a5> a sh:PropertyShape ;
+    rdfs:label "Schedule when the lighting is on (e.g., '22:00-07:00')."@en,
+        "operating hours"@en,
+        "Horario en que el alumbrado está encendido (ej: '22:00-07:00')."@es,
+        "horas de funcionamiento"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Schedule when the lighting is on (e.g., '22:00-07:00')."@en,
+        "Horario en que el alumbrado está encendido (ej: '22:00-07:00')."@es ;
+    sh:name "operating hours"@en,
+        "horas de funcionamiento"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :operatingHours ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#50761658a82564b894012ddbf9dc7367> a sh:PropertyShape ;
+    rdfs:label "Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4)."@en,
+        "tariff"@en,
+        "Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4)."@es,
+        "tarifa"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Type of electricity tariff applied (e.g., 6.1, 6.2, 6.3, 6.4)."@en,
+        "Tipo de tarifa eléctrica aplicada (ej: 6.1, 6.2, 6.3, 6.4)."@es ;
+    sh:name "tariff"@en,
+        "tarifa"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :tariff ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#51e0e8f19f0663f609c6d7e1181dfeb8> a sh:PropertyShape ;
+    rdfs:label "Tariff period to which the consumption corresponds. SKOS: active, standard, off-peak, peak. Each ConsumoEnergetico instance represents ONE tariff period; the total is obtained by summing instances of the same fiscal year."@en,
+        "tariff period"@en,
+        "Período tarifario al que corresponde el consumo. SKOS: activo, llano, valle, punta. Cada instancia de ConsumoEnergetico representa UN período tarifario; el total se obtiene sumando las instancias del mismo ejercicio."@es,
+        "período tarifario"@es ;
+    sh:class skos:Concept ;
+    sh:description "Tariff period to which the consumption corresponds. SKOS: active, standard, off-peak, peak. Each ConsumoEnergetico instance represents ONE tariff period; the total is obtained by summing instances of the same fiscal year."@en,
+        "Período tarifario al que corresponde el consumo. SKOS: activo, llano, valle, punta. Cada instancia de ConsumoEnergetico representa UN período tarifario; el total se obtiene sumando las instancias del mismo ejercicio."@es ;
+    sh:name "tariff period"@en,
+        "período tarifario"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :tariffPeriod .
+
+<https://astrea.linkeddata.es/shapes#59ff3df37cf1fbb0e40a095e495d75bf> a sh:PropertyShape ;
+    rdfs:label "Method for switching the lighting on/off (astronomical clock, photocell, remote management, etc.)."@en,
+        "control method"@en,
+        "Método de activación/desactivación del alumbrado (reloj astronómico, fotocélula, telegestión, etc.)."@es,
+        "método de control"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Method for switching the lighting on/off (astronomical clock, photocell, remote management, etc.)."@en,
+        "Método de activación/desactivación del alumbrado (reloj astronómico, fotocélula, telegestión, etc.)."@es ;
+    sh:name "control method"@en,
+        "método de control"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :controlMethod ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#64c4cba2bd8e2daf05c58f98887ddcc3> a sh:PropertyShape ;
+    rdfs:label "Arm of the post. Cardinality: 0..n."@en,
+        "has arm"@en,
+        "Brazo del poste. Cardinalidad: 0..n."@es,
+        "tiene brazo"@es ;
+    sh:class :Arm ;
+    sh:description "Arm of the post. Cardinality: 0..n."@en,
+        "Brazo del poste. Cardinalidad: 0..n."@es ;
+    sh:name "has arm"@en,
+        "tiene brazo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasArm .
+
+<https://astrea.linkeddata.es/shapes#66f8425553904964fa05c1889cee1eb5> a sh:PropertyShape ;
+    rdfs:label "Type of illumination. SKOS: Nighttime, Permanent."@en,
+        "illumination type"@en,
+        "Tipo de iluminación. SKOS: Nocturna, Permanente."@es,
+        "tipo de iluminación"@es ;
+    sh:class skos:Concept ;
+    sh:description "Type of illumination. SKOS: Nighttime, Permanent."@en,
+        "Tipo de iluminación. SKOS: Nocturna, Permanente."@es ;
+    sh:name "illumination type"@en,
+        "tipo de iluminación"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :illuminationType .
+
+<https://astrea.linkeddata.es/shapes#6bb098cd79419c4081bfc36f1561ab7e> a sh:PropertyShape ;
+    rdfs:label "Type of physical support of the post. SKOS with ~35 concepts. ConceptScheme: tipo-soporte."@en,
+        "support type"@en,
+        "Tipo de soporte físico del poste. SKOS con ~35 conceptos. ConceptScheme: tipo-soporte."@es,
+        "tipo de soporte"@es ;
+    sh:class skos:Concept ;
+    sh:description "Type of physical support of the post. SKOS with ~35 concepts. ConceptScheme: tipo-soporte."@en,
+        "Tipo de soporte físico del poste. SKOS con ~35 conceptos. ConceptScheme: tipo-soporte."@es ;
+    sh:name "support type"@en,
+        "tipo de soporte"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :supportType .
+
+<https://astrea.linkeddata.es/shapes#821ab2abe4fdb58380454bd3ec3fd36f> a sh:PropertyShape ;
+    rdfs:label "Indicates whether a flow reduction system is available at the start of the installation (head-end regulator)."@en,
+        "is head-end flow reducer"@en,
+        "Indica si dispone de sistema de reducción de flujo al inicio de la instalación (regulador de cabecera)."@es,
+        "es reductor de flujo al inicio"@es ;
+    sh:datatype xsd:boolean ;
+    sh:description "Indicates whether a flow reduction system is available at the start of the installation (head-end regulator)."@en,
+        "Indica si dispone de sistema de reducción de flujo al inicio de la instalación (regulador de cabecera)."@es ;
+    sh:name "is head-end flow reducer"@en,
+        "es reductor de flujo al inicio"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :hasHeadEndFlowReducer ;
+    sh:pattern "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#8516711ce517ebc8a91109946466e781> a sh:PropertyShape ;
+    rdfs:label "Correlated color temperature (CCT) of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kelvin (K)."@en,
+        "correlated color temperature"@en,
+        "Temperatura de color correlacionada (CCT) de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kelvin (K)."@es,
+        "temperatura de color"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Correlated color temperature (CCT) of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kelvin (K)."@en,
+        "Temperatura de color correlacionada (CCT) de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kelvin (K)."@es ;
+    sh:name "correlated color temperature"@en,
+        "temperatura de color"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :correlatedColorTemperature .
+
+<https://astrea.linkeddata.es/shapes#90df37974d1d2baaf7dd91e0401035cf> a sh:PropertyShape ;
+    rdfs:label "Code or model of the bulb."@en,
+        "bulb model"@en,
+        "Código o modelo de la bombilla."@es,
+        "modelo de bombilla"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Code or model of the bulb."@en,
+        "Código o modelo de la bombilla."@es ;
+    sh:name "bulb model"@en,
+        "modelo de bombilla"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :bulbModel ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#94d52328242bb2aeeb93b156eaa3c9f6> a sh:PropertyShape ;
+    rdfs:label "Rated life of the lamp at 70% maintained flux (L70). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en,
+        "rated life L70"@en,
+        "Vida útil nominal de la lámpara al 70% de flujo mantenido (L70). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es,
+        "vida útil L70"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Rated life of the lamp at 70% maintained flux (L70). The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in hours (HR)."@en,
+        "Vida útil nominal de la lámpara al 70% de flujo mantenido (L70). El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en horas (HR)."@es ;
+    sh:name "rated life L70"@en,
+        "vida útil L70"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :ratedLifeL70 .
+
+<https://astrea.linkeddata.es/shapes#9545c7c315e77d1a111dec7296ac20a3> a sh:PropertyShape ;
+    rdfs:label "Cable type in the junction box. SKOS: ET103, ET106, ET107, ET112, ET113."@en,
+        "cable type"@en,
+        "Tipo de cable en la caja de conexiones. SKOS: ET103, ET106, ET107, ET112, ET113."@es,
+        "tipo de cable"@es ;
+    sh:class skos:Concept ;
+    sh:description "Cable type in the junction box. SKOS: ET103, ET106, ET107, ET112, ET113."@en,
+        "Tipo de cable en la caja de conexiones. SKOS: ET103, ET106, ET107, ET112, ET113."@es ;
+    sh:name "cable type"@en,
+        "tipo de cable"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :cableType .
+
+<https://astrea.linkeddata.es/shapes#965c0260cdfa273401b06a46d62f59e7> a sh:PropertyShape ;
+    rdfs:label "Reference to the luminaire's catalog model. Cardinality: 0..1."@en,
+        "luminaire model"@en,
+        "Referencia al modelo de catálogo de la luminaria. Cardinalidad: 0..1."@es,
+        "modelo de luminaria"@es ;
+    sh:class :LuminaireModel ;
+    sh:description "Reference to the luminaire's catalog model. Cardinality: 0..1."@en,
+        "Referencia al modelo de catálogo de la luminaria. Cardinalidad: 0..1."@es ;
+    sh:name "luminaire model"@en,
+        "modelo de luminaria"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :luminaireModel .
+
+<https://astrea.linkeddata.es/shapes#98a5031e888bc0cb23a243da1b4a918c> a sh:PropertyShape ;
+    rdfs:label "Upper hemisphere flux (FHS/ULOR) of the luminaire. Key for REEAE compliance in zones E1-E4. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in percent (PERCENT)."@en,
+        "upper hemisphere flux"@en,
+        "Flujo hemisférico superior (FHS/ULOR) de la luminaria. Clave para el cumplimiento del REEAE en zonas E1-E4. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en porcentaje (PERCENT)."@es,
+        "flujo hemisférico superior"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Upper hemisphere flux (FHS/ULOR) of the luminaire. Key for REEAE compliance in zones E1-E4. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in percent (PERCENT)."@en,
+        "Flujo hemisférico superior (FHS/ULOR) de la luminaria. Clave para el cumplimiento del REEAE en zonas E1-E4. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en porcentaje (PERCENT)."@es ;
+    sh:name "upper hemisphere flux"@en,
+        "flujo hemisférico superior"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :upperHemisphereFlux .
+
+<https://astrea.linkeddata.es/shapes#9a43e4890cbd6ea188a60f13761c9097> a sh:PropertyShape ;
+    rdfs:label "Junction box of the streetlight. Cardinality: 0..1 (optional)."@en,
+        "junction box"@en,
+        "Caja de conexiones de la farola. Cardinalidad: 0..1 (opcional)."@es,
+        "caja"@es ;
+    sh:class :JunctionBox ;
+    sh:description "Junction box of the streetlight. Cardinality: 0..1 (optional)."@en,
+        "Caja de conexiones de la farola. Cardinalidad: 0..1 (opcional)."@es ;
+    sh:name "junction box"@en,
+        "caja"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :junctionBox .
+
+<https://astrea.linkeddata.es/shapes#a4348cda6f943e4dff5318f91cc17f06> a sh:PropertyShape ;
+    sh:hasValue edintkosinftype:StreeLamp ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:path edintinf:hasInfrastructureType .
+
+<https://astrea.linkeddata.es/shapes#a94b0043bcc94660e1059ee27f103290> a sh:PropertyShape ;
+    rdfs:label "Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@en,
+        "illumination class"@en,
+        "Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@es,
+        "tipo de alumbrado"@es ;
+    sh:class skos:Concept ;
+    sh:description "Lighting class according to EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@en,
+        "Clase de alumbrado según EN 13201. SKOS: S1-S4, CE2-CE4, ME3C-ME5."@es ;
+    sh:name "illumination class"@en,
+        "tipo de alumbrado"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :illuminationClass .
+
+<https://astrea.linkeddata.es/shapes#a97bfcadb54220897887e23683187d9b> a sh:PropertyShape ;
+    rdfs:label "Zone classification according to REEAE (RD 1890/2008) for light pollution control. SKOS: E1 (maximum protection), E2 (high protection), E3 (medium protection), E4 (low protection)."@en,
+        "lighting zone"@en,
+        "Clasificación de zona según REEAE (RD 1890/2008) para control de contaminación lumínica. SKOS: E1 (protección máxima), E2 (protección alta), E3 (protección media), E4 (protección baja)."@es,
+        "zona de alumbrado"@es ;
+    sh:class skos:Concept ;
+    sh:description "Zone classification according to REEAE (RD 1890/2008) for light pollution control. SKOS: E1 (maximum protection), E2 (high protection), E3 (medium protection), E4 (low protection)."@en,
+        "Clasificación de zona según REEAE (RD 1890/2008) para control de contaminación lumínica. SKOS: E1 (protección máxima), E2 (protección alta), E3 (protección media), E4 (protección baja)."@es ;
+    sh:name "lighting zone"@en,
+        "zona de alumbrado"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :lightingZone .
+
+<https://astrea.linkeddata.es/shapes#a9cf8309ba3dd63f31cf82d3bfd9da73> a sh:PropertyShape ;
+    rdfs:label "Luminous intensity of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in candelas (CD)."@en,
+        "luminous intensity"@en,
+        "Intensidad lumínica de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en candelas (CD)."@es,
+        "intensidad lumínica"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Luminous intensity of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in candelas (CD)."@en,
+        "Intensidad lumínica de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en candelas (CD)."@es ;
+    sh:name "luminous intensity"@en,
+        "intensidad lumínica"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :luminousIntensity .
+
+<https://astrea.linkeddata.es/shapes#b1524b5b3ee7cb38a78febbf84c5fa92> a sh:PropertyShape ;
+    rdfs:label "Installation date of the lamp."@en,
+        "installation date"@en,
+        "Fecha de instalación de la lámpara."@es,
+        "fecha de instalación"@es ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Installation date of the lamp."@en,
+        "Fecha de instalación de la lámpara."@es ;
+    sh:name "installation date"@en,
+        "fecha de instalación"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :installationDate ;
+    sh:pattern "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#c7f94a75bbe7b47d865693c22706b64e> a sh:PropertyShape ;
+    rdfs:label "Consumption from renewable energy sources with self-consumption systems. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kilowatt-hours (KiloW-HR)."@en,
+        "renewable kWh"@en,
+        "Consumo de fuentes de energía renovable con sistemas de autoconsumo. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kilovatios-hora (KiloW-HR)."@es,
+        "kWh renovables"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Consumption from renewable energy sources with self-consumption systems. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in kilowatt-hours (KiloW-HR)."@en,
+        "Consumo de fuentes de energía renovable con sistemas de autoconsumo. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en kilovatios-hora (KiloW-HR)."@es ;
+    sh:name "renewable kWh"@en,
+        "kWh renovables"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :renewableKwh .
+
+<https://astrea.linkeddata.es/shapes#c878a57063ac05481f2cc9331decb2de> a sh:PropertyShape ;
+    rdfs:label "Conservation status of the streetlight. SKOS with 5 levels: Excellent, Good, Regular, Poor, Under construction."@en,
+        "conservation status"@en,
+        "Estado de conservación de la farola. SKOS con 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución."@es,
+        "estado de conservación"@es ;
+    sh:class skos:Concept ;
+    sh:description "Conservation status of the streetlight. SKOS with 5 levels: Excellent, Good, Regular, Poor, Under construction."@en,
+        "Estado de conservación de la farola. SKOS con 5 niveles: Excelente, Bueno, Regular, Malo, En ejecución."@es ;
+    sh:name "conservation status"@en,
+        "estado de conservación"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :conservationStatus .
+
+<https://astrea.linkeddata.es/shapes#c9316e1a1859c34cc4c4ad821e95e2aa> a sh:PropertyShape ;
+    rdfs:label "Electricity supply contract associated with the control center. Cardinality: 0..1."@en,
+        "has supply"@en,
+        "Contrato de suministro eléctrico asociado al centro de mando. Cardinalidad: 0..1."@es,
+        "tiene suministro"@es ;
+    sh:class :ElectricitySupply ;
+    sh:description "Electricity supply contract associated with the control center. Cardinality: 0..1."@en,
+        "Contrato de suministro eléctrico asociado al centro de mando. Cardinalidad: 0..1."@es ;
+    sh:name "has supply"@en,
+        "tiene suministro"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasSupply .
+
+<https://astrea.linkeddata.es/shapes#cd176c9a8d420f99d4ad05937489160d> a sh:PropertyShape ;
+    rdfs:label "Ordinal position of the arm on the post (1, 2, 3...)."@en,
+        "arm order"@en,
+        "Posición ordinal del brazo en el poste (1, 2, 3...)."@es,
+        "orden del brazo"@es ;
+    sh:datatype xsd:integer ;
+    sh:description "Ordinal position of the arm on the post (1, 2, 3...)."@en,
+        "Posición ordinal del brazo en el poste (1, 2, 3...)."@es ;
+    sh:name "arm order"@en,
+        "orden del brazo"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :armOrder ;
+    sh:pattern "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#cfaea631f5666330b1d206e2fde9f680> a sh:PropertyShape ;
+    rdfs:label "Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian)."@en,
+        "road lighting class"@en,
+        "Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales)."@es,
+        "clase luminotécnica"@es ;
+    sh:class skos:Concept ;
+    sh:description "Lighting class according to UNE-EN 13201 determining minimum lighting requirements. SKOS: A (motorways), B (arterial), C (collector), D (residential), E (pedestrian)."@en,
+        "Clase luminotécnica según UNE-EN 13201 que determina los requisitos mínimos de alumbrado. SKOS: A (autopistas), B (arteriales), C (colectoras), D (residenciales), E (peatonales)."@es ;
+    sh:name "road lighting class"@en,
+        "clase luminotécnica"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :lightingClass .
+
+<https://astrea.linkeddata.es/shapes#d554a21bf734e25dfd5ec424ad036595> a sh:PropertyShape ;
+    rdfs:label "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en,
+        "address"@en,
+        "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es,
+        "dirección"@es ;
+    sh:class esdir:DireccionPostal ;
+    sh:description "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en,
+        "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es ;
+    sh:name "address"@en,
+        "dirección"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :address .
+
+<https://astrea.linkeddata.es/shapes#dc164d28dfaebc580de026a5ceef700e> a sh:PropertyShape ;
+    rdfs:label "Accessories mounted on the post (meters, cameras, etc.)."@en,
+        "accessories"@en,
+        "Accesorios montados en el poste (medidores, cámaras, etc.)."@es,
+        "accesorios"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Accessories mounted on the post (meters, cameras, etc.)."@en,
+        "Accesorios montados en el poste (medidores, cámaras, etc.)."@es ;
+    sh:name "accessories"@en,
+        "accesorios"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :accessories ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#dfbd3b6e9905d7baadc74ac05c9fd15d> a sh:PropertyShape ;
+    rdfs:label "Number of luminaires in the streetlight."@en,
+        "number of luminaires"@en,
+        "Número de luminarias en la farola."@es,
+        "número de luminarias"@es ;
+    sh:datatype xsd:integer ;
+    sh:description "Number of luminaires in the streetlight."@en,
+        "Número de luminarias en la farola."@es ;
+    sh:name "number of luminaires"@en,
+        "número de luminarias"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :numberOfLuminaires ;
+    sh:pattern "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#e1c0d170632640bf0a6a2b6dcc4256f0> a sh:PropertyShape ;
+    rdfs:label "Type of lamp. SKOS with 12 concepts (LED, Sodium vapor, Mercury vapor, Metal halide, etc.)."@en,
+        "lamp type"@en,
+        "Tipo de lámpara. SKOS con 12 conceptos (LED, Vapor sodio, Vapor mercurio, Halogenuro metálico, etc.)."@es,
+        "tipo de lámpara"@es ;
+    sh:class skos:Concept ;
+    sh:description "Type of lamp. SKOS with 12 concepts (LED, Sodium vapor, Mercury vapor, Metal halide, etc.)."@en,
+        "Tipo de lámpara. SKOS con 12 conceptos (LED, Vapor sodio, Vapor mercurio, Halogenuro metálico, etc.)."@es ;
+    sh:name "lamp type"@en,
+        "tipo de lámpara"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :lampType .
+
+<https://astrea.linkeddata.es/shapes#eb80f9f7706944593565caac6fe49bed> a sh:PropertyShape ;
+    rdfs:label "Indicates whether a flow reduction system is available in the luminaire."@en,
+        "is luminaire flow reducer"@en,
+        "Indica si dispone de sistema de reducción de flujo en la luminaria."@es,
+        "es reductor de flujo en luminaria"@es ;
+    sh:datatype xsd:boolean ;
+    sh:description "Indicates whether a flow reduction system is available in the luminaire."@en,
+        "Indica si dispone de sistema de reducción de flujo en la luminaria."@es ;
+    sh:name "is luminaire flow reducer"@en,
+        "es reductor de flujo en luminaria"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :hasLuminaireFlowReducer ;
+    sh:pattern "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#ec24c3b195130be4211f1c921af95197> a sh:PropertyShape ;
+    rdfs:label "Physical support of the streetlight. Cardinality: exactly 1."@en,
+        "post"@en,
+        "Soporte físico de la farola. Cardinalidad: exactamente 1."@es,
+        "poste"@es ;
+    sh:class :Post ;
+    sh:description "Physical support of the streetlight. Cardinality: exactly 1."@en,
+        "Soporte físico de la farola. Cardinalidad: exactamente 1."@es ;
+    sh:name "post"@en,
+        "poste"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :post .
+
+<https://astrea.linkeddata.es/shapes#f17df34f34e243c96ca6fb6bf1b01c9a> a sh:PropertyShape ;
+    rdfs:label "Data quality: B (good), R (regular), M (poor), E (under construction)."@en,
+        "data quality"@en,
+        "Calidad del dato: B (buena), R (regular), M (mala), E (en ejecución)."@es,
+        "calidad del dato"@es ;
+    sh:datatype xsd:string ;
+    sh:description "Data quality: B (good), R (regular), M (poor), E (under construction)."@en,
+        "Calidad del dato: B (buena), R (regular), M (mala), E (en ejecución)."@es ;
+    sh:name "data quality"@en,
+        "calidad del dato"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :dataQuality ;
+    sh:pattern ".*" .
+
+<https://astrea.linkeddata.es/shapes#f4da46971e8740bf53e1f42b0ff6bbe9> a sh:PropertyShape ;
+    rdfs:label "Lighting apparatus of the streetlight. Cardinality: 1 or more (e.g., LED+DISCHARGE)."@en,
+        "luminaire"@en,
+        "Aparato de iluminación de la farola. Cardinalidad: 1 o más (caso LED+DESCARGA)."@es,
+        "luminaria"@es ;
+    sh:class :Luminaire ;
+    sh:description "Lighting apparatus of the streetlight. Cardinality: 1 or more (e.g., LED+DISCHARGE)."@en,
+        "Aparato de iluminación de la farola. Cardinalidad: 1 o más (caso LED+DESCARGA)."@es ;
+    sh:name "luminaire"@en,
+        "luminaria"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :luminaire .
+
+<https://astrea.linkeddata.es/shapes#f961701d843bdfcdc41373dd649460cb> a sh:PropertyShape ;
+    rdfs:label "Energy consumption record of the supply. Cardinality: 0..n."@en,
+        "has consumption"@en,
+        "Registro de consumo energético del suministro. Cardinalidad: 0..n."@es,
+        "tiene consumo"@es ;
+    sh:class :EnergyConsumption ;
+    sh:description "Energy consumption record of the supply. Cardinality: 0..n."@en,
+        "Registro de consumo energético del suministro. Cardinalidad: 0..n."@es ;
+    sh:name "has consumption"@en,
+        "tiene consumo"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :hasConsumption .
+
+<https://astrea.linkeddata.es/shapes#fb76579a5ad1f41c91cb6938c05861e4> a sh:PropertyShape ;
+    rdfs:label "Color rendering index (CRI) of the lamp (0-100)."@en,
+        "color rendering index"@en,
+        "Índice de reproducción cromática (CRI/IRC) de la lámpara (0-100)."@es,
+        "índice de reproducción cromática"@es ;
+    sh:datatype xsd:decimal ;
+    sh:description "Color rendering index (CRI) of the lamp (0-100)."@en,
+        "Índice de reproducción cromática (CRI/IRC) de la lámpara (0-100)."@es ;
+    sh:name "color rendering index"@en,
+        "índice de reproducción cromática"@es ;
+    sh:nodeKind sh:Literal ;
+    sh:path :colorRenderingIndex ;
+    sh:pattern "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#fffdf5b59679717bf64d4fc035629d6c> a sh:PropertyShape ;
+    rdfs:label "Luminous flux of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in lumens (LM)."@en,
+        "luminous flux"@en,
+        "Flujo luminoso de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en lúmenes (LM)."@es,
+        "flujo luminoso"@es ;
+    sh:class qudt:QuantityValue ;
+    sh:description "Luminous flux of the lamp. The value is expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), in lumens (LM)."@en,
+        "Flujo luminoso de la lámpara. El valor se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), en lúmenes (LM)."@es ;
+    sh:name "luminous flux"@en,
+        "flujo luminoso"@es ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path :luminousFlux .
+
