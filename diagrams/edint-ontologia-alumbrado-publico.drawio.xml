@@ -154,7 +154,7 @@
             <mxPoint x="380" y="418" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1014" connectable="0" parent="1013" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;fontStyle=0" value="&lt;div&gt;edintalu:controlCenter&lt;/div&gt;centro de mando" vertex="1">
+        <mxCell id="1014" connectable="0" parent="1013" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;fontStyle=0" value="&lt;div&gt;edintalu:controlCenter&lt;/div&gt;(centro de mando)" vertex="1">
           <mxGeometry relative="1" x="-0.1" as="geometry">
             <mxPoint x="-204" y="-1" as="offset" />
           </mxGeometry>
