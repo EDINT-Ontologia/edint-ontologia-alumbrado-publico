@@ -23,7 +23,7 @@
                                            <http://purl.org/dc/terms/description> "Ontology for representing public street lighting data in the context of FEMP (Spanish Federation of Municipalities and Provinces). Models: modular composition of streetlights (post, luminaire, lamp, box), electrical infrastructure (control center), energy consumption as SOSA observation with QUDT result, luminaire model catalog, manufacturer, photometric parameters and light pollution (FHS, zones E1-E4), and conservation status. Measurement units with QUDT."@en ,
                                                                                   "Ontología para la representación de datos de alumbrado público en el contexto de la FEMP. Modela: composición modular de farolas (poste, luminaria, lámpara, caja), infraestructura eléctrica (centro de mando), consumo energético como observación SOSA con resultado QUDT, catálogo de modelos de luminaria, fabricante, parámetros fotométricos y de contaminación lumínica (FHS, zonas E1-E4), y estado de conservación. Unidades de medida con QUDT."@es ;
                                            <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
-                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                            <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                            <http://purl.org/dc/terms/publisher> _:genid7 ;
                                            <http://purl.org/dc/terms/title> "EDINT Public Street Lighting Ontology"@en ,

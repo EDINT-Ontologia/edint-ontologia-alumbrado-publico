@@ -13,8 +13,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?luminaria (COUNT(?lamp) AS ?numLamparas)
 WHERE {
-  ?luminaria a edintalu:Luminaria .
-  OPTIONAL { ?luminaria edintalu:tieneLampara ?lamp . }
+  ?luminaria a edintalu:Luminaire .
+  OPTIONAL { ?luminaria edintalu:hasLamp ?lamp . }
 }
 GROUP BY ?luminaria
 HAVING (COUNT(?lamp) != 1)

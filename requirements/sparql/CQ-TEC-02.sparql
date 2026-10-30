@@ -15,10 +15,10 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?tipoLampara (AVG(xsd:decimal(?flujoVal) / xsd:decimal(?potVal)) AS ?eficaciaLmPorW)
 WHERE {
-  ?lamp a edintalu:Lampara ;
-        edintalu:tipoLampara ?tipoURI ;
-        edintalu:flujoLuminoso ?flujoQv ;
-        edintalu:potenciaNominal ?potQv .
+  ?lamp a edintalu:Lamp ;
+        edintalu:lampType ?tipoURI ;
+        edintalu:luminousFlux ?flujoQv ;
+        edintalu:nominalPower ?potQv .
   ?flujoQv qudt:numericValue ?flujoVal .
   ?potQv qudt:numericValue ?potVal .
   FILTER(xsd:decimal(?potVal) > 0)
@@ -29,14 +29,14 @@ GROUP BY ?tipoLampara
 ORDER BY DESC(?eficaciaLmPorW)
 
 # -----------------------------------------------------------------------------
-# Si la ontología tiene la propiedad edintalu:eficaciaLuminosa directamente
+# Si la ontología tiene la propiedad edintalu:luminousEfficacy directamente
 # -----------------------------------------------------------------------------
 
 SELECT ?tipoLampara (AVG(xsd:decimal(?eficacia)) AS ?eficaciaLmPorW)
 WHERE {
-  ?lamp a edintalu:Lampara ;
-        edintalu:tipoLampara ?tipoURI ;
-        edintalu:eficaciaLuminosa ?eficacia .
+  ?lamp a edintalu:Lamp ;
+        edintalu:lampType ?tipoURI ;
+        edintalu:luminousEfficacy ?eficacia .
   ?tipoURI skos:prefLabel ?tipoLampara .
   FILTER(LANG(?tipoLampara) = "es")
 }

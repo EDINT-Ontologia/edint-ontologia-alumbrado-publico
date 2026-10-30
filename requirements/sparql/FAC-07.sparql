@@ -13,9 +13,9 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?centroDeMando
 WHERE {
-  ?centroDeMando a edintalu:CentroDeMando .
+  ?centroDeMando a edintalu:ControlCenter .
   FILTER NOT EXISTS {
-    ?f a edintalu:Farola ;
-       edintalu:centroDeMando ?centroDeMando .
+    ?f a edintalu:Streetlight ;
+       edintalu:controlCenter ?centroDeMando .
   }
 }
