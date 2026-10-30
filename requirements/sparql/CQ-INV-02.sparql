@@ -5,7 +5,7 @@
 # =============================================================================
 
 PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:  <https://schema.org/>
 
 # -----------------------------------------------------------------------------
 # Conteo de farolas por distrito (para calcular densidad, dividir por
@@ -16,26 +16,30 @@ SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Streetlight ;
      edintalu:address ?addr .
-  ?addr esdir:distrito ?distrito .
+  ?addr schema:addressRegion ?distrito .
 }
 GROUP BY ?distrito
 ORDER BY DESC(?totalFarolas)
 
 # -----------------------------------------------------------------------------
-# Densidad si se dispone de superficie (en km²) como dato asociado al distrito
+# VARIANTE (documentada, no ejecutable tal cual): requiere superficie del
+# distrito como dato externo (territorio:areaKm2 no modelado en este repo).
 # -----------------------------------------------------------------------------
-
-PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-
-SELECT ?distrito (COUNT(?f) AS ?totalFarolas) ?superficieKm2
-       (xsd:decimal(COUNT(?f)) / ?superficieKm2 AS ?densidadFarolasPorKm2)
-WHERE {
-  ?f a edintalu:Streetlight ;
-     edintalu:address ?addr .
-  ?addr esdir:distrito ?distrito .
-  ?distrito <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#areaKm2> ?superficieKm2 .
-}
-GROUP BY ?distrito ?superficieKm2
-ORDER BY DESC(?densidadFarolasPorKm2)
+# # -----------------------------------------------------------------------------
+# # Densidad si se dispone de superficie (en km²) como dato asociado al distrito
+# # -----------------------------------------------------------------------------
+#
+# PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
+# PREFIX schema:  <https://schema.org/>
+# PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+#
+# SELECT ?distrito (COUNT(?f) AS ?totalFarolas) ?superficieKm2
+#        (xsd:decimal(COUNT(?f)) / ?superficieKm2 AS ?densidadFarolasPorKm2)
+# WHERE {
+#   ?f a edintalu:Streetlight ;
+#      edintalu:address ?addr .
+#   ?addr schema:addressRegion ?distrito .
+#   ?distrito <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#areaKm2> ?superficieKm2 .
+# }
+# GROUP BY ?distrito ?superficieKm2
+# ORDER BY DESC(?densidadFarolasPorKm2)

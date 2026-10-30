@@ -4,7 +4,7 @@
 # =============================================================================
 
 PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:  <https://schema.org/>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 
 # -----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ SELECT ?municipio (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Streetlight ;
      edintalu:address ?addr .
-  ?addr esdir:municipio ?municipio .
+  ?addr schema:addressLocality ?municipio .
 }
 GROUP BY ?municipio
 ORDER BY DESC(?totalFarolas)
@@ -28,8 +28,8 @@ SELECT ?distrito (COUNT(?f) AS ?totalFarolas)
 WHERE {
   ?f a edintalu:Streetlight ;
      edintalu:address ?addr .
-  ?addr esdir:municipio <URI-MUNICIPIO> ;
-        esdir:distrito ?distrito .
+  ?addr schema:addressLocality "Madrid" ; # PARAM: municipio
+        schema:addressRegion ?distrito .
 }
 GROUP BY ?distrito
 ORDER BY DESC(?totalFarolas)

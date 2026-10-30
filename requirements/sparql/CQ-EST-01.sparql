@@ -4,7 +4,7 @@
 # =============================================================================
 
 PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
-PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX schema:  <https://schema.org/>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
 # -----------------------------------------------------------------------------
@@ -16,7 +16,7 @@ WHERE {
   ?f a edintalu:Streetlight ;
      edintalu:address ?addr ;
      edintalu:conservationStatus ?estado .
-  ?addr esdir:municipio ?municipio .
+  ?addr schema:addressLocality ?municipio .
   ?estado skos:prefLabel ?estadoLabel .
   FILTER(LANG(?estadoLabel) = "es")
 }
