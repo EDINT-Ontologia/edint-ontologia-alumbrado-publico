@@ -16,7 +16,7 @@
 
 edintkos:TariffPeriod a skos:ConceptScheme ;
     dct:issued "2026-05-07"^^xsd:date ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    cc:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
     rdfs:label "Período tarifario"@es , "Tariff period"@en ;
     skos:definition "Períodos horarios de facturación eléctrica según la regulación española."@es ;
     skos:definition "Electricity billing time periods according to Spanish regulation."@en .

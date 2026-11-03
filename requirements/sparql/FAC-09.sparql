@@ -14,8 +14,8 @@ PREFIX qudt:     <http://qudt.org/schema/qudt/>
 
 SELECT ?lampara
 WHERE {
-  ?lampara a edintalu:Lampara ;
-           edintalu:potenciaNominal ?qv .
+  ?lampara a edintalu:Lamp ;
+           edintalu:nominalPower ?qv .
   FILTER NOT EXISTS {
     ?qv a qudt:QuantityValue ;
         qudt:numericValue ?val ;

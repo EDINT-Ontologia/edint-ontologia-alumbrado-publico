@@ -12,8 +12,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?poste (COUNT(?brazo) AS ?numBrazos)
 WHERE {
-  ?poste a edintalu:Poste .
-  OPTIONAL { ?poste edintalu:tieneBrazo ?brazo . }
+  ?poste a edintalu:Post .
+  OPTIONAL { ?poste edintalu:hasArm ?brazo . }
 }
 GROUP BY ?poste
 ORDER BY DESC(?numBrazos)

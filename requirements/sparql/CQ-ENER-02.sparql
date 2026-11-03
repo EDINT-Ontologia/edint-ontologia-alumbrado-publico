@@ -17,11 +17,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?centroDeMando ?periodo (SUM(xsd:decimal(?value)) AS ?consumoKWh)
 WHERE {
-  ?centroDeMando edintalu:tieneSuministro ?suministro .
-  ?suministro edintalu:tieneConsumo ?consumo .
-  ?consumo a edintalu:ConsumoEnergetico ;
+  ?centroDeMando edintalu:hasSupply ?suministro .
+  ?suministro edintalu:hasConsumption ?consumo .
+  ?consumo a edintalu:EnergyConsumption ;
            sosa:hasResult ?result ;
-           edintalu:periodoTarifario ?periodoURI .
+           edintalu:tariffPeriod ?periodoURI .
   ?result qudt:numericValue ?value ;
           qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .
   ?periodoURI skos:prefLabel ?periodo .
@@ -36,9 +36,9 @@ ORDER BY ?centroDeMando ?periodo
 
 SELECT (SUM(xsd:decimal(?value)) AS ?consumoTotalKWh)
 WHERE {
-  <URI-CENTRO-DE-MANDO> edintalu:tieneSuministro ?suministro .
-  ?suministro edintalu:tieneConsumo ?consumo .
-  ?consumo a edintalu:ConsumoEnergetico ;
+  <URI-CENTRO-DE-MANDO> edintalu:hasSupply ?suministro .
+  ?suministro edintalu:hasConsumption ?consumo .
+  ?consumo a edintalu:EnergyConsumption ;
            sosa:hasResult ?result .
   ?result qudt:numericValue ?value ;
           qudt:hasUnit <http://qudt.org/vocab/unit/KiloW-HR> .

@@ -15,11 +15,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?farola ?fechaInstalacion ?vidaUtilL70Val ?horasUsoEstimadas
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:fechaInstalacion ?fechaInstalacion ;
-        edintalu:vidaUtilL70 ?vidaQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:installationDate ?fechaInstalacion ;
+        edintalu:ratedLifeL70 ?vidaQv .
   ?vidaQv qudt:numericValue ?vidaUtilL70Val .
   # Estimación: horas de uso = días desde instalación × horas/día de funcionamiento
   # Se necesita una función de fecha del motor SPARQL para calcular la diferencia
@@ -33,11 +33,11 @@ ORDER BY ?vidaUtilL70Val
 
 SELECT ?farola ?vidaUtilL70Val
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:vidaUtilL70 ?vidaQv ;
-        edintalu:fechaInstalacion ?fecha .
+  ?farola a edintalu:Streetlight ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:ratedLifeL70 ?vidaQv ;
+        edintalu:installationDate ?fecha .
   ?vidaQv qudt:numericValue ?vidaUtilL70Val .
   # Cálculo aproximado: asumiendo ~12h/día de funcionamiento
   BIND((YEAR(NOW()) - YEAR(?fecha)) * 365.25 * 12 AS ?horasEstimadas)

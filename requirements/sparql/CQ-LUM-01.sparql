@@ -21,10 +21,10 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?farola ?zonaLabel ?fhsVal ?umbralMaximo
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:zonaAlumbrado ?zona ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:flujoHemisfericoSuperior ?fhsQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:lightingZone ?zona ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:upperHemisphereFlux ?fhsQv .
   ?fhsQv qudt:numericValue ?fhsVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
@@ -49,10 +49,10 @@ ORDER BY ?zonaLabel ?farola
 
 SELECT ?farola ?zona ?fhsVal
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:zonaAlumbrado ?zona ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:flujoHemisfericoSuperior ?fhsQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:lightingZone ?zona ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:upperHemisphereFlux ?fhsQv .
   ?fhsQv qudt:numericValue ?fhsVal .
   FILTER(xsd:decimal(?fhsVal) > 25)  # Umbral para E4 como ejemplo
 }

@@ -27,5 +27,5 @@ ORDER BY ?label
 # -----------------------------------------------------------------------------
 
 ASK {
-  edintalu:zonaAlumbrado rdfs:range skos:Concept .
+  edintalu:lightingZone rdfs:range skos:Concept .
 }

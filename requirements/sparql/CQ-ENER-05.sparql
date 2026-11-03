@@ -11,11 +11,11 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?farola ?enLuminaria ?enInicio
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:disponeReductorFlujo ?reductor .
-  ?reductor a edintalu:ReductorFlujo ;
-            edintalu:esReductorFlujoLuminaria ?enLuminaria ;
-            edintalu:esReductorFlujoInicio ?enInicio .
+  ?farola a edintalu:Streetlight ;
+          edintalu:hasFlowReducer ?reductor .
+  ?reductor a edintalu:FlowReducer ;
+            edintalu:hasLuminaireFlowReducer ?enLuminaria ;
+            edintalu:hasHeadEndFlowReducer ?enInicio .
 }
 ORDER BY ?farola
 
@@ -25,11 +25,11 @@ ORDER BY ?farola
 
 SELECT ?farola
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:disponeReductorFlujo ?reductor .
-  ?reductor a edintalu:ReductorFlujo ;
-            edintalu:esReductorFlujoLuminaria true ;
-            edintalu:esReductorFlujoInicio false .
+  ?farola a edintalu:Streetlight ;
+          edintalu:hasFlowReducer ?reductor .
+  ?reductor a edintalu:FlowReducer ;
+            edintalu:hasLuminaireFlowReducer true ;
+            edintalu:hasHeadEndFlowReducer false .
 }
 
 # -----------------------------------------------------------------------------
@@ -38,8 +38,8 @@ WHERE {
 
 SELECT ?farola
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:disponeReductorFlujo ?reductor .
-  ?reductor a edintalu:ReductorFlujo ;
-            edintalu:esReductorFlujoInicio true .
+  ?farola a edintalu:Streetlight ;
+          edintalu:hasFlowReducer ?reductor .
+  ?reductor a edintalu:FlowReducer ;
+            edintalu:hasHeadEndFlowReducer true .
 }

@@ -14,11 +14,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT (AVG(xsd:decimal(?cctVal)) AS ?temperaturaColorMediaK)
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:zonaAlumbrado ?zona ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:temperaturaColor ?cctQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:lightingZone ?zona ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:correlatedColorTemperature ?cctQv .
   ?cctQv qudt:numericValue ?cctVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
@@ -31,11 +31,11 @@ WHERE {
 
 SELECT ?zonaLabel (AVG(xsd:decimal(?cctVal)) AS ?temperaturaColorMediaK)
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:zonaAlumbrado ?zona ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:temperaturaColor ?cctQv .
+  ?farola a edintalu:Streetlight ;
+          edintalu:lightingZone ?zona ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:correlatedColorTemperature ?cctQv .
   ?cctQv qudt:numericValue ?cctVal .
   ?zona skos:prefLabel ?zonaLabel .
   FILTER(LANG(?zonaLabel) = "es")
