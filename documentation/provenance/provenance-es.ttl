@@ -15,9 +15,9 @@
 	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0>;
 	 prov:wasGeneratedAt "2026-05-07";
 .
-:agent0 a prov:Agent; foaf:name "Oscar Corcho".
-:agent1 a prov:Agent; foaf:name "María Poveda".
-:agent2 a prov:Agent; foaf:name "M. Martín Blázquez".
-:agent3 a prov:Agent; foaf:name "Daniel Doña".
-:agent4 a prov:Agent; foaf:name "Edna Ruckhaus".
-:agent5 a prov:Agent; foaf:name "Lucía Sánchez".
+:agent0 a prov:Agent; foaf:name "Daniel Doña".
+:agent1 a prov:Agent; foaf:name "Edna Ruckhaus".
+:agent2 a prov:Agent; foaf:name "Lucía Sánchez".
+:agent3 a prov:Agent; foaf:name "M. Martín Blázquez".
+:agent4 a prov:Agent; foaf:name "María Poveda".
+:agent5 a prov:Agent; foaf:name "Oscar Corcho".

@@ -2,11 +2,11 @@
 <span class="markdown"><p>En la Figura 1 se muestra el modelo conceptual de la ontología con sus clases y relaciones (propiedades de objeto).</p></span>
 <p><center><img src="images/diagrama-conceptual.png" style="width:100%;"/><figcaption>
 Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
-<span class="markdown"><p>La ontología modela la composición modular de una <a href="#Farola">farola</a> como elemento urbano (<a href="#https://edint.es/def/infraestructura##UrbanElement">edintinf:UrbanElement</a>), compuesta por un <a href="#Poste">poste</a> (con uno o más <a href="#Brazo">brazos</a>), una o más <a href="#Luminaria">luminarias</a> (que alojan una <a href="#Lampara">lámpara</a> cada una) y opcionalmente una <a href="#Caja">caja de conexiones</a>.</p>
+<span class="markdown"><p>La ontología modela la composición modular de una <a href="#Farola">farola</a> como elemento urbano (<a href="#https://edint.es/def/infraestructura#UrbanElement">edintinf:UrbanElement</a>), compuesta por un <a href="#Poste">poste</a> (con uno o más <a href="#Brazo">brazos</a>), una o más <a href="#Luminaria">luminarias</a> (que alojan una <a href="#Lampara">lámpara</a> cada una) y opcionalmente una <a href="#Caja">caja de conexiones</a>.</p>
 
-<p>La infraestructura eléctrica se representa mediante el <a href="#CentroDeMando">centro de mando</a>, que es un punto de suministro (<a href="#https://edint.es/def/suministro##UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) del que dependen una o más farolas. El centro de mando puede tener un <a href="#SuministroElectrico">suministro eléctrico</a> (contrato de suministro, <a href="#https://edint.es/def/suministro##UtilityContract">edintsum:UtilityContract</a>).</p>
+<p>La infraestructura eléctrica se representa mediante el <a href="#CentroDeMando">centro de mando</a>, que es un punto de suministro (<a href="#https://edint.es/def/suministro#UtilitySupplyPoint">edintsum:UtilitySupplyPoint</a>) del que dependen una o más farolas. El centro de mando puede tener un <a href="#SuministroElectrico">suministro eléctrico</a> (contrato de suministro, <a href="#https://edint.es/def/suministro#UtilityContract">edintsum:UtilityContract</a>).</p>
 
-<p>El <a href="#ConsumoEnergetico">consumo energético</a> se modela como una observación SOSA (<a href="#https://edint.es/def/suministro##UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), donde cada instancia representa el consumo en un período tarifario determinado. El valor del consumo se representa mediante <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, que expresa la magnitud a través de <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> y la unidad de medida a través de <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (por ejemplo, <code>unit:KiloW-HR</code> para kilovatios-hora). El período tarifario se indica mediante la propiedad <a href="#periodoTarifario">periodoTarifario</a> vinculada a un concepto SKOS (activo, llano, valle, punta).</p>
+<p>El <a href="#ConsumoEnergetico">consumo energético</a> se modela como una observación SOSA (<a href="#https://edint.es/def/suministro#UtilityConsumption">edintsum:UtilityConsumption</a> ⊂ <a href="#http://www.w3.org/ns/sosa/Observation">sosa:Observation</a>), donde cada instancia representa el consumo en un período tarifario determinado. El valor del consumo se representa mediante <a href="#http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a>, que expresa la magnitud a través de <a href="#http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a> y la unidad de medida a través de <a href="#http://qudt.org/schema/qudt/hasUnit">qudt:hasUnit</a> (por ejemplo, <code>unit:KiloW-HR</code> para kilovatios-hora). El período tarifario se indica mediante la propiedad <a href="#periodoTarifario">periodoTarifario</a> vinculada a un concepto SKOS (activo, llano, valle, punta).</p>
 
 <p>Las clasificaciones del alumbrado (tipo de soporte, tipo de lámpara, estado de conservación, zona de alumbrado, clase luminotécnica, etc.) se representan mediante propiedades de objeto que apuntan a conceptos SKOS, organizados en esquemas de conceptos independientes disponibles en la carpeta <code>kos/</code>.</p>
 
@@ -15,8 +15,8 @@ Figura 1. Modelo conceptual de la ontología</figcaption></center></p>
 
 <pre><textarea style="resize:none" readonly id="code2" name="code" rows="30" cols="100">
 @prefix edintalu: &lt;https://edint.es/def/alumbrado-publico#&gt; .
-@prefix edintinf: &lt;https://edint.es/def/infraestructura##&gt; .
-@prefix edintsum: &lt;https://edint.es/def/suministro##&gt; .
+@prefix edintinf: &lt;https://edint.es/def/infraestructura#&gt; .
+@prefix edintsum: &lt;https://edint.es/def/suministro#&gt; .
 @prefix edintkosinftype: &lt;https://edint.es/kos/InfrastructureType/&gt; .
 @prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
 @prefix gsp: &lt;http://www.opengis.net/ont/geosparql#&gt; .
