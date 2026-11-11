@@ -13,8 +13,8 @@
      xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
-     xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico#">
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://edint.es/def/alumbrado-publico">
         <owl:versionIRI rdf:resource="https://edint.es/def/alumbrado-publico/0.1.1"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <terms:abstract xml:lang="en">Ontología para la representación de datos de alumbrado público. Modela la composición modular de farolas, la infraestructura eléctrica, el consumo energético y los parámetros fotométricos y de contaminación lumínica.</terms:abstract>
@@ -39,9 +39,6 @@
         <vann:preferredNamespacePrefix>edintalu</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://edint.es/def/alumbrado-publico#</vann:preferredNamespaceUri>
         <voaf:extends rdf:resource="https://edint.es/def/infraestructura"/>
-        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico"/>
-        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
-        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <rdfs:comment xml:lang="en">Ontology for representing public street lighting data.</rdfs:comment>
         <rdfs:comment xml:lang="es">Ontología para la representación de datos de alumbrado público.</rdfs:comment>
         <rdfs:label xml:lang="es">Alumbrado Público</rdfs:label>
@@ -49,6 +46,9 @@
         <rdfs:seeAlso rdf:resource="https://github.com/opencitydata/urbanismo-infraestructuras-alumbrado-publico"/>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-alumbrado-publico"/>
+        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <vocab:jsonldSerialization>ontology.jsonld</vocab:jsonldSerialization>
         <vocab:ntSerialization>ontology.nt</vocab:ntSerialization>
         <vocab:rdfxmlSerialization>ontology.rdf</vocab:rdfxmlSerialization>
@@ -60,33 +60,33 @@
         <vocab:vocabularyLabel rdf:nodeID="genid12"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
+        <foaf:name>Daniel Doña</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>Oscar Corcho</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid2">
+        <foaf:name>Edna Ruckhaus</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>María Poveda</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
+        <foaf:name>Lucía Sánchez</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>M. Martín Blázquez</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid4">
+        <foaf:name>M. Martín Blázquez</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>Daniel Doña</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
+        <foaf:name>María Poveda</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>Edna Ruckhaus</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
+        <foaf:name>Oscar Corcho</foaf:name>
         <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
-        <foaf:name>Lucía Sánchez</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid7">
-        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         <foaf:homepage rdf:resource="https://www.femp.es/"/>
         <foaf:name>FEMP</foaf:name>
+        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid8">
         <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
@@ -240,34 +240,6 @@
     
 
 
-    <!-- http://schema.org/affiliation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
-    
-
-
-    <!-- http://schema.org/codeRepository -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
-    
-
-
-    <!-- http://schema.org/creativeWorkStatus -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/creativeWorkStatus"/>
-    
-
-
-    <!-- http://schema.org/funding -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
 
@@ -279,6 +251,34 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creativeWorkStatus"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
     
 
 
@@ -1117,13 +1117,6 @@
         <rdfs:label xml:lang="es">Dirección postal</rdfs:label>
         <rdfs:label xml:lang="en">Postal address</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
     
 
 
