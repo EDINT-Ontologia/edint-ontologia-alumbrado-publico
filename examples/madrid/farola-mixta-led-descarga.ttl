@@ -23,7 +23,7 @@
 :farola_002 a edintalu:Streetlight ;
     edintinf:hasInfrastructureType edintkosinftype:StreeLamp ;
     edintalu:luminaire :lum_002_led , :lum_002_desc ;
-    edintalu:address :dir_002 ;
+    schema:address :dir_002 ;
     gsp:hasGeometry :geom_002 .
 
 # --- Luminaria LED (añadida) ---

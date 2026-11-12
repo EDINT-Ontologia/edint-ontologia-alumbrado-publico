@@ -46,7 +46,7 @@ exlp:f1001 a edintalu:Streetlight ;
     edintalu:operatingHours "Noche entera" ;
     edintalu:numberOfLuminaires 2 ;
     edintalu:dataQuality "B" ;
-    edintalu:address exlp:f1001-dir ;
+    schema:address exlp:f1001-dir ;
     gsp:hasGeometry exlp:f1001-geom .
 
 exlp:f1001-dir a esdir:DireccionPostal ;
