@@ -16,8 +16,8 @@ SELECT ?centroDeMando
        (MIN(?lat) AS ?minLat) (MAX(?lat) AS ?maxLat)
        (MIN(?lon) AS ?minLon) (MAX(?lon) AS ?maxLon)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:centroDeMando ?centroDeMando ;
+  ?f a edintalu:Streetlight ;
+     edintalu:controlCenter ?centroDeMando ;
      gsp:hasGeometry ?geom .
   ?geom gsp:asWKT ?wkt .
   # Nota: la extracción de lat/lon desde WKT depende del motor SPARQL.

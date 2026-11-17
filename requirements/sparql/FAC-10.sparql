@@ -15,8 +15,8 @@ PREFIX qudtu:    <http://qudt.org/vocab/unit/>
 
 SELECT ?unit (COUNT(?qval) AS ?total)
 WHERE {
-  ?lamp a edintalu:Lampara ;
-         edintalu:potenciaNominal ?qval .
+  ?lamp a edintalu:Lamp ;
+         edintalu:nominalPower ?qval .
   ?qval a qudt:QuantityValue ;
         qudt:hasUnit ?unit .
 }
@@ -28,8 +28,8 @@ GROUP BY ?unit
 
 SELECT ?lampara ?val
 WHERE {
-  ?lampara a edintalu:Lampara ;
-           edintalu:potenciaNominal ?qv .
+  ?lampara a edintalu:Lamp ;
+           edintalu:nominalPower ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val ;
       qudt:hasUnit qudtu:W .
@@ -41,8 +41,8 @@ WHERE {
 
 SELECT ?lampara ?val
 WHERE {
-  ?lampara a edintalu:Lampara ;
-           edintalu:potenciaNominal ?qv .
+  ?lampara a edintalu:Lamp ;
+           edintalu:nominalPower ?qv .
   ?qv a qudt:QuantityValue ;
       qudt:numericValue ?val ;
       qudt:hasUnit qudtu:KiloW .

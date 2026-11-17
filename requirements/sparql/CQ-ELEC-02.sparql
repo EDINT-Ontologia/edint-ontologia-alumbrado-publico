@@ -11,8 +11,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?centroDeMando (COUNT(?f) AS ?totalFarolas)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:centroDeMando ?centroDeMando .
+  ?f a edintalu:Streetlight ;
+     edintalu:controlCenter ?centroDeMando .
 }
 GROUP BY ?centroDeMando
 ORDER BY DESC(?totalFarolas)
