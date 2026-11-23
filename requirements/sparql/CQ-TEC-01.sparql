@@ -13,10 +13,10 @@ PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?tipoLampara (COUNT(DISTINCT ?f) AS ?totalFarolas)
 WHERE {
-  ?f a edintalu:Farola ;
-     edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:tipoLampara ?tipoURI .
+  ?f a edintalu:Streetlight ;
+     edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:lampType ?tipoURI .
   ?tipoURI skos:prefLabel ?tipoLampara .
   FILTER(LANG(?tipoLampara) = "es")
 }
@@ -30,10 +30,10 @@ ORDER BY DESC(?totalFarolas)
 
 SELECT ?farola (GROUP_CONCAT(DISTINCT ?tipoLabel; separator=", ") AS ?tiposLampara)
 WHERE {
-  ?farola a edintalu:Farola ;
-          edintalu:luminaria ?lum .
-  ?lum edintalu:tieneLampara ?lamp .
-  ?lamp edintalu:tipoLampara ?tipoURI .
+  ?farola a edintalu:Streetlight ;
+          edintalu:luminaire ?lum .
+  ?lum edintalu:hasLamp ?lamp .
+  ?lamp edintalu:lampType ?tipoURI .
   ?tipoURI skos:prefLabel ?tipoLabel .
   FILTER(LANG(?tipoLabel) = "es")
 }

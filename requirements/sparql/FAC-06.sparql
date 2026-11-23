@@ -13,6 +13,6 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?centroDeMando
 WHERE {
-  ?centroDeMando a edintalu:CentroDeMando .
-  FILTER NOT EXISTS { ?centroDeMando edintalu:tieneSuministro ?sum . }
+  ?centroDeMando a edintalu:ControlCenter .
+  FILTER NOT EXISTS { ?centroDeMando edintalu:hasSupply ?sum . }
 }

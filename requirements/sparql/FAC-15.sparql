@@ -27,5 +27,5 @@ ORDER BY ?label
 # -----------------------------------------------------------------------------
 
 ASK {
-  edintalu:estadoConservacion rdfs:range skos:Concept .
+  edintalu:conservationStatus rdfs:range skos:Concept .
 }

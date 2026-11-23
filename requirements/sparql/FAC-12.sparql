@@ -14,8 +14,8 @@ PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 
 SELECT ?farola
 WHERE {
-  ?farola a edintalu:Farola .
-  FILTER NOT EXISTS { ?farola edintalu:direccion ?addr . }
+  ?farola a edintalu:Streetlight .
+  FILTER NOT EXISTS { ?farola edintalu:address ?addr . }
 }
 
 # -----------------------------------------------------------------------------
@@ -25,6 +25,6 @@ WHERE {
 
 SELECT ?farola
 WHERE {
-  ?farola a edintalu:Farola .
+  ?farola a edintalu:Streetlight .
   FILTER NOT EXISTS { ?farola gsp:hasGeometry ?geom . }
 }

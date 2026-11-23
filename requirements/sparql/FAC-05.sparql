@@ -13,6 +13,6 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?farola
 WHERE {
-  ?farola a edintalu:Farola .
-  FILTER NOT EXISTS { ?farola edintalu:centroDeMando ?cm . }
+  ?farola a edintalu:Streetlight .
+  FILTER NOT EXISTS { ?farola edintalu:controlCenter ?cm . }
 }

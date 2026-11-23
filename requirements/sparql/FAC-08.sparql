@@ -13,8 +13,8 @@ PREFIX edintalu: <https://edint.es/def/alumbrado-publico#>
 
 SELECT ?luminaria (COUNT(?modelo) AS ?numModelos)
 WHERE {
-  ?luminaria a edintalu:Luminaria .
-  OPTIONAL { ?luminaria edintalu:modeloLuminaria ?modelo . }
+  ?luminaria a edintalu:Luminaire .
+  OPTIONAL { ?luminaria edintalu:luminaireModel ?modelo . }
 }
 GROUP BY ?luminaria
 HAVING (COUNT(?modelo) > 1)
