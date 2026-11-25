@@ -225,16 +225,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://edint.es/def/alumbrado-publico#address
-:address rdf:type owl:ObjectProperty ;
-         rdfs:domain :Streetlight ;
-         rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal> ;
-         rdfs:comment "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es ,
-                      "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en ;
-         rdfs:label "address"@en ,
-                    "dirección"@es .
-
-
 ###  https://edint.es/def/alumbrado-publico#cableType
 :cableType rdf:type owl:ObjectProperty ;
            rdfs:domain :JunctionBox ;
@@ -554,6 +544,16 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  https://edint.es/def/infraestructura#hasInfrastructureType
 <https://edint.es/def/infraestructura#hasInfrastructureType> rdf:type owl:ObjectProperty .
+
+
+###  https://schema.org/address
+<https://schema.org/address> rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Streetlight ;
+                             rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal> ;
+                             rdfs:comment "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es ,
+                                          "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en ;
+                             rdfs:label "address"@en ,
+                                        "dirección"@es .
 
 
 #################################################################

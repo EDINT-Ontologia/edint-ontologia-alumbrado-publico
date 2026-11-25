@@ -362,20 +362,6 @@
     
 
 
-    <!-- https://edint.es/def/alumbrado-publico#address -->
-
-
-    <owl:ObjectProperty rdf:about="https://edint.es/def/alumbrado-publico#address">
-        <rdfs:domain rdf:resource="https://edint.es/def/alumbrado-publico#Streetlight"/>
-        <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal"/>
-        <rdfs:comment xml:lang="es">Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address.</rdfs:comment>
-        <rdfs:label xml:lang="en">address</rdfs:label>
-        <rdfs:label xml:lang="es">dirección</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://edint.es/def/alumbrado-publico#cableType -->
 
 
@@ -825,6 +811,20 @@
 
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#hasInfrastructureType"/>
+    
+
+
+    <!-- https://schema.org/address -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/address">
+        <rdfs:domain rdf:resource="https://edint.es/def/alumbrado-publico#Streetlight"/>
+        <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal"/>
+        <rdfs:comment xml:lang="es">Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
+        <rdfs:label xml:lang="es">dirección</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
