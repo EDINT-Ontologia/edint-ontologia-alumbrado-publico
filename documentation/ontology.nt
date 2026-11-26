@@ -189,15 +189,6 @@ _:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@en .
 # #################################################################
 # 
 # 
-# https://edint.es/def/alumbrado-publico#address
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/alumbrado-publico#Streetlight> .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal> .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#comment> "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
-<https://edint.es/def/alumbrado-publico#address> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
-# 
 # https://edint.es/def/alumbrado-publico#cableType
 <https://edint.es/def/alumbrado-publico#cableType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/alumbrado-publico#cableType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/alumbrado-publico#JunctionBox> .
@@ -485,6 +476,15 @@ _:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@en .
 # 
 # https://edint.es/def/infraestructura#hasInfrastructureType
 <https://edint.es/def/infraestructura#hasInfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://schema.org/address
+<https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/alumbrado-publico#Streetlight> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/address-postal#DireccionPostal> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Dirección postal donde se ubica la farola. Se reutiliza esdir:DireccionPostal, que a su vez especializa schema:PostalAddress, vcard:Address y locn:Address."@es .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal address where the streetlight is located. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address."@en .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
 # 
 # 
 # 
